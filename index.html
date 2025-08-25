@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro League - Football League</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.svg" alt="Pro League Logo" class="nav-logo-img">
+                <span>Pro League</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="fixtures">Fixtures</a></li>
+                <li><a href="#" class="nav-link" data-page="table">Table</a></li>
+                <li><a href="#" class="nav-link" data-page="knockouts">Knockouts</a></li>
+                <li><a href="#" class="nav-link" data-page="clubs">Clubs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <ul class="mobile-nav-items">
+            <li><a href="#" class="mobile-nav-item" data-page="home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a></li>
+            <li><a href="#" class="mobile-nav-item" data-page="fixtures">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Fixtures</span>
+            </a></li>
+            <li><a href="#" class="mobile-nav-item" data-page="table">
+                <i class="fas fa-table"></i>
+                <span>Table</span>
+            </a></li>
+            <li><a href="#" class="mobile-nav-item" data-page="knockouts">
+                <i class="fas fa-trophy"></i>
+                <span>Knockouts</span>
+            </a></li>
+            <li><a href="#" class="mobile-nav-item" data-page="clubs">
+                <i class="fas fa-shield-alt"></i>
+                <span>Clubs</span>
+            </a></li>
+                </ul>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" id="mainsearch" placeholder="Search for teams, players, matches...">
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+        </div>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Content will be dynamically loaded here -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Pro League. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
