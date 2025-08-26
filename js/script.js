@@ -2225,119 +2225,119 @@ const groupData = {
 
 // Group stage fixtures - Each group has maximum 4 matchdays
 const groupFixtures = [
-    // Group A - Matchday 1 (July 14, 2025)
-    { id: 'GA1', group: 'A', matchday: 1, date: '2025-07-14', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'dandizzo', status: 'scheduled', score: { home: 2, away: 1 } },
-    { id: 'GA2', group: 'A', matchday: 1, date: '2025-07-14', time: '22:00', homeTeam: 'dandizzo', awayTeam: 'dav_lil7', status: 'scheduled', score: { home: 1, away: 3 } },
-    { id: 'GA3', group: 'A', matchday: 1, date: '2025-07-14', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'volts', status: 'scheduled', score: { home: 1, away: 3 } },
-    { id: 'GA4', group: 'A', matchday: 1, date: '2025-07-14', time: '22:00', homeTeam: 'volts', awayTeam: 'its_lyta23', status: 'scheduled', score: { home: 2, away: 1 } },
-    { id: 'GA5', group: 'A', matchday: 1, date: '2025-07-14', time: '20:00', homeTeam: 'ghost', awayTeam: 'dav_lil7', status: 'scheduled', score: { home: 0, away: 2 } },
-    { id: 'GA6', group: 'A', matchday: 1, date: '2025-07-14', time: '22:00', homeTeam: 'dav_lil7', awayTeam: 'ghost', status: 'scheduled', score: { home: 3, away: 0 } },
+    // Group A - Matchday 1 (August 26, 2025)
+    { id: 'GA1', group: 'A', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'dandizzo', status: 'scheduled', score: { home: 2, away: 1 } },
+    { id: 'GA2', group: 'A', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'dandizzo', awayTeam: 'dav_lil7', status: 'scheduled', score: { home: 1, away: 3 } },
+    { id: 'GA3', group: 'A', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'volts', status: 'scheduled', score: { home: 1, away: 3 } },
+    { id: 'GA4', group: 'A', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'volts', awayTeam: 'its_lyta23', status: 'scheduled', score: { home: 2, away: 1 } },
+    { id: 'GA5', group: 'A', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'ghost', awayTeam: 'dav_lil7', status: 'scheduled', score: { home: 0, away: 2 } },
+    { id: 'GA6', group: 'A', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'dav_lil7', awayTeam: 'ghost', status: 'scheduled', score: { home: 3, away: 0 } },
 
-    // Group A - Matchday 2 (July 15, 2025)
-    { id: 'GA7', group: 'A', matchday: 2, date: '2025-07-15', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'its_lyta23', status: 'scheduled', score: { home: 2, away: 2 } },
-    { id: 'GA8', group: 'A', matchday: 2, date: '2025-07-15', time: '22:00', homeTeam: 'its_lyta23', awayTeam: 'dandizzo', status: 'scheduled', score: { home: 1, away: 1 } },
-    { id: 'GA9', group: 'A', matchday: 2, date: '2025-07-15', time: '20:00', homeTeam: 'volts', awayTeam: 'ghost', status: 'scheduled', score: { home: 4, away: 1 } },
-    { id: 'GA10', group: 'A', matchday: 2, date: '2025-07-15', time: '22:00', homeTeam: 'ghost', awayTeam: 'volts', status: 'scheduled', score: { home: 1, away: 2 } },
+    // Group A - Matchday 2 (August 27, 2025)
+    { id: 'GA7', group: 'A', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'its_lyta23', status: 'scheduled', score: { home: 2, away: 2 } },
+    { id: 'GA8', group: 'A', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'its_lyta23', awayTeam: 'dandizzo', status: 'scheduled', score: { home: 1, away: 1 } },
+    { id: 'GA9', group: 'A', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'volts', awayTeam: 'ghost', status: 'scheduled', score: { home: 4, away: 1 } },
+    { id: 'GA10', group: 'A', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'ghost', awayTeam: 'volts', status: 'scheduled', score: { home: 1, away: 2 } },
 
-    // Group A - Matchday 3 (July 16, 2025)
-    { id: 'GA11', group: 'A', matchday: 3, date: '2025-07-16', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'volts', status: 'scheduled', score: { home: 1, away: 1 } },
-    { id: 'GA12', group: 'A', matchday: 3, date: '2025-07-16', time: '22:00', homeTeam: 'volts', awayTeam: 'dav_lil7', status: 'scheduled', score: { home: 2, away: 2 } },
-    { id: 'GA13', group: 'A', matchday: 3, date: '2025-07-16', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'ghost', status: 'scheduled', score: { home: 3, away: 0 } },
-    { id: 'GA14', group: 'A', matchday: 3, date: '2025-07-16', time: '22:00', homeTeam: 'ghost', awayTeam: 'dandizzo', status: 'scheduled', score: { home: 1, away: 2 } },
-    { id: 'GA15', group: 'A', matchday: 3, date: '2025-07-16', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'dav_lil7', status: 'scheduled', score: { home: 0, away: 2 } },
-    { id: 'GA16', group: 'A', matchday: 3, date: '2025-07-16', time: '22:00', homeTeam: 'dav_lil7', awayTeam: 'its_lyta23', status: 'scheduled', score: { home: 2, away: 1 } },
+    // Group A - Matchday 3 (August 28, 2025)
+    { id: 'GA11', group: 'A', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'volts', status: 'scheduled', score: { home: 1, away: 1 } },
+    { id: 'GA12', group: 'A', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'volts', awayTeam: 'dav_lil7', status: 'scheduled', score: { home: 2, away: 2 } },
+    { id: 'GA13', group: 'A', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'ghost', status: 'scheduled', score: { home: 3, away: 0 } },
+    { id: 'GA14', group: 'A', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'ghost', awayTeam: 'dandizzo', status: 'scheduled', score: { home: 1, away: 2 } },
+    { id: 'GA15', group: 'A', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'dav_lil7', status: 'scheduled', score: { home: 0, away: 2 } },
+    { id: 'GA16', group: 'A', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'dav_lil7', awayTeam: 'its_lyta23', status: 'scheduled', score: { home: 2, away: 1 } },
 
-    // Group A - Matchday 4 (July 17, 2025)
-    { id: 'GA17', group: 'A', matchday: 4, date: '2025-07-17', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'volts', status: 'scheduled', score: { home: 2, away: 2 } },
-    { id: 'GA18', group: 'A', matchday: 4, date: '2025-07-17', time: '22:00', homeTeam: 'volts', awayTeam: 'dandizzo', status: 'scheduled', score: { home: 1, away: 1 } },
-    { id: 'GA19', group: 'A', matchday: 4, date: '2025-07-17', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'ghost', status: 'scheduled', score: { home: 1, away: 1 } },
-    { id: 'GA20', group: 'A', matchday: 4, date: '2025-07-17', time: '22:00', homeTeam: 'ghost', awayTeam: 'its_lyta23', status: 'scheduled', score: { home: 2, away: 0 } },
+    // Group A - Matchday 4 (August 29, 2025)
+    { id: 'GA17', group: 'A', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'volts', status: 'scheduled', score: { home: 2, away: 2 } },
+    { id: 'GA18', group: 'A', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'volts', awayTeam: 'dandizzo', status: 'scheduled', score: { home: 1, away: 1 } },
+    { id: 'GA19', group: 'A', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'ghost', status: 'scheduled', score: { home: 1, away: 1 } },
+    { id: 'GA20', group: 'A', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'ghost', awayTeam: 'its_lyta23', status: 'scheduled', score: { home: 2, away: 0 } },
 
-    // Group B - Matchday 1 (July 18, 2025)
-    { id: 'GB1', group: 'B', matchday: 1, date: '2025-07-18', time: '20:00', homeTeam: 'phenom', awayTeam: 'elton', status: 'scheduled', score: { home: 3, away: 1 } },
-    { id: 'GB2', group: 'B', matchday: 1, date: '2025-07-18', time: '22:00', homeTeam: 'elton', awayTeam: 'phenom', status: 'scheduled', score: { home: 1, away: 2 } },
-    { id: 'GB3', group: 'B', matchday: 1, date: '2025-07-18', time: '20:00', homeTeam: 'dyno', awayTeam: 'ghazi', status: 'scheduled', score: { home: 2, away: 2 } },
-    { id: 'GB4', group: 'B', matchday: 1, date: '2025-07-18', time: '22:00', homeTeam: 'ghazi', awayTeam: 'dyno', status: 'scheduled', score: { home: 1, away: 1 } },
-    { id: 'GB5', group: 'B', matchday: 1, date: '2025-07-18', time: '20:00', homeTeam: 'tonny', awayTeam: 'phenom', status: 'scheduled', score: { home: 1, away: 4 } },
-    { id: 'GB6', group: 'B', matchday: 1, date: '2025-07-18', time: '22:00', homeTeam: 'phenom', awayTeam: 'tonny', status: 'scheduled', score: { home: 2, away: 0 } },
+    // Group B - Matchday 1 (August 26, 2025)
+    { id: 'GB1', group: 'B', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'phenom', awayTeam: 'elton', status: 'completed', score: { home: 5, away: 1 } },
+    { id: 'GB2', group: 'B', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'elton', awayTeam: 'phenom', status: 'completed', score: { home: 0, away: 4 } },
+    { id: 'GB3', group: 'B', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'dyno', awayTeam: 'ghazi', status: 'scheduled', score: { home: 2, away: 2 } },
+    { id: 'GB4', group: 'B', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'ghazi', awayTeam: 'dyno', status: 'scheduled', score: { home: 1, away: 1 } },
+    { id: 'GB5', group: 'B', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'tonny', awayTeam: 'phenom', status: 'scheduled', score: { home: 1, away: 4 } },
+    { id: 'GB6', group: 'B', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'phenom', awayTeam: 'tonny', status: 'scheduled', score: { home: 2, away: 0 } },
 
-    // Group B - Matchday 2 (July 19, 2025)
-    { id: 'GB7', group: 'B', matchday: 2, date: '2025-07-19', time: '20:00', homeTeam: 'elton', awayTeam: 'dyno', status: 'scheduled', score: { home: 0, away: 2 } },
-    { id: 'GB8', group: 'B', matchday: 2, date: '2025-07-19', time: '22:00', homeTeam: 'dyno', awayTeam: 'elton', status: 'scheduled', score: { home: 3, away: 1 } },
-    { id: 'GB9', group: 'B', matchday: 2, date: '2025-07-19', time: '20:00', homeTeam: 'ghazi', awayTeam: 'tonny', status: 'scheduled', score: { home: 3, away: 1 } },
-    { id: 'GB10', group: 'B', matchday: 2, date: '2025-07-19', time: '22:00', homeTeam: 'tonny', awayTeam: 'ghazi', status: 'scheduled', score: { home: 0, away: 2 } },
+    // Group B - Matchday 2 (August 27, 2025)
+    { id: 'GB7', group: 'B', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'elton', awayTeam: 'dyno', status: 'scheduled', score: { home: 0, away: 2 } },
+    { id: 'GB8', group: 'B', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'dyno', awayTeam: 'elton', status: 'scheduled', score: { home: 3, away: 1 } },
+    { id: 'GB9', group: 'B', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'ghazi', awayTeam: 'tonny', status: 'scheduled', score: { home: 3, away: 1 } },
+    { id: 'GB10', group: 'B', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'tonny', awayTeam: 'ghazi', status: 'scheduled', score: { home: 0, away: 2 } },
 
-    // Group B - Matchday 3 (July 20, 2025)
-    { id: 'GB11', group: 'B', matchday: 3, date: '2025-07-20', time: '20:00', homeTeam: 'phenom', awayTeam: 'dyno', status: 'scheduled', score: { home: 2, away: 1 } },
-    { id: 'GB12', group: 'B', matchday: 3, date: '2025-07-20', time: '22:00', homeTeam: 'dyno', awayTeam: 'phenom', status: 'scheduled', score: { home: 1, away: 1 } },
-    { id: 'GB13', group: 'B', matchday: 3, date: '2025-07-20', time: '20:00', homeTeam: 'elton', awayTeam: 'ghazi', status: 'scheduled', score: { home: 1, away: 2 } },
-    { id: 'GB14', group: 'B', matchday: 3, date: '2025-07-20', time: '22:00', homeTeam: 'ghazi', awayTeam: 'elton', status: 'scheduled', score: { home: 2, away: 1 } },
-    { id: 'GB15', group: 'B', matchday: 3, date: '2025-07-20', time: '20:00', homeTeam: 'tonny', awayTeam: 'elton', status: 'scheduled', score: { home: 1, away: 0 } },
-    { id: 'GB16', group: 'B', matchday: 3, date: '2025-07-20', time: '22:00', homeTeam: 'elton', awayTeam: 'tonny', status: 'scheduled', score: { home: 2, away: 1 } },
+    // Group B - Matchday 3 (August 28, 2025)
+    { id: 'GB11', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'phenom', awayTeam: 'dyno', status: 'scheduled', score: { home: 2, away: 1 } },
+    { id: 'GB12', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'dyno', awayTeam: 'phenom', status: 'scheduled', score: { home: 1, away: 1 } },
+    { id: 'GB13', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'elton', awayTeam: 'ghazi', status: 'scheduled', score: { home: 1, away: 2 } },
+    { id: 'GB14', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'ghazi', awayTeam: 'elton', status: 'scheduled', score: { home: 2, away: 1 } },
+    { id: 'GB15', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'tonny', awayTeam: 'elton', status: 'scheduled', score: { home: 1, away: 0 } },
+    { id: 'GB16', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'elton', awayTeam: 'tonny', status: 'scheduled', score: { home: 2, away: 1 } },
 
-    // Group B - Matchday 4 (July 21, 2025)
-    { id: 'GB17', group: 'B', matchday: 4, date: '2025-07-21', time: '20:00', homeTeam: 'phenom', awayTeam: 'ghazi', status: 'scheduled', score: { home: 3, away: 1 } },
-    { id: 'GB18', group: 'B', matchday: 4, date: '2025-07-21', time: '22:00', homeTeam: 'ghazi', awayTeam: 'phenom', status: 'scheduled', score: { home: 1, away: 2 } },
-    { id: 'GB19', group: 'B', matchday: 4, date: '2025-07-21', time: '20:00', homeTeam: 'elton', awayTeam: 'tonny', status: 'scheduled', score: { home: 1, away: 1 } },
-    { id: 'GB20', group: 'B', matchday: 4, date: '2025-07-21', time: '22:00', homeTeam: 'tonny', awayTeam: 'elton', status: 'scheduled', score: { home: 0, away: 2 } },
-    { id: 'GB21', group: 'B', matchday: 4, date: '2025-07-21', time: '20:00', homeTeam: 'dyno', awayTeam: 'tonny', status: 'scheduled', score: { home: 2, away: 1 } },
-    { id: 'GB22', group: 'B', matchday: 4, date: '2025-07-21', time: '22:00', homeTeam: 'tonny', awayTeam: 'dyno', status: 'scheduled', score: { home: 0, away: 3 } },
+    // Group B - Matchday 4 (August 29, 2025)
+    { id: 'GB17', group: 'B', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'phenom', awayTeam: 'ghazi', status: 'scheduled', score: { home: 3, away: 1 } },
+    { id: 'GB18', group: 'B', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'ghazi', awayTeam: 'phenom', status: 'scheduled', score: { home: 1, away: 2 } },
+    { id: 'GB19', group: 'B', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'elton', awayTeam: 'tonny', status: 'scheduled', score: { home: 1, away: 1 } },
+    { id: 'GB20', group: 'B', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'tonny', awayTeam: 'elton', status: 'scheduled', score: { home: 0, away: 2 } },
+    { id: 'GB21', group: 'B', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'dyno', awayTeam: 'tonny', status: 'scheduled', score: { home: 2, away: 1 } },
+    { id: 'GB22', group: 'B', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'tonny', awayTeam: 'dyno', status: 'scheduled', score: { home: 0, away: 3 } },
 
-    // Group C - Matchday 1 (July 22, 2025)
-    { id: 'GC1', group: 'C', matchday: 1, date: '2025-07-22', time: '20:00', homeTeam: 'newton', awayTeam: 'yotah', status: 'scheduled', score: { home: 2, away: 0 } },
-    { id: 'GC2', group: 'C', matchday: 1, date: '2025-07-22', time: '22:00', homeTeam: 'yotah', awayTeam: 'newton', status: 'scheduled', score: { home: 1, away: 3 } },
-    { id: 'GC3', group: 'C', matchday: 1, date: '2025-07-22', time: '20:00', homeTeam: 'kenno', awayTeam: 'offer_art', status: 'scheduled', score: { home: 1, away: 1 } },
-    { id: 'GC4', group: 'C', matchday: 1, date: '2025-07-22', time: '22:00', homeTeam: 'offer_art', awayTeam: 'kenno', status: 'scheduled', score: { home: 2, away: 1 } },
-    { id: 'GC5', group: 'C', matchday: 1, date: '2025-07-22', time: '20:00', homeTeam: 'emjay', awayTeam: 'newton', status: 'scheduled', score: { home: 0, away: 3 } },
-    { id: 'GC6', group: 'C', matchday: 1, date: '2025-07-22', time: '22:00', homeTeam: 'newton', awayTeam: 'emjay', status: 'scheduled', score: { home: 2, away: 1 } },
+    // Group C - Matchday 1 (August 26, 2025)
+    { id: 'GC1', group: 'C', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'newton', awayTeam: 'yotah', status: 'scheduled', score: { home: 2, away: 0 } },
+    { id: 'GC2', group: 'C', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'yotah', awayTeam: 'newton', status: 'scheduled', score: { home: 1, away: 3 } },
+    { id: 'GC3', group: 'C', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'kenno', awayTeam: 'offer_art', status: 'scheduled', score: { home: 1, away: 1 } },
+    { id: 'GC4', group: 'C', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'offer_art', awayTeam: 'kenno', status: 'scheduled', score: { home: 2, away: 1 } },
+    { id: 'GC5', group: 'C', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'emjay', awayTeam: 'newton', status: 'scheduled', score: { home: 0, away: 3 } },
+    { id: 'GC6', group: 'C', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'newton', awayTeam: 'emjay', status: 'scheduled', score: { home: 2, away: 1 } },
 
-    // Group C - Matchday 2 (July 23, 2025)
-    { id: 'GC7', group: 'C', matchday: 2, date: '2025-07-23', time: '20:00', homeTeam: 'yotah', awayTeam: 'kenno', status: 'scheduled', score: { home: 1, away: 2 } },
-    { id: 'GC8', group: 'C', matchday: 2, date: '2025-07-23', time: '22:00', homeTeam: 'kenno', awayTeam: 'yotah', status: 'scheduled', score: { home: 3, away: 1 } },
-    { id: 'GC9', group: 'C', matchday: 2, date: '2025-07-23', time: '20:00', homeTeam: 'offer_art', awayTeam: 'emjay', status: 'scheduled', score: { home: 2, away: 1 } },
-    { id: 'GC10', group: 'C', matchday: 2, date: '2025-07-23', time: '22:00', homeTeam: 'emjay', awayTeam: 'offer_art', status: 'scheduled', score: { home: 1, away: 1 } },
+    // Group C - Matchday 2 (August 27, 2025)
+    { id: 'GC7', group: 'C', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'yotah', awayTeam: 'kenno', status: 'scheduled', score: { home: 1, away: 2 } },
+    { id: 'GC8', group: 'C', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'kenno', awayTeam: 'yotah', status: 'scheduled', score: { home: 3, away: 1 } },
+    { id: 'GC9', group: 'C', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'offer_art', awayTeam: 'emjay', status: 'scheduled', score: { home: 2, away: 1 } },
+    { id: 'GC10', group: 'C', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'emjay', awayTeam: 'offer_art', status: 'scheduled', score: { home: 1, away: 1 } },
 
-    // Group C - Matchday 3 (July 24, 2025)
-    { id: 'GC11', group: 'C', matchday: 3, date: '2025-07-24', time: '20:00', homeTeam: 'newton', awayTeam: 'kenno', status: 'scheduled', score: { home: 1, away: 1 } },
-    { id: 'GC12', group: 'C', matchday: 3, date: '2025-07-24', time: '22:00', homeTeam: 'kenno', awayTeam: 'newton', status: 'scheduled', score: { home: 2, away: 2 } },
-    { id: 'GC13', group: 'C', matchday: 3, date: '2025-07-24', time: '20:00', homeTeam: 'yotah', awayTeam: 'offer_art', status: 'scheduled', score: { home: 0, away: 2 } },
-    { id: 'GC14', group: 'C', matchday: 3, date: '2025-07-24', time: '22:00', homeTeam: 'offer_art', awayTeam: 'yotah', status: 'scheduled', score: { home: 1, away: 0 } },
-    { id: 'GC15', group: 'C', matchday: 3, date: '2025-07-24', time: '20:00', homeTeam: 'emjay', awayTeam: 'kenno', status: 'scheduled', score: { home: 1, away: 2 } },
-    { id: 'GC16', group: 'C', matchday: 3, date: '2025-07-24', time: '22:00', homeTeam: 'kenno', awayTeam: 'emjay', status: 'scheduled', score: { home: 3, away: 0 } },
+    // Group C - Matchday 3 (August 28, 2025)
+    { id: 'GC11', group: 'C', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'newton', awayTeam: 'kenno', status: 'scheduled', score: { home: 1, away: 1 } },
+    { id: 'GC12', group: 'C', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'kenno', awayTeam: 'newton', status: 'scheduled', score: { home: 2, away: 2 } },
+    { id: 'GC13', group: 'C', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'yotah', awayTeam: 'offer_art', status: 'scheduled', score: { home: 0, away: 2 } },
+    { id: 'GC14', group: 'C', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'offer_art', awayTeam: 'yotah', status: 'scheduled', score: { home: 1, away: 0 } },
+    { id: 'GC15', group: 'C', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'emjay', awayTeam: 'kenno', status: 'scheduled', score: { home: 1, away: 2 } },
+    { id: 'GC16', group: 'C', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'kenno', awayTeam: 'emjay', status: 'scheduled', score: { home: 3, away: 0 } },
 
-    // Group C - Matchday 4 (July 25, 2025)
-    { id: 'GC17', group: 'C', matchday: 4, date: '2025-07-25', time: '20:00', homeTeam: 'newton', awayTeam: 'offer_art', status: 'scheduled', score: { home: 2, away: 1 } },
-    { id: 'GC18', group: 'C', matchday: 4, date: '2025-07-25', time: '22:00', homeTeam: 'offer_art', awayTeam: 'newton', status: 'scheduled', score: { home: 1, away: 2 } },
-    { id: 'GC19', group: 'C', matchday: 4, date: '2025-07-25', time: '20:00', homeTeam: 'yotah', awayTeam: 'emjay', status: 'scheduled', score: { home: 1, away: 1 } },
-    { id: 'GC20', group: 'C', matchday: 4, date: '2025-07-25', time: '22:00', homeTeam: 'emjay', awayTeam: 'yotah', status: 'scheduled', score: { home: 2, away: 0 } },
+    // Group C - Matchday 4 (August 29, 2025)
+    { id: 'GC17', group: 'C', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'newton', awayTeam: 'offer_art', status: 'scheduled', score: { home: 2, away: 1 } },
+    { id: 'GC18', group: 'C', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'offer_art', awayTeam: 'newton', status: 'scheduled', score: { home: 1, away: 2 } },
+    { id: 'GC19', group: 'C', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'yotah', awayTeam: 'emjay', status: 'scheduled', score: { home: 1, away: 1 } },
+    { id: 'GC20', group: 'C', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'emjay', awayTeam: 'yotah', status: 'scheduled', score: { home: 2, away: 0 } },
 
-    // Group D - Matchday 1 (July 26, 2025)
-    { id: 'GD1', group: 'D', matchday: 1, date: '2025-07-26', time: '20:00', homeTeam: 'mignon', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 11 } },
-    { id: 'GD2', group: 'D', matchday: 1, date: '2025-07-26', time: '22:00', homeTeam: 'wato', awayTeam: 'mignon', status: 'completed', score: { home: 3, away: 1 } },
-    { id: 'GD3', group: 'D', matchday: 1, date: '2025-07-26', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'ThDrksid', status: 'scheduled', score: { home: 1, away: 2 } },
-    { id: 'GD4', group: 'D', matchday: 1, date: '2025-07-26', time: '22:00', homeTeam: 'ThDrksid', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 2, away: 1 } },
-    { id: 'GD5', group: 'D', matchday: 1, date: '2025-07-26', time: '20:00', homeTeam: 'maria', awayTeam: 'mignon', status: 'scheduled', score: { home: 0, away: 3 } },
-    { id: 'GD6', group: 'D', matchday: 1, date: '2025-07-26', time: '22:00', homeTeam: 'mignon', awayTeam: 'maria', status: 'scheduled', score: { home: 2, away: 1 } },
+    // Group D - Matchday 1 (August 26, 2025)
+    { id: 'GD1', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'mignon', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 11 } },
+    { id: 'GD2', group: 'D', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'wato', awayTeam: 'mignon', status: 'completed', score: { home: 3, away: 1 } },
+    { id: 'GD3', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'ThDrksid', status: 'scheduled', score: { home: 1, away: 2 } },
+    { id: 'GD4', group: 'D', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'ThDrksid', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 2, away: 1 } },
+    { id: 'GD5', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'maria', awayTeam: 'mignon', status: 'scheduled', score: { home: 0, away: 3 } },
+    { id: 'GD6', group: 'D', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'mignon', awayTeam: 'maria', status: 'scheduled', score: { home: 2, away: 1 } },
 
-    // Group D - Matchday 2 (July 27, 2025)
-    { id: 'GD7', group: 'D', matchday: 2, date: '2025-07-27', time: '20:00', homeTeam: 'wato', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 2, away: 2 } },
-    { id: 'GD8', group: 'D', matchday: 2, date: '2025-07-27', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'wato', status: 'scheduled', score: { home: 4, away: 2 } },
-    { id: 'GD9', group: 'D', matchday: 2, date: '2025-07-27', time: '20:00', homeTeam: 'ThDrksid', awayTeam: 'maria', status: 'scheduled', score: { home: 3, away: 1 } },
-    { id: 'GD10', group: 'D', matchday: 2, date: '2025-07-27', time: '22:00', homeTeam: 'maria', awayTeam: 'ThDrksid', status: 'scheduled', score: { home: 1, away: 2 } },
+    // Group D - Matchday 2 (August 27, 2025)
+    { id: 'GD7', group: 'D', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'wato', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 2, away: 2 } },
+    { id: 'GD8', group: 'D', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'wato', status: 'scheduled', score: { home: 4, away: 2 } },
+    { id: 'GD9', group: 'D', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'ThDrksid', awayTeam: 'maria', status: 'scheduled', score: { home: 3, away: 1 } },
+    { id: 'GD10', group: 'D', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'maria', awayTeam: 'ThDrksid', status: 'scheduled', score: { home: 1, away: 2 } },
 
-    // Group D - Matchday 3 (July 28, 2025)
-    { id: 'GD11', group: 'D', matchday: 3, date: '2025-07-28', time: '20:00', homeTeam: 'mignon', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 1, away: 0 } },
-    { id: 'GD12', group: 'D', matchday: 3, date: '2025-07-28', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'mignon', status: 'scheduled', score: { home: 2, away: 1 } },
-    { id: 'GD13', group: 'D', matchday: 3, date: '2025-07-28', time: '20:00', homeTeam: 'wato', awayTeam: 'ThDrksid', status: 'scheduled', score: { home: 1, away: 2 } },
-    { id: 'GD14', group: 'D', matchday: 3, date: '2025-07-28', time: '22:00', homeTeam: 'ThDrksid', awayTeam: 'wato', status: 'scheduled', score: { home: 3, away: 0 } },
+    // Group D - Matchday 3 (August 28, 2025)
+    { id: 'GD11', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'mignon', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 1, away: 0 } },
+    { id: 'GD12', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'mignon', status: 'scheduled', score: { home: 2, away: 1 } },
+    { id: 'GD13', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'wato', awayTeam: 'ThDrksid', status: 'scheduled', score: { home: 1, away: 2 } },
+    { id: 'GD14', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'ThDrksid', awayTeam: 'wato', status: 'scheduled', score: { home: 3, away: 0 } },
 
-    // Group D - Matchday 4 (July 29, 2025)
-    { id: 'GD15', group: 'D', matchday: 4, date: '2025-07-29', time: '20:00', homeTeam: 'mignon', awayTeam: 'ThDrksid', status: 'scheduled', score: { home: 2, away: 1 } },
-    { id: 'GD16', group: 'D', matchday: 4, date: '2025-07-29', time: '22:00', homeTeam: 'ThDrksid', awayTeam: 'mignon', status: 'scheduled', score: { home: 3, away: 0 } },
-    { id: 'GD17', group: 'D', matchday: 4, date: '2025-07-29', time: '20:00', homeTeam: 'wato', awayTeam: 'maria', status: 'scheduled', score: { home: 1, away: 1 } },
-    { id: 'GD18', group: 'D', matchday: 4, date: '2025-07-29', time: '22:00', homeTeam: 'maria', awayTeam: 'wato', status: 'scheduled', score: { home: 0, away: 2 } },
-    { id: 'GD19', group: 'D', matchday: 4, date: '2025-07-29', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'maria', status: 'scheduled', score: { home: 1, away: 1 } },
-    { id: 'GD20', group: 'D', matchday: 4, date: '2025-07-29', time: '22:00', homeTeam: 'maria', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 0, away: 2 } }
+    // Group D - Matchday 4 (August 29, 2025)
+    { id: 'GD15', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'mignon', awayTeam: 'ThDrksid', status: 'scheduled', score: { home: 2, away: 1 } },
+    { id: 'GD16', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'ThDrksid', awayTeam: 'mignon', status: 'scheduled', score: { home: 3, away: 0 } },
+    { id: 'GD17', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'wato', awayTeam: 'maria', status: 'scheduled', score: { home: 1, away: 1 } },
+    { id: 'GD18', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'maria', awayTeam: 'wato', status: 'scheduled', score: { home: 0, away: 2 } },
+    { id: 'GD19', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'maria', status: 'scheduled', score: { home: 1, away: 1 } },
+    { id: 'GD20', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'maria', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 0, away: 2 } }
 ];
 
 // Helper function to get team name from ID
@@ -2631,57 +2631,57 @@ const leagueData = {
     knockouts: {
         roundOf16: [
             // Tie 1
-            { id: 'R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-08-01', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 3, away: 1 } },
-            { id: 'R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-08-08', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 2 }, penalties: { home: 4, away: 3 } },
+            { id: 'R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 3, away: 1 } },
+            { id: 'R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-09-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 2 }, penalties: { home: 4, away: 3 } },
             // Tie 2
-            { id: 'R16_2_1', round: 'Round of 16', tie: 2, leg: '1st', date: '2025-08-01', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 0 } },
-            { id: 'R16_2_2', round: 'Round of 16', tie: 2, leg: '2nd', date: '2025-08-08', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 } },
+            { id: 'R16_2_1', round: 'Round of 16', tie: 2, leg: '1st', date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 0 } },
+            { id: 'R16_2_2', round: 'Round of 16', tie: 2, leg: '2nd', date: '2025-09-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 } },
             // Tie 3
-            { id: 'R16_3_1', round: 'Round of 16', tie: 3, leg: '1st', date: '2025-08-02', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 4, away: 2 } },
-            { id: 'R16_3_2', round: 'Round of 16', tie: 3, leg: '2nd', date: '2025-08-09', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 0 } },
+            { id: 'R16_3_1', round: 'Round of 16', tie: 3, leg: '1st', date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 4, away: 2 } },
+            { id: 'R16_3_2', round: 'Round of 16', tie: 3, leg: '2nd', date: '2025-09-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 0 } },
             // Tie 4
-            { id: 'R16_4_1', round: 'Round of 16', tie: 4, leg: '1st', date: '2025-08-02', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 } },
-            { id: 'R16_4_2', round: 'Round of 16', tie: 4, leg: '2nd', date: '2025-08-09', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 2 }, penalties: { home: 2, away: 4 } },
+            { id: 'R16_4_1', round: 'Round of 16', tie: 4, leg: '1st', date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 } },
+            { id: 'R16_4_2', round: 'Round of 16', tie: 4, leg: '2nd', date: '2025-09-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 2 }, penalties: { home: 2, away: 4 } },
             // Tie 5
-            { id: 'R16_5_1', round: 'Round of 16', tie: 5, leg: '1st', date: '2025-08-03', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 1 } },
-            { id: 'R16_5_2', round: 'Round of 16', tie: 5, leg: '2nd', date: '2025-08-10', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 1 } },
+            { id: 'R16_5_1', round: 'Round of 16', tie: 5, leg: '1st', date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 1 } },
+            { id: 'R16_5_2', round: 'Round of 16', tie: 5, leg: '2nd', date: '2025-09-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 1 } },
             // Tie 6
-            { id: 'R16_6_1', round: 'Round of 16', tie: 6, leg: '1st', date: '2025-08-03', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 3, away: 0 } },
-            { id: 'R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-08-10', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 2 } },
+            { id: 'R16_6_1', round: 'Round of 16', tie: 6, leg: '1st', date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 3, away: 0 } },
+            { id: 'R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-09-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 2 } },
             // Tie 7
-            { id: 'R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-08-04', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 2 } },
-            { id: 'R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-08-11', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 0 } },
+            { id: 'R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 2 } },
+            { id: 'R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-09-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 0 } },
             // Tie 8
-            { id: 'R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-08-04', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-08-11', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 5, away: 4 } }
+            { id: 'R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-09-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 5, away: 4 } }
         ],
         quarterFinals: [
             // Tie 1
-            { id: 'QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-08-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-08-22', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } },
+            { id: 'QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-10-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
+            { id: 'QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-10-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } },
             // Tie 2
-            { id: 'QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-08-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-08-22', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
+            { id: 'QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-10-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
+            { id: 'QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-10-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
             // Tie 3
-            { id: 'QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-08-16', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-08-23', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } },
+            { id: 'QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-10-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
+            { id: 'QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-10-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } },
             // Tie 4
-            { id: 'QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-08-16', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-08-23', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' }
+            { id: 'QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-10-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
+            { id: 'QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-10-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' }
         ],
         semiFinals: [
             // Tie 1
-            { id: 'SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-08-29', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-09-05', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } },
+            { id: 'SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-11-01', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
+            { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-11-01', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } },
             // Tie 2
-            { id: 'SF_2_1', round: 'Semi Finals', tie: 2, leg: '1st', date: '2025-08-29', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'SF_2_2', round: 'Semi Finals', tie: 2, leg: '2nd', date: '2025-09-05', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } }
+            { id: 'SF_2_1', round: 'Semi Finals', tie: 2, leg: '1st', date: '2025-11-01', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
+            { id: 'SF_2_2', round: 'Semi Finals', tie: 2, leg: '2nd', date: '2025-11-01', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } }
         ],
         thirdPlacePlayoff: [
-            { id: 'TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-09-11', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled',score: { home: 1, away: 1 }, penalties: { home: 0, away: 0 } }
+            { id: 'TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-11-02', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled',score: { home: 1, away: 1 }, penalties: { home: 0, away: 0 } }
         ],
         final: [
-            { id: 'FINAL_1', round: 'Final', matchNumber: 1, date: '2025-09-12', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 0, away: 0 } }
+            { id: 'FINAL_1', round: 'Final', matchNumber: 1, date: '2025-11-02', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 0, away: 0 } }
         ]
     }
 };
