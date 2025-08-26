@@ -2694,8 +2694,11 @@ const leagueData = {
             { id: 'SF_2_1', round: 'Semi Finals', tie: 2, leg: '1st', date: '2025-08-29', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
             { id: 'SF_2_2', round: 'Semi Finals', tie: 2, leg: '2nd', date: '2025-09-05', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } }
         ],
+        thirdPlacePlayoff: [
+            { id: 'TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-09-11', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled',score: { home: 1, away: 1 }, penalties: { home: 0, away: 0 } }
+        ],
         final: [
-            { id: 'FINAL_1', round: 'Final', matchNumber: 1, date: '2025-09-12', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } }
+            { id: 'FINAL_1', round: 'Final', matchNumber: 1, date: '2025-09-12', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 0, away: 0 } }
         ]
     }
 };
@@ -3627,6 +3630,36 @@ function generateKnockoutsPage() {
                                     </div>
                                 </div>
                             `).join('')}
+                        </div>
+                    `).join('')}
+                </div>
+
+                <div class="round-card">
+                    <h2 class="round-title">Third Place Playoff</h2>
+                    ${leagueData.knockouts.thirdPlacePlayoff.map(match => `
+                        <div class="match-card ${match.status}">
+                            <div class="fixture-teams">
+                                <div class="team">
+                                    ${getTeamLogo(match.homeTeam, '50px', false)}
+                                    <span>${match.homeTeam === 'TBD' ? 'TBD' : getTeamName(match.homeTeam)}</span>
+                                </div>
+                                <div class="vs ${match.status}">
+                                    ${match.status === 'completed' && match.score ? `${match.score.home} - ${match.score.away}` : 'vs'}
+                                    ${match.status === 'completed' && match.penalties ? `<div class="penalties">(${match.penalties.home}-${match.penalties.away} pen)</div>` : ''}
+                                </div>
+                                <div class="team">
+                                    <span>${match.awayTeam === 'TBD' ? 'TBD' : getTeamName(match.awayTeam)}</span>
+                                    ${getTeamLogo(match.awayTeam, '50px', false)}
+                                </div>
+                            </div>
+                            <div class="fixture-details">
+                                <span><i class="fas fa-calendar"></i> ${match.date}</span>
+                                <span><i class="fas fa-clock"></i> ${match.time}</span>
+                                <span class="status-badge ${match.status}">
+                                    <i class="fas ${match.status === 'completed' ? 'fa-check-circle' : 'fa-calendar'}"></i>
+                                    ${match.status}
+                                </span>
+                            </div>
                         </div>
                     `).join('')}
                 </div>
