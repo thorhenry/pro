@@ -2312,8 +2312,8 @@ const groupFixtures = [
     { id: 'GC20', group: 'C', matchday: 4, date: '2025-07-25', time: '22:00', homeTeam: 'emjay', awayTeam: 'yotah', status: 'scheduled', score: { home: 2, away: 0 } },
 
     // Group D - Matchday 1 (July 26, 2025)
-    { id: 'GD1', group: 'D', matchday: 1, date: '2025-07-26', time: '20:00', homeTeam: 'mignon', awayTeam: 'wato', status: 'scheduled', score: { home: 2, away: 1 } },
-    { id: 'GD2', group: 'D', matchday: 1, date: '2025-07-26', time: '22:00', homeTeam: 'wato', awayTeam: 'mignon', status: 'scheduled', score: { home: 1, away: 3 } },
+    { id: 'GD1', group: 'D', matchday: 1, date: '2025-07-26', time: '20:00', homeTeam: 'mignon', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 11 } },
+    { id: 'GD2', group: 'D', matchday: 1, date: '2025-07-26', time: '22:00', homeTeam: 'wato', awayTeam: 'mignon', status: 'completed', score: { home: 3, away: 1 } },
     { id: 'GD3', group: 'D', matchday: 1, date: '2025-07-26', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'ThDrksid', status: 'scheduled', score: { home: 1, away: 2 } },
     { id: 'GD4', group: 'D', matchday: 1, date: '2025-07-26', time: '22:00', homeTeam: 'ThDrksid', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 2, away: 1 } },
     { id: 'GD5', group: 'D', matchday: 1, date: '2025-07-26', time: '20:00', homeTeam: 'maria', awayTeam: 'mignon', status: 'scheduled', score: { home: 0, away: 3 } },
