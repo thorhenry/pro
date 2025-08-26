@@ -3000,7 +3000,7 @@ function generateHomePage() {
                                         <span style="color: white;">${getTeamName(fixture.homeTeam)}</span>
                                     </div>
                                     <div class="vs completed">
-                                        ${fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
+                                        ${fixture.status === 'completed' && fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
                                     </div>
                                     <div class="team">
                                         <span style="color: white;">${getTeamName(fixture.awayTeam)}</span>
@@ -3200,7 +3200,7 @@ function generateFixturesPage() {
                                         <span>${getTeamName(fixture.homeTeam)}</span>
                             </div>
                                     <div class="vs">
-                                        ${fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
+                                        ${fixture.status === 'completed' && fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
                                     </div>
                             <div class="team">
                                         <span>${getTeamName(fixture.awayTeam)}</span>
@@ -3230,7 +3230,7 @@ function generateFixturesPage() {
                                         <span>${getTeamName(fixture.homeTeam)}</span>
                                     </div>
                                     <div class="vs">
-                                        ${fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
+                                        ${fixture.status === 'completed' && fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
                                     </div>
                                     <div class="team">
                                         <span>${getTeamName(fixture.awayTeam)}</span>
@@ -3260,7 +3260,7 @@ function generateFixturesPage() {
                                         <span>${getTeamName(fixture.homeTeam)}</span>
                                     </div>
                                     <div class="vs">
-                                        ${fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
+                                        ${fixture.status === 'completed' && fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
                                     </div>
                                     <div class="team">
                                         <span>${getTeamName(fixture.awayTeam)}</span>
@@ -3290,7 +3290,7 @@ function generateFixturesPage() {
                                         <span>${getTeamName(fixture.homeTeam)}</span>
                                     </div>
                                     <div class="vs">
-                                        ${fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
+                                        ${fixture.status === 'completed' && fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
                                     </div>
                                     <div class="team">
                                         <span>${getTeamName(fixture.awayTeam)}</span>
