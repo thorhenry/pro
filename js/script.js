@@ -2628,23 +2628,6 @@ const leagueData = {
     }),
     groups: groupData,
     groupFixtures: groupFixtures,
-    fixtures: [
-        { id: 1, homeTeam: "Phenom", awayTeam: "Volts", date: "2024-02-15", time: "20:00", venue: "Phenom Arena", status: "Scheduled" },
-        { id: 2, homeTeam: "Kenno", awayTeam: "Mignon", date: "2024-02-16", time: "20:00", venue: "Kenno Ground", status: "Scheduled" },
-        { id: 3, homeTeam: "ghost", awayTeam: "Newton", date: "2024-02-17", time: "20:00", venue: "ghost Arena", status: "Scheduled" },
-        { id: 4, homeTeam: "Aka The Kraven", awayTeam: "ThDrksid", date: "2024-02-18", time: "20:00", venue: "Holy Stadium", status: "Scheduled" },
-        { id: 5, homeTeam: "Its_Lyta23", awayTeam: "Dav-Lil7", date: "2024-02-19", time: "20:00", venue: "Lyta Stadium", status: "Scheduled" },
-        { id: 6, homeTeam: "Emjay", awayTeam: "Ghazi", date: "2024-02-20", time: "20:00", venue: "Emjay Arena", status: "Scheduled" },
-        { id: 7, homeTeam: "Elton", awayTeam: "Dandizzo", date: "2024-02-21", time: "20:00", venue: "Elton Park", status: "Scheduled" },
-        { id: 8, homeTeam: "Offer Art", awayTeam: "ThorVisual", date: "2024-02-22", time: "20:00", venue: "Art Stadium", status: "Scheduled" },
-        { id: 9, homeTeam: "Dyno", awayTeam: "Yotah", date: "2024-02-23", time: "20:00", venue: "Dyno Stadium", status: "Scheduled" },
-        { id: 10, homeTeam: "Wato", awayTeam: "Tonny", date: "2024-02-24", time: "20:00", venue: "Wato Park", status: "Scheduled" },
-        { id: 11, homeTeam: "Volts", awayTeam: "Phenom", date: "2024-03-01", time: "20:00", venue: "Volts Stadium", status: "Scheduled" },
-        { id: 12, homeTeam: "Mignon", awayTeam: "Kenno", date: "2024-03-02", time: "20:00", venue: "Mignon Park", status: "Scheduled" },
-        { id: 13, homeTeam: "Newton", awayTeam: "ghost", date: "2024-03-03", time: "20:00", venue: "Newton Stadium", status: "Scheduled" },
-        { id: 14, homeTeam: "ThDrksid", awayTeam: "Aka The Kraven", date: "2024-03-04", time: "20:00", venue: "Dark Side Arena", status: "Scheduled" },
-        { id: 15, homeTeam: "Dav-Lil7", awayTeam: "Its_Lyta23", date: "2024-03-05", time: "20:00", venue: "Dav Stadium", status: "Scheduled" }
-    ],
     knockouts: {
         roundOf16: [
             // Tie 1
@@ -4191,33 +4174,7 @@ function getCurrentStreak(team) {
     return `${streak} ${lastResult}${streak > 1 ? 's' : ''}`;
 }
 
-function getHomeMatches(team) {
-    const homeFixtures = leagueData.fixtures.filter(f => f.homeTeam === team.name);
-    return homeFixtures.length;
-}
 
-function getHomeWins(team) {
-    const homeFixtures = leagueData.fixtures.filter(f => f.homeTeam === team.name && f.status === 'Completed');
-    return Math.floor(homeFixtures.length * 0.6); // 60% win rate for home games
-}
-
-function getHomeGoals(team) {
-    return Math.floor(team.goalsFor * 0.7); // 70% of goals scored at home
-}
-
-function getAwayMatches(team) {
-    const awayFixtures = leagueData.fixtures.filter(f => f.awayTeam === team.name);
-    return awayFixtures.length;
-}
-
-function getAwayWins(team) {
-    const awayFixtures = leagueData.fixtures.filter(f => f.awayTeam === team.name && f.status === 'Completed');
-    return Math.floor(awayFixtures.length * 0.4); // 40% win rate for away games
-}
-
-function getAwayGoals(team) {
-    return Math.floor(team.goalsFor * 0.3); // 30% of goals scored away
-}
 
 // Dynamic Team Statistics Functions
 function calculateTeamStats(teamId, fixtures) {
