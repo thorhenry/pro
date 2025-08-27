@@ -2631,57 +2631,57 @@ const leagueData = {
     knockouts: {
         roundOf16: [
             // Tie 1
-            { id: 'R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 3, away: 1 } },
-            { id: 'R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-09-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 2 }, penalties: { home: 4, away: 3 } },
+            { id: 'R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 3, away: 1 } },
+            { id: 'R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 2 }, penalties: { home: 4, away: 3 } },
             // Tie 2
-            { id: 'R16_2_1', round: 'Round of 16', tie: 2, leg: '1st', date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 0 } },
-            { id: 'R16_2_2', round: 'Round of 16', tie: 2, leg: '2nd', date: '2025-09-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 } },
+            { id: 'R16_2_1', round: 'Round of 16', tie: 2, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 0 } },
+            { id: 'R16_2_2', round: 'Round of 16', tie: 2, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 } },
             // Tie 3
-            { id: 'R16_3_1', round: 'Round of 16', tie: 3, leg: '1st', date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 4, away: 2 } },
-            { id: 'R16_3_2', round: 'Round of 16', tie: 3, leg: '2nd', date: '2025-09-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 0 } },
+            { id: 'R16_3_1', round: 'Round of 16', tie: 3, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 4, away: 2 } },
+            { id: 'R16_3_2', round: 'Round of 16', tie: 3, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 0 } },
             // Tie 4
-            { id: 'R16_4_1', round: 'Round of 16', tie: 4, leg: '1st', date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 } },
-            { id: 'R16_4_2', round: 'Round of 16', tie: 4, leg: '2nd', date: '2025-09-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 2 }, penalties: { home: 2, away: 4 } },
+            { id: 'R16_4_1', round: 'Round of 16', tie: 4, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 } },
+            { id: 'R16_4_2', round: 'Round of 16', tie: 4, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 2 }, penalties: { home: 2, away: 4 } },
             // Tie 5
-            { id: 'R16_5_1', round: 'Round of 16', tie: 5, leg: '1st', date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 1 } },
-            { id: 'R16_5_2', round: 'Round of 16', tie: 5, leg: '2nd', date: '2025-09-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 1 } },
+            { id: 'R16_5_1', round: 'Round of 16', tie: 5, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 1 } },
+            { id: 'R16_5_2', round: 'Round of 16', tie: 5, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 1 } },
             // Tie 6
-            { id: 'R16_6_1', round: 'Round of 16', tie: 6, leg: '1st', date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 3, away: 0 } },
-            { id: 'R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-09-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 2 } },
+            { id: 'R16_6_1', round: 'Round of 16', tie: 6, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 3, away: 0 } },
+            { id: 'R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 2 } },
             // Tie 7
-            { id: 'R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 2 } },
-            { id: 'R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-09-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 0 } },
+            { id: 'R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 2 } },
+            { id: 'R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 0 } },
             // Tie 8
-            { id: 'R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-09-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 5, away: 4 } }
+            { id: 'R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 5, away: 4 } }
         ],
         quarterFinals: [
             // Tie 1
-            { id: 'QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-10-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-10-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } },
+            { id: 'QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
+            { id: 'QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } },
             // Tie 2
-            { id: 'QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-10-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-10-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
+            { id: 'QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
+            { id: 'QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
             // Tie 3
-            { id: 'QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-10-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-10-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } },
+            { id: 'QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
+            { id: 'QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } },
             // Tie 4
-            { id: 'QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-10-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-10-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' }
+            { id: 'QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
+            { id: 'QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' }
         ],
         semiFinals: [
             // Tie 1
-            { id: 'SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-11-01', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-11-01', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } },
+            { id: 'SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-09-01', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
+            { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } },
             // Tie 2
-            { id: 'SF_2_1', round: 'Semi Finals', tie: 2, leg: '1st', date: '2025-11-01', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'SF_2_2', round: 'Semi Finals', tie: 2, leg: '2nd', date: '2025-11-01', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } }
+            { id: 'SF_2_1', round: 'Semi Finals', tie: 2, leg: '1st', date: '2025-09-01', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
+            { id: 'SF_2_2', round: 'Semi Finals', tie: 2, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } }
         ],
         thirdPlacePlayoff: [
-            { id: 'TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-11-02', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled',score: { home: 1, away: 1 }, penalties: { home: 0, away: 0 } }
+            { id: 'TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-09-02', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled',score: { home: 1, away: 1 }, penalties: { home: 0, away: 0 } }
         ],
         final: [
-            { id: 'FINAL_1', round: 'Final', matchNumber: 1, date: '2025-11-02', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 0, away: 0 } }
+            { id: 'FINAL_1', round: 'Final', matchNumber: 1, date: '2025-09-02', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 0, away: 0 } }
         ]
     }
 };
