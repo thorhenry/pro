@@ -2236,8 +2236,8 @@ const groupFixtures = [
     // Group A - Matchday 2 (August 27, 2025)
     { id: 'GA7', group: 'A', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'its_lyta23', status: 'scheduled', score: { home: 2, away: 2 } },
     { id: 'GA8', group: 'A', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'its_lyta23', awayTeam: 'dandizzo', status: 'scheduled', score: { home: 1, away: 1 } },
-    { id: 'GA9', group: 'A', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'volts', awayTeam: 'ghost', status: 'scheduled', score: { home: 4, away: 1 } },
-    { id: 'GA10', group: 'A', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'ghost', awayTeam: 'volts', status: 'scheduled', score: { home: 1, away: 2 } },
+    { id: 'GA9', group: 'A', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'volts', awayTeam: 'ghost', status: 'completed', score: { home: 2, away: 5 } },
+    { id: 'GA10', group: 'A', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'ghost', awayTeam: 'volts', status: 'completed', score: { home: 3, away: 3 } },
 
     // Group A - Matchday 3 (August 28, 2025)
     { id: 'GA11', group: 'A', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'volts', status: 'scheduled', score: { home: 1, away: 1 } },
