@@ -2326,8 +2326,8 @@ const groupFixtures = [
     { id: 'GD10', group: 'D', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'maria', awayTeam: 'ThDrksid', status: 'completed', score: { home: 1, away: 4 } },
 
     // Group D - Matchday 3 (August 28, 2025)
-    { id: 'GD11', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'mignon', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 1, away: 0 } },
-    { id: 'GD12', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'mignon', status: 'scheduled', score: { home: 2, away: 1 } },
+    { id: 'GD11', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'mignon', awayTeam: 'thorvisual', status: 'completed', score: { home: 1, away: 7 } },
+    { id: 'GD12', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'mignon', status: 'completed', score: { home: 1, away: 0 } },
     { id: 'GD13', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'wato', awayTeam: 'ThDrksid', status: 'scheduled', score: { home: 1, away: 2 } },
     { id: 'GD14', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'ThDrksid', awayTeam: 'wato', status: 'scheduled', score: { home: 3, away: 0 } },
 
