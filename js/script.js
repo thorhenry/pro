@@ -2264,14 +2264,14 @@ const groupFixtures = [
     // Group B - Matchday 2 (August 27, 2025)
     { id: 'GB7', group: 'B', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'elton', awayTeam: 'dyno', status: 'completed', score: { home: 1, away: 8 } },
     { id: 'GB8', group: 'B', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'dyno', awayTeam: 'elton', status: 'completed', score: { home: 4, away: 2 } },
-    { id: 'GB9', group: 'B', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'ghazi', awayTeam: 'tonny', status: 'scheduled', score: { home: 3, away: 1 } },
-    { id: 'GB10', group: 'B', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'tonny', awayTeam: 'ghazi', status: 'scheduled', score: { home: 0, away: 2 } },
+    { id: 'GB9', group: 'B', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'ghazi', awayTeam: 'tonny', status: 'completed', score: { home: 5, away: 1 } },
+    { id: 'GB10', group: 'B', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'tonny', awayTeam: 'ghazi', status: 'completed', score: { home: 0, away: 1 } },
 
     // Group B - Matchday 3 (August 28, 2025)
     { id: 'GB11', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'phenom', awayTeam: 'dyno', status: 'completed', score: { home: 1, away: 3 } },
     { id: 'GB12', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'dyno', awayTeam: 'phenom', status: 'completed', score: { home: 3, away: 2 } },
-    { id: 'GB13', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'elton', awayTeam: 'ghazi', status: 'scheduled', score: { home: 1, away: 2 } },
-    { id: 'GB14', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'ghazi', awayTeam: 'elton', status: 'scheduled', score: { home: 2, away: 1 } },
+    { id: 'GB13', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'elton', awayTeam: 'ghazi', status: 'completed', score: { home: 0, away: 8 } },
+    { id: 'GB14', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'ghazi', awayTeam: 'elton', status: 'completed', score: { home: 9, away: 1 } },
     { id: 'GB15', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'tonny', awayTeam: 'elton', status: 'scheduled', score: { home: 1, away: 0 } },
     { id: 'GB16', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'elton', awayTeam: 'tonny', status: 'scheduled', score: { home: 2, away: 1 } },
 
@@ -2298,8 +2298,8 @@ const groupFixtures = [
     { id: 'GC10', group: 'C', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'emjay', awayTeam: 'offer_art', status: 'completed', score: { home: 0, away: 1 } },
 
     // Group C - Matchday 3 (August 28, 2025)
-    { id: 'GC11', group: 'C', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'newton', awayTeam: 'kenno', status: 'scheduled', score: { home: 1, away: 1 } },
-    { id: 'GC12', group: 'C', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'kenno', awayTeam: 'newton', status: 'scheduled', score: { home: 2, away: 2 } },
+    { id: 'GC11', group: 'C', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'newton', awayTeam: 'kenno', status: 'completed', score: { home: 4, away: 6 } },
+    { id: 'GC12', group: 'C', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'kenno', awayTeam: 'newton', status: 'completed', score: { home: 8, away: 2 } },
     { id: 'GC13', group: 'C', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'yotah', awayTeam: 'offer_art', status: 'completed', score: { home: 1, away: 2 } },
     { id: 'GC14', group: 'C', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'offer_art', awayTeam: 'yotah', status: 'completed', score: { home: 2, away: 3 } },
     { id: 'GC15', group: 'C', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'emjay', awayTeam: 'kenno', status: 'completed', score: { home: 0, away: 3 } },
@@ -2328,8 +2328,8 @@ const groupFixtures = [
     // Group D - Matchday 3 (August 28, 2025)
     { id: 'GD11', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'mignon', awayTeam: 'thorvisual', status: 'completed', score: { home: 1, away: 7 } },
     { id: 'GD12', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'mignon', status: 'completed', score: { home: 1, away: 0 } },
-    { id: 'GD13', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'wato', awayTeam: 'ThDrksid', status: 'scheduled', score: { home: 1, away: 2 } },
-    { id: 'GD14', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'ThDrksid', awayTeam: 'wato', status: 'scheduled', score: { home: 3, away: 0 } },
+    { id: 'GD13', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'wato', awayTeam: 'ThDrksid', status: 'completed', score: { home: 3, away: 3 } },
+    { id: 'GD14', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'ThDrksid', awayTeam: 'wato', status: 'completed', score: { home: 6, away: 5 } },
 
     // Group D - Matchday 4 (August 29, 2025)
     { id: 'GD15', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'mignon', awayTeam: 'ThDrksid', status: 'scheduled', score: { home: 2, away: 1 } },
