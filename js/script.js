@@ -2308,8 +2308,8 @@ const groupFixtures = [
     // Group C - Matchday 4 (August 29, 2025)
     { id: 'GC17', group: 'C', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'newton', awayTeam: 'offer_art', status: 'scheduled', score: { home: 2, away: 1 } },
     { id: 'GC18', group: 'C', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'offer_art', awayTeam: 'newton', status: 'scheduled', score: { home: 1, away: 2 } },
-    { id: 'GC19', group: 'C', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'yotah', awayTeam: 'emjay', status: 'scheduled', score: { home: 1, away: 1 } },
-    { id: 'GC20', group: 'C', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'emjay', awayTeam: 'yotah', status: 'scheduled', score: { home: 2, away: 0 } },
+    { id: 'GC19', group: 'C', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'yotah', awayTeam: 'emjay', status: 'completed', score: { home: 1, away: 2 } },
+    { id: 'GC20', group: 'C', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'emjay', awayTeam: 'yotah', status: 'completed', score: { home: 1, away: 3 } },
 
     // Group D - Matchday 1 (August 26, 2025)
     { id: 'GD1', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'mignon', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 11 } },
