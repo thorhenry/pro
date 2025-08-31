@@ -2496,8 +2496,8 @@ const groupFixtures = [
     { id: 'GB12', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'dyno', awayTeam: 'phenom', status: 'completed', score: { home: 3, away: 2 } },
     { id: 'GB13', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'elton', awayTeam: 'ghazi', status: 'completed', score: { home: 0, away: 8 } },
     { id: 'GB14', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'ghazi', awayTeam: 'elton', status: 'completed', score: { home: 9, away: 1 } },
-    { id: 'GB15', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'tonny', awayTeam: 'elton', status: 'scheduled', score: { home: 1, away: 0 } },
-    { id: 'GB16', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'elton', awayTeam: 'tonny', status: 'scheduled', score: { home: 2, away: 1 } },
+    { id: 'GB15', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'tonny', awayTeam: 'elton', status: 'completed', score: { home: 0, away: 0 } },
+    { id: 'GB16', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'elton', awayTeam: 'tonny', status: 'completed', score: { home: 0, away: 0 } },
 
     // Group B - Matchday 4 (August 29, 2025)
     { id: 'GB17', group: 'B', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'phenom', awayTeam: 'ghazi', status: 'completed', score: { home: 0, away: 2 } },
@@ -2554,8 +2554,8 @@ const groupFixtures = [
     { id: 'GD14', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'wato', status: 'completed', score: { home: 6, away: 5 } },
 
     // Group D - Matchday 4 (August 29, 2025)
-    { id: 'GD15', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'mignon', awayTeam: 'thDrksid', status: 'scheduled', score: { home: 2, away: 1 } },
-    { id: 'GD16', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'mignon', status: 'scheduled', score: { home: 3, away: 0 } },
+    { id: 'GD15', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'mignon', awayTeam: 'thDrksid', status: 'completed', score: { home: 0, away: 0 } },
+    { id: 'GD16', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'mignon', status: 'completed', score: { home: 0, away: 0 } },
     { id: 'GD17', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'wato', awayTeam: 'maria', status: 'completed', score: { home: 1, away: 2 } },
     { id: 'GD18', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'maria', awayTeam: 'wato', status: 'completed', score: { home: 4, away: 4 } },
     { id: 'GD19', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'maria', status: 'completed', score: { home: 2, away: 3 } },
@@ -2853,8 +2853,8 @@ const leagueData = {
     knockouts: {
         roundOf16: [
             // Tie 1
-            { id: 'R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'TBD', status: 'scheduled', score: { home: 3, away: 1 } },
-            { id: 'R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'dav_lil7', status: 'scheduled', score: { home: 2, away: 2 } },
+            { id: 'R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'phenom', status: 'scheduled', score: { home: 3, away: 1 } },
+            { id: 'R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'phenom', awayTeam: 'dav_lil7', status: 'scheduled', score: { home: 2, away: 2 } },
             // Tie 2
             { id: 'R16_2_1', round: 'Round of 16', tie: 2, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'emjay', status: 'scheduled', score: { home: 2, away: 0 } },
             { id: 'R16_2_2', round: 'Round of 16', tie: 2, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'emjay', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 1, away: 1 } },
@@ -2874,8 +2874,8 @@ const leagueData = {
             { id: 'R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'yotah', status: 'scheduled', score: { home: 1, away: 2 } },
             { id: 'R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'yotah', awayTeam: 'thDrksid', status: 'scheduled', score: { home: 2, away: 0 } },
             // Tie 8
-            { id: 'R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'its_lyta23', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 5, away: 4 } }
+            { id: 'R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'tonny', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'tonny', awayTeam: 'its_lyta23', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 5, away: 4 } }
         ],
         quarterFinals: [
             // Tie 1
@@ -3123,11 +3123,26 @@ function generateHomePage() {
         .sort((a, b) => new Date(b.date) - new Date(a.date))
         .slice(0, 6);
     
-    // Get upcoming matches
-    const upcomingMatches = leagueData.groupFixtures
+    // Get upcoming matches from group stage
+    let upcomingMatches = leagueData.groupFixtures
         .filter(f => f.status === 'scheduled' || f.status === 'pending')
-        .sort((a, b) => new Date(a.date) - new Date(b.date))
-        .slice(0, 6);
+        .sort((a, b) => new Date(a.date) - new Date(b.date));
+    
+    // If not enough group matches, add knockout matches
+    if (upcomingMatches.length < 6) {
+        const knockoutMatches = [
+            ...leagueData.knockouts.roundOf16,
+            ...leagueData.knockouts.quarterFinals,
+            ...leagueData.knockouts.semiFinals,
+            ...leagueData.knockouts.final,
+            ...leagueData.knockouts.thirdPlacePlayoff
+        ].filter(match => match.status === 'scheduled' || match.status === 'pending')
+         .sort((a, b) => new Date(a.date) - new Date(b.date));
+        
+        upcomingMatches = [...upcomingMatches, ...knockoutMatches];
+    }
+    
+    upcomingMatches = upcomingMatches.slice(0, 6);
     
     // Get top teams from each group
     calculateGroupStandings();
@@ -3237,26 +3252,34 @@ function generateHomePage() {
                         <button class="view-all-btn" onclick="loadPage('fixtures')">View All</button>
                     </div>
                     <div class="fixtures-container">
-                        ${upcomingMatches.length > 0 ? upcomingMatches.map((fixture, index) => `
-                            <div class="fixture-card scheduled" onclick="loadDetailedFixturePage('${fixture.id}')" style="cursor: pointer;">
-                                <div class="fixture-teams">
-                                    <div class="team">
-                                        ${getTeamLogo(fixture.homeTeam, '40px', false)}
-                                        <span style="color: white;">${getTeamName(fixture.homeTeam)}</span>
+                        ${upcomingMatches.length > 0 ? upcomingMatches.map((fixture, index) => {
+                            // Determine if this is a knockout match
+                            const isKnockout = fixture.round && !fixture.group;
+                            const matchType = isKnockout ? fixture.round : `Group ${fixture.group}`;
+                            const matchId = fixture.id || `${fixture.round}_${fixture.tie || fixture.matchNumber}`;
+                            
+                            return `
+                                <div class="fixture-card scheduled" onclick="loadDetailedFixturePage('${matchId}')" style="cursor: pointer;">
+                                    <div class="fixture-teams">
+                                        <div class="team">
+                                            ${getTeamLogo(fixture.homeTeam, '40px', false)}
+                                            <span style="color: white;">${getTeamName(fixture.homeTeam)}</span>
+                                        </div>
+                                        <div class="vs scheduled">vs</div>
+                                        <div class="team">
+                                            <span style="color: white;">${getTeamName(fixture.awayTeam)}</span>
+                                            ${getTeamLogo(fixture.awayTeam, '40px', false)}
+                                        </div>
                                     </div>
-                                    <div class="vs scheduled">vs</div>
-                                    <div class="team">
-                                        <span style="color: white;">${getTeamName(fixture.awayTeam)}</span>
-                                        ${getTeamLogo(fixture.awayTeam, '40px', false)}
+                                    <div class="fixture-details">
+                                        <span><i class="fas fa-calendar"></i> ${fixture.date}</span>
+                                        <span><i class="fas fa-trophy"></i> ${matchType}</span>
+                                        ${isKnockout && fixture.leg ? `<span><i class="fas fa-exchange-alt"></i> ${fixture.leg} Leg</span>` : ''}
                                     </div>
                                 </div>
-                                <div class="fixture-details">
-                                    <span><i class="fas fa-calendar"></i> ${fixture.date}</span>
-                                    <span><i class="fas fa-trophy"></i> Group ${fixture.group}</span>
-                                </div>
-                            </div>
-                            ${index < upcomingMatches.length - 1 ? '<div class="match-divider"></div>' : ''}
-                        `).join('') : `
+                                ${index < upcomingMatches.length - 1 ? '<div class="match-divider"></div>' : ''}
+                            `;
+                        }).join('') : `
                             <div class="no-data-message">
                                 <i class="fas fa-info-circle"></i>
                                 <p>No upcoming matches scheduled</p>
