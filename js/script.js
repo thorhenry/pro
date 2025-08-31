@@ -2270,7 +2270,7 @@ const teamsData = {
         shortName: 'AFC',
         logo: 'AFC'
     },
-    'ThDrksid': {
+    'thDrksid': {
         name: 'ThDrksid',
         stadium: 'Dark Side Arena',
         manager: 'Dark Manager',
@@ -2442,7 +2442,7 @@ const groupData = {
         { id: 'mignon', name: 'Mignon', shortName: 'MIG' },
         { id: 'wato', name: 'Wato', shortName: 'WAT' },
         { id: 'thorvisual', name: 'ThorVisual', shortName: 'THO' },
-        { id: 'ThDrksid', name: 'ThDrksid', shortName: 'DARK' },
+        { id: 'thDrksid', name: 'ThDrksid', shortName: 'DARK' },
         { id: 'maria', name: 'Aka The Kraven', shortName: 'AFC' }
     ]
 };
@@ -2536,26 +2536,26 @@ const groupFixtures = [
     // Group D - Matchday 1 (August 26, 2025)
     { id: 'GD1', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'mignon', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 11 } },
     { id: 'GD2', group: 'D', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'wato', awayTeam: 'mignon', status: 'completed', score: { home: 3, away: 1 } },
-    { id: 'GD3', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'ThDrksid', status: 'completed', score: { home: 2, away: 5 } },
-    { id: 'GD4', group: 'D', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'ThDrksid', awayTeam: 'thorvisual', status: 'completed', score: { home: 4, away: 2 } },
+    { id: 'GD3', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'thDrksid', status: 'completed', score: { home: 2, away: 5 } },
+    { id: 'GD4', group: 'D', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'thorvisual', status: 'completed', score: { home: 4, away: 2 } },
     { id: 'GD5', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'maria', awayTeam: 'mignon', status: 'completed', score: { home: 0, away: 0 } },
     { id: 'GD6', group: 'D', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'mignon', awayTeam: 'maria', status: 'completed', score: { home: 0, away: 0 } },
 
     // Group D - Matchday 2 (August 27, 2025)
     { id: 'GD7', group: 'D', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'wato', awayTeam: 'thorvisual', status: 'completed', score: { home: 5, away: 3 } },
     { id: 'GD8', group: 'D', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 1 } },
-    { id: 'GD9', group: 'D', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'ThDrksid', awayTeam: 'maria', status: 'completed', score: { home: 2, away: 1 } },
-    { id: 'GD10', group: 'D', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'maria', awayTeam: 'ThDrksid', status: 'completed', score: { home: 1, away: 4 } },
+    { id: 'GD9', group: 'D', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'maria', status: 'completed', score: { home: 2, away: 1 } },
+    { id: 'GD10', group: 'D', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'maria', awayTeam: 'thDrksid', status: 'completed', score: { home: 1, away: 4 } },
 
     // Group D - Matchday 3 (August 28, 2025)
     { id: 'GD11', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'mignon', awayTeam: 'thorvisual', status: 'completed', score: { home: 1, away: 7 } },
     { id: 'GD12', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'mignon', status: 'completed', score: { home: 1, away: 0 } },
-    { id: 'GD13', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'wato', awayTeam: 'ThDrksid', status: 'completed', score: { home: 3, away: 3 } },
-    { id: 'GD14', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'ThDrksid', awayTeam: 'wato', status: 'completed', score: { home: 6, away: 5 } },
+    { id: 'GD13', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'wato', awayTeam: 'thDrksid', status: 'completed', score: { home: 3, away: 3 } },
+    { id: 'GD14', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'wato', status: 'completed', score: { home: 6, away: 5 } },
 
     // Group D - Matchday 4 (August 29, 2025)
-    { id: 'GD15', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'mignon', awayTeam: 'ThDrksid', status: 'scheduled', score: { home: 2, away: 1 } },
-    { id: 'GD16', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'ThDrksid', awayTeam: 'mignon', status: 'scheduled', score: { home: 3, away: 0 } },
+    { id: 'GD15', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'mignon', awayTeam: 'thDrksid', status: 'scheduled', score: { home: 2, away: 1 } },
+    { id: 'GD16', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'mignon', status: 'scheduled', score: { home: 3, away: 0 } },
     { id: 'GD17', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'wato', awayTeam: 'maria', status: 'completed', score: { home: 1, away: 2 } },
     { id: 'GD18', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'maria', awayTeam: 'wato', status: 'completed', score: { home: 4, away: 4 } },
     { id: 'GD19', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'maria', status: 'completed', score: { home: 2, away: 3 } },
@@ -2871,8 +2871,8 @@ const leagueData = {
             { id: 'R16_6_1', round: 'Round of 16', tie: 6, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'offer_art', awayTeam: 'wato', status: 'scheduled', score: { home: 3, away: 0 } },
             { id: 'R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'wato', awayTeam: 'offer_art', status: 'scheduled', score: { home: 1, away: 2 } },
             // Tie 7
-            { id: 'R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'Thdrksid', awayTeam: 'yotah', status: 'scheduled', score: { home: 1, away: 2 } },
-            { id: 'R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'yotah', awayTeam: 'Thdrksid', status: 'scheduled', score: { home: 2, away: 0 } },
+            { id: 'R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'yotah', status: 'scheduled', score: { home: 1, away: 2 } },
+            { id: 'R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'yotah', awayTeam: 'thDrksid', status: 'scheduled', score: { home: 2, away: 0 } },
             // Tie 8
             { id: 'R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 0 } },
             { id: 'R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'its_lyta23', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 5, away: 4 } }
