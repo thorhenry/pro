@@ -1659,6 +1659,183 @@ const styles = `
         border: 1px solid #dc3545;
     }
 
+    /* Knockout Tabs Styles */
+    .knockout-tabs {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 30px;
+        border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+        padding-bottom: 10px;
+    }
+
+    .tab-button {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px 8px 0 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .tab-button:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 215, 0, 0.5);
+    }
+
+    .tab-button.active {
+        background: rgba(255, 215, 0, 0.2);
+        border-color: #ffd700;
+        color: #ffd700;
+        font-weight: bold;
+    }
+
+    .tab-content {
+        display: none;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
+
+    /* Tournament Bracket Styles */
+    .tournament-bracket {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        overflow-x: auto;
+    }
+
+    .bracket-round {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 200px;
+    }
+
+    .round-label {
+        color: #ffd700;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .bracket-matches {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .bracket-match {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        min-height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .bracket-match.completed {
+        border-color: #28a745;
+        background: rgba(40, 167, 69, 0.1);
+    }
+
+    .bracket-match.scheduled {
+        border-color: #ffc107;
+        background: rgba(255, 193, 7, 0.1);
+    }
+
+    .bracket-team {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .bracket-team.winner {
+        background: rgba(255, 215, 0, 0.2);
+        border: 1px solid #ffd700;
+        font-weight: bold;
+    }
+
+    .bracket-team .team-name {
+        flex: 1;
+        color: white;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .bracket-team .score {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 2px 6px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 0.8rem;
+        min-width: 20px;
+        text-align: center;
+    }
+
+    .penalties-indicator {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: #ffd700;
+        color: #1e3c72;
+        padding: 2px 6px;
+        border-radius: 10px;
+        font-size: 0.7rem;
+        font-weight: bold;
+    }
+
+    .partial-result {
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 193, 7, 0.9);
+        color: #1e3c72;
+        padding: 2px 8px;
+        border-radius: 10px;
+        font-size: 0.6rem;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .leg-results {
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(40, 167, 69, 0.9);
+        color: white;
+        padding: 2px 8px;
+        border-radius: 10px;
+        font-size: 0.6rem;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
     /* Knockouts Styles */
     .knockout-container {
         display: flex;
@@ -1958,6 +2135,53 @@ const styles = `
             margin-left: 0;
             margin-right: 0;
             padding: 20px 0;
+        }
+
+        /* Mobile Tab Styles */
+        .knockout-tabs {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .tab-button {
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            border-radius: 8px;
+        }
+
+        /* Mobile Tournament Bracket Styles */
+        .tournament-bracket {
+            flex-direction: column;
+            gap: 15px;
+            padding: 15px;
+        }
+
+        .bracket-round {
+            min-width: auto;
+            width: 100%;
+        }
+
+        .bracket-matches {
+            gap: 10px;
+        }
+
+        .bracket-match {
+            min-height: 60px;
+            padding: 8px;
+        }
+
+        .bracket-team .team-name {
+            font-size: 0.8rem;
+        }
+
+        .bracket-team .score {
+            font-size: 0.7rem;
+            padding: 1px 4px;
+        }
+
+        .round-label {
+            font-size: 1rem;
+            margin-bottom: 15px;
         }
     }
 `;
@@ -2276,8 +2500,8 @@ const groupFixtures = [
     { id: 'GB16', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'elton', awayTeam: 'tonny', status: 'scheduled', score: { home: 2, away: 1 } },
 
     // Group B - Matchday 4 (August 29, 2025)
-    { id: 'GB17', group: 'B', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'phenom', awayTeam: 'ghazi', status: 'scheduled', score: { home: 3, away: 1 } },
-    { id: 'GB18', group: 'B', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'ghazi', awayTeam: 'phenom', status: 'scheduled', score: { home: 1, away: 2 } },
+    { id: 'GB17', group: 'B', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'phenom', awayTeam: 'ghazi', status: 'completed', score: { home: 0, away: 2 } },
+    { id: 'GB18', group: 'B', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'ghazi', awayTeam: 'phenom', status: 'completed', score: { home: 2, away: 2 } },
     { id: 'GB21', group: 'B', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'dyno', awayTeam: 'tonny', status: 'completed', score: { home: 4, away: 0 } },
     { id: 'GB22', group: 'B', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'tonny', awayTeam: 'dyno', status: 'completed', score: { home: 3, away: 8 } },
 
@@ -2630,7 +2854,7 @@ const leagueData = {
         roundOf16: [
             // Tie 1
             { id: 'R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'TBD', status: 'scheduled', score: { home: 3, away: 1 } },
-            { id: 'R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'dav_lil7', status: 'scheduled', score: { home: 2, away: 2 }, penalties: { home: 4, away: 3 } },
+            { id: 'R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'TBD', awayTeam: 'dav_lil7', status: 'scheduled', score: { home: 2, away: 2 } },
             // Tie 2
             { id: 'R16_2_1', round: 'Round of 16', tie: 2, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'emjay', status: 'scheduled', score: { home: 2, away: 0 } },
             { id: 'R16_2_2', round: 'Round of 16', tie: 2, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'emjay', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 1, away: 1 } },
@@ -2638,8 +2862,8 @@ const leagueData = {
             { id: 'R16_3_1', round: 'Round of 16', tie: 3, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'kenno', awayTeam: 'maria', status: 'scheduled', score: { home: 4, away: 2 } },
             { id: 'R16_3_2', round: 'Round of 16', tie: 3, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'maria', awayTeam: 'kenno', status: 'scheduled', score: { home: 1, away: 0 } },
             // Tie 4
-            { id: 'R16_4_1', round: 'Round of 16', tie: 4, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'ghost', status: 'scheduled', score: { home: 1, away: 1 } },
-            { id: 'R16_4_2', round: 'Round of 16', tie: 4, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'ghost', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 2 }, penalties: { home: 2, away: 4 } },
+            { id: 'R16_4_1', round: 'Round of 16', tie: 4, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'ghazi', awayTeam: 'ghost', status: 'scheduled', score: { home: 1, away: 1 } },
+            { id: 'R16_4_2', round: 'Round of 16', tie: 4, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'ghost', awayTeam: 'ghazi', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 2, away: 4 } },
             // Tie 5
             { id: 'R16_5_1', round: 'Round of 16', tie: 5, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'dyno', awayTeam: 'dandizzo', status: 'scheduled', score: { home: 2, away: 1 } },
             { id: 'R16_5_2', round: 'Round of 16', tie: 5, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'dandizzo', awayTeam: 'dyno', status: 'scheduled', score: { home: 0, away: 1 } },
@@ -2676,7 +2900,7 @@ const leagueData = {
             { id: 'SF_2_2', round: 'Semi Finals', tie: 2, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } }
         ],
         thirdPlacePlayoff: [
-            { id: 'TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-09-02', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled',score: { home: 1, away: 1 }, penalties: { home: 0, away: 0 } }
+            { id: 'TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-09-02', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled',score: { home: 1, away: 1 } }
         ],
         final: [
             { id: 'FINAL_1', round: 'Final', matchNumber: 1, date: '2025-09-02', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 0, away: 0 } }
@@ -3502,11 +3726,187 @@ function generateTablePage() {
     }
 }
 
+// Function to generate bracket matches for tournament view
+function generateBracketMatches(matches, expectedMatches) {
+    // Check if this is a single match (Final or TPP) or two-legged tie
+    const isSingleMatch = matches.length === expectedMatches;
+    
+    if (isSingleMatch) {
+        // Handle single matches (Final, TPP)
+        return matches.map(match => {
+            const winner = match.status === 'completed' && match.score ? 
+                (match.score.home > match.score.away ? match.homeTeam : 
+                 match.score.away > match.score.home ? match.awayTeam : 'TBD') : 'TBD';
+            
+            return `
+                <div class="bracket-match ${match.status}">
+                    <div class="bracket-team home ${match.status === 'completed' && winner === match.homeTeam ? 'winner' : ''}">
+                        ${getTeamLogo(match.homeTeam, '30px', false)}
+                        <span class="team-name">${match.homeTeam === 'TBD' ? 'TBD' : getTeamName(match.homeTeam)}</span>
+                        ${match.status === 'completed' && match.score ? `<span class="score">${match.score.home}</span>` : ''}
+                    </div>
+                    <div class="bracket-team away ${match.status === 'completed' && winner === match.awayTeam ? 'winner' : ''}">
+                        ${getTeamLogo(match.awayTeam, '30px', false)}
+                        <span class="team-name">${match.awayTeam === 'TBD' ? 'TBD' : getTeamName(match.awayTeam)}</span>
+                        ${match.status === 'completed' && match.score ? `<span class="score">${match.score.away}</span>` : ''}
+                    </div>
+                    ${match.status === 'completed' && match.penalties ? `<div class="penalties-indicator">(${match.penalties.home}-${match.penalties.away} pen)</div>` : ''}
+                </div>
+            `;
+        }).join('');
+    } else {
+        // Handle two-legged ties (Round of 16, Quarter Finals, Semi Finals)
+        const ties = groupMatchesByTie(matches);
+        
+        // Create array of expected matches
+        const bracketMatches = [];
+        for (let i = 0; i < expectedMatches; i++) {
+            const tie = ties[i] || { matches: [] };
+            const firstMatch = tie.matches[0] || { homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null };
+            const secondMatch = tie.matches[1] || { homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null };
+            
+            // Check if both legs are completed
+            const bothLegsCompleted = firstMatch.status === 'completed' && secondMatch.status === 'completed';
+            
+            // Determine winner based on aggregate score only if both legs are completed
+            let winner = 'TBD';
+            let aggregateScore = null;
+            let penalties = null;
+            
+            if (bothLegsCompleted && firstMatch.score && secondMatch.score) {
+                const homeAggregate = firstMatch.score.home + (secondMatch.score.away || 0);
+                const awayAggregate = firstMatch.score.away + (secondMatch.score.home || 0);
+                
+                aggregateScore = { home: homeAggregate, away: awayAggregate };
+                
+                if (homeAggregate > awayAggregate) {
+                    winner = firstMatch.homeTeam;
+                } else if (awayAggregate > homeAggregate) {
+                    winner = firstMatch.awayTeam;
+                } else {
+                    // Check penalties if scores are equal
+                    if (secondMatch.penalties) {
+                        penalties = secondMatch.penalties;
+                        winner = secondMatch.penalties.home > secondMatch.penalties.away ? firstMatch.homeTeam : firstMatch.awayTeam;
+                    } else {
+                        winner = 'TBD';
+                    }
+                }
+            }
+            
+            bracketMatches.push({
+                tie: i + 1,
+                homeTeam: firstMatch.homeTeam,
+                awayTeam: firstMatch.awayTeam,
+                winner: winner,
+                status: bothLegsCompleted ? 'completed' : 'scheduled',
+                aggregateScore: aggregateScore,
+                penalties: penalties,
+                firstLegScore: firstMatch.score,
+                secondLegScore: secondMatch.score
+            });
+                }
+        
+        return bracketMatches.map(match => `
+            <div class="bracket-match ${match.status}">
+                <div class="bracket-team home ${match.status === 'completed' && match.winner === match.homeTeam ? 'winner' : ''}">
+                    ${getTeamLogo(match.homeTeam, '30px', false)}
+                    <span class="team-name">${match.homeTeam === 'TBD' ? 'TBD' : getTeamName(match.homeTeam)}</span>
+                    ${match.status === 'completed' && match.aggregateScore ? `<span class="score">${match.aggregateScore.home}</span>` : ''}
+                </div>
+                <div class="bracket-team away ${match.status === 'completed' && match.winner === match.awayTeam ? 'winner' : ''}">
+                    ${getTeamLogo(match.awayTeam, '30px', false)}
+                    <span class="team-name">${match.awayTeam === 'TBD' ? 'TBD' : getTeamName(match.awayTeam)}</span>
+                    ${match.status === 'completed' && match.aggregateScore ? `<span class="score">${match.aggregateScore.away}</span>` : ''}
+                </div>
+                ${match.status === 'completed' && match.penalties ? `<div class="penalties-indicator">(${match.penalties.home}-${match.penalties.away} pen)</div>` : ''}
+                ${match.status === 'completed' && match.firstLegScore && match.secondLegScore ? `<div class="leg-results">H: ${match.firstLegScore.home}-${match.firstLegScore.away} | A: ${match.secondLegScore.home}-${match.secondLegScore.away}</div>` : ''}
+            </div>
+        `).join('');
+    }
+}
+
+// Function to switch between knockout tabs
+function switchKnockoutTab(tabName) {
+    // Hide all tab contents
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(content => content.classList.remove('active'));
+    
+    // Remove active class from all tab buttons
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(button => button.classList.remove('active'));
+    
+    // Show selected tab content
+    const selectedTab = document.getElementById(tabName + '-tab');
+    if (selectedTab) {
+        selectedTab.classList.add('active');
+    }
+    
+    // Add active class to clicked button
+    const clickedButton = event.target.closest('.tab-button');
+    if (clickedButton) {
+        clickedButton.classList.add('active');
+    }
+}
+
 function generateKnockoutsPage() {
     return `
         <div class="page-container">
             <h1 class="page-title">Knockout Stages</h1>
-            <div class="knockout-container">
+            
+            <!-- Tab Navigation -->
+            <div class="knockout-tabs">
+                <button class="tab-button active" onclick="switchKnockoutTab('bracket')">
+                    <i class="fas fa-sitemap"></i> Tournament Bracket
+                </button>
+                <button class="tab-button" onclick="switchKnockoutTab('details')">
+                    <i class="fas fa-list"></i> Match Details
+                </button>
+            </div>
+            
+            <!-- Bracket Tab Content -->
+            <div id="bracket-tab" class="tab-content active">
+                <div class="tournament-bracket">
+                    <div class="bracket-round round-of-16">
+                        <h3 class="round-label">Round of 16</h3>
+                        <div class="bracket-matches">
+                            ${generateBracketMatches(leagueData.knockouts.roundOf16, 8)}
+                        </div>
+                    </div>
+                    
+                    <div class="bracket-round quarter-finals">
+                        <h3 class="round-label">Quarter Finals</h3>
+                        <div class="bracket-matches">
+                            ${generateBracketMatches(leagueData.knockouts.quarterFinals, 4)}
+                        </div>
+                    </div>
+                    
+                    <div class="bracket-round semi-finals">
+                        <h3 class="round-label">Semi Finals</h3>
+                        <div class="bracket-matches">
+                            ${generateBracketMatches(leagueData.knockouts.semiFinals, 2)}
+                        </div>
+                    </div>
+                    
+                    <div class="bracket-round final">
+                        <h3 class="round-label">Final</h3>
+                        <div class="bracket-matches">
+                            ${generateBracketMatches(leagueData.knockouts.final, 1)}
+                        </div>
+                    </div>
+                    
+                    <div class="bracket-round third-place">
+                        <h3 class="round-label">3rd Place</h3>
+                        <div class="bracket-matches">
+                            ${generateBracketMatches(leagueData.knockouts.thirdPlacePlayoff, 1)}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Details Tab Content -->
+            <div id="details-tab" class="tab-content">
+                <div class="knockout-container">
                 <div class="round-card">
                     <h2 class="round-title">Round of 16</h2>
                     ${groupMatchesByTie(leagueData.knockouts.roundOf16).map(tie => `
