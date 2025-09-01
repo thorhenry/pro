@@ -3310,9 +3310,17 @@ function generateHomePage() {
     const completedGroupMatches = leagueData.groupFixtures.filter(f => f.status === 'completed').length;
     const upcomingGroupMatches = leagueData.groupFixtures.filter(f => f.status === 'scheduled').length;
     
-    // Get recent completed matches
-    const recentMatches = leagueData.groupFixtures
-        .filter(f => f.status === 'completed')
+    // Get recent completed matches (group stage + knockouts)
+    const allCompletedMatches = [
+        ...leagueData.groupFixtures.filter(f => f.status === 'completed'),
+        ...leagueData.knockouts.roundOf16.filter(m => m.status === 'completed'),
+        ...leagueData.knockouts.quarterFinals.filter(m => m.status === 'completed'),
+        ...leagueData.knockouts.semiFinals.filter(m => m.status === 'completed'),
+        ...leagueData.knockouts.final.filter(m => m.status === 'completed'),
+        ...leagueData.knockouts.thirdPlacePlayoff.filter(m => m.status === 'completed')
+    ];
+    
+    const recentMatches = allCompletedMatches
         .sort((a, b) => new Date(b.date) - new Date(a.date))
         .slice(0, 6);
     
@@ -3659,28 +3667,37 @@ function generateHomePage() {
                         <button class="view-all-btn" onclick="loadPage('fixtures')">View All</button>
                     </div>
                     <div class="fixtures-container">
-                        ${recentMatches.length > 0 ? recentMatches.map((fixture, index) => `
-                            <div class="fixture-card completed" onclick="loadDetailedFixturePage('${fixture.id}')" style="cursor: pointer;">
-                                <div class="fixture-teams">
-                                    <div class="team">
-                                        ${getTeamLogo(fixture.homeTeam, '40px', false)}
-                                        <span style="color: white;">${getTeamName(fixture.homeTeam)}</span>
+                        ${recentMatches.length > 0 ? recentMatches.map((fixture, index) => {
+                            // Determine if this is a knockout match
+                            const isKnockout = fixture.round && !fixture.group;
+                            const matchType = isKnockout ? fixture.round : `Group ${fixture.group}`;
+                            const matchId = fixture.id || `${fixture.round}_${fixture.tie || fixture.matchNumber}`;
+                            
+                            return `
+                                <div class="fixture-card completed" onclick="loadDetailedFixturePage('${matchId}')" style="cursor: pointer;">
+                                    <div class="fixture-teams">
+                                        <div class="team">
+                                            ${getTeamLogo(fixture.homeTeam, '40px', false)}
+                                            <span style="color: white;">${getTeamName(fixture.homeTeam)}</span>
+                                        </div>
+                                        <div class="vs completed">
+                                            ${fixture.status === 'completed' && fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
+                                        </div>
+                                        <div class="team">
+                                            <span style="color: white;">${getTeamName(fixture.awayTeam)}</span>
+                                            ${getTeamLogo(fixture.awayTeam, '40px', false)}
+                                        </div>
                                     </div>
-                                    <div class="vs completed">
-                                        ${fixture.status === 'completed' && fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
-                                    </div>
-                                    <div class="team">
-                                        <span style="color: white;">${getTeamName(fixture.awayTeam)}</span>
-                                        ${getTeamLogo(fixture.awayTeam, '40px', false)}
+                                    <div class="fixture-details">
+                                        <span><i class="fas fa-calendar"></i> ${fixture.date}</span>
+                                        <span><i class="fas fa-trophy"></i> ${matchType}</span>
+                                        ${isKnockout && fixture.leg ? `<span><i class="fas fa-exchange-alt"></i> ${fixture.leg} Leg</span>` : ''}
+                                        ${isKnockout && fixture.penalties ? `<span><i class="fas fa-crosshairs"></i> Penalties: ${fixture.penalties.home}-${fixture.penalties.away}</span>` : ''}
                                     </div>
                                 </div>
-                                <div class="fixture-details">
-                                    <span><i class="fas fa-calendar"></i> ${fixture.date}</span>
-                                    <span><i class="fas fa-trophy"></i> Group ${fixture.group}</span>
-                                </div>
-                            </div>
-                            ${index < recentMatches.length - 1 ? '<div class="match-divider"></div>' : ''}
-                        `).join('') : `
+                                ${index < recentMatches.length - 1 ? '<div class="match-divider"></div>' : ''}
+                            `;
+                        }).join('') : `
                             <div class="no-data-message">
                                 <i class="fas fa-info-circle"></i>
                                 <p>No recent matches to display</p>
