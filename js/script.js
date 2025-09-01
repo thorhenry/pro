@@ -3072,10 +3072,10 @@ const leagueData = {
             { id: 'R16_5_2', round: 'Round of 16', tie: 5, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'dandizzo', awayTeam: 'dyno', status: 'completed', score: { home: 1, away: 4 } },
             // Tie 6
             { id: 'R16_6_1', round: 'Round of 16', tie: 6, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'offer_art', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 4 } },
-            { id: 'R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'wato', awayTeam: 'offer_art', status: 'scheduled', score: { home: 1, away: 2 } },
+            { id: 'R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'wato', awayTeam: 'offer_art', status: 'completed', score: { home: 3, away: 1 } },
             // Tie 7
-            { id: 'R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'yotah', status: 'completed', score: { home: 11, away: 1 } },
-            { id: 'R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'yotah', awayTeam: 'thDrksid', status: 'scheduled', score: { home: 2, away: 0 } },
+            { id: 'R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'yotah', status: 'completed', score: { home: 8, away: 2 } },
+            { id: 'R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'yotah', awayTeam: 'thDrksid', status: 'completed', score: { home: 3, away: 1 } },
             // Tie 8
             { id: 'R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'tonny', status: 'scheduled', score: { home: 0, away: 0 } },
             { id: 'R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'tonny', awayTeam: 'its_lyta23', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 5, away: 4 } }
