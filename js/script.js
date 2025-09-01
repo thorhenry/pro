@@ -1,5 +1,16 @@
 // Embedded CSS Styles
 const styles = `
+    /* Font face declarations */
+    @font-face {
+        font-family: 'EFootballStencil';
+        src: url('fonts/efootball-stencil-regular.woff2') format('woff2'),
+             url('fonts/efootball-stencil-regular.woff') format('woff'),
+             url('fonts/efootball-stencil-regular.eot') format('embedded-opentype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    
     * {
         margin: 0;
         padding: 0;
@@ -37,9 +48,26 @@ const styles = `
     .nav-logo {
         display: flex;
         align-items: center;
-        color: #ffd700;
         font-size: 1.5rem;
         font-weight: bold;
+        font-family: 'EFootballStencil', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 1px;
+    }
+    
+    .nav-logo-text {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .nav-logo-pro {
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+    
+    .nav-logo-league {
+        color: #ffb600;
+        text-transform: uppercase;
     }
 
     .nav-logo i {
@@ -69,13 +97,13 @@ const styles = `
     }
 
     .nav-link:hover {
-        color: #ffd700;
-        background: rgba(255, 215, 0, 0.1);
+        color: #ffb600;
+        background: rgba(255, 182, 0, 0.1);
     }
 
     .nav-link.active {
-        color: #ffd700;
-        background: rgba(255, 215, 0, 0.2);
+        color: #ffb600;
+        background: rgba(255, 182, 0, 0.2);
     }
 
     .mobile-nav {
@@ -110,8 +138,8 @@ const styles = `
     }
 
     .mobile-nav-item.active {
-        color: #ffd700;
-        background: rgba(255, 215, 0, 0.1);
+        color: #ffb600;
+        background: rgba(255, 182, 0, 0.1);
     }
 
     .mobile-nav-item i {
@@ -211,12 +239,12 @@ const styles = `
 
     .search-result-item.team-result {
         padding: 20px;
-        border-left: 4px solid #ffd700;
+        border-left: 4px solid #ffb600;
     }
 
     .search-result-item.team-result:hover {
         background: rgba(255, 255, 255, 0.15);
-        border-left-color: #ffd700;
+        border-left-color: #ffb600;
     }
 
     .search-result-item.team-result::after {
@@ -224,7 +252,7 @@ const styles = `
         position: absolute;
         top: 10px;
         right: 15px;
-        background: #ffd700;
+        background: #ffb600;
         color: #1e3c72;
         padding: 4px 8px;
         border-radius: 12px;
@@ -401,10 +429,10 @@ const styles = `
     }
 
     .info-card h3 {
-        color: #ffd700;
+        color: #ffb600;
         font-size: 1.3rem;
         margin-bottom: 20px;
-        border-bottom: 2px solid #ffd700;
+        border-bottom: 2px solid #ffb600;
         padding-bottom: 10px;
     }
 
@@ -440,10 +468,10 @@ const styles = `
     }
 
     .fixtures-section h3, .knockouts-section h3, .form-section h3, .performance-section h3 {
-        color: #ffd700;
+        color: #ffb600;
         font-size: 1.3rem;
         margin-bottom: 20px;
-        border-bottom: 2px solid #ffd700;
+        border-bottom: 2px solid #ffb600;
         padding-bottom: 10px;
     }
 
@@ -495,7 +523,7 @@ const styles = `
         background: rgba(255, 255, 255, 0.1);
         padding: 15px;
         border-radius: 10px;
-        border-left: 4px solid #ffd700;
+        border-left: 4px solid #ffb600;
         backdrop-filter: blur(5px);
     }
 
@@ -523,12 +551,12 @@ const styles = `
         background: rgba(255, 255, 255, 0.1);
         border-radius: 10px;
         padding: 20px;
-        border-left: 4px solid #ffd700;
+        border-left: 4px solid #ffb600;
         backdrop-filter: blur(5px);
     }
 
     .performance-card h4 {
-        color: #ffd700;
+        color: #ffb600;
         font-size: 1.1rem;
         margin-bottom: 15px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -571,7 +599,7 @@ const styles = `
         background: rgba(255, 255, 255, 0.1);
         border-radius: 10px;
         padding: 15px;
-        border-left: 4px solid #ffd700;
+        border-left: 4px solid #ffb600;
         backdrop-filter: blur(5px);
     }
 
@@ -701,7 +729,7 @@ const styles = `
 
     .fixture-group {
         font-size: 0.9rem;
-        color: #ffd700;
+        color: #ffb600;
         margin-top: 5px;
         font-weight: bold;
     }
@@ -743,9 +771,10 @@ const styles = `
         font-size: 2.5rem;
         margin-bottom: 30px;
         text-align: center;
-        border-bottom: 3px solid #ffd700;
+        border-bottom: 3px solid #ffb600;
         padding-bottom: 15px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        font-family: 'EFootballStencil', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     /* Home Page Styles */
@@ -759,6 +788,7 @@ const styles = `
         color: #ffffff;
         margin-bottom: 20px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        font-family: 'EFootballStencil', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .hero-subtitle {
@@ -790,14 +820,14 @@ const styles = `
     }
 
     .hero-btn.primary {
-        background: #ffd700;
+        background: #ffb600;
         color: #1e3c72;
     }
 
     .hero-btn.primary:hover {
-        background: #ffed4e;
+        background: #ffc233;
         transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        box-shadow: 0 5px 15px rgba(255, 182, 0, 0.3);
     }
 
     .hero-btn.secondary {
@@ -896,7 +926,7 @@ const styles = `
     }
 
     .section-header h2 {
-        color: #ffd700;
+        color: #ffb600;
         font-size: 1.3rem;
         margin: 0;
         display: flex;
@@ -905,9 +935,9 @@ const styles = `
     }
 
     .view-all-btn {
-        background: rgba(255, 215, 0, 0.2);
-        color: #ffd700;
-        border: 1px solid rgba(255, 215, 0, 0.5);
+        background: rgba(255, 182, 0, 0.2);
+        color: #ffb600;
+        border: 1px solid rgba(255, 182, 0, 0.5);
         padding: 8px 16px;
         border-radius: 20px;
         font-size: 0.9rem;
@@ -916,7 +946,7 @@ const styles = `
     }
 
     .view-all-btn:hover {
-        background: rgba(255, 215, 0, 0.3);
+        background: rgba(255, 182, 0, 0.3);
         transform: translateY(-1px);
     }
 
@@ -929,7 +959,7 @@ const styles = `
         background: rgba(255, 255, 255, 0.05);
         border-radius: 10px;
         padding: 15px;
-        border-left: 4px solid #ffd700;
+        border-left: 4px solid #ffb600;
         transition: all 0.3s ease;
     }
 
@@ -952,12 +982,150 @@ const styles = `
     }
 
     .group-badge {
-        background: rgba(255, 215, 0, 0.2);
-        color: #ffd700;
+        background: rgba(255, 182, 0, 0.2);
+        color: #ffb600;
         padding: 3px 8px;
         border-radius: 10px;
         font-size: 0.8rem;
         font-weight: bold;
+    }
+    
+    /* Qualification Ticker Styles */
+    .qualification-ticker-section {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        overflow: hidden;
+    }
+    
+    .qualification-status {
+        background: rgba(40, 167, 69, 0.2);
+        color: #28a745;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        border: 1px solid rgba(40, 167, 69, 0.3);
+    }
+    
+    .ticker-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        margin-top: 25px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 15px 0;
+    }
+    
+    .ticker-track {
+        display: flex;
+        align-items: center;
+        animation: ticker-scroll 60s linear infinite;
+        width: max-content;
+        white-space: nowrap;
+    }
+    
+    @keyframes ticker-scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+    
+    .ticker-track:hover {
+        animation-play-state: paused;
+    }
+    
+    .group-separator {
+        color: #ffb600;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0 15px;
+    }
+    
+    .group-label {
+        color: #ffb600;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-right: 10px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    .team-qualifier {
+        color: white;
+        font-size: 0.95rem;
+        margin: 0 8px;
+        padding: 4px 8px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+    }
+    
+    .team-qualifier.winner {
+        background: rgba(255, 182, 0, 0.2);
+        border: 1px solid rgba(255, 182, 0, 0.4);
+    }
+    
+    .team-qualifier.runner-up {
+        background: rgba(192, 192, 192, 0.2);
+        border: 1px solid rgba(192, 192, 192, 0.4);
+    }
+    
+    .team-qualifier.third {
+        background: rgba(205, 127, 50, 0.2);
+        border: 1px solid rgba(205, 127, 50, 0.4);
+    }
+    
+    .team-qualifier.fourth {
+        background: rgba(128, 128, 128, 0.2);
+        border: 1px solid rgba(128, 128, 128, 0.4);
+    }
+    
+    .team-qualifier.fifth {
+        background: rgba(139, 69, 19, 0.2);
+        border: 1px solid rgba(139, 69, 19, 0.4);
+    }
+    
+    .team-qualifier.sixth {
+        background: rgba(105, 105, 105, 0.2);
+        border: 1px solid rgba(105, 105, 105, 0.4);
+    }
+    
+    .team-qualifier.eliminated {
+        background: rgba(220, 53, 69, 0.2);
+        border: 1px solid rgba(220, 53, 69, 0.4);
+    }
+    
+    .team-qualifier:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: scale(1.05);
+    }
+    
+    .position-badge {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+    
+    .eliminated-badge {
+        background: rgba(220, 53, 69, 0.8);
+        color: white;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.65rem;
+        font-weight: bold;
+        margin-left: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
 
     .leader-stats {
@@ -1006,7 +1174,7 @@ const styles = `
 
     .quick-nav-card i {
         font-size: 2rem;
-        color: #ffd700;
+        color: #ffb600;
         margin-bottom: 10px;
     }
 
@@ -1030,7 +1198,7 @@ const styles = `
 
     .no-data-message i {
         font-size: 2rem;
-        color: #ffd700;
+        color: #ffb600;
         margin-bottom: 10px;
         display: block;
     }
@@ -1042,7 +1210,7 @@ const styles = `
 
     .match-divider {
         height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+        background: linear-gradient(90deg, transparent, rgba(255, 182, 0, 0.3), transparent);
         margin: 15px 0;
         border-radius: 1px;
     }
@@ -1057,7 +1225,7 @@ const styles = `
         background: rgba(255, 255, 255, 0.05);
         border-radius: 8px;
         padding: 15px;
-        border-left: 3px solid #ffd700;
+        border-left: 3px solid #ffb600;
         color: white;
         position: relative;
         margin-bottom: 10px;
@@ -1199,7 +1367,7 @@ const styles = `
     }
 
     .sort-category h3 {
-        color: #ffd700;
+        color: #ffb600;
         font-size: 0.85rem;
         margin: 0;
         font-weight: 600;
@@ -1217,14 +1385,14 @@ const styles = `
     }
 
     .sort-dropdown:hover {
-        border-color: #ffd700;
+        border-color: #ffb600;
         background: rgba(0, 0, 0, 0.8);
     }
 
     .sort-dropdown:focus {
         outline: none;
-        border-color: #ffd700;
-        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        border-color: #ffb600;
+        box-shadow: 0 0 10px rgba(255, 182, 0, 0.3);
     }
 
     .sort-dropdown option {
@@ -1247,13 +1415,13 @@ const styles = `
 
     .no-matches-message i {
         font-size: 3rem;
-        color: #ffd700;
+        color: #ffb600;
         margin-bottom: 15px;
         display: block;
     }
 
     .no-matches-message h3 {
-        color: #ffd700;
+        color: #ffb600;
         font-size: 1.2rem;
         margin: 0 0 10px 0;
     }
@@ -1265,11 +1433,11 @@ const styles = `
     }
 
     .section-title {
-        color: #ffd700;
+        color: #ffb600;
         font-size: 1.5rem;
         margin: 30px 0 20px 0;
         padding-bottom: 10px;
-        border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+        border-bottom: 2px solid rgba(255, 182, 0, 0.3);
     }
 
     /* Responsive Design for Sorting Dropdowns */
@@ -1304,7 +1472,7 @@ const styles = `
     }
 
     .group-title {
-        color: #ffd700;
+        color: #ffb600;
         font-size: 1.8rem;
         margin-bottom: 20px;
         text-align: center;
@@ -1312,7 +1480,7 @@ const styles = `
     }
 
     .matchday-badge {
-        background: linear-gradient(135deg, #ffd700, #ffed4e);
+        background: linear-gradient(135deg, #ffb600, #ffc233);
         color: #1e3c72;
         padding: 5px 12px;
         border-radius: 20px;
@@ -1321,7 +1489,7 @@ const styles = `
         position: absolute;
         top: -10px;
         left: 20px;
-        box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+        box-shadow: 0 2px 8px rgba(255, 182, 0, 0.3);
     }
 
     .group-table-section {
@@ -1541,16 +1709,16 @@ const styles = `
 
     .club-info-item i {
         width: 16px;
-        color: #ffd700;
+        color: #ffb600;
     }
 
     .click-indicator {
-        background: rgba(255, 215, 0, 0.1);
+        background: rgba(255, 182, 0, 0.1);
         padding: 12px;
         text-align: center;
-        border-top: 1px solid rgba(255, 215, 0, 0.3);
+        border-top: 1px solid rgba(255, 182, 0, 0.3);
         font-size: 0.9rem;
-        color: #ffd700;
+        color: #ffb600;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1601,8 +1769,8 @@ const styles = `
     .match-leg {
         margin-top: 8px;
         padding: 6px 12px;
-        background: rgba(255, 215, 0, 0.2);
-        color: #ffd700;
+        background: rgba(255, 182, 0, 0.2);
+        color: #ffb600;
         border-radius: 15px;
         font-size: 0.9rem;
         font-weight: bold;
@@ -1611,12 +1779,12 @@ const styles = `
     .penalties-display {
         margin-top: 8px;
         padding: 6px 12px;
-        background: rgba(255, 215, 0, 0.3);
-        color: #ffd700;
+        background: rgba(255, 182, 0, 0.3);
+        color: #ffb600;
         border-radius: 15px;
         font-size: 0.9rem;
         font-weight: bold;
-        border: 1px solid #ffd700;
+        border: 1px solid #ffb600;
     }
 
     .value.positive {
@@ -1689,9 +1857,9 @@ const styles = `
     }
 
     .tab-button.active {
-        background: rgba(255, 215, 0, 0.2);
-        border-color: #ffd700;
-        color: #ffd700;
+        background: rgba(255, 182, 0, 0.2);
+        border-color: #ffb600;
+        color: #ffb600;
         font-weight: bold;
     }
 
@@ -1724,7 +1892,7 @@ const styles = `
     }
 
     .round-label {
-        color: #ffd700;
+        color: #ffb600;
         font-size: 1.1rem;
         font-weight: bold;
         margin-bottom: 20px;
@@ -1771,8 +1939,8 @@ const styles = `
     }
 
     .bracket-team.winner {
-        background: rgba(255, 215, 0, 0.2);
-        border: 1px solid #ffd700;
+        background: rgba(255, 182, 0, 0.2);
+        border: 1px solid #ffb600;
         font-weight: bold;
     }
 
@@ -1800,7 +1968,7 @@ const styles = `
         position: absolute;
         top: -5px;
         right: -5px;
-        background: #ffd700;
+        background: #ffb600;
         color: #1e3c72;
         padding: 2px 6px;
         border-radius: 10px;
@@ -1869,7 +2037,7 @@ const styles = `
         font-size: 1.5rem;
         margin-bottom: 20px;
         text-align: center;
-        border-bottom: 2px solid #ffd700;
+        border-bottom: 2px solid #ffb600;
         padding-bottom: 10px;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
@@ -1879,7 +2047,7 @@ const styles = `
         border-radius: 10px;
         padding: 5px;
         margin-bottom: 15px;
-        border-left: 4px solid #ffd700;
+        border-left: 4px solid #ffb600;
         color: white;
         position: relative;
         width: 100%;
@@ -1929,7 +2097,7 @@ const styles = `
 
     .penalties {
         font-size: 0.8rem;
-        color: #ffd700;
+        color: #ffb600;
         font-weight: bold;
         margin-top: 5px;
         text-align: center;
@@ -1968,6 +2136,7 @@ const styles = `
 
         .hero-title {
             font-size: 2rem;
+            font-family: 'EFootballStencil', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .hero-actions {
@@ -1983,6 +2152,7 @@ const styles = `
 
         .page-title {
             font-size: 2rem;
+            font-family: 'EFootballStencil', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .home-sections-grid {
@@ -2016,6 +2186,29 @@ const styles = `
         .stats-grid {
             grid-template-columns: 1fr;
             gap: 15px;
+        }
+        
+        .qualification-ticker-section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .ticker-track {
+            animation-duration: 40s;
+        }
+        
+        .ticker-container {
+            padding: 12px 0;
+        }
+        
+        .group-separator {
+            margin: 0 10px;
+        }
+        
+        .team-qualifier {
+            margin: 0 5px;
+            padding: 3px 6px;
+            font-size: 0.9rem;
         }
 
         .clubs-grid {
@@ -2879,31 +3072,31 @@ const leagueData = {
         ],
         quarterFinals: [
             // Tie 1
-            { id: 'QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } },
+            { id: 'QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 0 }, penalties: { home: 0, away: 3 } },
             // Tie 2
-            { id: 'QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
+            { id: 'QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 3 } },
+            { id: 'QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 3
-            { id: 'QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } },
+            { id: 'QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 0 } },
+            { id: 'QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 1 }, penalties: { home: 0, away: 0 } },
             // Tie 4
-            { id: 'QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' }
+            { id: 'QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 0 } },
+            { id: 'QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 0 } }
         ],
         semiFinals: [
             // Tie 1
-            { id: 'SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-09-01', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } },
+            { id: 'SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-09-01', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 0 }, penalties: { home: 1, away: 4 } },
             // Tie 2
-            { id: 'SF_2_1', round: 'Semi Finals', tie: 2, leg: '1st', date: '2025-09-01', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled' },
-            { id: 'SF_2_2', round: 'Semi Finals', tie: 2, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', penalties: { home: 0, away: 0 } }
+            { id: 'SF_2_1', round: 'Semi Finals', tie: 2, leg: '1st', date: '2025-09-01', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'SF_2_2', round: 'Semi Finals', tie: 2, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 0 }, penalties: { home: 3, away: 0 } }
         ],
         thirdPlacePlayoff: [
-            { id: 'TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-09-02', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled',score: { home: 1, away: 1 } }
+            { id: 'TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-09-02', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled',score: { home: 2, away: 1 } }
         ],
         final: [
-            { id: 'FINAL_1', round: 'Final', matchNumber: 1, date: '2025-09-02', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 0, away: 0 } }
+            { id: 'FINAL_1', round: 'Final', matchNumber: 1, date: '2025-09-02', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 3, away: 2 } }
         ]
     }
 };
@@ -3206,6 +3399,257 @@ function generateHomePage() {
                     <div class="stat-icon"><i class="fas fa-trophy"></i></div>
                 </div>
             </div>
+            
+            ${upcomingGroupMatches === 0 ? `
+            <!-- Dynamic Qualification Ticker -->
+            <div class="qualification-ticker-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-star"></i> ${leagueData.knockouts.quarterFinals.every(match => match.status === 'completed') ? 'Semi Finals Qualifiers' : leagueData.knockouts.roundOf16.every(match => match.status === 'completed') ? 'Quarter Finals Qualifiers' : 'Round of 16 Qualifiers'}</h2>
+                    <span class="qualification-status">${leagueData.knockouts.quarterFinals.every(match => match.status === 'completed') ? 'Quarter Finals Completed!' : leagueData.knockouts.roundOf16.every(match => match.status === 'completed') ? 'Round of 16 Completed!' : 'All Group Matches Completed!'}</span>
+                </div>
+                <div class="ticker-container">
+                    <div class="ticker-track">
+                        ${leagueData.knockouts.quarterFinals.every(match => match.status === 'completed') ? 
+                            // Semi Finals Qualifiers
+                            (() => {
+                                const semiFinalists = [];
+                                const eliminated = [];
+                                
+                                // Process Quarter Finals results to determine Semi Finalists
+                                const qfTies = groupMatchesByTie(leagueData.knockouts.quarterFinals);
+                                qfTies.forEach((tie, index) => {
+                                    if (tie.matches.every(match => match.status === 'completed')) {
+                                        const firstMatch = tie.matches[0];
+                                        const secondMatch = tie.matches[1];
+                                        
+                                        if (firstMatch.score && secondMatch.score) {
+                                            const homeAggregate = firstMatch.score.home + secondMatch.score.away;
+                                            const awayAggregate = firstMatch.score.away + secondMatch.score.home;
+                                            
+                                            if (homeAggregate > awayAggregate) {
+                                                semiFinalists.push(firstMatch.homeTeam);
+                                                eliminated.push(firstMatch.awayTeam);
+                                            } else if (awayAggregate > homeAggregate) {
+                                                semiFinalists.push(firstMatch.awayTeam);
+                                                eliminated.push(firstMatch.homeTeam);
+                                            } else if (secondMatch.penalties) {
+                                                // Penalty shootout winner
+                                                const winner = secondMatch.penalties.home > secondMatch.penalties.away ? firstMatch.homeTeam : firstMatch.awayTeam;
+                                                const loser = winner === firstMatch.homeTeam ? firstMatch.awayTeam : firstMatch.homeTeam;
+                                                semiFinalists.push(winner);
+                                                eliminated.push(loser);
+                                            }
+                                        }
+                                    }
+                                });
+                                
+                                return `
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">Semi Finalists:</span>
+                                    ${semiFinalists.map(team => `
+                                        <span class="team-qualifier winner">
+                                            ${getTeamName(team)} <span class="position-badge">QUALIFIED</span>
+                                        </span>
+                                    `).join('')}
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">Eliminated:</span>
+                                    ${eliminated.map(team => `
+                                        <span class="team-qualifier eliminated">
+                                            ${getTeamName(team)} <span class="eliminated-badge">ELIMINATED</span>
+                                        </span>
+                                    `).join('')}
+                                `;
+                            })() :
+                            leagueData.knockouts.roundOf16.every(match => match.status === 'completed') ? 
+                            // Quarter Finals Qualifiers
+                            (() => {
+                                const quarterFinalists = [];
+                                const eliminated = [];
+                                
+                                // Process Round of 16 results to determine Quarter Finalists
+                                const r16Ties = groupMatchesByTie(leagueData.knockouts.roundOf16);
+                                r16Ties.forEach((tie, index) => {
+                                    if (tie.matches.every(match => match.status === 'completed')) {
+                                        const firstMatch = tie.matches[0];
+                                        const secondMatch = tie.matches[1];
+                                        
+                                        if (firstMatch.score && secondMatch.score) {
+                                            const homeAggregate = firstMatch.score.home + secondMatch.score.away;
+                                            const awayAggregate = firstMatch.score.away + secondMatch.score.home;
+                                            
+                                            if (homeAggregate > awayAggregate) {
+                                                quarterFinalists.push(firstMatch.homeTeam);
+                                                eliminated.push(firstMatch.awayTeam);
+                                            } else if (awayAggregate > homeAggregate) {
+                                                quarterFinalists.push(firstMatch.awayTeam);
+                                                eliminated.push(firstMatch.homeTeam);
+                                            } else if (secondMatch.penalties) {
+                                                // Penalty shootout winner
+                                                const winner = secondMatch.penalties.home > secondMatch.penalties.away ? firstMatch.homeTeam : firstMatch.awayTeam;
+                                                const loser = winner === firstMatch.homeTeam ? firstMatch.awayTeam : firstMatch.homeTeam;
+                                                quarterFinalists.push(winner);
+                                                eliminated.push(loser);
+                                            }
+                                        }
+                                    }
+                                });
+                                
+                                return `
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">Quarter Finalists:</span>
+                                    ${quarterFinalists.map(team => `
+                                        <span class="team-qualifier winner">
+                                            ${getTeamName(team)} <span class="position-badge">QUALIFIED</span>
+                                        </span>
+                                    `).join('')}
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">Eliminated:</span>
+                                    ${eliminated.map(team => `
+                                        <span class="team-qualifier eliminated">
+                                            ${getTeamName(team)} <span class="eliminated-badge">ELIMINATED</span>
+                                        </span>
+                                    `).join('')}
+                                `;
+                            })() :
+                            // Round of 16 Qualifiers (original group display)
+                            Object.keys(leagueData.groups).map(groupKey => {
+                                const group = leagueData.groups[groupKey];
+                                const groupLetter = groupKey.replace('group', '').toUpperCase();
+                                const allTeams = group.slice(0, 6);
+                                
+                                return `
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">Group ${groupLetter}:</span>
+                                    ${allTeams.map((team, index) => `
+                                        <span class="team-qualifier ${index === 0 ? 'winner' : index === 1 ? 'runner-up' : index === 2 ? 'third' : index === 3 ? 'fourth' : index === 4 ? 'fifth' : 'sixth'}">
+                                            ${getTeamName(team.id)} <span class="position-badge">${index === 0 ? '1st' : index === 1 ? '2nd' : index === 2 ? '3rd' : index === 3 ? '4th' : index === 4 ? '5th' : '6th'}</span>
+                                            ${index >= 4 ? '<span class="eliminated-badge">ELIMINATED</span>' : ''}
+                                        </span>
+                                    `).join('')}
+                                `;
+                            }).join('')
+                        }
+                        <!-- Duplicate for seamless loop -->
+                        ${leagueData.knockouts.quarterFinals.every(match => match.status === 'completed') ? 
+                            // Semi Finals Qualifiers (duplicate)
+                            (() => {
+                                const semiFinalists = [];
+                                const eliminated = [];
+                                
+                                const qfTies = groupMatchesByTie(leagueData.knockouts.quarterFinals);
+                                qfTies.forEach((tie, index) => {
+                                    if (tie.matches.every(match => match.status === 'completed')) {
+                                        const firstMatch = tie.matches[0];
+                                        const secondMatch = tie.matches[1];
+                                        
+                                        if (firstMatch.score && secondMatch.score) {
+                                            const homeAggregate = firstMatch.score.home + secondMatch.score.away;
+                                            const awayAggregate = firstMatch.score.away + secondMatch.score.home;
+                                            
+                                            if (homeAggregate > awayAggregate) {
+                                                semiFinalists.push(firstMatch.homeTeam);
+                                                eliminated.push(firstMatch.awayTeam);
+                                            } else if (awayAggregate > homeAggregate) {
+                                                semiFinalists.push(firstMatch.awayTeam);
+                                                eliminated.push(firstMatch.homeTeam);
+                                            } else if (secondMatch.penalties) {
+                                                const winner = secondMatch.penalties.home > secondMatch.penalties.away ? firstMatch.homeTeam : firstMatch.awayTeam;
+                                                const loser = winner === firstMatch.homeTeam ? firstMatch.awayTeam : firstMatch.homeTeam;
+                                                semiFinalists.push(winner);
+                                                eliminated.push(loser);
+                                            }
+                                        }
+                                    }
+                                });
+                                
+                                return `
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">Semi Finalists:</span>
+                                    ${semiFinalists.map(team => `
+                                        <span class="team-qualifier winner">
+                                            ${getTeamName(team)} <span class="position-badge">QUALIFIED</span>
+                                        </span>
+                                    `).join('')}
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">Eliminated:</span>
+                                    ${eliminated.map(team => `
+                                        <span class="team-qualifier eliminated">
+                                            ${getTeamName(team)} <span class="eliminated-badge">ELIMINATED</span>
+                                        </span>
+                                    `).join('')}
+                                `;
+                            })() :
+                            leagueData.knockouts.roundOf16.every(match => match.status === 'completed') ? 
+                            // Quarter Finals Qualifiers (duplicate)
+                            (() => {
+                                const quarterFinalists = [];
+                                const eliminated = [];
+                                
+                                const r16Ties = groupMatchesByTie(leagueData.knockouts.roundOf16);
+                                r16Ties.forEach((tie, index) => {
+                                    if (tie.matches.every(match => match.status === 'completed')) {
+                                        const firstMatch = tie.matches[0];
+                                        const secondMatch = tie.matches[1];
+                                        
+                                        if (firstMatch.score && secondMatch.score) {
+                                            const homeAggregate = firstMatch.score.home + secondMatch.score.away;
+                                            const awayAggregate = firstMatch.score.away + secondMatch.score.home;
+                                            
+                                            if (homeAggregate > awayAggregate) {
+                                                quarterFinalists.push(firstMatch.homeTeam);
+                                                eliminated.push(firstMatch.awayTeam);
+                                            } else if (awayAggregate > homeAggregate) {
+                                                quarterFinalists.push(firstMatch.awayTeam);
+                                                eliminated.push(firstMatch.homeTeam);
+                                            } else if (secondMatch.penalties) {
+                                                const winner = secondMatch.penalties.home > secondMatch.penalties.away ? firstMatch.homeTeam : firstMatch.awayTeam;
+                                                const loser = winner === firstMatch.homeTeam ? firstMatch.awayTeam : firstMatch.homeTeam;
+                                                quarterFinalists.push(winner);
+                                                eliminated.push(loser);
+                                            }
+                                        }
+                                    }
+                                });
+                                
+                                return `
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">Quarter Finalists:</span>
+                                    ${quarterFinalists.map(team => `
+                                        <span class="team-qualifier winner">
+                                            ${getTeamName(team)} <span class="position-badge">QUALIFIED</span>
+                                        </span>
+                                    `).join('')}
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">Eliminated:</span>
+                                    ${eliminated.map(team => `
+                                        <span class="team-qualifier eliminated">
+                                            ${getTeamName(team)} <span class="eliminated-badge">ELIMINATED</span>
+                                        </span>
+                                    `).join('')}
+                                `;
+                            })() :
+                            // Round of 16 Qualifiers (duplicate)
+                            Object.keys(leagueData.groups).map(groupKey => {
+                                const group = leagueData.groups[groupKey];
+                                const groupLetter = groupKey.replace('group', '').toUpperCase();
+                                const allTeams = group.slice(0, 6);
+                                
+                                return `
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">Group ${groupLetter}:</span>
+                                    ${allTeams.map((team, index) => `
+                                        <span class="team-qualifier ${index === 0 ? 'winner' : index === 1 ? 'runner-up' : index === 2 ? 'third' : index === 3 ? 'fourth' : index === 4 ? 'fifth' : 'sixth'}">
+                                            ${getTeamName(team.id)} <span class="position-badge">${index === 0 ? '1st' : index === 1 ? '2nd' : index === 2 ? '3rd' : index === 3 ? '4th' : index === 4 ? '5th' : '6th'}</span>
+                                            ${index >= 4 ? '<span class="eliminated-badge">ELIMINATED</span>' : ''}
+                                        </span>
+                                    `).join('')}
+                                `;
+                            }).join('')
+                        }
+                    </div>
+                </div>
+            </div>
+            ` : ''}
 
             <div class="home-sections-grid">
                 <!-- Recent Results Section -->
@@ -4353,7 +4797,7 @@ function loadDetailedTeamPage(team) {
         <div class="page-container">
             <!-- Navigation Header -->
             <div class="page-navigation">
-                <div class="back-button" onclick="loadPage('clubs')" style="cursor: pointer; color: #ffd700; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
+                <div class="back-button" onclick="loadPage('clubs')" style="cursor: pointer; color: #ffb600; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
                     <i class="fas fa-arrow-left"></i>
                     Back to Clubs
                 </div>
@@ -4800,7 +5244,7 @@ function loadDetailedFixturePage(fixture) {
         <div class="page-container">
             <!-- Navigation Header -->
             <div class="page-navigation">
-                <div class="back-button" onclick="loadPage('fixtures')" style="cursor: pointer; color: #ffd700; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
+                <div class="back-button" onclick="loadPage('fixtures')" style="cursor: pointer; color: #ffb600; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
                     <i class="fas fa-arrow-left"></i>
                     Back to Fixtures
                 </div>
@@ -4954,10 +5398,10 @@ function loadDetailedKnockoutPage(match) {
         mainContent.innerHTML = `
             <div class="page-container">
                 <div class="page-navigation">
-                    <div class="back-button" onclick="loadPage('knockouts')" style="cursor: pointer; color: #ffd700; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
-                        <i class="fas fa-arrow-left"></i>
-                        Back to Knockouts
-                    </div>
+                                    <div class="back-button" onclick="loadPage('knockouts')" style="cursor: pointer; color: #ffb600; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Knockouts
+                </div>
                     <div class="page-title" style="color: #1e3c72; font-size: 1.5rem; font-weight: bold; margin: 10px 0;">
                         Knockout Match
                     </div>
@@ -4995,7 +5439,7 @@ function loadDetailedKnockoutPage(match) {
         <div class="page-container">
             <!-- Navigation Header -->
             <div class="page-navigation">
-                <div class="back-button" onclick="loadPage('knockouts')" style="cursor: pointer; color: #ffd700; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
+                <div class="back-button" onclick="loadPage('knockouts')" style="cursor: pointer; color: #ffb600; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
                     <i class="fas fa-arrow-left"></i>
                     Back to Knockouts
                 </div>
@@ -5062,7 +5506,7 @@ function loadDetailedKnockoutPage(match) {
                         ${match.status === 'completed' && match.penalties ? `
                         <div class="info-item">
                             <span class="label"><i class="fas fa-bullseye"></i> Penalties:</span>
-                            <span class="value" style="font-weight: bold; color: #ffd700;">${match.penalties.home} - ${match.penalties.away}</span>
+                            <span class="value" style="font-weight: bold; color: #ffb600;">${match.penalties.home} - ${match.penalties.away}</span>
                         </div>
                         ` : ''}
                         <div class="info-item">
