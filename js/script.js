@@ -3088,8 +3088,8 @@ const leagueData = {
             { id: 'QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'wato', awayTeam: 'dyno', status: 'scheduled', score: { home: 0, away: 3 } },
             { id: 'QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'dyno', awayTeam: 'wato', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 3
-            { id: 'QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'ghazi', awayTeam: 'kenno', status: 'scheduled', score: { home: 1, away: 0 } },
-            { id: 'QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 1 }, penalties: { home: 0, away: 0 } },
+            { id: 'QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'kenno', status: 'scheduled', score: { home: 1, away: 0 } },
+            { id: 'QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'kenno', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 1 }, penalties: { home: 0, away: 0 } },
             // Tie 4
             { id: 'QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 1, away: 0 } },
             { id: 'QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: { home: 2, away: 0 } }
