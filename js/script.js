@@ -1101,6 +1101,16 @@ const styles = `
         border: 1px solid rgba(220, 53, 69, 0.4);
     }
     
+    .team-qualifier.third {
+        background: rgba(255, 193, 7, 0.2);
+        border: 1px solid rgba(255, 193, 7, 0.4);
+    }
+    
+    .team-qualifier.fourth {
+        background: rgba(108, 117, 125, 0.2);
+        border: 1px solid rgba(108, 117, 125, 0.4);
+    }
+    
     .team-qualifier:hover {
         background: rgba(255, 255, 255, 0.15);
         transform: scale(1.05);
@@ -3412,12 +3422,136 @@ function generateHomePage() {
             <!-- Dynamic Qualification Ticker -->
             <div class="qualification-ticker-section">
                 <div class="section-header">
-                    <h2><i class="fas fa-star"></i> ${leagueData.knockouts.quarterFinals.every(match => match.status === 'completed') ? 'Semi Finals Qualifiers' : leagueData.knockouts.roundOf16.every(match => match.status === 'completed') ? 'Quarter Finals Qualifiers' : 'Round of 16 Qualifiers'}</h2>
-                    <span class="qualification-status">${leagueData.knockouts.quarterFinals.every(match => match.status === 'completed') ? 'Quarter Finals Completed!' : leagueData.knockouts.roundOf16.every(match => match.status === 'completed') ? 'Round of 16 Completed!' : 'All Group Matches Completed!'}</span>
+                    <h2><i class="fas fa-star"></i> ${leagueData.knockouts.final.every(match => match.status === 'completed') && leagueData.knockouts.thirdPlacePlayoff.every(match => match.status === 'completed') ? '🏆 Tournament Champions' : leagueData.knockouts.semiFinals.every(match => match.status === 'completed') ? 'Finals & Third Place Playoff' : leagueData.knockouts.quarterFinals.every(match => match.status === 'completed') ? 'Semi Finals Qualifiers' : leagueData.knockouts.roundOf16.every(match => match.status === 'completed') ? 'Quarter Finals Qualifiers' : 'Round of 16 Qualifiers'}</h2>
+                    <span class="qualification-status">${leagueData.knockouts.final.every(match => match.status === 'completed') && leagueData.knockouts.thirdPlacePlayoff.every(match => match.status === 'completed') ? 'Tournament Completed! 🎉' : leagueData.knockouts.semiFinals.every(match => match.status === 'completed') ? 'Semi Finals Completed!' : leagueData.knockouts.quarterFinals.every(match => match.status === 'completed') ? 'Quarter Finals Completed!' : leagueData.knockouts.roundOf16.every(match => match.status === 'completed') ? 'Round of 16 Completed!' : 'All Group Matches Completed!'}</span>
                 </div>
                 <div class="ticker-container">
                     <div class="ticker-track">
-                        ${leagueData.knockouts.quarterFinals.every(match => match.status === 'completed') ? 
+                        ${leagueData.knockouts.final.every(match => match.status === 'completed') && leagueData.knockouts.thirdPlacePlayoff.every(match => match.status === 'completed') ? 
+                            // Tournament Champions & Final Rankings
+                            (() => {
+                                const champions = [];
+                                const runnersUp = [];
+                                const thirdPlace = [];
+                                const fourthPlace = [];
+                                
+                                // Get Final results
+                                const finalMatch = leagueData.knockouts.final[0];
+                                if (finalMatch.status === 'completed' && finalMatch.score) {
+                                    if (finalMatch.score.home > finalMatch.score.away) {
+                                        champions.push(finalMatch.homeTeam);
+                                        runnersUp.push(finalMatch.awayTeam);
+                                    } else if (finalMatch.score.away > finalMatch.score.home) {
+                                        champions.push(finalMatch.awayTeam);
+                                        runnersUp.push(finalMatch.homeTeam);
+                                    } else if (finalMatch.penalties) {
+                                        const winner = finalMatch.penalties.home > finalMatch.penalties.away ? finalMatch.homeTeam : finalMatch.awayTeam;
+                                        const loser = winner === finalMatch.homeTeam ? finalMatch.awayTeam : finalMatch.homeTeam;
+                                        champions.push(winner);
+                                        runnersUp.push(loser);
+                                    }
+                                }
+                                
+                                // Get Third Place Playoff results
+                                const tppMatch = leagueData.knockouts.thirdPlacePlayoff[0];
+                                if (tppMatch.status === 'completed' && tppMatch.score) {
+                                    if (tppMatch.score.home > tppMatch.score.away) {
+                                        thirdPlace.push(tppMatch.homeTeam);
+                                        fourthPlace.push(tppMatch.awayTeam);
+                                    } else if (tppMatch.score.away > tppMatch.score.home) {
+                                        thirdPlace.push(tppMatch.awayTeam);
+                                        fourthPlace.push(tppMatch.homeTeam);
+                                    } else if (tppMatch.penalties) {
+                                        const winner = tppMatch.penalties.home > tppMatch.penalties.away ? tppMatch.homeTeam : tppMatch.awayTeam;
+                                        const loser = winner === tppMatch.homeTeam ? tppMatch.awayTeam : tppMatch.homeTeam;
+                                        thirdPlace.push(winner);
+                                        fourthPlace.push(loser);
+                                    }
+                                }
+                                
+                                return `
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">🥇 Champions:</span>
+                                    ${champions.map(team => `
+                                        <span class="team-qualifier winner">
+                                            ${getTeamName(team)} <span class="position-badge">1ST</span>
+                                        </span>
+                                    `).join('')}
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">🥈 Runners-Up:</span>
+                                    ${runnersUp.map(team => `
+                                        <span class="team-qualifier runner-up">
+                                            ${getTeamName(team)} <span class="position-badge">2ND</span>
+                                        </span>
+                                    `).join('')}
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">🥉 Third Place:</span>
+                                    ${thirdPlace.map(team => `
+                                        <span class="team-qualifier third">
+                                            ${getTeamName(team)} <span class="position-badge">3RD</span>
+                                        </span>
+                                    `).join('')}
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">4th Place:</span>
+                                    ${fourthPlace.map(team => `
+                                        <span class="team-qualifier fourth">
+                                            ${getTeamName(team)} <span class="position-badge">4TH</span>
+                                        </span>
+                                    `).join('')}
+                                `;
+                            })() :
+                            leagueData.knockouts.semiFinals.every(match => match.status === 'completed') ? 
+                            // Finals & Third Place Playoff
+                            (() => {
+                                const finalists = [];
+                                const thirdPlaceTeams = [];
+                                
+                                // Process Semi Finals results to determine Finalists and Third Place teams
+                                const sfTies = groupMatchesByTie(leagueData.knockouts.semiFinals);
+                                sfTies.forEach((tie, index) => {
+                                    if (tie.matches.every(match => match.status === 'completed')) {
+                                        const firstMatch = tie.matches[0];
+                                        const secondMatch = tie.matches[1];
+                                        
+                                        if (firstMatch.score && secondMatch.score) {
+                                            const homeAggregate = firstMatch.score.home + secondMatch.score.away;
+                                            const awayAggregate = firstMatch.score.away + secondMatch.score.home;
+                                            
+                                            if (homeAggregate > awayAggregate) {
+                                                finalists.push(firstMatch.homeTeam);
+                                                thirdPlaceTeams.push(firstMatch.awayTeam);
+                                            } else if (awayAggregate > homeAggregate) {
+                                                finalists.push(firstMatch.awayTeam);
+                                                thirdPlaceTeams.push(firstMatch.homeTeam);
+                                            } else if (secondMatch.penalties) {
+                                                // Penalty shootout winner
+                                                const winner = secondMatch.penalties.home > secondMatch.penalties.away ? firstMatch.homeTeam : firstMatch.awayTeam;
+                                                const loser = winner === firstMatch.homeTeam ? firstMatch.awayTeam : firstMatch.homeTeam;
+                                                finalists.push(winner);
+                                                thirdPlaceTeams.push(loser);
+                                            }
+                                        }
+                                    }
+                                });
+                                
+                                return `
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">Finalists:</span>
+                                    ${finalists.map(team => `
+                                        <span class="team-qualifier winner">
+                                            ${getTeamName(team)} <span class="position-badge">FINAL</span>
+                                        </span>
+                                    `).join('')}
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">Third Place Playoff:</span>
+                                    ${thirdPlaceTeams.map(team => `
+                                        <span class="team-qualifier runner-up">
+                                            ${getTeamName(team)} <span class="position-badge">3RD PLACE</span>
+                                        </span>
+                                    `).join('')}
+                                `;
+                            })() :
+                            leagueData.knockouts.quarterFinals.every(match => match.status === 'completed') ? 
                             // Semi Finals Qualifiers
                             (() => {
                                 const semiFinalists = [];
@@ -3538,7 +3672,56 @@ function generateHomePage() {
                             }).join('')
                         }
                         <!-- Duplicate for seamless loop -->
-                        ${leagueData.knockouts.quarterFinals.every(match => match.status === 'completed') ? 
+                        ${leagueData.knockouts.semiFinals.every(match => match.status === 'completed') ? 
+                            // Finals & Third Place Playoff (duplicate)
+                            (() => {
+                                const finalists = [];
+                                const thirdPlaceTeams = [];
+                                
+                                const sfTies = groupMatchesByTie(leagueData.knockouts.semiFinals);
+                                sfTies.forEach((tie, index) => {
+                                    if (tie.matches.every(match => match.status === 'completed')) {
+                                        const firstMatch = tie.matches[0];
+                                        const secondMatch = tie.matches[1];
+                                        
+                                        if (firstMatch.score && secondMatch.score) {
+                                            const homeAggregate = firstMatch.score.home + secondMatch.score.away;
+                                            const awayAggregate = firstMatch.score.away + secondMatch.score.home;
+                                            
+                                            if (homeAggregate > awayAggregate) {
+                                                finalists.push(firstMatch.homeTeam);
+                                                thirdPlaceTeams.push(firstMatch.awayTeam);
+                                            } else if (awayAggregate > homeAggregate) {
+                                                finalists.push(firstMatch.awayTeam);
+                                                thirdPlaceTeams.push(firstMatch.homeTeam);
+                                            } else if (secondMatch.penalties) {
+                                                const winner = secondMatch.penalties.home > secondMatch.penalties.away ? firstMatch.homeTeam : firstMatch.awayTeam;
+                                                const loser = winner === firstMatch.homeTeam ? firstMatch.awayTeam : firstMatch.homeTeam;
+                                                finalists.push(winner);
+                                                thirdPlaceTeams.push(loser);
+                                            }
+                                        }
+                                    }
+                                });
+                                
+                                return `
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">Finalists:</span>
+                                    ${finalists.map(team => `
+                                        <span class="team-qualifier winner">
+                                            ${getTeamName(team)} <span class="position-badge">FINAL</span>
+                                        </span>
+                                    `).join('')}
+                                    <span class="group-separator">•</span>
+                                    <span class="group-label">Third Place Playoff:</span>
+                                    ${thirdPlaceTeams.map(team => `
+                                        <span class="team-qualifier runner-up">
+                                            ${getTeamName(team)} <span class="position-badge">3RD PLACE</span>
+                                        </span>
+                                    `).join('')}
+                                `;
+                            })() :
+                            leagueData.knockouts.quarterFinals.every(match => match.status === 'completed') ? 
                             // Semi Finals Qualifiers (duplicate)
                             (() => {
                                 const semiFinalists = [];
