@@ -2274,6 +2274,23 @@ const styles = `
         margin-top: 5px;
         text-align: center;
     }
+    
+    /* Team Logo Type Styling */
+    .team-logo.owner-picture {
+        object-fit: cover;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .team-logo.club-badge {
+        object-fit: contain;
+        border: 2px solid rgba(255, 182, 0, 0.4);
+        background: rgba(255, 182, 0, 0.1);
+    }
+    
+    .team-logo.club-badge:hover {
+        border-color: #ffb600;
+        background: rgba(255, 182, 0, 0.2);
+    }
 
     /* Footer Styles */
     .footer {
@@ -2933,19 +2950,20 @@ function getTeamName(teamId) {
     return teamsData[teamId] ? teamsData[teamId].name : teamId;
 }
 
-// Helper function to generate team logo HTML (now uses owner pictures)
+// Helper function to generate team logo HTML (uses owner pictures with club logo fallback)
 function getTeamLogo(teamId, size = '40px', useCircle = true) {
     if (!teamId || teamId === 'TBD') {
         // Always use circular design for TBD and fallback logos
         return `<div class="team-logo" style="width: ${size}; height: ${size}; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.2); border-radius: 50%; font-weight: bold; color: #ffffff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);">${teamId === 'TBD' ? 'TBD' : 'N/A'}</div>`;
     }
     
-    const picturePath = `images/pics/${teamId}.jpeg`;
     const borderRadius = useCircle ? '50%' : '8px';
     const background = useCircle ? 'rgba(255, 255, 255, 0.1)' : 'transparent';
     
+    // Create a working fallback system with proper error handling
     return `<div style="position: relative; width: ${size}; height: ${size};">
-                <img src="${picturePath}" alt="${getTeamName(teamId)}" class="team-logo" style="width: ${size}; height: ${size}; object-fit: cover; border-radius: ${borderRadius}; background: ${background}; position: absolute; top: 0; left: 0; border: 2px solid rgba(255, 255, 255, 0.3);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <img src="images/pics/${teamId}.jpeg" alt="${getTeamName(teamId)}" class="team-logo owner-picture" style="width: ${size}; height: ${size}; object-fit: cover; border-radius: ${borderRadius}; background: ${background}; position: absolute; top: 0; left: 0; border: 2px solid rgba(255, 255, 255, 0.3);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <img src="images/club-logos/${teamId}.svg" alt="${getTeamName(teamId)}" class="team-logo club-badge" style="width: ${size}; height: ${size}; object-fit: contain; border-radius: ${borderRadius}; background: ${background}; position: absolute; top: 0; left: 0; border: 2px solid rgba(255, 182, 0, 0.4); display: none;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                 <div class="team-logo-fallback" style="width: ${size}; height: ${size}; display: none; align-items: center; justify-content: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: ${borderRadius}; font-weight: bold; color: #ffffff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; border: 2px solid rgba(255, 255, 255, 0.3); font-size: ${parseInt(size) * 0.4}px; letter-spacing: 1px;">${teamsData[teamId] ? teamsData[teamId].shortName : teamId.substring(0, 3).toUpperCase()}</div>
             </div>`;
 }
