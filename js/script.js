@@ -2956,7 +2956,7 @@ function findTeamGroup(teamId) {
         groupA: ['dav_lil7', 'dandizzo', 'its_lyta23', 'volts', 'ghost'],
         groupB: ['phenom', 'elton', 'dyno', 'ghazi', 'tonny'],
         groupC: ['newton', 'yotah', 'kenno', 'offer_art', 'emjay'],
-        groupD: ['mignon', 'wato', 'thorvisual', 'ThDrksid', 'maria']
+        groupD: ['mignon', 'wato', 'thorvisual', 'thDrksid', 'maria']
     };
     
     for (const [group, teams] of Object.entries(groupData)) {
