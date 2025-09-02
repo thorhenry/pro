@@ -3248,8 +3248,8 @@ const leagueData = {
             { id: 'QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'thDrksid', status: 'completed', score: { home: 0, away: 1 } },
             { id: 'QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'its_lyta23', status: 'completed', score: { home: 4, away: 2 }, },
             // Tie 2
-            { id: 'QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'wato', awayTeam: 'dyno', status: 'scheduled', score: { home: 0, away: 3 } },
-            { id: 'QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'dyno', awayTeam: 'wato', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'wato', awayTeam: 'dyno', status: 'completed', score: { home: 8, away: 3 } },
+            { id: 'QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'dyno', awayTeam: 'wato', status: 'completed', score: { home: 5, away: 2 } },
             // Tie 3
             { id: 'QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'ghost', awayTeam: 'kenno', status: 'scheduled', score: { home: 1, away: 0 } },
             { id: 'QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'kenno', awayTeam: 'ghost', status: 'scheduled', score: { home: 0, away: 1 }, penalties: { home: 0, away: 0 } },
@@ -3262,8 +3262,8 @@ const leagueData = {
             { id: 'SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-09-01', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 0 } },
             { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'TBD', awayTeam: 'dav_lil7', status: 'scheduled', score: { home: 0, away: 0 }, penalties: { home: 1, away: 4 } },
             // Tie 2
-            { id: 'SF_2_1', round: 'Semi Finals', tie: 2, leg: '1st', date: '2025-09-01', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'TBD', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'SF_2_2', round: 'Semi Finals', tie: 2, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'TBD', awayTeam: 'thDrksid', status: 'scheduled', score: { home: 0, away: 0 }, penalties: { home: 3, away: 0 } }
+            { id: 'SF_2_1', round: 'Semi Finals', tie: 2, leg: '1st', date: '2025-09-01', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'wato', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'SF_2_2', round: 'Semi Finals', tie: 2, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'wato', awayTeam: 'thDrksid', status: 'scheduled', score: { home: 0, away: 0 }, penalties: { home: 3, away: 0 } }
         ],
         thirdPlacePlayoff: [
             { id: 'TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-09-02', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled',score: { home: 2, away: 1 } }
