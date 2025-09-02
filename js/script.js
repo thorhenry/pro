@@ -5592,9 +5592,50 @@ function getMatchResult(fixture, teamId) {
 }
 
 function loadDetailedFixturePage(fixture) {
+    // Handle case where fixture is a string ID (from knockout matches)
+    let fixtureData = fixture;
+    if (typeof fixture === 'string') {
+        // Find the fixture in knockout data
+        const allKnockoutMatches = [
+            ...leagueData.knockouts.roundOf16,
+            ...leagueData.knockouts.quarterFinals,
+            ...leagueData.knockouts.semiFinals,
+            ...leagueData.knockouts.final,
+            ...leagueData.knockouts.thirdPlacePlayoff
+        ];
+        fixtureData = allKnockoutMatches.find(match => match.id === fixture);
+        
+        if (!fixtureData) {
+            // If not found in knockouts, try group fixtures
+            fixtureData = leagueData.groupFixtures.find(match => match.id === fixture);
+        }
+        
+        if (!fixtureData) {
+            console.error('Fixture not found:', fixture);
+            mainContent.innerHTML = `
+                <div class="page-container">
+                    <div class="page-navigation">
+                        <div class="back-button" onclick="loadPage('fixtures')" style="cursor: pointer; color: #ffb600; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Fixtures
+                        </div>
+                        <div class="page-title" style="color: #1e3c72; font-size: 1.5rem; font-weight: bold; margin: 10px 0;">
+                            Match Details
+                        </div>
+                    </div>
+                    <div style="text-align: center; color: white; padding: 50px;">
+                        <h2>Error Loading Match Details</h2>
+                        <p>Fixture not found.</p>
+                    </div>
+                </div>
+            `;
+            return;
+        }
+    }
+    
     // Get team data from teamsData using team IDs
-    const homeTeamData = teamsData[fixture.homeTeam];
-    const awayTeamData = teamsData[fixture.awayTeam];
+    const homeTeamData = teamsData[fixtureData.homeTeam];
+    const awayTeamData = teamsData[fixtureData.awayTeam];
     
     // Check if team data exists
     if (!homeTeamData || !awayTeamData) {
@@ -5607,7 +5648,7 @@ function loadDetailedFixturePage(fixture) {
                         Back to Fixtures
                     </div>
                     <div class="page-title" style="color: #1e3c72; font-size: 1.5rem; font-weight: bold; margin: 10px 0;">
-                        Match Details
+                        ${fixtureData.round ? fixtureData.round : 'Match Details'}
                     </div>
                 </div>
                 <div style="text-align: center; color: white; padding: 50px;">
@@ -5621,30 +5662,30 @@ function loadDetailedFixturePage(fixture) {
     
     // Get team statistics from group fixtures
     const homeTeamFixtures = leagueData.groupFixtures.filter(f => 
-        f.homeTeam === fixture.homeTeam || f.awayTeam === fixture.homeTeam
+        f.homeTeam === fixtureData.homeTeam || f.awayTeam === fixtureData.homeTeam
     );
     const awayTeamFixtures = leagueData.groupFixtures.filter(f => 
-        f.homeTeam === fixture.awayTeam || f.awayTeam === fixture.awayTeam
+        f.homeTeam === fixtureData.awayTeam || f.awayTeam === fixtureData.awayTeam
     );
     
-    const homeTeamStats = calculateTeamStats(fixture.homeTeam, homeTeamFixtures);
-    const awayTeamStats = calculateTeamStats(fixture.awayTeam, awayTeamFixtures);
+    const homeTeamStats = calculateTeamStats(fixtureData.homeTeam, homeTeamFixtures);
+    const awayTeamStats = calculateTeamStats(fixtureData.awayTeam, awayTeamFixtures);
     
     // Get team groups
-    const homeTeamGroup = findTeamGroup(fixture.homeTeam);
-    const awayTeamGroup = findTeamGroup(fixture.awayTeam);
+    const homeTeamGroup = findTeamGroup(fixtureData.homeTeam);
+    const awayTeamGroup = findTeamGroup(fixtureData.awayTeam);
     
     // Calculate match results for both teams
-    const homeTeamResult = getMatchResult(fixture, fixture.homeTeam);
-    const awayTeamResult = getMatchResult(fixture, fixture.awayTeam);
+    const homeTeamResult = getMatchResult(fixtureData, fixtureData.homeTeam);
+    const awayTeamResult = getMatchResult(fixtureData, fixtureData.awayTeam);
 
     const content = `
         <div class="page-container">
             <!-- Navigation Header -->
             <div class="page-navigation">
-                <div class="back-button" onclick="loadPage('fixtures')" style="cursor: pointer; color: #ffb600; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
+                <div class="back-button" onclick="loadPage('${fixtureData.round ? 'knockouts' : 'fixtures'}')" style="cursor: pointer; color: #ffb600; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
                     <i class="fas fa-arrow-left"></i>
-                    Back to Fixtures
+                    Back to ${fixtureData.round ? 'Knockouts' : 'Fixtures'}
                 </div>
                 <div class="page-title" style="color: #1e3c72; font-size: 1.5rem; font-weight: bold; margin: 10px 0;">
                     Match Details
@@ -5654,30 +5695,32 @@ function loadDetailedFixturePage(fixture) {
             <!-- Match Header Section -->
             <div class="detailed-header">
                 <div class="fixture-banner">
-                    <div class="fixture-teams-large">
-                        <div class="team-side">
-                            ${getTeamLogo(fixture.homeTeam, '80px')}
-                            <h2 class="team-name">${homeTeamData.name}</h2>
-                            <div class="team-group">${homeTeamGroup}</div>
-                            ${homeTeamResult ? `<div class="match-result ${homeTeamResult}">${homeTeamResult.toUpperCase()}</div>` : ''}
-                        </div>
-                        <div class="fixture-vs">
-                            <span class="vs-large ${fixture.status}">${fixture.status === 'completed' && fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}</span>
-                            ${fixture.group ? `<div class="fixture-group"><i class="fas fa-trophy"></i> Group ${fixture.group}</div>` : ''}
-                            ${fixture.matchday ? `<div class="fixture-matchday"><i class="fas fa-calendar-day"></i> Matchday ${fixture.matchday}</div>` : ''}
-                            <div class="fixture-date"><i class="fas fa-calendar"></i> ${fixture.date}</div>
-                            <div class="fixture-time"><i class="fas fa-clock"></i> ${fixture.time}</div>
-                            <div class="fixture-status status ${fixture.status}">
-                                <i class="fas fa-flag"></i> ${fixture.status}
+                                            <div class="fixture-teams-large">
+                            <div class="team-side">
+                                ${getTeamLogo(fixtureData.homeTeam, '80px')}
+                                <h2 class="team-name">${homeTeamData.name}</h2>
+                                <div class="team-group">${homeTeamGroup}</div>
+                                ${homeTeamResult ? `<div class="match-result ${homeTeamResult}">${homeTeamResult.toUpperCase()}</div>` : ''}
+                            </div>
+                            <div class="fixture-vs">
+                                <span class="vs-large ${fixtureData.status}">${fixtureData.status === 'completed' && fixtureData.score ? `${fixtureData.score.home} - ${fixtureData.score.away}` : 'vs'}</span>
+                                ${fixtureData.group ? `<div class="fixture-group"><i class="fas fa-trophy"></i> Group ${fixtureData.group}</div>` : ''}
+                                ${fixtureData.round ? `<div class="fixture-group"><i class="fas fa-trophy"></i> ${fixtureData.round}</div>` : ''}
+                                ${fixtureData.matchday ? `<div class="fixture-matchday"><i class="fas fa-calendar-day"></i> Matchday ${fixtureData.matchday}</div>` : ''}
+                                ${fixtureData.leg ? `<div class="fixture-matchday"><i class="fas fa-exchange-alt"></i> ${fixtureData.leg} Leg</div>` : ''}
+                                <div class="fixture-date"><i class="fas fa-calendar"></i> ${fixtureData.date}</div>
+                                <div class="fixture-time"><i class="fas fa-clock"></i> ${fixtureData.time}</div>
+                                <div class="fixture-status status ${fixtureData.status}">
+                                    <i class="fas fa-flag"></i> ${fixtureData.status}
+                                </div>
+                            </div>
+                            <div class="team-side">
+                                ${getTeamLogo(fixtureData.awayTeam, '80px')}
+                                <h2 class="team-name">${awayTeamData.name}</h2>
+                                <div class="team-group">${awayTeamGroup}</div>
+                                ${awayTeamResult ? `<div class="match-result ${awayTeamResult}">${awayTeamResult.toUpperCase()}</div>` : ''}
                             </div>
                         </div>
-                        <div class="team-side">
-                            ${getTeamLogo(fixture.awayTeam, '80px')}
-                            <h2 class="team-name">${awayTeamData.name}</h2>
-                            <div class="team-group">${awayTeamGroup}</div>
-                            ${awayTeamResult ? `<div class="match-result ${awayTeamResult}">${awayTeamResult.toUpperCase()}</div>` : ''}
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -5687,37 +5730,76 @@ function loadDetailedFixturePage(fixture) {
                     <!-- Match Information Card -->
                     <div class="info-card">
                         <h3><i class="fas fa-info-circle"></i> Match Information</h3>
-                        ${fixture.group ? `
+                        ${fixtureData.group ? `
                         <div class="info-item">
                             <span class="label"><i class="fas fa-trophy"></i> Group:</span>
-                            <span class="value">Group ${fixture.group}</span>
+                            <span class="value">Group ${fixtureData.group}</span>
                         </div>
                         ` : ''}
-                        ${fixture.matchday ? `
+                        ${fixtureData.round ? `
+                        <div class="info-item">
+                            <span class="label"><i class="fas fa-trophy"></i> Round:</span>
+                            <span class="value">${fixtureData.round}</span>
+                        </div>
+                        ` : ''}
+                        ${fixtureData.matchday ? `
                         <div class="info-item">
                             <span class="label"><i class="fas fa-calendar-day"></i> Matchday:</span>
-                            <span class="value">${fixture.matchday}</span>
+                            <span class="value">${fixtureData.matchday}</span>
+                        </div>
+                        ` : ''}
+                        ${fixtureData.leg ? `
+                        <div class="info-item">
+                            <span class="label"><i class="fas fa-exchange-alt"></i> Leg:</span>
+                            <span class="value">${fixtureData.leg} Leg</span>
                         </div>
                         ` : ''}
                         <div class="info-item">
                             <span class="label"><i class="fas fa-flag"></i> Status:</span>
-                            <span class="value status ${fixture.status.toLowerCase()}">${fixture.status}</span>
+                            <span class="value status ${fixtureData.status.toLowerCase()}">${fixtureData.status}</span>
                         </div>
                         <div class="info-item">
                             <span class="label"><i class="fas fa-calendar-alt"></i> Date:</span>
-                            <span class="value">${fixture.date}</span>
+                            <span class="value">${fixtureData.date}</span>
                         </div>
                         <div class="info-item">
                             <span class="label"><i class="fas fa-clock"></i> Time:</span>
-                            <span class="value">${fixture.time}</span>
+                            <span class="value">${fixtureData.time}</span>
                         </div>
-                        ${fixture.venue ? `
+                        ${fixtureData.venue ? `
                         <div class="info-item">
                             <span class="label"><i class="fas fa-map-marker-alt"></i> Venue:</span>
-                            <span class="value">${fixture.venue}</span>
+                            <span class="value">${fixtureData.venue}</span>
+                        </div>
+                        ` : ''}
+                        ${fixtureData.penalties ? `
+                        <div class="info-item">
+                            <span class="label"><i class="fas fa-crosshairs"></i> Penalties:</span>
+                            <span class="value">${fixtureData.penalties.home} - ${fixtureData.penalties.away}</span>
                         </div>
                         ` : ''}
                     </div>
+
+                    <!-- Match Score Card (for completed matches) -->
+                    ${fixtureData.status === 'completed' && fixtureData.score ? `
+                    <div class="info-card">
+                        <h3><i class="fas fa-futbol"></i> Match Result</h3>
+                        <div class="info-item">
+                            <span class="label"><i class="fas fa-home"></i> ${homeTeamData.name}:</span>
+                            <span class="value">${fixtureData.score.home}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label"><i class="fas fa-plane"></i> ${awayTeamData.name}:</span>
+                            <span class="value">${fixtureData.score.away}</span>
+                        </div>
+                        ${fixtureData.penalties ? `
+                        <div class="info-item">
+                            <span class="label"><i class="fas fa-crosshairs"></i> Penalties:</span>
+                            <span class="value" style="color: #ffb600; font-weight: bold;">${fixtureData.penalties.home} - ${fixtureData.penalties.away}</span>
+                        </div>
+                        ` : ''}
+                    </div>
+                    ` : ''}
 
                     <!-- Home Team Stats Card -->
                     <div class="info-card">
