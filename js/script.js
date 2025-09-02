@@ -1,5 +1,63 @@
 // Embedded CSS Styles
 const styles = `
+    /* Page Loader */
+    .page-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+    }
+    
+    .page-loader.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .loader-content {
+        text-align: center;
+        color: white;
+    }
+    
+    .loader-spinner {
+        width: 80px;
+        height: 80px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid #ffb600;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 20px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .loader-logo {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        z-index: 2;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    .loader-text {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    
     /* Font face declarations */
     @font-face {
         font-family: 'EFootballStencil';
@@ -3208,8 +3266,25 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
-    loadPage('home');
-    setupEventListeners();
+    // Show loader initially
+    const pageLoader = document.getElementById('pageLoader');
+    const mainContent = document.getElementById('mainContent');
+    
+    // Simulate a small delay to ensure smooth loading
+    setTimeout(() => {
+        // Load the home page
+        loadPage('home');
+        setupEventListeners();
+        
+        // Hide loader and show main content
+        pageLoader.classList.add('hidden');
+        mainContent.style.display = 'block';
+        
+        // Remove loader after transition
+        setTimeout(() => {
+            pageLoader.style.display = 'none';
+        }, 500);
+    }, 800);
 });
 
 function setupEventListeners() {
@@ -3290,6 +3365,11 @@ function loadPage(page) {
     currentPage = page;
     let content = '';
 
+    // Show quick loader for page transitions
+    const mainContent = document.getElementById('mainContent');
+    mainContent.style.opacity = '0.7';
+    mainContent.style.transition = 'opacity 0.2s ease';
+
     switch (page) {
         case 'home':
             content = generateHomePage();
@@ -3310,7 +3390,9 @@ function loadPage(page) {
             content = generateHomePage();
     }
 
+    // Update content and restore opacity
     mainContent.innerHTML = content;
+    mainContent.style.opacity = '1';
 }
 
 function generateHomePage() {
