@@ -347,7 +347,7 @@ const styles = `
     .team-logo-large {
         width: 120px;
         height: 120px;
-        background: rgba(255, 255, 255, 0.1);
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -356,7 +356,16 @@ const styles = `
         font-weight: bold;
         color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        object-fit: contain;
+        object-fit: cover;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+    
+    .team-logo-large:hover {
+        transform: scale(1.05);
+        border-color: #ffb600;
+        box-shadow: 0 6px 20px rgba(255, 182, 0, 0.5);
     }
 
     .team-info {
@@ -390,6 +399,8 @@ const styles = `
         height: 50px;
         font-size: 1.2rem;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        object-fit: cover;
     }
 
     /* Smaller team names and logos for team details page */
@@ -1597,7 +1608,16 @@ const styles = `
         font-weight: bold;
         color: #ffffff;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        object-fit: contain;
+        object-fit: cover;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    .team-logo:hover {
+        transform: scale(1.1);
+        border-color: #ffb600;
+        box-shadow: 0 4px 12px rgba(255, 182, 0, 0.4);
     }
 
     .vs {
@@ -2420,6 +2440,7 @@ const styles = `
             width: 35px;
             height: 35px;
             font-size: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .club-logo {
@@ -2912,20 +2933,20 @@ function getTeamName(teamId) {
     return teamsData[teamId] ? teamsData[teamId].name : teamId;
 }
 
-// Helper function to generate team logo HTML
+// Helper function to generate team logo HTML (now uses owner pictures)
 function getTeamLogo(teamId, size = '40px', useCircle = true) {
     if (!teamId || teamId === 'TBD') {
         // Always use circular design for TBD and fallback logos
         return `<div class="team-logo" style="width: ${size}; height: ${size}; display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.2); border-radius: 50%; font-weight: bold; color: #ffffff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);">${teamId === 'TBD' ? 'TBD' : 'N/A'}</div>`;
     }
     
-    const logoPath = `images/club-logos/${teamId}.svg`;
-    const borderRadius = useCircle ? '50%' : '0';
+    const picturePath = `images/pics/${teamId}.jpeg`;
+    const borderRadius = useCircle ? '50%' : '8px';
     const background = useCircle ? 'rgba(255, 255, 255, 0.1)' : 'transparent';
     
     return `<div style="position: relative; width: ${size}; height: ${size};">
-                <img src="${logoPath}" alt="${getTeamName(teamId)}" class="team-logo" style="width: ${size}; height: ${size}; object-fit: contain; border-radius: ${borderRadius}; background: ${background}; position: absolute; top: 0; left: 0;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                <div class="team-logo-fallback" style="width: ${size}; height: ${size}; display: none; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.2); border-radius: 50%; font-weight: bold; color: #ffffff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0;">${teamsData[teamId] ? teamsData[teamId].shortName : teamId.substring(0, 3)}</div>
+                <img src="${picturePath}" alt="${getTeamName(teamId)}" class="team-logo" style="width: ${size}; height: ${size}; object-fit: cover; border-radius: ${borderRadius}; background: ${background}; position: absolute; top: 0; left: 0; border: 2px solid rgba(255, 255, 255, 0.3);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="team-logo-fallback" style="width: ${size}; height: ${size}; display: none; align-items: center; justify-content: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: ${borderRadius}; font-weight: bold; color: #ffffff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; border: 2px solid rgba(255, 255, 255, 0.3); font-size: ${parseInt(size) * 0.4}px; letter-spacing: 1px;">${teamsData[teamId] ? teamsData[teamId].shortName : teamId.substring(0, 3).toUpperCase()}</div>
             </div>`;
 }
 
@@ -3233,8 +3254,8 @@ const leagueData = {
             { id: 'QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'ghost', awayTeam: 'kenno', status: 'scheduled', score: { home: 1, away: 0 } },
             { id: 'QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'kenno', awayTeam: 'ghost', status: 'scheduled', score: { home: 0, away: 1 }, penalties: { home: 0, away: 0 } },
             // Tie 4
-            { id: 'QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'dav_lil7', status: 'scheduled', score: { home: 1, away: 0 } },
-            { id: 'QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'dav_lil7', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 2, away: 0 } }
+            { id: 'QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'dav_lil7', status: 'completed', score: { home: 1, away: 2 } },
+            { id: 'QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'dav_lil7', awayTeam: 'thorvisual', status: 'completed', score: { home: 1, away: 1 } }
         ],
         semiFinals: [
             // Tie 1
