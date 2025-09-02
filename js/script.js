@@ -1895,6 +1895,90 @@ const styles = `
         border: 1px solid #dc3545;
     }
 
+    /* Tournament Bracket Visualization */
+    .brackets-visualization {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+    }
+    
+    .brackets-header {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    .brackets-header h2 {
+        color: #ffb600;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        font-family: 'EFootballStencil', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 1px;
+    }
+    
+    .brackets-header p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        margin: 0;
+    }
+    
+    .brackets-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .brackets-svg {
+        max-width: 100%;
+        height: auto;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+        transition: transform 0.3s ease;
+    }
+    
+    .brackets-svg:hover {
+        transform: scale(1.02);
+    }
+    
+    /* Responsive Design for Brackets */
+    @media (max-width: 768px) {
+        .brackets-visualization {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .brackets-header h2 {
+            font-size: 1.5rem;
+        }
+        
+        .brackets-header p {
+            font-size: 1rem;
+        }
+        
+        .brackets-container {
+            padding: 15px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .brackets-visualization {
+            padding: 15px;
+        }
+        
+        .brackets-header h2 {
+            font-size: 1.3rem;
+        }
+        
+        .brackets-container {
+            padding: 10px;
+        }
+    }
+    
     /* Knockout Tabs Styles */
     .knockout-tabs {
         display: flex;
@@ -4602,6 +4686,17 @@ function generateKnockoutsPage() {
     return `
         <div class="page-container">
             <h1 class="page-title">Knockout Stages</h1>
+            
+            <!-- Tournament Bracket Visualization -->
+            <div class="brackets-visualization">
+                <div class="brackets-header">
+                    <h2><i class="fas fa-sitemap"></i> Tournament Bracket</h2>
+                    <p>Visual representation of the knockout tournament structure</p>
+                </div>
+                <div class="brackets-container">
+                    <img src="images/brackets/brackets.svg" alt="Tournament Bracket" class="brackets-svg">
+                </div>
+            </div>
             
             <!-- Tab Navigation -->
             <div class="knockout-tabs">
