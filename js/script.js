@@ -3288,7 +3288,7 @@ const leagueData = {
             { id: 'TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-09-02', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'wato', status: 'scheduled',score: { home: 2, away: 1 } }
         ],
         final: [
-            { id: 'FINAL_1', round: 'Final', matchNumber: 1, date: '2025-09-02', time: '22:00', homeTeam: 'kenno', awayTeam: 'thDrksid', status: 'scheduled', score: { home: 1, away: 1 }, penalties: { home: 3, away: 2 } }
+            { id: 'FINAL_1', round: 'Final', matchNumber: 1, date: '2025-09-02', time: '22:00', homeTeam: 'kenno', awayTeam: 'thDrksid', status: 'completed', score: { home: 2, away: 1 } }
         ]
     }
 };
