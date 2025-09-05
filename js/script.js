@@ -7,7 +7,7 @@ const styles = `
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        background: linear-gradient(135deg, #1e0021 0%, #37003c 100%);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -29,7 +29,7 @@ const styles = `
         width: 80px;
         height: 80px;
         border: 4px solid rgba(255, 255, 255, 0.3);
-        border-top: 4px solid #ffb600;
+        border-top: 4px solid #e90052;
         border-radius: 50%;
         animation: spin 1s linear infinite;
         margin: 0 auto 20px;
@@ -77,7 +77,7 @@ const styles = `
 
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        background: linear-gradient(135deg, #1e0021 0%, #37003c 100%);
         color: #333;
         min-height: 100vh;
     }
@@ -124,7 +124,7 @@ const styles = `
     }
     
     .nav-logo-league {
-        color: #ffb600;
+        color: #e90052;
         text-transform: uppercase;
     }
 
@@ -155,13 +155,13 @@ const styles = `
     }
 
     .nav-link:hover {
-        color: #ffb600;
-        background: rgba(255, 182, 0, 0.1);
+        color: #e90052;
+        background: rgba(255, 93, 182, 0.3);
     }
 
     .nav-link.active {
-        color: #ffb600;
-        background: rgba(255, 182, 0, 0.2);
+        color: #e90052;
+        background: rgba(255, 93, 182, 0.3);
     }
 
     .mobile-nav {
@@ -196,7 +196,7 @@ const styles = `
     }
 
     .mobile-nav-item.active {
-        color: #ffb600;
+        color: #e90052;
         background: rgba(255, 182, 0, 0.1);
     }
 
@@ -238,7 +238,7 @@ const styles = `
     }
 
     #searchBtn {
-        background: #ffd700;
+        background: #00ff85;
         border: none;
         padding: 15px 20px;
         cursor: pointer;
@@ -246,7 +246,7 @@ const styles = `
     }
 
     #searchBtn:hover {
-        background: #ffed4e;
+        background:rgb(2, 185, 100);
     }
 
     .search-results {
@@ -283,7 +283,7 @@ const styles = `
         position: absolute;
         top: 8px;
         right: 15px;
-        background: #1e3c72;
+        background: #1e0021;
         color: white;
         padding: 3px 6px;
         border-radius: 10px;
@@ -297,12 +297,12 @@ const styles = `
 
     .search-result-item.team-result {
         padding: 20px;
-        border-left: 4px solid #ffb600;
+        border-left: 4px solid #e90052;
     }
 
     .search-result-item.team-result:hover {
         background: rgba(255, 255, 255, 0.15);
-        border-left-color: #ffb600;
+        border-left-color: #e90052;
     }
 
     .search-result-item.team-result::after {
@@ -310,8 +310,8 @@ const styles = `
         position: absolute;
         top: 10px;
         right: 15px;
-        background: #ffb600;
-        color: #1e3c72;
+        background: #e90052;
+        color: #1e0021;
         padding: 4px 8px;
         border-radius: 12px;
         font-size: 0.7rem;
@@ -330,9 +330,9 @@ const styles = `
     .detailed-header {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
-        padding: 40px 30px;
+        padding: 20px 30px;
         border-radius: 15px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         text-align: center;
     }
 
@@ -364,8 +364,8 @@ const styles = `
     
     .team-logo-large:hover {
         transform: scale(1.05);
-        border-color: #ffb600;
-        box-shadow: 0 6px 20px rgba(255, 182, 0, 0.5);
+        border-color: #e90052;
+        box-shadow: 0 6px 20px rgba(255, 0, 157, 0.5);
     }
 
     .team-info {
@@ -381,13 +381,13 @@ const styles = `
     /* Smaller team names for fixture details */
     .fixture-teams-large .team-name,
     .knockout-teams-large .team-name {
-        font-size: 0.9rem;
-        margin-bottom: 3px;
+        font-size: 0.8rem;
+        margin-bottom: 2px;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 150px;
+        max-width: 100px;
         text-align: center;
         font-weight: 500;
     }
@@ -395,9 +395,9 @@ const styles = `
     /* Smaller team logos for fixture details */
     .fixture-teams-large .team-logo-large,
     .knockout-teams-large .team-logo-large {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         border: 2px solid rgba(255, 255, 255, 0.3);
         object-fit: cover;
@@ -498,10 +498,10 @@ const styles = `
     }
 
     .info-card h3 {
-        color: #ffb600;
+        color: #e90052;
         font-size: 1.3rem;
         margin-bottom: 20px;
-        border-bottom: 2px solid #ffb600;
+        border-bottom: 2px solid #e90052;
         padding-bottom: 10px;
     }
 
@@ -537,10 +537,10 @@ const styles = `
     }
 
     .fixtures-section h3, .knockouts-section h3, .form-section h3, .performance-section h3 {
-        color: #ffb600;
+        color: #e90052;
         font-size: 1.3rem;
         margin-bottom: 20px;
-        border-bottom: 2px solid #ffb600;
+        border-bottom: 2px solid #e90052;
         padding-bottom: 10px;
     }
 
@@ -592,7 +592,7 @@ const styles = `
         background: rgba(255, 255, 255, 0.1);
         padding: 15px;
         border-radius: 10px;
-        border-left: 4px solid #ffb600;
+        border-left: 4px solid #e90052;
         backdrop-filter: blur(5px);
     }
 
@@ -620,12 +620,12 @@ const styles = `
         background: rgba(255, 255, 255, 0.1);
         border-radius: 10px;
         padding: 20px;
-        border-left: 4px solid #ffb600;
+        border-left: 4px solid #e90052;
         backdrop-filter: blur(5px);
     }
 
     .performance-card h4 {
-        color: #ffb600;
+        color: #e90052;
         font-size: 1.1rem;
         margin-bottom: 15px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -668,7 +668,7 @@ const styles = `
         background: rgba(255, 255, 255, 0.1);
         border-radius: 10px;
         padding: 15px;
-        border-left: 4px solid #ffb600;
+        border-left: 4px solid #e90052;
         backdrop-filter: blur(5px);
     }
 
@@ -681,7 +681,7 @@ const styles = `
     }
 
     .team-highlight {
-        color: #1e3c72;
+        color: #1e0021;
         font-weight: bold;
     }
 
@@ -692,6 +692,9 @@ const styles = `
         font-size: 0.9rem;
         flex-wrap: wrap;
         gap: 10px;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     @media (max-width: 768px) {
@@ -732,42 +735,45 @@ const styles = `
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 30px;
-        margin-top: 20px;
-        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 10px;
+        flex-wrap: nowrap;
     }
 
     @media (max-width: 768px) {
         .fixture-teams-large, .knockout-teams-large {
-            flex-direction: column;
-            gap: 20px;
+            flex-direction: row;
+            gap: 15px;
+            flex-wrap: nowrap;
         }
         
         .team-side {
             text-align: center;
+            flex: 1;
         }
         
         .fixture-vs, .knockout-vs {
-            order: -1;
-            margin-bottom: 10px;
+            order: 0;
+            margin: 0;
+            flex: 0 0 auto;
         }
 
         .fixture-teams-large .team-name,
         .knockout-teams-large .team-name {
-            font-size: 0.8rem;
-            max-width: 120px;
+            font-size: 0.7rem;
+            max-width: 80px;
         }
 
         .fixture-teams-large .team-logo-large,
         .knockout-teams-large .team-logo-large {
-            width: 40px;
-            height: 40px;
-            font-size: 1rem;
+            width: 30px;
+            height: 30px;
+            font-size: 0.8rem;
         }
 
         .match-result {
-            font-size: 0.7rem;
-            padding: 3px 8px;
+            font-size: 0.6rem;
+            padding: 2px 6px;
         }
     }
 
@@ -775,7 +781,9 @@ const styles = `
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        gap: 8px;
+        flex: 1;
+        min-width: 0;
     }
 
     .fixture-vs, .knockout-vs {
@@ -798,7 +806,7 @@ const styles = `
 
     .fixture-group {
         font-size: 0.9rem;
-        color: #ffb600;
+        color: #e90052;
         margin-top: 5px;
         font-weight: bold;
     }
@@ -840,7 +848,7 @@ const styles = `
         font-size: 2.5rem;
         margin-bottom: 30px;
         text-align: center;
-        border-bottom: 3px solid #ffb600;
+        border-bottom: 3px solid #e90052;
         padding-bottom: 15px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         font-family: 'EFootballStencil', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -850,21 +858,31 @@ const styles = `
     .hero-section {
         text-align: center;
         margin-bottom: 40px;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/football-stadium.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 80px 20px;
+        margin: 0 -20px 40px -20px;
+        width: calc(100% + 40px);
     }
 
     .hero-title {
         font-size: 3rem;
         color: #ffffff;
         margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
         font-family: 'EFootballStencil', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
     }
 
     .hero-subtitle {
         font-size: 1.2rem;
         color: #ffffff;
         margin-bottom: 30px;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        font-weight: 500;
+        opacity: 0.95;
     }
 
     .hero-actions {
@@ -873,6 +891,343 @@ const styles = `
         justify-content: center;
         flex-wrap: wrap;
         margin-top: 30px;
+    }
+
+    /* Sponsors Section */
+    .sponsors-section {
+        background: linear-gradient(135deg, #1e0021 0%, #37003c 100%);
+        padding: 40px 20px;
+        margin: 60px -20px 0 -20px;
+        width: calc(100% + 40px);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .sponsors-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .sponsors-title {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+
+    .sponsors-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        flex-wrap: wrap;
+    }
+
+    .sponsor-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.6;
+        transition: all 0.3s ease;
+        filter: grayscale(100%) brightness(0.8);
+    }
+
+    .sponsor-item:hover {
+        opacity: 1;
+        filter: grayscale(0%) brightness(1);
+        transform: scale(1.05);
+    }
+
+    /* Keep LinkMedia in original colors */
+    .sponsor-item:first-child {
+        filter: none;
+        opacity: 0.8;
+    }
+
+    .sponsor-item:first-child:hover {
+        filter: none;
+        opacity: 1;
+    }
+
+    /* Apply silver/white colors to YTY and ThorVisual */
+    .sponsor-item:nth-child(2) .sponsor-logo,
+    .sponsor-item:nth-child(3) .sponsor-logo {
+        filter: brightness(0) saturate(100%) invert(100%) brightness(0.9) contrast(1.1);
+    }
+
+    .sponsor-item:nth-child(2):hover .sponsor-logo,
+    .sponsor-item:nth-child(3):hover .sponsor-logo {
+        filter: brightness(0) saturate(100%) invert(100%) brightness(1) contrast(1.2);
+    }
+
+    .sponsor-logo {
+        height: 60px;
+        width: auto;
+        max-width: 180px;
+    }
+
+    /* Certificates Section */
+    .certificates-section {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 40px 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    .certificates-title {
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .certificates-subtitle {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .certificates-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .certificate-item {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .certificate-item:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .certificate-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: #e90052;
+    }
+
+    .certificate-position {
+        color: #ffffff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .certificate-description {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .certificate-actions {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .certificate-btn {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .certificate-btn.download {
+        background: #e90052;
+        color: white;
+    }
+
+    .certificate-btn.download:hover {
+        background: #c70046;
+        transform: translateY(-1px);
+    }
+
+    .certificate-btn.view {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .certificate-btn.view:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-1px);
+    }
+
+    /* Certificate Preview Modal */
+    .certificate-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px);
+    }
+
+    .certificate-modal-content {
+        position: relative;
+        margin: 2% auto;
+        padding: 20px;
+        width: 90%;
+        max-width: 800px;
+        background: linear-gradient(135deg, #1e0021 0%, #37003c 100%);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .certificate-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .certificate-modal-title {
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .certificate-modal-close {
+        color: #ffffff;
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        background: none;
+        border: none;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .certificate-modal-close:hover {
+        color: #e90052;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .certificate-preview {
+        width: 100%;
+        height: auto;
+        max-height: 70vh;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        object-fit: contain;
+    }
+
+    .certificate-modal-actions {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .certificate-modal-btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .certificate-modal-btn.download {
+        background: #e90052;
+        color: white;
+    }
+
+    .certificate-modal-btn.download:hover {
+        background: #c70046;
+        transform: translateY(-1px);
+    }
+
+    .certificate-modal-btn.close {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .certificate-modal-btn.close:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-1px);
+    }
+
+    /* Certificate Loading Spinner */
+    .certificate-loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 20px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .certificate-spinner {
+        width: 50px;
+        height: 50px;
+        border: 4px solid rgba(255, 255, 255, 0.2);
+        border-top: 4px solid #e90052;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .certificate-loading-text {
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .certificate-loading-subtext {
+        font-size: 0.9rem;
+        opacity: 0.7;
     }
 
     .hero-btn {
@@ -889,14 +1244,14 @@ const styles = `
     }
 
     .hero-btn.primary {
-        background: #ffb600;
-        color: #1e3c72;
+        background: #e90052;
+        color: #1e0021;
     }
 
     .hero-btn.primary:hover {
-        background: #ffc233;
+        background:rgb(198, 3, 71);
         transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(255, 182, 0, 0.3);
+        box-shadow: 0 5px 15px rgba(255, 0, 157, 0.5);
     }
 
     .hero-btn.secondary {
@@ -913,21 +1268,26 @@ const styles = `
 
     .stats-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
         margin-bottom: 40px;
     }
 
     .stat-card {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
-        padding: 25px;
+        padding: 20px;
         border-radius: 15px;
         text-align: center;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .stat-card:hover {
@@ -951,23 +1311,22 @@ const styles = `
     }
 
     .stat-number {
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: bold;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     .stat-label {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         opacity: 0.9;
+        margin-bottom: 5px;
     }
-
+    
     .stat-icon {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         opacity: 0.7;
     }
+
 
     .home-sections-grid {
         display: grid;
@@ -991,11 +1350,11 @@ const styles = `
         align-items: center;
         margin-bottom: 20px;
         padding-bottom: 10px;
-        border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+        border-bottom: 2px solid rgba(255, 93, 182, 0.3);
     }
 
     .section-header h2 {
-        color: #ffb600;
+        color: #e90052;
         font-size: 1.3rem;
         margin: 0;
         display: flex;
@@ -1005,8 +1364,8 @@ const styles = `
 
     .view-all-btn {
         background: rgba(255, 182, 0, 0.2);
-        color: #ffb600;
-        border: 1px solid rgba(255, 182, 0, 0.5);
+        color: #e90052;
+        border: 1px solid rgba(228, 76, 160, 0.3);
         padding: 8px 16px;
         border-radius: 20px;
         font-size: 0.9rem;
@@ -1015,7 +1374,7 @@ const styles = `
     }
 
     .view-all-btn:hover {
-        background: rgba(255, 182, 0, 0.3);
+        background: rgba(244, 67, 54, 0.3);
         transform: translateY(-1px);
     }
 
@@ -1028,7 +1387,7 @@ const styles = `
         background: rgba(255, 255, 255, 0.05);
         border-radius: 10px;
         padding: 15px;
-        border-left: 4px solid #ffb600;
+        border-left: 4px solid #e90052;
         transition: all 0.3s ease;
     }
 
@@ -1052,7 +1411,7 @@ const styles = `
 
     .group-badge {
         background: rgba(255, 182, 0, 0.2);
-        color: #ffb600;
+        color: #e90052;
         padding: 3px 8px;
         border-radius: 10px;
         font-size: 0.8rem;
@@ -1112,14 +1471,14 @@ const styles = `
     }
     
     .group-separator {
-        color: #ffb600;
+        color: #e90052;
         font-size: 1.2rem;
         font-weight: bold;
         margin: 0 15px;
     }
     
     .group-label {
-        color: #ffb600;
+        color: #e90052;
         font-size: 1rem;
         font-weight: bold;
         margin-right: 10px;
@@ -1137,7 +1496,7 @@ const styles = `
     
     .team-qualifier.winner {
         background: rgba(255, 182, 0, 0.2);
-        border: 1px solid rgba(255, 182, 0, 0.4);
+        border: 1px solid rgba(244, 67, 54, 0.3);
     }
     
     .team-qualifier.runner-up {
@@ -1172,7 +1531,7 @@ const styles = `
     
     .team-qualifier.third {
         background: rgba(255, 193, 7, 0.2);
-        border: 1px solid rgba(255, 193, 7, 0.4);
+        border: 1px solid rgba(255, 93, 182, 0.3);
     }
     
     .team-qualifier.fourth {
@@ -1253,7 +1612,7 @@ const styles = `
 
     .quick-nav-card i {
         font-size: 2rem;
-        color: #ffb600;
+        color: #e90052;
         margin-bottom: 10px;
     }
 
@@ -1277,7 +1636,7 @@ const styles = `
 
     .no-data-message i {
         font-size: 2rem;
-        color: #ffb600;
+        color: #e90052;
         margin-bottom: 10px;
         display: block;
     }
@@ -1289,7 +1648,7 @@ const styles = `
 
     .match-divider {
         height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(255, 182, 0, 0.3), transparent);
+        background: linear-gradient(90deg, transparent, rgba(244, 67, 54, 0.3), transparent);
         margin: 15px 0;
         border-radius: 1px;
     }
@@ -1303,19 +1662,20 @@ const styles = `
     .fixture-item {
         background: rgba(255, 255, 255, 0.05);
         border-radius: 8px;
-        padding: 15px;
-        border-left: 3px solid #ffb600;
+        padding: 20px 15px 15px 15px;
+        border-left: 3px solid #e90052;
         color: white;
         position: relative;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         backdrop-filter: blur(10px);
         transition: all 0.3s ease;
+        margin-top: 15px;
     }
 
     /* Completed Match Styling */
     .fixture-item.completed {
         border-left: 4px solid #4CAF50;
-        background: rgba(76, 175, 80, 0.1);
+        background: rgba(55, 0, 60, 0.3);
     }
 
     .fixture-item.completed .vs {
@@ -1405,7 +1765,7 @@ const styles = `
     .result-badge.draw {
         background: #FF9800;
         color: white;
-        box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3);
+        box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3);
     }
 
     /* Team-specific fixture styling */
@@ -1446,7 +1806,7 @@ const styles = `
     }
 
     .sort-category h3 {
-        color: #ffb600;
+        color: #e90052;
         font-size: 0.85rem;
         margin: 0;
         font-weight: 600;
@@ -1464,14 +1824,14 @@ const styles = `
     }
 
     .sort-dropdown:hover {
-        border-color: #ffb600;
+        border-color: #e90052;
         background: rgba(0, 0, 0, 0.8);
     }
 
     .sort-dropdown:focus {
         outline: none;
-        border-color: #ffb600;
-        box-shadow: 0 0 10px rgba(255, 182, 0, 0.3);
+        border-color: #e90052;
+        box-shadow: 0 0 10px rgba(244, 67, 54, 0.3);
     }
 
     .sort-dropdown option {
@@ -1494,13 +1854,13 @@ const styles = `
 
     .no-matches-message i {
         font-size: 3rem;
-        color: #ffb600;
+        color: #e90052;
         margin-bottom: 15px;
         display: block;
     }
 
     .no-matches-message h3 {
-        color: #ffb600;
+        color: #e90052;
         font-size: 1.2rem;
         margin: 0 0 10px 0;
     }
@@ -1512,11 +1872,11 @@ const styles = `
     }
 
     .section-title {
-        color: #ffb600;
+        color: #e90052;
         font-size: 1.5rem;
         margin: 30px 0 20px 0;
         padding-bottom: 10px;
-        border-bottom: 2px solid rgba(255, 182, 0, 0.3);
+        border-bottom: 2px solid rgba(244, 67, 54, 0.3);
     }
 
     /* Responsive Design for Sorting Dropdowns */
@@ -1551,7 +1911,7 @@ const styles = `
     }
 
     .group-title {
-        color: #ffb600;
+        color: #e90052;
         font-size: 1.8rem;
         margin-bottom: 20px;
         text-align: center;
@@ -1559,16 +1919,17 @@ const styles = `
     }
 
     .matchday-badge {
-        background: linear-gradient(135deg, #ffb600, #ffc233);
-        color: #1e3c72;
+        background: linear-gradient(135deg, #e90052, rgb(198, 3, 71));
+        color: #1e0021;
         padding: 5px 12px;
         border-radius: 20px;
         font-size: 0.8rem;
         font-weight: bold;
         position: absolute;
         top: -10px;
-        left: 20px;
-        box-shadow: 0 2px 8px rgba(255, 182, 0, 0.3);
+        right: 20px;
+        box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3);
+        z-index: 10;
     }
 
     .group-table-section {
@@ -1576,12 +1937,21 @@ const styles = `
     }
 
     .qualified {
-        background: rgba(40, 167, 69, 0.2);
         border-left: 4px solid #28a745;
+        background: rgba(55, 0, 60, 0.3);
     }
 
     .qualified:hover {
-        background: rgba(40, 167, 69, 0.3);
+        background: rgba(233, 0, 82, 0.1);
+    }
+
+    .eliminated {
+        border-left: 4px solid #dc3545;
+        background: rgba(220, 53, 69, 0.1);
+    }
+
+    .eliminated:hover {
+        background: rgba(220, 53, 69, 0.15);
     }
 
     .fixture-teams {
@@ -1589,12 +1959,23 @@ const styles = `
         justify-content: space-between;
         align-items: center;
         margin-bottom: 15px;
+        margin-top: 10px;
+        gap: 15px;
     }
 
     .team {
         display: flex;
         align-items: center;
         gap: 10px;
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .team span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 120px;
     }
 
     .team-logo {
@@ -1616,8 +1997,8 @@ const styles = `
     
     .team-logo:hover {
         transform: scale(1.1);
-        border-color: #ffb600;
-        box-shadow: 0 4px 12px rgba(255, 182, 0, 0.4);
+        border-color: #e90052;
+        box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
     }
 
     .vs {
@@ -1633,6 +2014,9 @@ const styles = `
         color: #ffffff;
         font-size: 0.9rem;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     /* Table Styles */
@@ -1647,20 +2031,22 @@ const styles = `
     }
 
     .league-table th {
-        background: rgba(30, 60, 114, 0.8);
+        background: rgba(55, 0, 60, 0.8);
         color: white;
         padding: 15px;
         text-align: left;
         font-weight: 600;
+        border-bottom: 2px solid #e90052;
     }
 
     .league-table td {
         padding: 12px 15px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.05);
     }
 
     .league-table tr:hover {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(233, 0, 82, 0.1);
     }
 
     .team-row {
@@ -1673,7 +2059,7 @@ const styles = `
         font-weight: bold;
         color: #ffffff;
         min-width: 30px;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        text-align: center;
     }
 
     /* Clubs Styles */
@@ -1684,17 +2070,20 @@ const styles = `
     }
 
     .club-card {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.05);
         border-radius: 15px;
         overflow: hidden;
         transition: all 0.3s ease;
         color: white;
         position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
     }
 
     .club-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        border-color: rgba(255, 255, 255, 0.2);
     }
 
     .club-header {
@@ -1702,6 +2091,7 @@ const styles = `
         color: white;
         padding: 20px;
         text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .club-logo {
@@ -1737,6 +2127,7 @@ const styles = `
         opacity: 0.9;
         font-size: 0.9rem;
         background: rgba(255, 255, 255, 0.2);
+        color: white;
         padding: 4px 12px;
         border-radius: 12px;
         display: inline-block;
@@ -1765,19 +2156,21 @@ const styles = `
         font-size: 0.8rem;
         opacity: 0.8;
         margin-bottom: 4px;
+        color: rgba(255, 255, 255, 0.7);
     }
 
     .stat-value {
         font-size: 1rem;
         font-weight: bold;
+        color: white;
     }
 
     .stat-value.positive {
-        color: #28a745;
+        color: #00ff85;
     }
 
     .stat-value.negative {
-        color: #dc3545;
+        color: #ff6b6b;
     }
 
     .club-info {
@@ -1797,16 +2190,16 @@ const styles = `
 
     .club-info-item i {
         width: 16px;
-        color: #ffb600;
+        color: rgba(255, 255, 255, 0.7);
     }
 
     .click-indicator {
         background: rgba(255, 182, 0, 0.1);
         padding: 12px;
         text-align: center;
-        border-top: 1px solid rgba(255, 182, 0, 0.3);
+        border-top: 1px solid rgba(244, 67, 54, 0.3);
         font-size: 0.9rem;
-        color: #ffb600;
+        color: #e90052;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1858,7 +2251,7 @@ const styles = `
         margin-top: 8px;
         padding: 6px 12px;
         background: rgba(255, 182, 0, 0.2);
-        color: #ffb600;
+        color: #e90052;
         border-radius: 15px;
         font-size: 0.9rem;
         font-weight: bold;
@@ -1867,12 +2260,12 @@ const styles = `
     .penalties-display {
         margin-top: 8px;
         padding: 6px 12px;
-        background: rgba(255, 182, 0, 0.3);
-        color: #ffb600;
+        background: rgba(244, 67, 54, 0.3);
+        color: #e90052;
         border-radius: 15px;
         font-size: 0.9rem;
         font-weight: bold;
-        border: 1px solid #ffb600;
+        border: 1px solid #e90052;
     }
 
     .value.positive {
@@ -1931,7 +2324,7 @@ const styles = `
     }
     
     .brackets-header h2 {
-        color: #ffb600;
+        color: #e90052;
         font-size: 2rem;
         margin-bottom: 10px;
         font-family: 'EFootballStencil', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -2004,7 +2397,7 @@ const styles = `
         display: flex;
         gap: 10px;
         margin-bottom: 30px;
-        border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+        border-bottom: 2px solid rgba(255, 93, 182, 0.3);
         padding-bottom: 10px;
     }
 
@@ -2025,13 +2418,13 @@ const styles = `
 
     .tab-button:hover {
         background: rgba(255, 255, 255, 0.2);
-        border-color: rgba(255, 215, 0, 0.5);
+        border-color: rgba(244, 67, 54, 0.3);
     }
 
     .tab-button.active {
         background: rgba(255, 182, 0, 0.2);
-        border-color: #ffb600;
-        color: #ffb600;
+        border-color: #e90052;
+        color: #e90052;
         font-weight: bold;
     }
 
@@ -2064,7 +2457,7 @@ const styles = `
     }
 
     .round-label {
-        color: #ffb600;
+        color: #e90052;
         font-size: 1.1rem;
         font-weight: bold;
         margin-bottom: 20px;
@@ -2111,9 +2504,10 @@ const styles = `
     }
 
     .bracket-team.winner {
-        background: rgba(255, 182, 0, 0.2);
-        border: 1px solid #ffb600;
+        background: rgba(55, 0, 60, 0.3);
+        border: 2px solid #e90052;
         font-weight: bold;
+        border-radius: 8px;
     }
 
     .bracket-team .team-name {
@@ -2140,8 +2534,8 @@ const styles = `
         position: absolute;
         top: -5px;
         right: -5px;
-        background: #ffb600;
-        color: #1e3c72;
+        background: #e90052;
+        color: #1e0021;
         padding: 2px 6px;
         border-radius: 10px;
         font-size: 0.7rem;
@@ -2154,7 +2548,7 @@ const styles = `
         left: 50%;
         transform: translateX(-50%);
         background: rgba(255, 193, 7, 0.9);
-        color: #1e3c72;
+        color: #1e0021;
         padding: 2px 8px;
         border-radius: 10px;
         font-size: 0.6rem;
@@ -2209,7 +2603,7 @@ const styles = `
         font-size: 1.5rem;
         margin-bottom: 20px;
         text-align: center;
-        border-bottom: 2px solid #ffb600;
+        border-bottom: 2px solid #e90052;
         padding-bottom: 10px;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
@@ -2219,7 +2613,7 @@ const styles = `
         border-radius: 10px;
         padding: 5px;
         margin-bottom: 15px;
-        border-left: 4px solid #ffb600;
+        border-left: 4px solid #e90052;
         color: white;
         position: relative;
         width: 100%;
@@ -2269,7 +2663,7 @@ const styles = `
 
     .penalties {
         font-size: 0.8rem;
-        color: #ffb600;
+        color: #e90052;
         font-weight: bold;
         margin-top: 5px;
         text-align: center;
@@ -2283,12 +2677,12 @@ const styles = `
     
     .team-logo.club-badge {
         object-fit: contain;
-        border: 2px solid rgba(255, 182, 0, 0.4);
+        border: 2px solid rgba(244, 67, 54, 0.3);
         background: rgba(255, 182, 0, 0.1);
     }
     
     .team-logo.club-badge:hover {
-        border-color: #ffb600;
+        border-color: #e90052;
         background: rgba(255, 182, 0, 0.2);
     }
 
@@ -2303,6 +2697,110 @@ const styles = `
 
     /* Responsive Design */
     @media (max-width: 768px) {
+        .hero-section {
+            padding: 60px 15px;
+            margin: 0 -15px 30px -15px;
+            width: calc(100% + 30px);
+        }
+        
+        .hero-title {
+            font-size: 2.2rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1rem;
+        }
+        
+        .sponsors-section {
+            padding: 30px 15px;
+            margin: 40px -15px 0 -15px;
+            width: calc(100% + 30px);
+        }
+        
+        .sponsors-grid {
+            gap: 40px;
+        }
+        
+        .sponsor-logo {
+            height: 45px;
+            max-width: 140px;
+        }
+        
+        .sponsors-title {
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .certificates-section {
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .certificates-title {
+            font-size: 1.3rem;
+        }
+        
+        .certificates-subtitle {
+            font-size: 0.9rem;
+        }
+        
+        .certificates-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        .certificate-item {
+            padding: 15px;
+        }
+        
+        .certificate-icon {
+            font-size: 2rem;
+        }
+        
+        .certificate-position {
+            font-size: 1.1rem;
+        }
+        
+        .certificate-actions {
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .certificate-btn {
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .certificate-modal-content {
+            width: 95%;
+            margin: 5% auto;
+            padding: 15px;
+        }
+        
+        .certificate-modal-title {
+            font-size: 1.2rem;
+        }
+        
+        .certificate-modal-close {
+            font-size: 1.5rem;
+            width: 35px;
+            height: 35px;
+        }
+        
+        .certificate-preview {
+            max-height: 60vh;
+        }
+        
+        .certificate-modal-actions {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .certificate-modal-btn {
+            width: 100%;
+            justify-content: center;
+        }
+        
         .nav-menu {
             display: none;
         }
@@ -2373,8 +2871,24 @@ const styles = `
         }
 
         .stats-grid {
-            grid-template-columns: 1fr;
-            gap: 15px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+        
+        .stat-card {
+            padding: 10px;
+        }
+        
+        .stat-number {
+            font-size: 1.2rem;
+        }
+        
+        .stat-label {
+            font-size: 0.7rem;
+        }
+        
+        .stat-icon {
+            font-size: 0.9rem;
         }
         
         .qualification-ticker-section {
@@ -2415,9 +2929,35 @@ const styles = `
         }
 
         .fixture-teams {
-            flex-direction: column;
+            flex-direction: row;
             gap: 10px;
             text-align: center;
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+        
+        .matchday-badge {
+            position: relative;
+            top: 0;
+            right: 0;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .team span {
+            max-width: 80px;
+            font-size: 0.8rem;
+        }
+        
+        .team {
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .team-logo {
+            width: 30px;
+            height: 30px;
         }
 
         .fixture-details {
@@ -2963,7 +3503,7 @@ function getTeamLogo(teamId, size = '40px', useCircle = true) {
     // Create a working fallback system with proper error handling
     return `<div style="position: relative; width: ${size}; height: ${size};">
                 <img src="images/pics/${teamId}.jpeg" alt="${getTeamName(teamId)}" class="team-logo owner-picture" style="width: ${size}; height: ${size}; object-fit: cover; border-radius: ${borderRadius}; background: ${background}; position: absolute; top: 0; left: 0; border: 2px solid rgba(255, 255, 255, 0.3);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                <img src="images/club-logos/${teamId}.svg" alt="${getTeamName(teamId)}" class="team-logo club-badge" style="width: ${size}; height: ${size}; object-fit: contain; border-radius: ${borderRadius}; background: ${background}; position: absolute; top: 0; left: 0; border: 2px solid rgba(255, 182, 0, 0.4); display: none;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <img src="images/club-logos/${teamId}.svg" alt="${getTeamName(teamId)}" class="team-logo club-badge" style="width: ${size}; height: ${size}; object-fit: contain; border-radius: ${borderRadius}; background: ${background}; position: absolute; top: 0; left: 0; border: 2px solid rgba(244, 67, 54, 0.3); display: none;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                 <div class="team-logo-fallback" style="width: ${size}; height: ${size}; display: none; align-items: center; justify-content: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: ${borderRadius}; font-weight: bold; color: #ffffff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; border: 2px solid rgba(255, 255, 255, 0.3); font-size: ${parseInt(size) * 0.4}px; letter-spacing: 1px;">${teamsData[teamId] ? teamsData[teamId].shortName : teamId.substring(0, 3).toUpperCase()}</div>
             </div>`;
 }
@@ -3153,8 +3693,8 @@ function generateAllFixtures() {
                         ${fixture.status === 'completed' && fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
                     </div>
                     <div class="team">
-                        <span>${getTeamName(fixture.awayTeam)}</span>
                         ${getTeamLogo(fixture.awayTeam, '50px', false)}
+                        <span>${getTeamName(fixture.awayTeam)}</span>
                     </div>
                 </div>
                 <div class="fixture-details">
@@ -4063,24 +4603,28 @@ function generateHomePage() {
                             const matchId = fixture.id || `${fixture.round}_${fixture.tie || fixture.matchNumber}`;
                             
                             return `
-                                <div class="fixture-card completed" onclick="loadDetailedFixturePage('${matchId}')" style="cursor: pointer;">
+                                <div class="fixture-item completed" onclick="loadDetailedFixturePage('${matchId}')" style="cursor: pointer;">
+                                    <div class="matchday-badge">${matchType}${isKnockout && fixture.leg ? ` - ${fixture.leg} Leg` : ''}</div>
                                     <div class="fixture-teams">
                                         <div class="team">
-                                            ${getTeamLogo(fixture.homeTeam, '40px', false)}
-                                            <span style="color: white;">${getTeamName(fixture.homeTeam)}</span>
+                                            ${getTeamLogo(fixture.homeTeam, '50px', false)}
+                                            <span>${getTeamName(fixture.homeTeam)}</span>
                                         </div>
                                         <div class="vs completed">
                                             ${fixture.status === 'completed' && fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
                                         </div>
                                         <div class="team">
-                                            <span style="color: white;">${getTeamName(fixture.awayTeam)}</span>
-                                            ${getTeamLogo(fixture.awayTeam, '40px', false)}
+                                            ${getTeamLogo(fixture.awayTeam, '50px', false)}
+                                            <span>${getTeamName(fixture.awayTeam)}</span>
                                         </div>
                                     </div>
                                     <div class="fixture-details">
                                         <span><i class="fas fa-calendar"></i> ${fixture.date}</span>
-                                        <span><i class="fas fa-trophy"></i> ${matchType}</span>
-                                        ${isKnockout && fixture.leg ? `<span><i class="fas fa-exchange-alt"></i> ${fixture.leg} Leg</span>` : ''}
+                                        <span><i class="fas fa-clock"></i> ${fixture.time}</span>
+                                        <span class="status-badge completed">
+                                            <i class="fas fa-check-circle"></i>
+                                            completed
+                                        </span>
                                         ${isKnockout && fixture.penalties ? `<span><i class="fas fa-crosshairs"></i> Penalties: ${fixture.penalties.home}-${fixture.penalties.away}</span>` : ''}
                                     </div>
                                 </div>
@@ -4109,22 +4653,26 @@ function generateHomePage() {
                             const matchId = fixture.id || `${fixture.round}_${fixture.tie || fixture.matchNumber}`;
                             
                             return `
-                                <div class="fixture-card scheduled" onclick="loadDetailedFixturePage('${matchId}')" style="cursor: pointer;">
+                                <div class="fixture-item scheduled" onclick="loadDetailedFixturePage('${matchId}')" style="cursor: pointer;">
+                                    <div class="matchday-badge">${matchType}${isKnockout && fixture.leg ? ` - ${fixture.leg} Leg` : ''}</div>
                                     <div class="fixture-teams">
                                         <div class="team">
-                                            ${getTeamLogo(fixture.homeTeam, '40px', false)}
-                                            <span style="color: white;">${getTeamName(fixture.homeTeam)}</span>
+                                            ${getTeamLogo(fixture.homeTeam, '50px', false)}
+                                            <span>${getTeamName(fixture.homeTeam)}</span>
                                         </div>
                                         <div class="vs scheduled">vs</div>
                                         <div class="team">
-                                            <span style="color: white;">${getTeamName(fixture.awayTeam)}</span>
-                                            ${getTeamLogo(fixture.awayTeam, '40px', false)}
+                                            ${getTeamLogo(fixture.awayTeam, '50px', false)}
+                                            <span>${getTeamName(fixture.awayTeam)}</span>
                                         </div>
                                     </div>
                                     <div class="fixture-details">
                                         <span><i class="fas fa-calendar"></i> ${fixture.date}</span>
-                                        <span><i class="fas fa-trophy"></i> ${matchType}</span>
-                                        ${isKnockout && fixture.leg ? `<span><i class="fas fa-exchange-alt"></i> ${fixture.leg} Leg</span>` : ''}
+                                        <span><i class="fas fa-clock"></i> ${fixture.time}</span>
+                                        <span class="status-badge scheduled">
+                                            <i class="fas fa-calendar"></i>
+                                            scheduled
+                                        </span>
                                     </div>
                                 </div>
                                 ${index < upcomingMatches.length - 1 ? '<div class="match-divider"></div>' : ''}
@@ -4150,7 +4698,10 @@ function generateHomePage() {
                                 <div class="leader-header">
                                     ${getTeamLogo(team.id, '50px', false)}
                                     <div class="leader-info">
-                                        <h3>${team.name}</h3>
+                                        <h3>
+                                            ${team.name}
+                                            <img src="images/icons/verified-badge.svg" alt="Verified" class="verified-badge" style="width: 14px; height: 14px; margin-left: 6px; vertical-align: middle;">
+                                        </h3>
                                         <span class="group-badge">Group ${team.group}</span>
                                     </div>
                                 </div>
@@ -4199,6 +4750,108 @@ function generateHomePage() {
                             <h3>Clubs</h3>
                             <p>Explore all teams</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certificates Section -->
+            <div class="certificates-section">
+                <h2 class="certificates-title">🏆 Championship Certificates</h2>
+                <p class="certificates-subtitle">Download and review the official certificates for our top 3 teams</p>
+                <div class="certificates-grid">
+                    <div class="certificate-item">
+                        <div class="certificate-icon">🥇</div>
+                        <div class="certificate-position">1st Place</div>
+                        <div class="certificate-description">Championship Winner Certificate</div>
+                        <div class="certificate-actions">
+                            <a href="images/certificates/first.jpeg" download="Championship_Winner_Certificate.jpeg" class="certificate-btn download">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                            <button onclick="viewCertificate('first', 'Championship Winner Certificate')" class="certificate-btn view">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon">🥈</div>
+                        <div class="certificate-position">2nd Place</div>
+                        <div class="certificate-description">Runner-up Certificate</div>
+                        <div class="certificate-actions">
+                            <a href="images/certificates/second.jpeg" download="Runner_up_Certificate.jpeg" class="certificate-btn download">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                            <button onclick="viewCertificate('second', 'Runner-up Certificate')" class="certificate-btn view">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon">🥉</div>
+                        <div class="certificate-position">3rd Place</div>
+                        <div class="certificate-description">Third Place Certificate</div>
+                        <div class="certificate-actions">
+                            <a href="images/certificates/third.jpeg" download="Third_Place_Certificate.jpeg" class="certificate-btn download">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                            <button onclick="viewCertificate('third', 'Third Place Certificate')" class="certificate-btn view">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sponsors Section -->
+            <div class="sponsors-section">
+                <div class="sponsors-container">
+                    <div class="sponsors-title">Our Partners</div>
+                    <div class="sponsors-grid">
+                        <div class="sponsor-item">
+                            <img src="images/sponsors/linkmedia.svg" alt="LinkMedia" class="sponsor-logo">
+                        </div>
+                        <div class="sponsor-item">
+                            <img src="images/sponsors/thorvisual.svg" alt="ThorVisual" class="sponsor-logo">
+                        </div>
+                        <div class="sponsor-item">
+                            <img src="images/sponsors/yty.svg" alt="YTY" class="sponsor-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certificate Modal -->
+            <div id="certificateModal" class="certificate-modal">
+                <div class="certificate-modal-content">
+                    <div class="certificate-modal-header">
+                        <h3 class="certificate-modal-title" id="modalTitle">Certificate Preview</h3>
+                        <button class="certificate-modal-close" onclick="closeCertificateModal()">&times;</button>
+                    </div>
+                    <!-- Loading Spinner -->
+                    <div id="certificateLoading" class="certificate-loading">
+                        <div class="certificate-spinner"></div>
+                        <div class="certificate-loading-text">Loading Certificate...</div>
+                        <div class="certificate-loading-subtext">Please wait while we load the certificate image</div>
+                    </div>
+                    
+                    <!-- Certificate Image -->
+                    <img id="certificatePreview" class="certificate-preview" src="" alt="Certificate Preview" style="display: none;" onerror="showFallbackMessage()">
+                    
+                    <!-- Fallback Message -->
+                    <div id="fallbackMessage" style="display: none; text-align: center; padding: 40px; color: rgba(255, 255, 255, 0.8);">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 3rem; margin-bottom: 20px; color: #e90052;"></i>
+                        <h3>Image Preview Not Available</h3>
+                        <p>Unable to load the certificate image. Please use the download button to get the certificate.</p>
+                        <button onclick="downloadCertificate()" class="certificate-modal-btn download" style="margin-top: 20px;">
+                            <i class="fas fa-download"></i> Download Certificate
+                        </button>
+                    </div>
+                    <div class="certificate-modal-actions">
+                        <a id="modalDownload" href="" download="" class="certificate-modal-btn download">
+                            <i class="fas fa-download"></i> Download Certificate
+                        </a>
+                        <button onclick="closeCertificateModal()" class="certificate-modal-btn close">
+                            <i class="fas fa-times"></i> Close
+                        </button>
                     </div>
                 </div>
             </div>
@@ -4284,8 +4937,8 @@ function generateFixturesPage() {
                                         ${fixture.status === 'completed' && fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
                                     </div>
                             <div class="team">
-                                        <span>${getTeamName(fixture.awayTeam)}</span>
                                         ${getTeamLogo(fixture.awayTeam, '50px', false)}
+                                        <span>${getTeamName(fixture.awayTeam)}</span>
                             </div>
                         </div>
                         <div class="fixture-details">
@@ -4314,8 +4967,8 @@ function generateFixturesPage() {
                                         ${fixture.status === 'completed' && fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
                                     </div>
                                     <div class="team">
-                                        <span>${getTeamName(fixture.awayTeam)}</span>
                                         ${getTeamLogo(fixture.awayTeam, '50px', false)}
+                                        <span>${getTeamName(fixture.awayTeam)}</span>
                                     </div>
                                 </div>
                                 <div class="fixture-details">
@@ -4344,8 +4997,8 @@ function generateFixturesPage() {
                                         ${fixture.status === 'completed' && fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
                                     </div>
                                     <div class="team">
-                                        <span>${getTeamName(fixture.awayTeam)}</span>
                                         ${getTeamLogo(fixture.awayTeam, '50px', false)}
+                                        <span>${getTeamName(fixture.awayTeam)}</span>
                                     </div>
                                 </div>
                                 <div class="fixture-details">
@@ -4374,8 +5027,8 @@ function generateFixturesPage() {
                                         ${fixture.status === 'completed' && fixture.score ? `${fixture.score.home} - ${fixture.score.away}` : 'vs'}
                                     </div>
                                     <div class="team">
-                                        <span>${getTeamName(fixture.awayTeam)}</span>
                                         ${getTeamLogo(fixture.awayTeam, '50px', false)}
+                                        <span>${getTeamName(fixture.awayTeam)}</span>
                                     </div>
                                 </div>
                                 <div class="fixture-details">
@@ -4431,7 +5084,7 @@ function generateTablePage() {
                     </thead>
                     <tbody>
                                 ${leagueData.groups.groupA.map((team, index) => `
-                                    <tr class="${index < 4 ? 'qualified' : ''}">
+                                    <tr class="${index < 4 ? 'qualified' : index >= 4 ? 'eliminated' : ''}">
                                         <td class="position">${index + 1}</td>
                                         <td>
                                             <div class="team-row">
@@ -4475,7 +5128,7 @@ function generateTablePage() {
                             </thead>
                             <tbody>
                                 ${leagueData.groups.groupB.map((team, index) => `
-                                    <tr class="${index < 4 ? 'qualified' : ''}">
+                                    <tr class="${index < 4 ? 'qualified' : index >= 4 ? 'eliminated' : ''}">
                                 <td class="position">${index + 1}</td>
                                 <td>
                                     <div class="team-row">
@@ -4519,7 +5172,7 @@ function generateTablePage() {
                             </thead>
                             <tbody>
                                 ${leagueData.groups.groupC.map((team, index) => `
-                                    <tr class="${index < 4 ? 'qualified' : ''}">
+                                    <tr class="${index < 4 ? 'qualified' : index >= 4 ? 'eliminated' : ''}">
                                         <td class="position">${index + 1}</td>
                                         <td>
                                             <div class="team-row">
@@ -4563,7 +5216,7 @@ function generateTablePage() {
                             </thead>
                             <tbody>
                                 ${leagueData.groups.groupD.map((team, index) => `
-                                    <tr class="${index < 4 ? 'qualified' : ''}">
+                                    <tr class="${index < 4 ? 'qualified' : index >= 4 ? 'eliminated' : ''}">
                                         <td class="position">${index + 1}</td>
                                         <td>
                                             <div class="team-row">
@@ -4790,15 +5443,15 @@ function generateKnockoutsPage() {
             
             <!-- Details Tab Content -->
             <div id="details-tab" class="tab-content">
-                <div class="knockout-container">
+                <div class="fixtures-container">
                 <div class="round-card">
                     <h2 class="round-title">Round of 16</h2>
                     ${groupMatchesByTie(leagueData.knockouts.roundOf16).map(tie => `
                         <div class="tie-container">
                             <h3 class="tie-title">Tie ${tie.tie}</h3>
                             ${tie.matches.map(match => `
-                                <div class="match-card ${match.status}">
-                                    <div class="leg-badge ${match.leg.toLowerCase()}">${match.leg} Leg</div>
+                                <div class="fixture-item ${match.status}" onclick="loadDetailedKnockoutPage('${match.round}_${match.tie || match.matchNumber}')" style="cursor: pointer;">
+                                    <div class="matchday-badge">${match.round} - Tie ${match.tie || match.matchNumber} - ${match.leg} Leg</div>
                                     <div class="fixture-teams">
                                         <div class="team">
                                             ${getTeamLogo(match.homeTeam, '50px', false)}
@@ -4809,8 +5462,8 @@ function generateKnockoutsPage() {
                                             ${match.status === 'completed' && match.penalties ? `<div class="penalties">(${match.penalties.home}-${match.penalties.away} pen)</div>` : ''}
                                         </div>
                                         <div class="team">
-                                            <span>${match.awayTeam === 'TBD' ? 'TBD' : getTeamName(match.awayTeam)}</span>
                                             ${getTeamLogo(match.awayTeam, '50px', false)}
+                                            <span>${match.awayTeam === 'TBD' ? 'TBD' : getTeamName(match.awayTeam)}</span>
                                         </div>
                                     </div>
                                     <div class="fixture-details">
@@ -4833,8 +5486,8 @@ function generateKnockoutsPage() {
                         <div class="tie-container">
                             <h3 class="tie-title">Tie ${tie.tie}</h3>
                             ${tie.matches.map(match => `
-                                <div class="match-card ${match.status}">
-                                    <div class="leg-badge ${match.leg.toLowerCase()}">${match.leg} Leg</div>
+                                <div class="fixture-item ${match.status}" onclick="loadDetailedKnockoutPage('${match.round}_${match.tie || match.matchNumber}')" style="cursor: pointer;">
+                                    <div class="matchday-badge">${match.round} - Tie ${match.tie || match.matchNumber} - ${match.leg} Leg</div>
                                     <div class="fixture-teams">
                                         <div class="team">
                                             ${getTeamLogo(match.homeTeam, '50px', false)}
@@ -4845,8 +5498,8 @@ function generateKnockoutsPage() {
                                             ${match.status === 'completed' && match.penalties ? `<div class="penalties">(${match.penalties.home}-${match.penalties.away} pen)</div>` : ''}
                                         </div>
                                         <div class="team">
-                                            <span>${match.awayTeam === 'TBD' ? 'TBD' : getTeamName(match.awayTeam)}</span>
                                             ${getTeamLogo(match.awayTeam, '50px', false)}
+                                            <span>${match.awayTeam === 'TBD' ? 'TBD' : getTeamName(match.awayTeam)}</span>
                                         </div>
                                     </div>
                                     <div class="fixture-details">
@@ -4869,8 +5522,8 @@ function generateKnockoutsPage() {
                         <div class="tie-container">
                             <h3 class="tie-title">Tie ${tie.tie}</h3>
                             ${tie.matches.map(match => `
-                                <div class="match-card ${match.status}">
-                                    <div class="leg-badge ${match.leg.toLowerCase()}">${match.leg} Leg</div>
+                                <div class="fixture-item ${match.status}" onclick="loadDetailedKnockoutPage('${match.round}_${match.tie || match.matchNumber}')" style="cursor: pointer;">
+                                    <div class="matchday-badge">${match.round} - Tie ${match.tie || match.matchNumber} - ${match.leg} Leg</div>
                                     <div class="fixture-teams">
                                         <div class="team">
                                             ${getTeamLogo(match.homeTeam, '50px', false)}
@@ -4881,8 +5534,8 @@ function generateKnockoutsPage() {
                                             ${match.status === 'completed' && match.penalties ? `<div class="penalties">(${match.penalties.home}-${match.penalties.away} pen)</div>` : ''}
                                         </div>
                                         <div class="team">
-                                            <span>${match.awayTeam === 'TBD' ? 'TBD' : getTeamName(match.awayTeam)}</span>
                                             ${getTeamLogo(match.awayTeam, '50px', false)}
+                                            <span>${match.awayTeam === 'TBD' ? 'TBD' : getTeamName(match.awayTeam)}</span>
                                         </div>
                                     </div>
                                     <div class="fixture-details">
@@ -4902,7 +5555,8 @@ function generateKnockoutsPage() {
                 <div class="round-card">
                     <h2 class="round-title">Third Place Playoff</h2>
                     ${leagueData.knockouts.thirdPlacePlayoff.map(match => `
-                        <div class="match-card ${match.status}">
+                        <div class="fixture-item ${match.status}" onclick="loadDetailedKnockoutPage('${match.round}_${match.tie || match.matchNumber}')" style="cursor: pointer;">
+                            <div class="matchday-badge">${match.round}</div>
                             <div class="fixture-teams">
                                 <div class="team">
                                     ${getTeamLogo(match.homeTeam, '50px', false)}
@@ -4913,8 +5567,8 @@ function generateKnockoutsPage() {
                                     ${match.status === 'completed' && match.penalties ? `<div class="penalties">(${match.penalties.home}-${match.penalties.away} pen)</div>` : ''}
                                 </div>
                                 <div class="team">
-                                    <span>${match.awayTeam === 'TBD' ? 'TBD' : getTeamName(match.awayTeam)}</span>
                                     ${getTeamLogo(match.awayTeam, '50px', false)}
+                                    <span>${match.awayTeam === 'TBD' ? 'TBD' : getTeamName(match.awayTeam)}</span>
                                 </div>
                             </div>
                             <div class="fixture-details">
@@ -4932,7 +5586,8 @@ function generateKnockoutsPage() {
                 <div class="round-card">
                     <h2 class="round-title">Final</h2>
                     ${leagueData.knockouts.final.map(match => `
-                        <div class="match-card ${match.status}">
+                        <div class="fixture-item ${match.status}" onclick="loadDetailedKnockoutPage('${match.round}_${match.tie || match.matchNumber}')" style="cursor: pointer;">
+                            <div class="matchday-badge">${match.round}</div>
                             <div class="fixture-teams">
                                 <div class="team">
                                     ${getTeamLogo(match.homeTeam, '50px', false)}
@@ -4943,8 +5598,8 @@ function generateKnockoutsPage() {
                                     ${match.status === 'completed' && match.penalties ? `<div class="penalties">(${match.penalties.home}-${match.penalties.away} pen)</div>` : ''}
                                 </div>
                                 <div class="team">
-                                    <span>${match.awayTeam === 'TBD' ? 'TBD' : getTeamName(match.awayTeam)}</span>
                                     ${getTeamLogo(match.awayTeam, '50px', false)}
+                                    <span>${match.awayTeam === 'TBD' ? 'TBD' : getTeamName(match.awayTeam)}</span>
                                 </div>
                             </div>
                             <div class="fixture-details">
@@ -4981,7 +5636,10 @@ function generateClubsPage() {
                         <div class="club-card" onclick="loadDetailedTeamPage(${JSON.stringify(team).replace(/"/g, '&quot;')})" style="cursor: pointer;">
                             <div class="club-header">
                                 ${getTeamLogo(teamId, '80px', false)}
-                                <div class="club-name">${team.name}</div>
+                                <div class="club-name">
+                                    ${team.name}
+                                    <img src="images/icons/verified-badge.svg" alt="Verified" class="verified-badge" style="width: 16px; height: 16px; margin-left: 8px; vertical-align: middle;">
+                                </div>
                                 <div class="club-group">${teamGroup}</div>
                             </div>
                             <div class="club-overview">
@@ -5214,11 +5872,11 @@ function loadDetailedTeamPage(team) {
         <div class="page-container">
             <!-- Navigation Header -->
             <div class="page-navigation">
-                <div class="back-button" onclick="loadPage('clubs')" style="cursor: pointer; color: #ffb600; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
+                <div class="back-button" onclick="loadPage('clubs')" style="cursor: pointer; color: #e90052; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
                     <i class="fas fa-arrow-left"></i>
                     Back to Clubs
                 </div>
-                <div class="page-title" style="color: #1e3c72; font-size: 1.5rem; font-weight: bold; margin: 10px 0;">
+                <div class="page-title" style="color: #ffffff; font-size: 1.5rem; font-weight: bold; margin: 10px 0; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
                     Team Profile
                 </div>
             </div>
@@ -5228,7 +5886,10 @@ function loadDetailedTeamPage(team) {
                 <div class="team-banner">
                     ${getTeamLogo(teamId, '80px')}
                     <div class="team-info">
-                        <h1 class="team-name">${team.name}</h1>
+                        <h1 class="team-name">
+                            ${team.name}
+                            <img src="images/icons/verified-badge.svg" alt="Verified" class="verified-badge" style="width: 20px; height: 20px; margin-left: 10px; vertical-align: middle;">
+                        </h1>
                         <p class="team-subtitle">${teamGroup} • ${team.stadium}</p>
                         <div class="team-stats-overview">
                             <span class="stat-badge">Group: ${teamGroup}</span>
@@ -5634,11 +6295,11 @@ function loadDetailedFixturePage(fixture) {
             mainContent.innerHTML = `
                 <div class="page-container">
                     <div class="page-navigation">
-                        <div class="back-button" onclick="loadPage('fixtures')" style="cursor: pointer; color: #ffb600; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
+                        <div class="back-button" onclick="loadPage('fixtures')" style="cursor: pointer; color: #e90052; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
                             <i class="fas fa-arrow-left"></i>
                             Back to Fixtures
                         </div>
-                        <div class="page-title" style="color: #1e3c72; font-size: 1.5rem; font-weight: bold; margin: 10px 0;">
+                        <div class="page-title" style="color: #ffffff; font-size: 1.5rem; font-weight: bold; margin: 10px 0; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
                             Match Details
                         </div>
                     </div>
@@ -5662,11 +6323,11 @@ function loadDetailedFixturePage(fixture) {
         mainContent.innerHTML = `
             <div class="page-container">
                 <div class="page-navigation">
-                    <div class="back-button" onclick="loadPage('fixtures')" style="cursor: pointer; color: #ffd700; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
+                    <div class="back-button" onclick="loadPage('fixtures')" style="cursor: pointer; color: #00ff85; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
                         <i class="fas fa-arrow-left"></i>
                         Back to Fixtures
                     </div>
-                    <div class="page-title" style="color: #1e3c72; font-size: 1.5rem; font-weight: bold; margin: 10px 0;">
+                    <div class="page-title" style="color: #ffffff; font-size: 1.5rem; font-weight: bold; margin: 10px 0; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
                         ${fixtureData.round ? fixtureData.round : 'Match Details'}
                     </div>
                 </div>
@@ -5702,11 +6363,11 @@ function loadDetailedFixturePage(fixture) {
         <div class="page-container">
             <!-- Navigation Header -->
             <div class="page-navigation">
-                <div class="back-button" onclick="loadPage('${fixtureData.round ? 'knockouts' : 'fixtures'}')" style="cursor: pointer; color: #ffb600; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
+                <div class="back-button" onclick="loadPage('${fixtureData.round ? 'knockouts' : 'fixtures'}')" style="cursor: pointer; color: #e90052; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
                     <i class="fas fa-arrow-left"></i>
                     Back to ${fixtureData.round ? 'Knockouts' : 'Fixtures'}
                 </div>
-                <div class="page-title" style="color: #1e3c72; font-size: 1.5rem; font-weight: bold; margin: 10px 0;">
+                <div class="page-title" style="color: #ffffff; font-size: 1.5rem; font-weight: bold; margin: 10px 0; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
                     Match Details
                 </div>
             </div>
@@ -5716,7 +6377,7 @@ function loadDetailedFixturePage(fixture) {
                 <div class="fixture-banner">
                                             <div class="fixture-teams-large">
                             <div class="team-side">
-                                ${getTeamLogo(fixtureData.homeTeam, '80px')}
+                                ${getTeamLogo(fixtureData.homeTeam, '40px')}
                                 <h2 class="team-name">${homeTeamData.name}</h2>
                                 <div class="team-group">${homeTeamGroup}</div>
                                 ${homeTeamResult ? `<div class="match-result ${homeTeamResult}">${homeTeamResult.toUpperCase()}</div>` : ''}
@@ -5734,7 +6395,7 @@ function loadDetailedFixturePage(fixture) {
                                 </div>
                             </div>
                             <div class="team-side">
-                                ${getTeamLogo(fixtureData.awayTeam, '80px')}
+                                ${getTeamLogo(fixtureData.awayTeam, '40px')}
                                 <h2 class="team-name">${awayTeamData.name}</h2>
                                 <div class="team-group">${awayTeamGroup}</div>
                                 ${awayTeamResult ? `<div class="match-result ${awayTeamResult}">${awayTeamResult.toUpperCase()}</div>` : ''}
@@ -5814,7 +6475,7 @@ function loadDetailedFixturePage(fixture) {
                         ${fixtureData.penalties ? `
                         <div class="info-item">
                             <span class="label"><i class="fas fa-crosshairs"></i> Penalties:</span>
-                            <span class="value" style="color: #ffb600; font-weight: bold;">${fixtureData.penalties.home} - ${fixtureData.penalties.away}</span>
+                            <span class="value" style="color: #e90052; font-weight: bold;">${fixtureData.penalties.home} - ${fixtureData.penalties.away}</span>
                         </div>
                         ` : ''}
                     </div>
@@ -5897,11 +6558,11 @@ function loadDetailedKnockoutPage(match) {
         mainContent.innerHTML = `
             <div class="page-container">
                 <div class="page-navigation">
-                                    <div class="back-button" onclick="loadPage('knockouts')" style="cursor: pointer; color: #ffb600; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
+                                    <div class="back-button" onclick="loadPage('knockouts')" style="cursor: pointer; color: #e90052; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
                     <i class="fas fa-arrow-left"></i>
                     Back to Knockouts
                 </div>
-                    <div class="page-title" style="color: #1e3c72; font-size: 1.5rem; font-weight: bold; margin: 10px 0;">
+                    <div class="page-title" style="color: #1e0021; font-size: 1.5rem; font-weight: bold; margin: 10px 0;">
                         Knockout Match
                     </div>
                 </div>
@@ -5938,11 +6599,11 @@ function loadDetailedKnockoutPage(match) {
         <div class="page-container">
             <!-- Navigation Header -->
             <div class="page-navigation">
-                <div class="back-button" onclick="loadPage('knockouts')" style="cursor: pointer; color: #ffb600; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
+                <div class="back-button" onclick="loadPage('knockouts')" style="cursor: pointer; color: #e90052; font-weight: bold; display: flex; align-items: center; gap: 10px; padding: 10px 0;">
                     <i class="fas fa-arrow-left"></i>
                     Back to Knockouts
                 </div>
-                <div class="page-title" style="color: #1e3c72; font-size: 1.5rem; font-weight: bold; margin: 10px 0;">
+                <div class="page-title" style="color: #1e0021; font-size: 1.5rem; font-weight: bold; margin: 10px 0;">
                     Knockout Match
                 </div>
             </div>
@@ -5955,7 +6616,7 @@ function loadDetailedKnockoutPage(match) {
                     </div>
                     <div class="knockout-teams-large">
                         <div class="team-side">
-                            ${getTeamLogo(match.homeTeam, '80px')}
+                            ${getTeamLogo(match.homeTeam, '40px')}
                             <h2 class="team-name">${homeTeamData.name}</h2>
                             <div class="team-group">${homeTeamGroup}</div>
                         </div>
@@ -5968,7 +6629,7 @@ function loadDetailedKnockoutPage(match) {
                             </div>
                         </div>
                         <div class="team-side">
-                            ${getTeamLogo(match.awayTeam, '80px')}
+                            ${getTeamLogo(match.awayTeam, '40px')}
                             <h2 class="team-name">${awayTeamData.name}</h2>
                             <div class="team-group">${awayTeamGroup}</div>
                         </div>
@@ -6005,7 +6666,7 @@ function loadDetailedKnockoutPage(match) {
                         ${match.status === 'completed' && match.penalties ? `
                         <div class="info-item">
                             <span class="label"><i class="fas fa-bullseye"></i> Penalties:</span>
-                            <span class="value" style="font-weight: bold; color: #ffb600;">${match.penalties.home} - ${match.penalties.away}</span>
+                            <span class="value" style="font-weight: bold; color: #e90052;">${match.penalties.home} - ${match.penalties.away}</span>
                         </div>
                         ` : ''}
                         <div class="info-item">
@@ -6084,6 +6745,127 @@ function loadDetailedKnockoutPage(match) {
     currentPage = 'knockout-detail';
 }
 
+// Certificate viewing functions
+function viewCertificate(certificateType, title) {
+    const modal = document.getElementById('certificateModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const certificatePreview = document.getElementById('certificatePreview');
+    const modalDownload = document.getElementById('modalDownload');
+    const fallbackMessage = document.getElementById('fallbackMessage');
+    const certificateLoading = document.getElementById('certificateLoading');
+    
+    // Set modal title
+    modalTitle.textContent = title;
+    
+    // Reset all states
+    if (fallbackMessage) {
+        fallbackMessage.style.display = 'none';
+    }
+    if (certificateLoading) {
+        certificateLoading.style.display = 'flex';
+    }
+    certificatePreview.style.display = 'none';
+    
+    // Set certificate image source - try both .jpeg and .jpg extensions
+    const imagePath = `images/certificates/${certificateType}.jpeg`;
+    console.log('Attempting to load image:', imagePath);
+    testImagePath(imagePath); // Test if image exists
+    certificatePreview.src = imagePath;
+    
+    // If .jpeg fails, try .jpg
+    certificatePreview.onerror = function() {
+        console.log('Trying .jpg extension...');
+        certificatePreview.src = `images/certificates/${certificateType}.jpg`;
+        certificatePreview.onerror = function() {
+            console.log('Both .jpeg and .jpg failed, showing fallback');
+            hideLoadingAndShowFallback();
+        };
+    };
+    
+    // Set download link
+    const downloadNames = {
+        'first': 'Championship_Winner_Certificate.jpeg',
+        'second': 'Runner_up_Certificate.jpeg',
+        'third': 'Third_Place_Certificate.jpeg'
+    };
+    
+    modalDownload.href = imagePath;
+    modalDownload.download = downloadNames[certificateType];
+    
+    // Show modal
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    
+    // Add load event listener to handle successful loading
+    certificatePreview.onload = function() {
+        console.log('Certificate image loaded successfully');
+        hideLoadingAndShowImage();
+    };
+}
 
+function closeCertificateModal() {
+    const modal = document.getElementById('certificateModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
 
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById('certificateModal');
+    if (event.target === modal) {
+        closeCertificateModal();
+    }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeCertificateModal();
+    }
+});
+
+// Helper functions for managing loading states
+function hideLoadingAndShowImage() {
+    const loading = document.getElementById('certificateLoading');
+    const image = document.getElementById('certificatePreview');
+    
+    if (loading && image) {
+        loading.style.display = 'none';
+        image.style.display = 'block';
+    }
+}
+
+function hideLoadingAndShowFallback() {
+    const loading = document.getElementById('certificateLoading');
+    const fallback = document.getElementById('fallbackMessage');
+    
+    if (loading && fallback) {
+        loading.style.display = 'none';
+        fallback.style.display = 'block';
+    }
+}
+
+// Fallback functions for image viewing
+function showFallbackMessage() {
+    hideLoadingAndShowFallback();
+}
+
+function downloadCertificate() {
+    const modalDownload = document.getElementById('modalDownload');
+    if (modalDownload) {
+        modalDownload.click();
+    }
+}
+
+// Test function to check if images exist
+function testImagePath(path) {
+    const img = new Image();
+    img.onload = function() {
+        console.log('Image exists:', path);
+    };
+    img.onerror = function() {
+        console.log('Image does not exist:', path);
+    };
+    img.src = path;
+}
 
