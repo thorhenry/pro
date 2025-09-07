@@ -505,6 +505,66 @@ const styles = `
         padding-bottom: 10px;
     }
 
+    /* Collapsible Headers */
+    .collapsible-header {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+        user-select: none;
+        padding: 15px 20px;
+        margin: -15px -20px 20px -20px;
+        border-radius: 10px;
+        background: rgba(233, 0, 82, 0.1);
+        border: 2px solid transparent;
+    }
+
+    .collapsible-header:hover {
+        color: #ff6b9d;
+        background: rgba(233, 0, 82, 0.2);
+        border-color: rgba(233, 0, 82, 0.3);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(233, 0, 82, 0.2);
+    }
+
+    .collapsible-header:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 6px rgba(233, 0, 82, 0.3);
+    }
+
+    .toggle-icon {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        font-size: 1.2rem;
+        color: #e90052;
+        padding: 5px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        transform: rotate(0deg);
+    }
+
+    .collapsible-header:hover .toggle-icon {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.1);
+    }
+
+    .collapsible-content {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+    }
+
+    .collapsible-content.collapsed {
+        opacity: 0;
+        max-height: 0;
+        transform: translateY(-10px);
+    }
+
+    .collapsible-content.expanded {
+        opacity: 1;
+        max-height: 2000px;
+        transform: translateY(0);
+    }
+
     .info-item {
         display: flex;
         justify-content: space-between;
@@ -527,6 +587,144 @@ const styles = `
         color: #ffffff;
     }
 
+    /* All Seasons Stats Styles */
+    .all-seasons-stats {
+        grid-column: 1 / -1;
+        margin-top: 20px;
+    }
+
+    .all-seasons-overview {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 25px;
+    }
+
+    .overview-stats, .goals-overview {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+    }
+
+    .overview-stat, .goals-stat {
+        text-align: center;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .overview-stat .stat-value, .goals-stat .stat-value {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #e90052;
+        margin-bottom: 5px;
+    }
+
+    .overview-stat .stat-label, .goals-stat .stat-label {
+        display: block;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .seasons-breakdown {
+        margin-top: 25px;
+    }
+
+    .seasons-breakdown h4 {
+        color: #e90052;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        border-bottom: 1px solid rgba(233, 0, 82, 0.3);
+        padding-bottom: 8px;
+    }
+
+    .seasons-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .season-item {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .season-item:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-1px);
+    }
+
+    .season-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .season-name {
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 1rem;
+    }
+
+    .season-group {
+        background: rgba(233, 0, 82, 0.2);
+        color: #e90052;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .season-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
+    .season-stat {
+        text-align: center;
+    }
+
+    .season-stat .stat-value {
+        display: block;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 2px;
+    }
+
+    .season-stat .stat-label {
+        display: block;
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.6);
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+    }
+
+    @media (max-width: 768px) {
+        .overview-stats, .goals-overview {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .season-stats {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .season-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+        }
+    }
+
     .fixtures-section, .knockouts-section, .form-section, .performance-section {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 15px;
@@ -542,6 +740,12 @@ const styles = `
         margin-bottom: 20px;
         border-bottom: 2px solid #e90052;
         padding-bottom: 10px;
+    }
+
+    .fixtures-section .collapsible-header, .form-section .collapsible-header, .performance-section .collapsible-header {
+        border-bottom: 2px solid #e90052;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     /* Form Section Styles */
@@ -657,6 +861,697 @@ const styles = `
     .perf-stat .value {
         font-weight: bold;
         color: #ffffff;
+    }
+
+    /* Performance Stats Card Styles */
+    .performance-stats-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .performance-stats-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .perf-stat-item {
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 10px;
+        padding: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .perf-stat-item:hover {
+        background: rgba(255, 255, 255, 0.06);
+        transform: translateY(-2px);
+    }
+
+    .home-stat {
+        border-left: 3px solid #e90052;
+    }
+
+    .away-stat {
+        border-left: 3px solid #8a2be2;
+    }
+
+    .perf-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+
+    .home-stat .perf-icon {
+        background: rgba(233, 0, 82, 0.2);
+        color: #e90052;
+    }
+
+    .away-stat .perf-icon {
+        background: rgba(138, 43, 226, 0.2);
+        color: #8a2be2;
+    }
+
+    .perf-icon i {
+        font-size: 1.2rem;
+    }
+
+    .perf-content {
+        flex: 1;
+    }
+
+    .perf-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 8px;
+    }
+
+    .perf-numbers {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+    }
+
+    .perf-numbers:last-child {
+        margin-bottom: 0;
+    }
+
+    .perf-number {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin-right: 8px;
+        min-width: 20px;
+    }
+
+    .perf-label {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+        .performance-stats-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        .perf-stat-item {
+            padding: 12px;
+        }
+        
+        .perf-icon {
+            width: 35px;
+            height: 35px;
+            margin-right: 12px;
+        }
+        
+        .perf-icon i {
+            font-size: 1rem;
+        }
+        
+        .perf-title {
+            font-size: 0.9rem;
+        }
+        
+        .perf-number {
+            font-size: 1rem;
+        }
+        
+        .perf-label {
+            font-size: 0.8rem;
+        }
+    }
+
+    /* Team Comparison Card Styles */
+    .team-comparison-card {
+        grid-column: 1 / -1;
+    }
+
+    .team-comparison-grid {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .team-comparison-item {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 20px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .team-comparison-item:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(233, 0, 82, 0.3);
+        transform: translateY(-2px);
+    }
+
+    .team-comparison-item.home-team {
+        border-left: 4px solid #e90052;
+    }
+
+    .team-comparison-item.away-team {
+        border-right: 4px solid #e90052;
+    }
+
+    .team-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .team-header i {
+        font-size: 1.5rem;
+        color: #e90052;
+        margin-bottom: 8px;
+    }
+
+    .team-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 4px;
+    }
+
+    .team-group {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+        background: rgba(233, 0, 82, 0.2);
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+
+    .team-stats-compact {
+        display: grid;
+        gap: 8px;
+    }
+
+    .stat-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-row:last-child {
+        border-bottom: none;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 500;
+    }
+
+    .stat-value {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    .stat-value.positive {
+        color: #28a745;
+    }
+
+    .stat-value.negative {
+        color: #dc3545;
+    }
+
+    .vs-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #e90052, #8a2be2);
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(233, 0, 82, 0.3);
+    }
+
+    .vs-text {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 768px) {
+        .team-comparison-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        .vs-divider {
+            order: -1;
+            width: 50px;
+            height: 50px;
+        }
+        
+        .vs-text {
+            font-size: 1rem;
+        }
+        
+        .team-comparison-item {
+            padding: 15px;
+        }
+    }
+
+    /* Complete Match Card Styles */
+    .complete-match-card {
+        grid-column: 1 / -1;
+    }
+
+    .match-header-section {
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid rgba(233, 0, 82, 0.3);
+    }
+
+    .match-teams {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .team-display {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-display i {
+        font-size: 1.5rem;
+        color: #e90052;
+        margin-bottom: 8px;
+    }
+
+    .team-display .team-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 4px;
+    }
+
+    .team-display .team-group {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+        background: rgba(233, 0, 82, 0.2);
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+
+    .match-score-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .final-score {
+        text-align: center;
+    }
+
+    .final-score .score {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .final-score .penalties {
+        font-size: 0.9rem;
+        color: #e90052;
+        margin-top: 4px;
+        font-weight: 600;
+    }
+
+    .match-score-section .vs-text {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #e90052;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .match-info-section {
+        margin-bottom: 25px;
+    }
+
+    .info-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .info-row:last-child {
+        margin-bottom: 0;
+    }
+
+    .team-stats-section {
+        border-top: 2px solid rgba(233, 0, 82, 0.3);
+        padding-top: 20px;
+    }
+
+    .team-stats-section h4 {
+        color: #e90052;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .stats-comparison {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 20px;
+        align-items: start;
+    }
+
+    .team-stats {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .team-stats.home-stats {
+        border-left: 3px solid #e90052;
+    }
+
+    .team-stats.away-stats {
+        border-right: 3px solid #e90052;
+    }
+
+    .stat-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-item .stat-label {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 500;
+    }
+
+    .stat-item .stat-value {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    .stat-item .stat-value.positive {
+        color: #28a745;
+    }
+
+    .stat-item .stat-value.negative {
+        color: #dc3545;
+    }
+
+    .stats-divider {
+        width: 2px;
+        background: linear-gradient(to bottom, transparent, #e90052, transparent);
+        height: 100%;
+        min-height: 120px;
+    }
+
+    @media (max-width: 768px) {
+        .match-teams {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        .match-score-section {
+            order: -1;
+        }
+        
+        .stats-comparison {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        .stats-divider {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #e90052, transparent);
+            order: -1;
+        }
+        
+        .info-row {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+    }
+
+    /* Head to Head Section Styles */
+    .head-to-head-section {
+        border-top: 2px solid rgba(233, 0, 82, 0.3);
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+
+    .head-to-head-section h4 {
+        color: #e90052;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .head-to-head-section h5 {
+        color: #ffffff;
+        font-size: 1rem;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .no-head-to-head {
+        text-align: center;
+        padding: 20px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .no-head-to-head i {
+        font-size: 2rem;
+        color: #e90052;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .head-to-head-stats {
+        margin-bottom: 20px;
+    }
+
+    .h2h-summary {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .h2h-stat {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 12px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .h2h-label {
+        display: block;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 4px;
+    }
+
+    .h2h-value {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    .h2h-value.team1-color {
+        color: #e90052;
+    }
+
+    .h2h-value.team2-color {
+        color: #8a2be2;
+    }
+
+    .h2h-matches-list {
+        display: grid;
+        gap: 10px;
+        max-height: 300px;
+        overflow-y: auto;
+        padding-right: 5px;
+    }
+
+    .h2h-match {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 12px;
+        border-left: 4px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .h2h-match:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateX(5px);
+    }
+
+    .h2h-match.team1-win {
+        border-left-color: #e90052;
+    }
+
+    .h2h-match.team2-win {
+        border-left-color: #8a2be2;
+    }
+
+    .h2h-match.draw {
+        border-left-color: #ffc107;
+    }
+
+    .h2h-teams {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .h2h-home, .h2h-away {
+        font-weight: 600;
+        color: #ffffff;
+        flex: 1;
+    }
+
+    .h2h-home {
+        text-align: left;
+    }
+
+    .h2h-away {
+        text-align: right;
+    }
+
+    .h2h-score {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #e90052;
+        margin: 0 15px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .h2h-match-details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .h2h-season {
+        background: rgba(233, 0, 82, 0.2);
+        padding: 2px 6px;
+        border-radius: 4px;
+        color: #e90052;
+        font-weight: 600;
+    }
+
+    .h2h-date {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .h2h-type {
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-weight: 600;
+    }
+
+    .h2h-type.knockout {
+        background: rgba(138, 43, 226, 0.2);
+        color: #8a2be2;
+    }
+
+    .h2h-type.group {
+        background: rgba(40, 167, 69, 0.2);
+        color: #28a745;
+    }
+
+    .h2h-round {
+        background: rgba(255, 193, 7, 0.2);
+        color: #ffc107;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-weight: 600;
+    }
+
+    .h2h-penalties {
+        color: #e90052;
+        font-weight: 600;
+    }
+
+    /* Custom scrollbar for h2h matches list */
+    .h2h-matches-list::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .h2h-matches-list::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+    }
+
+    .h2h-matches-list::-webkit-scrollbar-thumb {
+        background: #e90052;
+        border-radius: 3px;
+    }
+
+    .h2h-matches-list::-webkit-scrollbar-thumb:hover {
+        background: #c70042;
+    }
+
+    @media (max-width: 768px) {
+        .h2h-summary {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .h2h-teams {
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .h2h-home, .h2h-away {
+            text-align: center;
+        }
+        
+        .h2h-score {
+            margin: 0;
+        }
+        
+        .h2h-match-details {
+            justify-content: center;
+        }
     }
 
     .fixtures-list, .knockouts-list {
@@ -1194,6 +2089,188 @@ const styles = `
         transform: translateY(-1px);
     }
 
+    /* Season Filter Section */
+    .season-filter-section {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 40px 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    .season-filter-section h2 {
+        color: #ffffff;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .season-selector-container {
+        position: relative;
+        max-width: 400px;
+        margin: 20px auto 0;
+    }
+
+    .certificate-season-select {
+        width: 100%;
+        padding: 15px 50px 15px 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        backdrop-filter: blur(10px);
+    }
+
+    .certificate-season-select:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0.3);
+        transform: translateY(-1px);
+    }
+
+    .certificate-season-select:focus {
+        outline: none;
+        background: rgba(255, 255, 255, 0.15);
+        border-color: #e90052;
+        box-shadow: 0 0 0 3px rgba(233, 0, 82, 0.2);
+        transform: translateY(-1px);
+    }
+
+    .certificate-season-select option {
+        background: #1a1a2e;
+        color: #ffffff;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .season-selector-icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #e90052;
+        font-size: 1.2rem;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .certificates-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .certificates-header h2 {
+        color: #ffffff;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .certificates-header p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1rem;
+    }
+
+    /* No Certificates Message */
+    .no-certificates-message {
+        text-align: center;
+        padding: 60px 40px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 15px;
+        border: 2px dashed rgba(255, 255, 255, 0.1);
+        margin: 20px 0;
+    }
+
+    .no-certificates-icon {
+        font-size: 4rem;
+        color: #ffc107;
+        margin-bottom: 20px;
+    }
+
+    .no-certificates-message h3 {
+        color: #ffffff;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .no-certificates-message p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1rem;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .season-status-info {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .status-badge {
+        display: inline-block;
+        padding: 8px 16px;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .status-badge.completed {
+        background: rgba(0, 255, 133, 0.2);
+        color: #00ff85;
+        border: 1px solid rgba(0, 255, 133, 0.3);
+    }
+
+    .status-badge.upcoming {
+        background: rgba(255, 193, 7, 0.2);
+        color: #ffc107;
+        border: 1px solid rgba(255, 193, 7, 0.3);
+    }
+
+    .status-badge.planned {
+        background: rgba(108, 117, 125, 0.2);
+        color: #6c757d;
+        border: 1px solid rgba(108, 117, 125, 0.3);
+    }
+
+    .status-description {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+        margin: 0;
+        font-style: italic;
+    }
+
+    .suggestion-text {
+        background: rgba(233, 0, 82, 0.1);
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 20px;
+        border-left: 4px solid #e90052;
+    }
+
+    .suggestion-text p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.9rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .suggestion-text i {
+        color: #e90052;
+    }
+
     /* Certificate Loading Spinner */
     .certificate-loading {
         display: flex;
@@ -1201,17 +2278,21 @@ const styles = `
         align-items: center;
         justify-content: center;
         padding: 60px 20px;
-        color: rgba(255, 255, 255, 0.8);
+        color: rgba(255, 255, 255, 0.9);
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        margin: 20px;
     }
 
     .certificate-spinner {
-        width: 50px;
-        height: 50px;
-        border: 4px solid rgba(255, 255, 255, 0.2);
-        border-top: 4px solid #e90052;
+        width: 60px;
+        height: 60px;
+        border: 5px solid rgba(255, 255, 255, 0.2);
+        border-top: 5px solid #e90052;
         border-radius: 50%;
         animation: spin 1s linear infinite;
         margin-bottom: 20px;
+        box-shadow: 0 0 20px rgba(233, 0, 82, 0.3);
     }
 
     @keyframes spin {
@@ -1220,14 +2301,60 @@ const styles = `
     }
 
     .certificate-loading-text {
-        font-size: 1.1rem;
-        font-weight: 500;
+        font-size: 1.2rem;
+        font-weight: 600;
         margin-bottom: 10px;
+        color: #ffffff;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .certificate-loading-subtext {
-        font-size: 0.9rem;
-        opacity: 0.7;
+        font-size: 1rem;
+        opacity: 0.8;
+        color: rgba(255, 255, 255, 0.9);
+        text-align: center;
+    }
+
+
+
+
+    /* Mobile Season Selector */
+    @media (max-width: 768px) {
+        .nav-container {
+            flex-direction: row;
+            height: 70px;
+            padding: 0 20px;
+            gap: 10px;
+        }
+        
+        .nav-logo {
+            order: 1;
+            flex: 1;
+            text-align: left;
+        }
+        
+        .nav-menu {
+            order: 2;
+            display: none;
+        }
+        
+        /* Adjust search container margin for mobile */
+        .search-container {
+            margin-top: 90px;
+        }
+    }
+
+    /* Small Mobile Season Selector */
+    @media (max-width: 480px) {
+        .nav-container {
+            padding: 0 15px;
+            gap: 8px;
+        }
+        
+        
+        .nav-logo-text {
+            font-size: 0.9rem;
+        }
     }
 
     .hero-btn {
@@ -1321,7 +2448,7 @@ const styles = `
         opacity: 0.9;
         margin-bottom: 5px;
     }
-    
+
     .stat-icon {
         font-size: 1.2rem;
         opacity: 0.7;
@@ -2210,6 +3337,140 @@ const styles = `
         font-size: 0.8rem;
     }
 
+    /* Club Trophies Styles */
+    .club-trophies {
+        background: rgba(255, 255, 255, 0.03);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 15px 20px;
+    }
+
+    .trophies-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+        color: #ffd700;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+    .trophies-header i {
+        font-size: 1rem;
+    }
+
+    .trophies-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    .trophy-item {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 8px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .trophy-item:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-2px);
+    }
+
+    .trophy-item.champion {
+        border-color: rgba(255, 215, 0, 0.3);
+        background: rgba(255, 215, 0, 0.1);
+    }
+
+    .trophy-item.runner-up {
+        border-color: rgba(192, 192, 192, 0.3);
+        background: rgba(192, 192, 192, 0.1);
+    }
+
+    .trophy-item.third-place {
+        border-color: rgba(205, 127, 50, 0.3);
+        background: rgba(205, 127, 50, 0.1);
+    }
+
+    .trophy-item i {
+        display: block;
+        font-size: 1.2rem;
+        margin-bottom: 4px;
+    }
+
+    .trophy-item.champion i {
+        color: #ffd700;
+    }
+
+    .trophy-item.runner-up i {
+        color: #c0c0c0;
+    }
+
+    .trophy-item.third-place i {
+        color: #cd7f32;
+    }
+
+    .trophy-count {
+        display: block;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 2px;
+    }
+
+    .trophy-label {
+        display: block;
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.2;
+    }
+
+    .trophy-seasons {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 10px;
+    }
+
+    .seasons-label {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 6px;
+    }
+
+    .seasons-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .season-badge {
+        background: rgba(233, 0, 82, 0.2);
+        color: #e90052;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        border: 1px solid rgba(233, 0, 82, 0.3);
+    }
+
+    .season-badge.champion {
+        background: rgba(255, 215, 0, 0.2);
+        color: #ffd700;
+        border-color: rgba(255, 215, 0, 0.3);
+    }
+
+    .season-badge.runner-up {
+        background: rgba(192, 192, 192, 0.2);
+        color: #c0c0c0;
+        border-color: rgba(192, 192, 192, 0.3);
+    }
+
+    .season-badge.third-place {
+        background: rgba(205, 127, 50, 0.2);
+        color: #cd7f32;
+        border-color: rgba(205, 127, 50, 0.3);
+    }
+
     /* Match Details Styles */
     .team-group {
         opacity: 0.9;
@@ -2390,8 +3651,157 @@ const styles = `
         .brackets-container {
             padding: 10px;
         }
+
+        .knockouts-not-started {
+            padding: 40px 20px;
+        }
+
+        .not-started-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .knockouts-not-started h2 {
+            font-size: 1.5rem;
+        }
+
+        .knockouts-not-started p {
+            font-size: 1rem;
+        }
+
+        .group-stage-info {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .info-card {
+            padding: 20px;
+        }
+
+        .info-card i {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .info-card h3 {
+            font-size: 1.1rem;
+        }
+
+        .info-card p {
+            font-size: 0.9rem;
+        }
+
+        .suggestion-text {
+            padding: 12px;
+        }
+
+        .suggestion-text p {
+            font-size: 0.8rem;
+            flex-direction: column;
+            text-align: center;
+            gap: 5px;
+        }
+
     }
     
+    /* Knockouts Not Started Message */
+    .knockouts-not-started {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        padding: 60px 40px;
+        margin-bottom: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        text-align: center;
+    }
+
+    .not-started-icon {
+        font-size: 4rem;
+        color: #ffc107;
+        margin-bottom: 20px;
+    }
+
+    .knockouts-not-started h2 {
+        color: #ffffff;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .knockouts-not-started p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    .group-stage-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 30px 0;
+    }
+
+    .info-card {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .info-card:hover {
+        background: rgba(255, 255, 255, 0.12);
+        transform: translateY(-2px);
+    }
+
+    .info-card i {
+        font-size: 2rem;
+        color: #e90052;
+        margin-bottom: 15px;
+    }
+
+    .info-card h3 {
+        color: #ffffff;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .info-card p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.95rem;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    .suggestion-text {
+        background: rgba(233, 0, 82, 0.1);
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 20px;
+        border-left: 4px solid #e90052;
+    }
+
+    .suggestion-text p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.9rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .suggestion-text i {
+        color: #e90052;
+    }
+
+    .suggestion-text a:hover {
+        text-decoration: underline !important;
+    }
+
+
     /* Knockout Tabs Styles */
     .knockout-tabs {
         display: flex;
@@ -2742,6 +4152,67 @@ const styles = `
         
         .certificates-subtitle {
             font-size: 0.9rem;
+        }
+
+        .season-filter-section {
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .season-filter-section h2 {
+            font-size: 1.3rem;
+        }
+
+        .season-selector-container {
+            max-width: 100%;
+            margin: 15px 0 0;
+        }
+
+        .certificate-season-select {
+            padding: 12px 45px 12px 15px;
+            font-size: 0.9rem;
+        }
+
+        .season-selector-icon {
+            right: 12px;
+            font-size: 1rem;
+        }
+
+        .no-certificates-message {
+            padding: 40px 20px;
+        }
+
+        .no-certificates-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .no-certificates-message h3 {
+            font-size: 1.3rem;
+        }
+
+        .no-certificates-message p {
+            font-size: 0.9rem;
+        }
+
+        .season-status-info {
+            padding: 15px;
+        }
+
+        .status-badge {
+            font-size: 0.8rem;
+            padding: 6px 12px;
+        }
+
+        .suggestion-text {
+            padding: 12px;
+        }
+
+        .suggestion-text p {
+            font-size: 0.8rem;
+            flex-direction: column;
+            text-align: center;
+            gap: 5px;
         }
         
         .certificates-grid {
@@ -3335,11 +4806,64 @@ const teamsData = {
         colors: ['#b71c1c', '#ef5350'],
         shortName: 'TON',
         logo: 'TON'
-    }
+    },
+    'yunusu': {
+        name: 'Yunusu',
+        stadium: 'Yunusu Arena',
+        manager: 'Yunusu Manager',
+        capacity: 27000,
+        founded: 2021,
+        titles: 0,
+        colors: ['#b71c1c', '#ef5350'],
+        shortName: 'YUN',
+        logo: 'YUN'
+    },
+    'lardker': {
+        name: 'Lardker',
+        stadium: 'Lardker Feild',
+        manager: 'Lardker Manager',
+        capacity: 3000,
+        founded: 2024,
+        titles: 0,
+        colors: ['#b71c1c', '#4a148c'],
+        shortName: 'LAD',
+        logo: 'LAD'
+    },
+    'delvin': {
+        name: 'Delvin Rash',
+        stadium: 'Rash Feild',
+        manager: 'Delvin Manager',
+        capacity: 3000,
+        founded: 2024,
+        titles: 0,
+        colors: ['#4a148c', '#4caf50'],
+        shortName: 'DEL',
+        logo: 'DEL'
+    },
+    'brioz': {
+        name: 'Brioz',
+        stadium: 'Brioz Stadium',
+        manager: 'Brioz Manager',
+        capacity: 13000,
+        founded: 2025,
+        titles: 0,
+        colors: ['#bf360c', '#4caf50'],
+        shortName: 'BRI',
+        logo: 'BRI'
+    },
+    
 };
 
-// Group stage data - Just team names and short names
-const groupData = {
+// Multi-Season Data Structure
+const seasonsData = {
+    season1: {
+        id: 'season1',
+        name: 'Season 1',
+        year: 'August 2025',
+        status: 'completed',
+        startDate: '2025-08-01',
+        endDate: '2025-08-31',
+        groups: {
     groupA: [
         { id: 'dav_lil7', name: 'Dav-Lil7', shortName: 'DAV' },
         { id: 'dandizzo', name: 'Dandizzo', shortName: 'DAN' },
@@ -3368,122 +4892,970 @@ const groupData = {
         { id: 'thDrksid', name: 'ThDrksid', shortName: 'DARK' },
         { id: 'maria', name: 'Aka The Kraven', shortName: 'AFC' }
     ]
+        }
+    },
+    season2: {
+        id: 'season2',
+        name: 'Season 2',
+        year: 'September 2025',
+        status: 'ongoing',
+        startDate: '2025-09-01',
+        endDate: '2025-09-30',
+        groups: {
+            groupA: [
+                { id: 'dav_lil7', name: 'Dav-Lil7', shortName: 'DAV' },
+                { id: 'phenom', name: 'Phenom', shortName: 'PHE' },
+                { id: 'yunusu', name: 'Yunusu', shortName: 'YUN' },
+                { id: 'mignon', name: 'Mignon', shortName: 'MIG' },
+                { id: 'ghost', name: 'ghost', shortName: 'GHO' }
+            ],
+            groupB: [
+                { id: 'dandizzo', name: 'Dandizzo', shortName: 'DAN' },
+                { id: 'elton', name: 'Elton', shortName: 'ELT' },
+                { id: 'yotah', name: 'Yotah', shortName: 'YOT' },
+                { id: 'wato', name: 'Wato', shortName: 'WAT' },
+                { id: 'volts', name: 'Volts', shortName: 'VOL' }
+            ],
+            groupC: [
+                { id: 'its_lyta23', name: 'Its_Lyta23', shortName: 'LYT' },
+                { id: 'lardker', name: 'Lardker', shortName: 'LAD' },
+                { id: 'kenno', name: 'Kenno', shortName: 'KEN' },
+                { id: 'thorvisual', name: 'ThorVisual', shortName: 'THO' },
+                { id: 'offer_art', name: 'Offer Art', shortName: 'OFF' }
+            ],
+            groupD: [
+                { id: 'ghazi', name: 'Ghazi', shortName: 'GHA' },
+                { id: 'delvin', name: 'Delvin Rash', shortName: 'DEL' },
+                { id: 'brioz', name: 'Brioz', shortName: 'BRI' },
+                { id: 'thDrksid', name: 'ThDrksid', shortName: 'DARK' },
+                { id: 'maria', name: 'Aka The Kraven', shortName: 'AFC' }
+            ]
+        }
+    },
+    season3: {
+        id: 'season3',
+        name: 'Season 3',
+        year: 'October 2025',
+        status: 'planned',
+        startDate: '2025-10-01',
+        endDate: '2025-10-31',
+        groups: {
+            groupA: [
+                { id: 'dav_lil7', name: 'Dav-Lil7', shortName: 'DAV' },
+                { id: 'dyno', name: 'Dyno', shortName: 'DYN' },
+                { id: 'kenno', name: 'Kenno', shortName: 'KEN' },
+                { id: 'thorvisual', name: 'ThorVisual', shortName: 'THO' },
+                { id: 'ghost', name: 'ghost', shortName: 'GHO' }
+            ],
+            groupB: [
+                { id: 'phenom', name: 'Phenom', shortName: 'PHE' },
+                { id: 'its_lyta23', name: 'Its_Lyta23', shortName: 'LYT' },
+                { id: 'offer_art', name: 'Offer Art', shortName: 'OFF' },
+                { id: 'thDrksid', name: 'ThDrksid', shortName: 'DARK' },
+                { id: 'volts', name: 'Volts', shortName: 'VOL' }
+            ],
+            groupC: [
+                { id: 'elton', name: 'Elton', shortName: 'ELT' },
+                { id: 'dandizzo', name: 'Dandizzo', shortName: 'DAN' },
+                { id: 'emjay', name: 'Emjay', shortName: 'EMJ' },
+                { id: 'wato', name: 'Wato', shortName: 'WAT' },
+                { id: 'newton', name: 'Newton', shortName: 'NEW' }
+            ],
+            groupD: [
+                { id: 'ghazi', name: 'Ghazi', shortName: 'GHA' },
+                { id: 'tonny', name: 'Tonny', shortName: 'TON' },
+                { id: 'yotah', name: 'Yotah', shortName: 'YOT' },
+                { id: 'mignon', name: 'Mignon', shortName: 'MIG' },
+                { id: 'maria', name: 'Aka The Kraven', shortName: 'AFC' }
+            ]
+        }
+    }
 };
 
-// Group stage fixtures - Each group has maximum 4 matchdays
-const groupFixtures = [
-    // Group A - Matchday 1 (August 26, 2025)
-    { id: 'GA1', group: 'A', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'dandizzo', status: 'completed', score: { home: 1, away: 2 } },
-    { id: 'GA2', group: 'A', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'dandizzo', awayTeam: 'dav_lil7', status: 'completed', score: { home: 1, away: 2 } },
-    { id: 'GA3', group: 'A', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'volts', status: 'completed', score: { home: 3, away: 0 } },
-    { id: 'GA4', group: 'A', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'volts', awayTeam: 'its_lyta23', status: 'completed', score: { home: 0, away: 2 } },
-    { id: 'GA5', group: 'A', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'ghost', awayTeam: 'dav_lil7', status: 'completed', score: { home: 0, away: 1 } },
-    { id: 'GA6', group: 'A', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'dav_lil7', awayTeam: 'ghost', status: 'completed', score: { home: 2, away: 0 } },
 
-    // Group A - Matchday 2 (August 27, 2025)
-    { id: 'GA7', group: 'A', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'its_lyta23', status: 'completed', score: { home: 0, away: 1 } },
-    { id: 'GA8', group: 'A', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'its_lyta23', awayTeam: 'dandizzo', status: 'completed', score: { home: 1, away: 0 } },
-    { id: 'GA9', group: 'A', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'volts', awayTeam: 'ghost', status: 'completed', score: { home: 2, away: 5 } },
-    { id: 'GA10', group: 'A', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'ghost', awayTeam: 'volts', status: 'completed', score: { home: 3, away: 3 } },
+// Current season reference
+let currentSeason = 'season1';
 
-    // Group A - Matchday 3 (August 28, 2025)
-    { id: 'GA11', group: 'A', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'volts', status: 'completed', score: { home: 1, away: 3 } },
-    { id: 'GA12', group: 'A', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'volts', awayTeam: 'dav_lil7', status: 'completed', score: { home: 0, away: 2 } },
-    { id: 'GA13', group: 'A', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'ghost', status: 'completed', score: { home: 0, away: 5 } },
-    { id: 'GA14', group: 'A', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'ghost', awayTeam: 'dandizzo', status: 'completed', score: { home: 4, away: 4 } },
-    { id: 'GA15', group: 'A', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'dav_lil7', status: 'completed', score: { home: 1, away: 3 } },
-    { id: 'GA16', group: 'A', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'dav_lil7', awayTeam: 'its_lyta23', status: 'completed', score: { home: 2, away: 2 } },
+// Log the current season
+console.log('Current season set to:', currentSeason);
 
-    // Group A - Matchday 4 (August 29, 2025)
-    { id: 'GA17', group: 'A', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'volts', status: 'completed', score: { home: 2, away: 1 } },
-    { id: 'GA18', group: 'A', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'volts', awayTeam: 'dandizzo', status: 'completed', score: { home: 2, away: 1 } },
-    { id: 'GA19', group: 'A', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'ghost', status: 'completed', score: { home: 2, away: 5 } },
-    { id: 'GA20', group: 'A', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'ghost', awayTeam: 'its_lyta23', status: 'completed', score: { home: 1, away: 2 } },
+// Helper function to get current season data
+function getCurrentSeasonData() {
+    try {
+        if (seasonsData && seasonsData[currentSeason]) {
+            return seasonsData[currentSeason];
+        } else {
+            console.warn(`Season ${currentSeason} not found in seasonsData`);
+            return null;
+        }
+    } catch (error) {
+        console.error('Error getting current season data:', error);
+        return null;
+    }
+}
 
-    // Group B - Matchday 1 (August 26, 2025)
-    { id: 'GB1', group: 'B', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'phenom', awayTeam: 'elton', status: 'completed', score: { home: 5, away: 1 } },
-    { id: 'GB2', group: 'B', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'elton', awayTeam: 'phenom', status: 'completed', score: { home: 0, away: 4 } },
-    { id: 'GB3', group: 'B', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'dyno', awayTeam: 'ghazi', status: 'completed', score: { home: 7, away: 2 } },
-    { id: 'GB4', group: 'B', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'ghazi', awayTeam: 'dyno', status: 'completed', score: { home: 0, away: 3 } },
-    { id: 'GB5', group: 'B', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'tonny', awayTeam: 'phenom', status: 'completed', score: { home: 2, away: 1 } },
-    { id: 'GB6', group: 'B', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'phenom', awayTeam: 'tonny', status: 'completed', score: { home: 1, away: 3 } },
+// Helper function to get unique team IDs from current season
+function getCurrentSeasonTeamIds() {
+    try {
+        const currentSeasonData = getCurrentSeasonData();
+        if (!currentSeasonData || !currentSeasonData.groups) {
+            console.warn('No current season data or groups found');
+            return Object.keys(teamsData); // Fallback to all teams
+        }
+        
+        const allTeams = [];
+        
+        // Collect all teams from all groups in current season
+        Object.values(currentSeasonData.groups).forEach(group => {
+            if (Array.isArray(group)) {
+                group.forEach(team => {
+                    allTeams.push(team.id);
+                });
+            }
+        });
+        
+        // Return unique team IDs
+        const uniqueTeamIds = [...new Set(allTeams)];
+        console.log(`Current season (${currentSeason}) has ${uniqueTeamIds.length} unique teams:`, uniqueTeamIds);
+        return uniqueTeamIds;
+    } catch (error) {
+        console.warn('Error getting current season team IDs:', error);
+        return Object.keys(teamsData); // Fallback to all teams
+    }
+}
 
-    // Group B - Matchday 2 (August 27, 2025)
-    { id: 'GB7', group: 'B', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'elton', awayTeam: 'dyno', status: 'completed', score: { home: 1, away: 8 } },
-    { id: 'GB8', group: 'B', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'dyno', awayTeam: 'elton', status: 'completed', score: { home: 4, away: 2 } },
-    { id: 'GB9', group: 'B', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'ghazi', awayTeam: 'tonny', status: 'completed', score: { home: 5, away: 1 } },
-    { id: 'GB10', group: 'B', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'tonny', awayTeam: 'ghazi', status: 'completed', score: { home: 0, away: 1 } },
+// Function to calculate all-seasons stats for a team
+function calculateAllSeasonsStats(teamId) {
+    const allSeasonsStats = {
+        totalMatches: 0,
+        totalWins: 0,
+        totalDraws: 0,
+        totalLosses: 0,
+        totalGoalsFor: 0,
+        totalGoalsAgainst: 0,
+        totalGoalDifference: 0,
+        seasonsPlayed: 0,
+        seasons: []
+    };
 
-    // Group B - Matchday 3 (August 28, 2025)
-    { id: 'GB11', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'phenom', awayTeam: 'dyno', status: 'completed', score: { home: 1, away: 3 } },
-    { id: 'GB12', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'dyno', awayTeam: 'phenom', status: 'completed', score: { home: 3, away: 2 } },
-    { id: 'GB13', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'elton', awayTeam: 'ghazi', status: 'completed', score: { home: 0, away: 8 } },
-    { id: 'GB14', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'ghazi', awayTeam: 'elton', status: 'completed', score: { home: 9, away: 1 } },
-    { id: 'GB15', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'tonny', awayTeam: 'elton', status: 'completed', score: { home: 0, away: 0 } },
-    { id: 'GB16', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'elton', awayTeam: 'tonny', status: 'completed', score: { home: 0, away: 0 } },
+    // Process each season
+    Object.entries(seasonsFixtures).forEach(([seasonId, seasonFixtures]) => {
+        // Get team's group stage fixtures for this season
+        const teamSeasonFixtures = seasonFixtures.filter(f => 
+            f.homeTeam === teamId || f.awayTeam === teamId
+        );
 
-    // Group B - Matchday 4 (August 29, 2025)
-    { id: 'GB17', group: 'B', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'phenom', awayTeam: 'ghazi', status: 'completed', score: { home: 0, away: 2 } },
-    { id: 'GB18', group: 'B', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'ghazi', awayTeam: 'phenom', status: 'completed', score: { home: 2, away: 2 } },
-    { id: 'GB21', group: 'B', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'dyno', awayTeam: 'tonny', status: 'completed', score: { home: 4, away: 0 } },
-    { id: 'GB22', group: 'B', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'tonny', awayTeam: 'dyno', status: 'completed', score: { home: 3, away: 8 } },
+        // Get team's knockout matches for this season
+        const seasonKnockouts = seasonsKnockouts[seasonId];
+        let teamKnockoutMatches = [];
+        
+        if (seasonKnockouts) {
+            const allKnockoutMatches = [
+                ...seasonKnockouts.roundOf16,
+                ...seasonKnockouts.quarterFinals,
+                ...seasonKnockouts.semiFinals,
+                ...seasonKnockouts.final,
+                ...seasonKnockouts.thirdPlacePlayoff
+            ];
+            
+            teamKnockoutMatches = allKnockoutMatches.filter(match => 
+                match.homeTeam === teamId || match.awayTeam === teamId
+            );
+        }
 
-    // Group C - Matchday 1 (August 26, 2025)
-    { id: 'GC1', group: 'C', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'newton', awayTeam: 'yotah', status: 'completed', score: { home: 2, away: 5 } },
-    { id: 'GC2', group: 'C', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'yotah', awayTeam: 'newton', status: 'completed', score: { home: 1, away: 0 } },
-    { id: 'GC3', group: 'C', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'kenno', awayTeam: 'offer_art', status: 'completed', score: { home: 7, away: 2 } },
-    { id: 'GC4', group: 'C', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'offer_art', awayTeam: 'kenno', status: 'completed', score: { home: 1, away: 2 } },
-    { id: 'GC5', group: 'C', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'emjay', awayTeam: 'newton', status: 'completed', score: { home: 3, away: 2 } },
-    { id: 'GC6', group: 'C', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'newton', awayTeam: 'emjay', status: 'completed', score: { home: 1, away: 4 } },
+        // Combine all matches for this season
+        const allSeasonMatches = [...teamSeasonFixtures, ...teamKnockoutMatches];
 
-    // Group C - Matchday 2 (August 27, 2025)
-    { id: 'GC7', group: 'C', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'yotah', awayTeam: 'kenno', status: 'completed', score: { home: 2, away: 5 } },
-    { id: 'GC8', group: 'C', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'kenno', awayTeam: 'yotah', status: 'completed', score: { home: 6, away: 0 } },
-    { id: 'GC9', group: 'C', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'offer_art', awayTeam: 'emjay', status: 'completed', score: { home: 4, away: 5 } },
-    { id: 'GC10', group: 'C', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'emjay', awayTeam: 'offer_art', status: 'completed', score: { home: 0, away: 1 } },
+        if (allSeasonMatches.length > 0) {
+            // Calculate stats for this season (including both group and knockout)
+            const seasonStats = calculateTeamStats(teamId, allSeasonMatches);
+            
+            allSeasonsStats.totalMatches += seasonStats.played;
+            allSeasonsStats.totalWins += seasonStats.won;
+            allSeasonsStats.totalDraws += seasonStats.drawn;
+            allSeasonsStats.totalLosses += seasonStats.lost;
+            allSeasonsStats.totalGoalsFor += seasonStats.goalsFor;
+            allSeasonsStats.totalGoalsAgainst += seasonStats.goalsAgainst;
+            allSeasonsStats.seasonsPlayed++;
+            
+            // Add season details
+            allSeasonsStats.seasons.push({
+                seasonId: seasonId,
+                seasonName: seasonsData[seasonId]?.name || seasonId,
+                seasonYear: seasonsData[seasonId]?.year || '2025',
+                group: findTeamGroupInSeason(teamId, seasonId),
+                matches: seasonStats.played,
+                wins: seasonStats.won,
+                draws: seasonStats.drawn,
+                losses: seasonStats.lost,
+                goalsFor: seasonStats.goalsFor,
+                goalsAgainst: seasonStats.goalsAgainst,
+                goalDifference: seasonStats.goalDifference,
+                points: seasonStats.points,
+                groupMatches: teamSeasonFixtures.length,
+                knockoutMatches: teamKnockoutMatches.length
+            });
+        }
+    });
 
-    // Group C - Matchday 3 (August 28, 2025)
-    { id: 'GC11', group: 'C', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'newton', awayTeam: 'kenno', status: 'completed', score: { home: 4, away: 6 } },
-    { id: 'GC12', group: 'C', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'kenno', awayTeam: 'newton', status: 'completed', score: { home: 8, away: 2 } },
-    { id: 'GC13', group: 'C', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'yotah', awayTeam: 'offer_art', status: 'completed', score: { home: 1, away: 2 } },
-    { id: 'GC14', group: 'C', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'offer_art', awayTeam: 'yotah', status: 'completed', score: { home: 2, away: 3 } },
-    { id: 'GC15', group: 'C', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'emjay', awayTeam: 'kenno', status: 'completed', score: { home: 0, away: 3 } },
-    { id: 'GC16', group: 'C', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'kenno', awayTeam: 'emjay', status: 'completed', score: { home: 3, away: 2 } },
+    // Calculate total goal difference
+    allSeasonsStats.totalGoalDifference = allSeasonsStats.totalGoalsFor - allSeasonsStats.totalGoalsAgainst;
 
-    // Group C - Matchday 4 (August 29, 2025)
-    { id: 'GC17', group: 'C', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'newton', awayTeam: 'offer_art', status: 'completed', score: { home: 2, away: 5 } },
-    { id: 'GC18', group: 'C', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'offer_art', awayTeam: 'newton', status: 'completed', score: { home: 8, away: 2 } },
-    { id: 'GC19', group: 'C', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'yotah', awayTeam: 'emjay', status: 'completed', score: { home: 1, away: 2 } },
-    { id: 'GC20', group: 'C', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'emjay', awayTeam: 'yotah', status: 'completed', score: { home: 1, away: 3 } },
+    return allSeasonsStats;
+}
 
-    // Group D - Matchday 1 (August 26, 2025)
-    { id: 'GD1', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'mignon', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 11 } },
-    { id: 'GD2', group: 'D', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'wato', awayTeam: 'mignon', status: 'completed', score: { home: 3, away: 1 } },
-    { id: 'GD3', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'thDrksid', status: 'completed', score: { home: 2, away: 5 } },
-    { id: 'GD4', group: 'D', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'thorvisual', status: 'completed', score: { home: 4, away: 2 } },
-    { id: 'GD5', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'maria', awayTeam: 'mignon', status: 'completed', score: { home: 0, away: 0 } },
-    { id: 'GD6', group: 'D', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'mignon', awayTeam: 'maria', status: 'completed', score: { home: 0, away: 0 } },
+// Function to calculate historical records from all seasons
+function calculateHistoricalRecords() {
+    const teamRecords = {};
+    
+    // Initialize all teams with empty records
+    Object.keys(teamsData).forEach(teamId => {
+        teamRecords[teamId] = {
+            leagueWins: 0,
+            runnerUp: 0,
+            thirdPlace: 0,
+            totalTrophies: 0,
+            seasons: []
+        };
+    });
+    
+    // Process each season
+    Object.entries(seasonsKnockouts).forEach(([seasonId, seasonData]) => {
+        console.log(`Processing ${seasonId} for historical records...`);
+        
+        // Check if season has completed final
+        if (seasonData.final && seasonData.final.length > 0) {
+            const finalMatch = seasonData.final[0];
+            
+            if (finalMatch.status === 'completed' && finalMatch.score) {
+                const homeTeam = finalMatch.homeTeam;
+                const awayTeam = finalMatch.awayTeam;
+                const homeScore = finalMatch.score.home;
+                const awayScore = finalMatch.score.away;
+                
+                // Determine winner and runner-up based on final match score
+                let winner, runnerUp;
+                if (homeScore > awayScore) {
+                    winner = homeTeam;
+                    runnerUp = awayTeam;
+                } else if (awayScore > homeScore) {
+                    winner = awayTeam;
+                    runnerUp = homeTeam;
+                } else {
+                    // Handle penalties if available
+                    if (finalMatch.penalties) {
+                        if (finalMatch.penalties.home > finalMatch.penalties.away) {
+                            winner = homeTeam;
+                            runnerUp = awayTeam;
+                        } else {
+                            winner = awayTeam;
+                            runnerUp = homeTeam;
+                        }
+                    }
+                }
+                
+                // Update records for winner (Champion)
+                if (winner && teamRecords[winner]) {
+                    teamRecords[winner].leagueWins++;
+                    teamRecords[winner].totalTrophies++;
+                    teamRecords[winner].seasons.push({
+                        season: seasonId,
+                        achievement: 'Champion',
+                        year: seasonsData[seasonId]?.year || '2025'
+                    });
+                    console.log(`${winner} won ${seasonId} - League Wins: ${teamRecords[winner].leagueWins}`);
+                }
+                
+                // Update records for runner-up
+                if (runnerUp && teamRecords[runnerUp]) {
+                    teamRecords[runnerUp].runnerUp++;
+                    teamRecords[runnerUp].seasons.push({
+                        season: seasonId,
+                        achievement: 'Runner-up',
+                        year: seasonsData[seasonId]?.year || '2025'
+                    });
+                    console.log(`${runnerUp} was runner-up in ${seasonId}`);
+                }
+                
+                // Check for third place playoff
+                if (seasonData.thirdPlacePlayoff && seasonData.thirdPlacePlayoff.length > 0) {
+                    const thirdPlaceMatch = seasonData.thirdPlacePlayoff[0];
+                    if (thirdPlaceMatch.status === 'completed' && thirdPlaceMatch.score) {
+                        const thirdPlaceWinner = thirdPlaceMatch.score.home > thirdPlaceMatch.score.away 
+                            ? thirdPlaceMatch.homeTeam 
+                            : thirdPlaceMatch.awayTeam;
+                        
+                        if (thirdPlaceWinner && teamRecords[thirdPlaceWinner]) {
+                            teamRecords[thirdPlaceWinner].thirdPlace++;
+                            teamRecords[thirdPlaceWinner].totalTrophies++;
+                            teamRecords[thirdPlaceWinner].seasons.push({
+                                season: seasonId,
+                                achievement: 'Third Place',
+                                year: seasonsData[seasonId]?.year || '2025'
+                            });
+                            console.log(`${thirdPlaceWinner} won third place in ${seasonId}`);
+                        }
+                    }
+                }
+            }
+        }
+    });
+    
+    console.log('Historical records calculated:', teamRecords);
+    return teamRecords;
+}
 
-    // Group D - Matchday 2 (August 27, 2025)
-    { id: 'GD7', group: 'D', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'wato', awayTeam: 'thorvisual', status: 'completed', score: { home: 5, away: 3 } },
-    { id: 'GD8', group: 'D', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 1 } },
-    { id: 'GD9', group: 'D', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'maria', status: 'completed', score: { home: 2, away: 1 } },
-    { id: 'GD10', group: 'D', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'maria', awayTeam: 'thDrksid', status: 'completed', score: { home: 1, away: 4 } },
+// Helper function to get group data for current season
+function getCurrentGroupData() {
+    try {
+        const seasonData = getCurrentSeasonData();
+        if (seasonData && seasonData.groups) {
+            return seasonData.groups;
+        } else {
+            console.warn('No groups data available for current season');
+            return {};
+        }
+    } catch (error) {
+        console.error('Error getting current group data:', error);
+        return {};
+    }
+}
 
-    // Group D - Matchday 3 (August 28, 2025)
-    { id: 'GD11', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'mignon', awayTeam: 'thorvisual', status: 'completed', score: { home: 1, away: 7 } },
-    { id: 'GD12', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'mignon', status: 'completed', score: { home: 1, away: 0 } },
-    { id: 'GD13', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'wato', awayTeam: 'thDrksid', status: 'completed', score: { home: 3, away: 3 } },
-    { id: 'GD14', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'wato', status: 'completed', score: { home: 6, away: 5 } },
+// Legacy support - keep the old groupData for backward compatibility
+let groupData = {};
 
-    // Group D - Matchday 4 (August 29, 2025)
-    { id: 'GD15', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'mignon', awayTeam: 'thDrksid', status: 'completed', score: { home: 0, away: 0 } },
-    { id: 'GD16', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'mignon', status: 'completed', score: { home: 0, away: 0 } },
-    { id: 'GD17', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'wato', awayTeam: 'maria', status: 'completed', score: { home: 1, away: 2 } },
-    { id: 'GD18', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'maria', awayTeam: 'wato', status: 'completed', score: { home: 4, away: 4 } },
-    { id: 'GD19', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'maria', status: 'completed', score: { home: 2, away: 3 } },
-    { id: 'GD20', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'maria', awayTeam: 'thorvisual', status: 'completed', score: { home: 0, away: 3 } }
-];
+// Season management functions
+function switchSeason(seasonId) {
+    if (seasonsData[seasonId]) {
+        currentSeason = seasonId;
+        
+        // Update the legacy groupData reference
+        const newGroupData = seasonsData[seasonId].groups;
+        Object.assign(groupData, newGroupData);
+        
+        // Update the legacy groupFixtures reference
+        const newFixtures = seasonsFixtures[seasonId] || [];
+        groupFixtures.length = 0;
+        groupFixtures.push(...newFixtures);
+        
+        // Update leagueData.groupFixtures to match
+        leagueData.groupFixtures = groupFixtures;
+        // Update leagueData.groups to match
+        leagueData.groups = newGroupData;
+        // Update the legacy knockouts reference
+        const currentKnockouts = getCurrentSeasonKnockouts();
+        leagueData.knockouts = currentKnockouts;
+        
+        // Update leagueData teams with current season's teams
+        const currentSeasonTeamIds = getCurrentSeasonTeamIds();
+        leagueData.teams = currentSeasonTeamIds.map((teamId, index) => {
+            const team = teamsData[teamId];
+            const played = Math.floor(Math.random() * 6) + 1;
+            const won = Math.floor(Math.random() * played);
+            const drawn = Math.floor(Math.random() * (played - won));
+            const lost = played - won - drawn;
+            const goalsFor = Math.floor(Math.random() * 20) + 5;
+            const goalsAgainst = Math.floor(Math.random() * 15) + 3;
+            const points = (won * 3) + drawn;
+            
+            return {
+                id: index + 1,
+                name: team.name,
+                country: "Pro League",
+                logo: team.logo,
+                points: points,
+                played: played,
+                won: won,
+                drawn: drawn,
+                lost: lost,
+                goalsFor: goalsFor,
+                goalsAgainst: goalsAgainst,
+                stadium: team.stadium,
+                manager: team.manager,
+                capacity: team.capacity,
+                founded: team.founded,
+                titles: team.titles,
+                colors: team.colors,
+                shortName: team.shortName
+            };
+        });
+        
+        console.log(`Switched to ${seasonsData[seasonId].name} and set as current season`);
+        return true;
+    }
+    console.error(`Season ${seasonId} not found`);
+    return false;
+}
+
+function getSeasonList() {
+    return Object.values(seasonsData).map(season => ({
+        id: season.id,
+        name: season.name,
+        year: season.year,
+        status: season.status,
+        startDate: season.startDate,
+        endDate: season.endDate
+    }));
+}
+
+function getCurrentSeason() {
+    try {
+        if (seasonsData && seasonsData[currentSeason]) {
+            return seasonsData[currentSeason];
+        } else {
+            console.warn(`Current season ${currentSeason} not found in seasonsData`);
+            return null;
+        }
+    } catch (error) {
+        console.error('Error in getCurrentSeason:', error);
+        return null;
+    }
+}
+
+function getSeasonById(seasonId) {
+    return seasonsData[seasonId] || null;
+}
+
+
+// Function to add a new season
+function addSeason(seasonId, seasonData) {
+    if (seasonsData[seasonId]) {
+        console.warn(`Season ${seasonId} already exists`);
+        return false;
+    }
+    
+    seasonsData[seasonId] = seasonData;
+    seasonsFixtures[seasonId] = seasonData.fixtures || [];
+    console.log(`Added new season: ${seasonData.name}`);
+    return true;
+}
+
+// Function to remove a season
+function removeSeason(seasonId) {
+    if (!seasonsData[seasonId]) {
+        console.warn(`Season ${seasonId} does not exist`);
+        return false;
+    }
+    
+    if (currentSeason === seasonId) {
+        console.warn(`Cannot remove current season ${seasonId}`);
+        return false;
+    }
+    
+    delete seasonsData[seasonId];
+    delete seasonsFixtures[seasonId];
+    console.log(`Removed season: ${seasonId}`);
+    return true;
+}
+
+// Multi-Season Fixtures Structure
+const seasonsFixtures = {
+    season1: [
+            // Group A - Matchday 1 (August 26, 2025)
+        { id: 'GA1', group: 'A', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'dandizzo', status: 'completed', score: { home: 1, away: 2 } },
+        { id: 'GA2', group: 'A', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'dandizzo', awayTeam: 'dav_lil7', status: 'completed', score: { home: 1, away: 2 } },
+        { id: 'GA3', group: 'A', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'volts', status: 'completed', score: { home: 3, away: 0 } },
+        { id: 'GA4', group: 'A', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'volts', awayTeam: 'its_lyta23', status: 'completed', score: { home: 0, away: 2 } },
+        { id: 'GA5', group: 'A', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'ghost', awayTeam: 'dav_lil7', status: 'completed', score: { home: 0, away: 1 } },
+        { id: 'GA6', group: 'A', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'dav_lil7', awayTeam: 'ghost', status: 'completed', score: { home: 2, away: 0 } },
+
+        // Group A - Matchday 2 (August 27, 2025)
+        { id: 'GA7', group: 'A', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'its_lyta23', status: 'completed', score: { home: 0, away: 1 } },
+        { id: 'GA8', group: 'A', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'its_lyta23', awayTeam: 'dandizzo', status: 'completed', score: { home: 1, away: 0 } },
+        { id: 'GA9', group: 'A', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'volts', awayTeam: 'ghost', status: 'completed', score: { home: 2, away: 5 } },
+        { id: 'GA10', group: 'A', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'ghost', awayTeam: 'volts', status: 'completed', score: { home: 3, away: 3 } },
+
+        // Group A - Matchday 3 (August 28, 2025)
+        { id: 'GA11', group: 'A', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'volts', status: 'completed', score: { home: 1, away: 3 } },
+        { id: 'GA12', group: 'A', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'volts', awayTeam: 'dav_lil7', status: 'completed', score: { home: 0, away: 2 } },
+        { id: 'GA13', group: 'A', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'ghost', status: 'completed', score: { home: 0, away: 5 } },
+        { id: 'GA14', group: 'A', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'ghost', awayTeam: 'dandizzo', status: 'completed', score: { home: 4, away: 4 } },
+        { id: 'GA15', group: 'A', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'dav_lil7', status: 'completed', score: { home: 1, away: 3 } },
+        { id: 'GA16', group: 'A', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'dav_lil7', awayTeam: 'its_lyta23', status: 'completed', score: { home: 2, away: 2 } },
+
+        // Group A - Matchday 4 (August 29, 2025)
+        { id: 'GA17', group: 'A', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'volts', status: 'completed', score: { home: 2, away: 1 } },
+        { id: 'GA18', group: 'A', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'volts', awayTeam: 'dandizzo', status: 'completed', score: { home: 2, away: 1 } },
+        { id: 'GA19', group: 'A', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'ghost', status: 'completed', score: { home: 2, away: 5 } },
+        { id: 'GA20', group: 'A', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'ghost', awayTeam: 'its_lyta23', status: 'completed', score: { home: 1, away: 2 } },
+
+        // Group B - Matchday 1 (August 26, 2025)
+        { id: 'GB1', group: 'B', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'phenom', awayTeam: 'elton', status: 'completed', score: { home: 5, away: 1 } },
+        { id: 'GB2', group: 'B', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'elton', awayTeam: 'phenom', status: 'completed', score: { home: 0, away: 4 } },
+        { id: 'GB3', group: 'B', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'dyno', awayTeam: 'ghazi', status: 'completed', score: { home: 7, away: 2 } },
+        { id: 'GB4', group: 'B', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'ghazi', awayTeam: 'dyno', status: 'completed', score: { home: 0, away: 3 } },
+        { id: 'GB5', group: 'B', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'tonny', awayTeam: 'phenom', status: 'completed', score: { home: 2, away: 1 } },
+        { id: 'GB6', group: 'B', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'phenom', awayTeam: 'tonny', status: 'completed', score: { home: 1, away: 3 } },
+
+        // Group B - Matchday 2 (August 27, 2025)
+        { id: 'GB7', group: 'B', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'elton', awayTeam: 'dyno', status: 'completed', score: { home: 1, away: 8 } },
+        { id: 'GB8', group: 'B', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'dyno', awayTeam: 'elton', status: 'completed', score: { home: 4, away: 2 } },
+        { id: 'GB9', group: 'B', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'ghazi', awayTeam: 'tonny', status: 'completed', score: { home: 5, away: 1 } },
+        { id: 'GB10', group: 'B', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'tonny', awayTeam: 'ghazi', status: 'completed', score: { home: 0, away: 1 } },
+
+        // Group B - Matchday 3 (August 28, 2025)
+        { id: 'GB11', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'phenom', awayTeam: 'dyno', status: 'completed', score: { home: 1, away: 3 } },
+        { id: 'GB12', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'dyno', awayTeam: 'phenom', status: 'completed', score: { home: 3, away: 2 } },
+        { id: 'GB13', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'elton', awayTeam: 'ghazi', status: 'completed', score: { home: 0, away: 8 } },
+        { id: 'GB14', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'ghazi', awayTeam: 'elton', status: 'completed', score: { home: 9, away: 1 } },
+        { id: 'GB15', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'tonny', awayTeam: 'elton', status: 'completed', score: { home: 0, away: 0 } },
+        { id: 'GB16', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'elton', awayTeam: 'tonny', status: 'completed', score: { home: 0, away: 0 } },
+
+        // Group B - Matchday 4 (August 29, 2025)
+        { id: 'GB17', group: 'B', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'phenom', awayTeam: 'ghazi', status: 'completed', score: { home: 0, away: 2 } },
+        { id: 'GB18', group: 'B', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'ghazi', awayTeam: 'phenom', status: 'completed', score: { home: 2, away: 2 } },
+        { id: 'GB21', group: 'B', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'dyno', awayTeam: 'tonny', status: 'completed', score: { home: 4, away: 0 } },
+        { id: 'GB22', group: 'B', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'tonny', awayTeam: 'dyno', status: 'completed', score: { home: 3, away: 8 } },
+
+        // Group C - Matchday 1 (August 26, 2025)
+        { id: 'GC1', group: 'C', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'newton', awayTeam: 'yotah', status: 'completed', score: { home: 2, away: 5 } },
+        { id: 'GC2', group: 'C', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'yotah', awayTeam: 'newton', status: 'completed', score: { home: 1, away: 0 } },
+        { id: 'GC3', group: 'C', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'kenno', awayTeam: 'offer_art', status: 'completed', score: { home: 7, away: 2 } },
+        { id: 'GC4', group: 'C', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'offer_art', awayTeam: 'kenno', status: 'completed', score: { home: 1, away: 2 } },
+        { id: 'GC5', group: 'C', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'emjay', awayTeam: 'newton', status: 'completed', score: { home: 3, away: 2 } },
+        { id: 'GC6', group: 'C', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'newton', awayTeam: 'emjay', status: 'completed', score: { home: 1, away: 4 } },
+
+        // Group C - Matchday 2 (August 27, 2025)
+        { id: 'GC7', group: 'C', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'yotah', awayTeam: 'kenno', status: 'completed', score: { home: 2, away: 5 } },
+        { id: 'GC8', group: 'C', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'kenno', awayTeam: 'yotah', status: 'completed', score: { home: 6, away: 0 } },
+        { id: 'GC9', group: 'C', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'offer_art', awayTeam: 'emjay', status: 'completed', score: { home: 4, away: 5 } },
+        { id: 'GC10', group: 'C', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'emjay', awayTeam: 'offer_art', status: 'completed', score: { home: 0, away: 1 } },
+
+        // Group C - Matchday 3 (August 28, 2025)
+        { id: 'GC11', group: 'C', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'newton', awayTeam: 'kenno', status: 'completed', score: { home: 4, away: 6 } },
+        { id: 'GC12', group: 'C', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'kenno', awayTeam: 'newton', status: 'completed', score: { home: 8, away: 2 } },
+        { id: 'GC13', group: 'C', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'yotah', awayTeam: 'offer_art', status: 'completed', score: { home: 1, away: 2 } },
+        { id: 'GC14', group: 'C', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'offer_art', awayTeam: 'yotah', status: 'completed', score: { home: 2, away: 3 } },
+        { id: 'GC15', group: 'C', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'emjay', awayTeam: 'kenno', status: 'completed', score: { home: 0, away: 3 } },
+        { id: 'GC16', group: 'C', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'kenno', awayTeam: 'emjay', status: 'completed', score: { home: 3, away: 2 } },
+
+        // Group C - Matchday 4 (August 29, 2025)
+        { id: 'GC17', group: 'C', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'newton', awayTeam: 'offer_art', status: 'completed', score: { home: 2, away: 5 } },
+        { id: 'GC18', group: 'C', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'offer_art', awayTeam: 'newton', status: 'completed', score: { home: 8, away: 2 } },
+        { id: 'GC19', group: 'C', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'yotah', awayTeam: 'emjay', status: 'completed', score: { home: 1, away: 2 } },
+        { id: 'GC20', group: 'C', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'emjay', awayTeam: 'yotah', status: 'completed', score: { home: 1, away: 3 } },
+
+        // Group D - Matchday 1 (August 26, 2025)
+        { id: 'GD1', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'mignon', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 11 } },
+        { id: 'GD2', group: 'D', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'wato', awayTeam: 'mignon', status: 'completed', score: { home: 3, away: 1 } },
+        { id: 'GD3', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'thDrksid', status: 'completed', score: { home: 2, away: 5 } },
+        { id: 'GD4', group: 'D', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'thorvisual', status: 'completed', score: { home: 4, away: 2 } },
+        { id: 'GD5', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'maria', awayTeam: 'mignon', status: 'completed', score: { home: 0, away: 0 } },
+        { id: 'GD6', group: 'D', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'mignon', awayTeam: 'maria', status: 'completed', score: { home: 0, away: 0 } },
+
+        // Group D - Matchday 2 (August 27, 2025)
+        { id: 'GD7', group: 'D', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'wato', awayTeam: 'thorvisual', status: 'completed', score: { home: 5, away: 3 } },
+        { id: 'GD8', group: 'D', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 1 } },
+        { id: 'GD9', group: 'D', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'maria', status: 'completed', score: { home: 2, away: 1 } },
+        { id: 'GD10', group: 'D', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'maria', awayTeam: 'thDrksid', status: 'completed', score: { home: 1, away: 4 } },
+
+        // Group D - Matchday 3 (August 28, 2025)
+        { id: 'GD11', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'mignon', awayTeam: 'thorvisual', status: 'completed', score: { home: 1, away: 7 } },
+        { id: 'GD12', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'mignon', status: 'completed', score: { home: 1, away: 0 } },
+        { id: 'GD13', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'wato', awayTeam: 'thDrksid', status: 'completed', score: { home: 3, away: 3 } },
+        { id: 'GD14', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'wato', status: 'completed', score: { home: 6, away: 5 } },
+
+        // Group D - Matchday 4 (August 29, 2025)
+        { id: 'GD15', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'mignon', awayTeam: 'thDrksid', status: 'completed', score: { home: 0, away: 0 } },
+        { id: 'GD16', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'mignon', status: 'completed', score: { home: 0, away: 0 } },
+        { id: 'GD17', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'wato', awayTeam: 'maria', status: 'completed', score: { home: 1, away: 2 } },
+        { id: 'GD18', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'maria', awayTeam: 'wato', status: 'completed', score: { home: 4, away: 4 } },
+        { id: 'GD19', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'maria', status: 'completed', score: { home: 2, away: 3 } },
+        { id: 'GD20', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'maria', awayTeam: 'thorvisual', status: 'completed', score: { home: 0, away: 3 } }
+    ],
+    season2: [
+        // Season 2 fixtures - Sample data for upcoming season
+        { id: 'S2GA1', group: 'A', matchday: 1, date: '2025-09-01', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'phenom', status: 'completed', score: { home: 1, away: 2 } },
+        { id: 'S2GA2', group: 'A', matchday: 1, date: '2025-09-01', time: '22:00', homeTeam: 'yunusu', awayTeam: 'mignon', status: 'completed', score: { home: 7, away: 2 } },
+        { id: 'S2GA3', group: 'A', matchday: 1, date: '2025-09-02', time: '20:00', homeTeam: 'ghost', awayTeam: 'dav_lil7', status: 'completed', score: { home: 1, away: 0 } },
+        { id: 'S2GA4', group: 'A', matchday: 1, date: '2025-09-02', time: '22:00', homeTeam: 'phenom', awayTeam: 'yunusu', status: 'completed', score: { home: 0, away: 2 } },
+        { id: 'S2GA5', group: 'A', matchday: 1, date: '2025-09-03', time: '20:00', homeTeam: 'mignon', awayTeam: 'ghost', status: 'completed', score: { home: 9, away: 8 } },
+        
+        { id: 'S2GB1', group: 'B', matchday: 1, date: '2025-09-01', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'elton', status: 'completed', score: { home: 1, away: 2 } },
+        { id: 'S2GB2', group: 'B', matchday: 1, date: '2025-09-01', time: '22:00', homeTeam: 'yotah', awayTeam: 'wato', status: 'completed', score: { home: 5, away: 2 } },
+        { id: 'S2GB3', group: 'B', matchday: 1, date: '2025-09-02', time: '20:00', homeTeam: 'volts', awayTeam: 'dandizzo', status: 'completed', score: { home: 1, away: 2 } },
+        { id: 'S2GB4', group: 'B', matchday: 1, date: '2025-09-02', time: '22:00', homeTeam: 'elton', awayTeam: 'yotah', status: 'completed', score: { home: 1, away: 5 } },
+        { id: 'S2GB5', group: 'B', matchday: 1, date: '2025-09-03', time: '20:00', homeTeam: 'wato', awayTeam: 'volts', status: 'completed', score: { home: 1, away: 2 } },
+        
+        { id: 'S2GC1', group: 'C', matchday: 1, date: '2025-09-01', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'lardker', status: 'completed', score: { home: 1, away: 2 } },
+        { id: 'S2GC2', group: 'C', matchday: 1, date: '2025-09-01', time: '22:00', homeTeam: 'kenno', awayTeam: 'thorvisual', status: 'completed', score: { home: 1, away: 9 } },
+        { id: 'S2GC3', group: 'C', matchday: 1, date: '2025-09-02', time: '20:00', homeTeam: 'offer_art', awayTeam: 'its_lyta23', status: 'scheduled', score: { home: 8, away: 2 } },
+        { id: 'S2GC4', group: 'C', matchday: 1, date: '2025-09-02', time: '22:00', homeTeam: 'lardker', awayTeam: 'kenno', status: 'completed', score: { home: 6, away: 2 } },
+        { id: 'S2GC5', group: 'C', matchday: 1, date: '2025-09-03', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'offer_art', status: 'completed', score: { home: 5, away: 2 } },
+        
+        { id: 'S2GD1', group: 'D', matchday: 1, date: '2025-09-01', time: '20:00', homeTeam: 'ghazi', awayTeam: 'brioz', status: 'completed', score: { home: 1, away: 2 } },
+        { id: 'S2GD2', group: 'D', matchday: 1, date: '2025-09-01', time: '22:00', homeTeam: 'delvin', awayTeam: 'thDrksid', status: 'completed', score: { home: 6, away: 2 } },
+        { id: 'S2GD3', group: 'D', matchday: 1, date: '2025-09-02', time: '20:00', homeTeam: 'maria', awayTeam: 'ghazi', status: 'completed', score: { home: 1, away: 2 } },
+        { id: 'S2GD4', group: 'D', matchday: 1, date: '2025-09-02', time: '22:00', homeTeam: 'brioz', awayTeam: 'delvin', status: 'completed', score: { home: 1, away: 2 } },
+        { id: 'S2GD5', group: 'D', matchday: 1, date: '2025-09-03', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'maria', status: 'completed', score: { home: 8, away: 2 } }
+    ],
+    season3: [
+        // Season 3 fixtures - Sample data for planned season
+        { id: 'S3GA1', group: 'A', matchday: 1, date: '2025-10-01', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'dyno', status: 'pending', score: null },
+        { id: 'S3GA2', group: 'A', matchday: 1, date: '2025-10-01', time: '22:00', homeTeam: 'kenno', awayTeam: 'thorvisual', status: 'pending', score: null },
+        { id: 'S3GA3', group: 'A', matchday: 1, date: '2025-10-02', time: '20:00', homeTeam: 'ghost', awayTeam: 'dav_lil7', status: 'pending', score: null },
+        { id: 'S3GA4', group: 'A', matchday: 1, date: '2025-10-02', time: '22:00', homeTeam: 'dyno', awayTeam: 'kenno', status: 'pending', score: null },
+        { id: 'S3GA5', group: 'A', matchday: 1, date: '2025-10-03', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'ghost', status: 'pending', score: null }
+    ]
+};
+
+// Multi-Season Knockouts Structure
+const seasonsKnockouts = {
+    season1: {
+        roundOf16: [
+            // Tie 1
+            { id: 'R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'phenom', status: 'completed', score: { home: 1, away: 2 } },
+            { id: 'R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'phenom', awayTeam: 'dav_lil7', status: 'completed', score: { home: 0, away: 2 } },
+            // Tie 2
+            { id: 'R16_2_1', round: 'Round of 16', tie: 2, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'emjay', status: 'completed', score: { home: 4, away: 2 } },
+            { id: 'R16_2_2', round: 'Round of 16', tie: 2, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'emjay', awayTeam: 'thorvisual', status: 'completed', score: { home: 3, away: 4 } },
+            // Tie 3
+            { id: 'R16_3_1', round: 'Round of 16', tie: 3, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'kenno', awayTeam: 'maria', status: 'completed', score: { home: 4, away: 0 } },
+            { id: 'R16_3_2', round: 'Round of 16', tie: 3, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'maria', awayTeam: 'kenno', status: 'completed', score: { home: 3, away: 1 } },
+            // Tie 4
+            { id: 'R16_4_1', round: 'Round of 16', tie: 4, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'ghazi', awayTeam: 'ghost', status: 'completed', score: { home: 3, away: 3 } },
+            { id: 'R16_4_2', round: 'Round of 16', tie: 4, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'ghost', awayTeam: 'ghazi', status: 'completed', score: { home: 4, away: 2 } },
+            // Tie 5
+            { id: 'R16_5_1', round: 'Round of 16', tie: 5, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'dyno', awayTeam: 'dandizzo', status: 'completed', score: { home: 2, away: 1 } },
+            { id: 'R16_5_2', round: 'Round of 16', tie: 5, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'dandizzo', awayTeam: 'dyno', status: 'completed', score: { home: 1, away: 4 } },
+            // Tie 6
+            { id: 'R16_6_1', round: 'Round of 16', tie: 6, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'offer_art', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 4 } },
+            { id: 'R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'wato', awayTeam: 'offer_art', status: 'completed', score: { home: 3, away: 1 } },
+            // Tie 7
+            { id: 'R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'yotah', status: 'completed', score: { home: 8, away: 2 } },
+            { id: 'R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'yotah', awayTeam: 'thDrksid', status: 'completed', score: { home: 3, away: 1 } },
+            // Tie 8
+            { id: 'R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'tonny', status: 'completed', score: { home: 1, away: 0 } },
+            { id: 'R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'tonny', awayTeam: 'its_lyta23', status: 'completed', score: { home: 1, away: 3 }, }
+        ],
+        quarterFinals: [
+            // Tie 1
+            { id: 'QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'thDrksid', status: 'completed', score: { home: 0, away: 1 } },
+            { id: 'QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'its_lyta23', status: 'completed', score: { home: 4, away: 2 }, },
+            // Tie 2
+            { id: 'QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'wato', awayTeam: 'dyno', status: 'completed', score: { home: 8, away: 3 } },
+            { id: 'QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'dyno', awayTeam: 'wato', status: 'completed', score: { home: 5, away: 2 } },
+            // Tie 3
+            { id: 'QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'ghost', awayTeam: 'kenno', status: 'completed', score: { home: 3, away: 3 } },
+            { id: 'QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'kenno', awayTeam: 'ghost', status: 'completed', score: { home: 2, away: 0 }, },
+            // Tie 4
+            { id: 'QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'dav_lil7', status: 'completed', score: { home: 1, away: 2 } },
+            { id: 'QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'dav_lil7', awayTeam: 'thorvisual', status: 'completed', score: { home: 1, away: 1 } }
+        ],
+        semiFinals: [
+            // Tie 1
+            { id: 'SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-09-01', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'kenno', status: 'completed', score: { home: 1, away: 5 } },
+            { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'kenno', awayTeam: 'dav_lil7', status: 'completed', score: { home: 7, away: 3 } },
+            // { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'kenno', awayTeam: 'dav_lil7', status: 'completed', score: { home: 0, away: 0 }, penalties: { home: 1, away: 4 } },
+            // Tie 2
+            { id: 'SF_2_1', round: 'Semi Finals', tie: 2, leg: '1st', date: '2025-09-01', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 0 } },
+            { id: 'SF_2_2', round: 'Semi Finals', tie: 2, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'wato', awayTeam: 'thDrksid', status: 'completed', score: { home: 4, away: 3 }, }
+        ],
+        final: [
+            { id: 'FINAL_1', round: 'Final', matchNumber: 1, date: '2025-09-02', time: '22:00', homeTeam: 'kenno', awayTeam: 'thDrksid', status: 'completed', score: { home: 2, away: 1 } }
+        ],
+        thirdPlacePlayoff: [
+            { id: 'TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-09-02', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'wato', status: 'completed',score: { home: 1, away: 2 } }
+        ]
+    },
+    season2: {
+        roundOf16: [
+            // Season 2 knockouts - different team matchups
+            { id: 'S2R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-09-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
+            { id: 'S2R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-09-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
+            { id: 'S2R16_2_1', round: 'Round of 16', tie: 2, leg: '1st', date: '2025-09-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
+            { id: 'S2R16_2_2', round: 'Round of 16', tie: 2, leg: '2nd', date: '2025-09-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
+            { id: 'S2R16_3_1', round: 'Round of 16', tie: 3, leg: '1st', date: '2025-09-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
+            { id: 'S2R16_3_2', round: 'Round of 16', tie: 3, leg: '2nd', date: '2025-09-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
+            { id: 'S2R16_4_1', round: 'Round of 16', tie: 4, leg: '1st', date: '2025-09-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
+            { id: 'S2R16_4_2', round: 'Round of 16', tie: 4, leg: '2nd', date: '2025-09-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
+            { id: 'S2R16_5_1', round: 'Round of 16', tie: 5, leg: '1st', date: '2025-09-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
+            { id: 'S2R16_5_2', round: 'Round of 16', tie: 5, leg: '2nd', date: '2025-09-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
+            { id: 'S2R16_6_1', round: 'Round of 16', tie: 6, leg: '1st', date: '2025-09-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
+            { id: 'S2R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-09-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
+            { id: 'S2R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-09-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
+            { id: 'S2R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-09-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
+            { id: 'S2R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-09-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
+            { id: 'S2R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-09-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null }
+        ],
+        quarterFinals: [
+            { id: 'S2QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-09-20', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
+            { id: 'S2QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-09-20', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
+            { id: 'S2QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-09-20', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
+            { id: 'S2QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-09-20', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
+            { id: 'S2QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-09-20', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
+            { id: 'S2QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-09-20', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
+            { id: 'S2QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-09-20', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
+            { id: 'S2QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-09-20', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
+        ],
+        semiFinals: [
+            { id: 'S2SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-09-25', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
+            { id: 'S2SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-09-25', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
+            { id: 'S2SF_2_1', round: 'Semi Finals', tie: 2, leg: '1st', date: '2025-09-25', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
+            { id: 'S2SF_2_2', round: 'Semi Finals', tie: 2, leg: '2nd', date: '2025-09-25', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
+        ],
+        final: [
+            { id: 'S2FINAL_1', round: 'Final', matchNumber: 1, date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
+        ],
+        thirdPlacePlayoff: [
+            { id: 'S2TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-09-30', time: '17:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
+        ]
+    },
+    season3: {
+        roundOf16: [
+            { id: 'S3R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-10-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
+            { id: 'S3R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-10-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
+        ],
+        quarterFinals: [
+            { id: 'S3QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-10-20', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
+            { id: 'S3QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-10-20', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
+        ],
+        semiFinals: [
+            { id: 'S3SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-10-25', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
+            { id: 'S3SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-10-25', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
+        ],
+        final: [
+            { id: 'S3FINAL_1', round: 'Final', matchNumber: 1, date: '2025-10-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
+        ],
+        thirdPlacePlayoff: [
+            { id: 'S3TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-10-30', time: '17:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
+        ]
+    },
+    season4: {
+        id: 'season4',
+        current: false,
+        name: 'Season 4',
+        year: 'November 2025',
+        status: 'planned',
+        startDate: '2025-11-01',
+        endDate: '2025-11-30',
+        groups: {
+            groupA: [
+                { id: 'dav_lil7', name: 'Dav-Lil7', shortName: 'DAV' },
+                { id: 'phenom', name: 'Phenom', shortName: 'PHE' },
+                { id: 'newton', name: 'Newton', shortName: 'NEW' },
+                { id: 'mignon', name: 'Mignon', shortName: 'MIG' },
+                { id: 'ghost', name: 'ghost', shortName: 'GHO' }
+            ],
+            groupB: [
+                { id: 'dandizzo', name: 'Dandizzo', shortName: 'DAN' },
+                { id: 'elton', name: 'Elton', shortName: 'ELT' },
+                { id: 'yotah', name: 'Yotah', shortName: 'YOT' },
+                { id: 'wato', name: 'Wato', shortName: 'WAT' },
+                { id: 'volts', name: 'Volts', shortName: 'VOL' }
+            ],
+            groupC: [
+                { id: 'its_lyta23', name: 'Its Lyta23', shortName: 'LYT' },
+                { id: 'dyno', name: 'Dyno', shortName: 'DYN' },
+                { id: 'kenno', name: 'Kenno', shortName: 'KEN' },
+                { id: 'thorvisual', name: 'ThorVisual', shortName: 'THO' },
+                { id: 'offer_art', name: 'Offer Art', shortName: 'ART' }
+            ],
+            groupD: [
+                { id: 'ghazi', name: 'Ghazi', shortName: 'GHA' },
+                { id: 'thDrksid', name: 'ThDrksid', shortName: 'DARK' },
+                { id: 'maria', name: 'Aka The Kraven', shortName: 'AFC' }
+            ]
+        }
+    },
+    season5: {
+        id: 'season5',
+        current: false,
+        name: 'Season 5',
+        year: 'December 2025',
+        status: 'planned',
+        startDate: '2025-12-01',
+        endDate: '2025-12-31',
+        groups: {
+            groupA: [
+                { id: 'dav_lil7', name: 'Dav-Lil7', shortName: 'DAV' },
+                { id: 'phenom', name: 'Phenom', shortName: 'PHE' },
+                { id: 'newton', name: 'Newton', shortName: 'NEW' },
+                { id: 'mignon', name: 'Mignon', shortName: 'MIG' },
+                { id: 'ghost', name: 'ghost', shortName: 'GHO' }
+            ],
+            groupB: [
+                { id: 'dandizzo', name: 'Dandizzo', shortName: 'DAN' },
+                { id: 'elton', name: 'Elton', shortName: 'ELT' },
+                { id: 'yotah', name: 'Yotah', shortName: 'YOT' },
+                { id: 'wato', name: 'Wato', shortName: 'WAT' },
+                { id: 'volts', name: 'Volts', shortName: 'VOL' }
+            ],
+            groupC: [
+                { id: 'its_lyta23', name: 'Its Lyta23', shortName: 'LYT' },
+                { id: 'dyno', name: 'Dyno', shortName: 'DYN' },
+                { id: 'kenno', name: 'Kenno', shortName: 'KEN' },
+                { id: 'thorvisual', name: 'ThorVisual', shortName: 'THO' },
+                { id: 'offer_art', name: 'Offer Art', shortName: 'ART' }
+            ],
+            groupD: [
+                { id: 'ghazi', name: 'Ghazi', shortName: 'GHA' },
+                { id: 'thDrksid', name: 'ThDrksid', shortName: 'DARK' },
+                { id: 'maria', name: 'Aka The Kraven', shortName: 'AFC' }
+            ]
+        }
+    },
+    season6: {
+        id: 'season6',
+        current: false,
+        name: 'Season 6',
+        year: 'January 2026',
+        status: 'planned',
+        startDate: '2026-01-01',
+        endDate: '2026-01-31',
+        groups: {
+            groupA: [
+                { id: 'dav_lil7', name: 'Dav-Lil7', shortName: 'DAV' },
+                { id: 'phenom', name: 'Phenom', shortName: 'PHE' },
+                { id: 'newton', name: 'Newton', shortName: 'NEW' },
+                { id: 'mignon', name: 'Mignon', shortName: 'MIG' },
+                { id: 'ghost', name: 'ghost', shortName: 'GHO' }
+            ],
+            groupB: [
+                { id: 'dandizzo', name: 'Dandizzo', shortName: 'DAN' },
+                { id: 'elton', name: 'Elton', shortName: 'ELT' },
+                { id: 'yotah', name: 'Yotah', shortName: 'YOT' },
+                { id: 'wato', name: 'Wato', shortName: 'WAT' },
+                { id: 'volts', name: 'Volts', shortName: 'VOL' }
+            ],
+            groupC: [
+                { id: 'its_lyta23', name: 'Its Lyta23', shortName: 'LYT' },
+                { id: 'dyno', name: 'Dyno', shortName: 'DYN' },
+                { id: 'kenno', name: 'Kenno', shortName: 'KEN' },
+                { id: 'thorvisual', name: 'ThorVisual', shortName: 'THO' },
+                { id: 'offer_art', name: 'Offer Art', shortName: 'ART' }
+            ],
+            groupD: [
+                { id: 'ghazi', name: 'Ghazi', shortName: 'GHA' },
+                { id: 'thDrksid', name: 'ThDrksid', shortName: 'DARK' },
+                { id: 'maria', name: 'Aka The Kraven', shortName: 'AFC' }
+            ]
+        }
+    }
+};
+
+// Helper function to get current season fixtures
+function getCurrentSeasonFixtures() {
+    return seasonsFixtures[currentSeason] || [];
+}
+
+// Helper function to get current season knockouts
+function getCurrentSeasonKnockouts() {
+    return seasonsKnockouts[currentSeason] || {
+        roundOf16: [],
+        quarterFinals: [],
+        semiFinals: [],
+        final: [],
+        thirdPlacePlayoff: []
+    };
+}
+
+// Function to populate season1 fixtures from current groupFixtures
+function populateSeason1Fixtures() {
+    try {
+        if (groupFixtures && Array.isArray(groupFixtures)) {
+            seasonsFixtures.season1 = [...groupFixtures];
+            console.log(`Populated season1 with ${groupFixtures.length} fixtures`);
+        } else {
+            console.warn('groupFixtures is not available or not an array');
+            seasonsFixtures.season1 = [];
+        }
+    } catch (error) {
+        console.error('Error populating season1 fixtures:', error);
+        seasonsFixtures.season1 = [];
+    }
+}
+
+// Group stage fixtures - Will be populated dynamically based on current season
+let groupFixtures = [];
+
+// Initialize season1 fixtures after groupFixtures is defined
+// populateSeason1Fixtures(); // Commented out - will be handled by initializeCurrentSeasonData()
+
+// Initialize data for the current season
+function initializeCurrentSeasonData() {
+    try {
+        console.log(`Initializing data for current season: ${currentSeason}`);
+        
+        // Initialize groupData with current season's data
+        groupData = getCurrentGroupData();
+        
+        // Update leagueData.groups to match
+        leagueData.groups = groupData;
+        
+        // Initialize groupFixtures with current season's fixtures
+        const currentFixtures = getCurrentSeasonFixtures();
+        groupFixtures.length = 0;
+        groupFixtures.push(...currentFixtures);
+        
+        // Update leagueData.groupFixtures to match
+        leagueData.groupFixtures = groupFixtures;
+        
+        // Also populate season1 fixtures for backward compatibility
+        if (currentSeason === 'season1') {
+            seasonsFixtures.season1 = [...groupFixtures];
+        }
+        
+        // Initialize knockouts with current season's data
+        const currentKnockouts = getCurrentSeasonKnockouts();
+        leagueData.knockouts = currentKnockouts;
+        
+        // Update leagueData teams with current season's teams
+        const currentSeasonTeamIds = getCurrentSeasonTeamIds();
+        leagueData.teams = currentSeasonTeamIds.map((teamId, index) => {
+            const team = teamsData[teamId];
+            const played = Math.floor(Math.random() * 6) + 1;
+            const won = Math.floor(Math.random() * played);
+            const drawn = Math.floor(Math.random() * (played - won));
+            const lost = played - won - drawn;
+            const goalsFor = Math.floor(Math.random() * 20) + 5;
+            const goalsAgainst = Math.floor(Math.random() * 15) + 3;
+            const points = (won * 3) + drawn;
+            
+            return {
+                id: index + 1,
+                name: team.name,
+                country: "Pro League",
+                logo: team.logo,
+                points: points,
+                played: played,
+                won: won,
+                drawn: drawn,
+                lost: lost,
+                goalsFor: goalsFor,
+                goalsAgainst: goalsAgainst,
+                stadium: team.stadium,
+                manager: team.manager,
+                capacity: team.capacity,
+                founded: team.founded,
+                titles: team.titles,
+                colors: team.colors,
+                shortName: team.shortName
+            };
+        });
+        
+        console.log(`Initialized data for ${currentSeason}:`, {
+            teams: leagueData.teams.length,
+            groups: Object.keys(groupData).length,
+            fixtures: groupFixtures.length,
+            knockouts: Object.keys(currentKnockouts).length
+        });
+        
+        // Debug: Log some sample data to verify it's from the correct season
+        console.log('Sample team IDs from current season:', leagueData.teams.slice(0, 3).map(t => t.name));
+        console.log('Sample fixtures from current season:', groupFixtures.slice(0, 2).map(f => `${f.homeTeam} vs ${f.awayTeam}`));
+        console.log('Current season fixtures count:', groupFixtures.length);
+        console.log('Current season teams count:', leagueData.teams.length);
+    } catch (error) {
+        console.error('Error initializing current season data:', error);
+        // Fallback to season1
+        currentSeason = 'season1';
+        groupData = getCurrentGroupData();
+    }
+}
+
+// Initialize data for the current season
+initializeCurrentSeasonData();
 
 // Helper function to get team name from ID
 function getTeamName(teamId) {
@@ -3508,17 +5880,27 @@ function getTeamLogo(teamId, size = '40px', useCircle = true) {
             </div>`;
 }
 
-// Function to find which group a team belongs to
+// Function to find which group a team belongs to (for current season)
 function findTeamGroup(teamId) {
-    const groupData = {
-        groupA: ['dav_lil7', 'dandizzo', 'its_lyta23', 'volts', 'ghost'],
-        groupB: ['phenom', 'elton', 'dyno', 'ghazi', 'tonny'],
-        groupC: ['newton', 'yotah', 'kenno', 'offer_art', 'emjay'],
-        groupD: ['mignon', 'wato', 'thorvisual', 'thDrksid', 'maria']
-    };
+    const currentGroupData = getCurrentGroupData();
     
-    for (const [group, teams] of Object.entries(groupData)) {
-        if (teams.includes(teamId)) {
+    for (const [group, teams] of Object.entries(currentGroupData)) {
+        const teamIds = teams.map(team => team.id);
+        if (teamIds.includes(teamId)) {
+            return group.replace('group', '').toUpperCase();
+        }
+    }
+    return 'Unknown';
+}
+
+// Function to find which group a team belongs to in a specific season
+function findTeamGroupInSeason(teamId, seasonId) {
+    const seasonData = seasonsData[seasonId];
+    if (!seasonData) return 'Unknown';
+    
+    for (const [group, teams] of Object.entries(seasonData.groups)) {
+        const teamIds = teams.map(team => team.id);
+        if (teamIds.includes(teamId)) {
             return group.replace('group', '').toUpperCase();
         }
     }
@@ -3739,10 +6121,12 @@ function updateFilteredFixtures() {
     }
 }
 
-// Convert teamsData to leagueData format with random stats
-const leagueData = {
-    teams: Object.keys(teamsData).map((key, index) => {
-        const team = teamsData[key];
+// Function to create leagueData with current season's teams
+function createLeagueData() {
+    const currentSeasonTeamIds = getCurrentSeasonTeamIds();
+    return {
+        teams: currentSeasonTeamIds.map((teamId, index) => {
+            const team = teamsData[teamId];
         const played = Math.floor(Math.random() * 6) + 1;
         const won = Math.floor(Math.random() * played);
         const drawn = Math.floor(Math.random() * (played - won));
@@ -3774,64 +6158,12 @@ const leagueData = {
     }),
     groups: groupData,
     groupFixtures: groupFixtures,
-    knockouts: {
-        roundOf16: [
-            // Tie 1
-            { id: 'R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'phenom', status: 'completed', score: { home: 1, away: 2 } },
-            { id: 'R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'phenom', awayTeam: 'dav_lil7', status: 'completed', score: { home: 0, away: 2 } },
-            // Tie 2
-            { id: 'R16_2_1', round: 'Round of 16', tie: 2, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'emjay', status: 'completed', score: { home: 4, away: 2 } },
-            { id: 'R16_2_2', round: 'Round of 16', tie: 2, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'emjay', awayTeam: 'thorvisual', status: 'completed', score: { home: 3, away: 4 } },
-            // Tie 3
-            { id: 'R16_3_1', round: 'Round of 16', tie: 3, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'kenno', awayTeam: 'maria', status: 'completed', score: { home: 4, away: 0 } },
-            { id: 'R16_3_2', round: 'Round of 16', tie: 3, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'maria', awayTeam: 'kenno', status: 'completed', score: { home: 3, away: 1 } },
-            // Tie 4
-            { id: 'R16_4_1', round: 'Round of 16', tie: 4, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'ghazi', awayTeam: 'ghost', status: 'completed', score: { home: 3, away: 3 } },
-            { id: 'R16_4_2', round: 'Round of 16', tie: 4, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'ghost', awayTeam: 'ghazi', status: 'completed', score: { home: 4, away: 2 } },
-            // Tie 5
-            { id: 'R16_5_1', round: 'Round of 16', tie: 5, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'dyno', awayTeam: 'dandizzo', status: 'completed', score: { home: 2, away: 1 } },
-            { id: 'R16_5_2', round: 'Round of 16', tie: 5, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'dandizzo', awayTeam: 'dyno', status: 'completed', score: { home: 1, away: 4 } },
-            // Tie 6
-            { id: 'R16_6_1', round: 'Round of 16', tie: 6, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'offer_art', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 4 } },
-            { id: 'R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'wato', awayTeam: 'offer_art', status: 'completed', score: { home: 3, away: 1 } },
-            // Tie 7
-            { id: 'R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'yotah', status: 'completed', score: { home: 8, away: 2 } },
-            { id: 'R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'yotah', awayTeam: 'thDrksid', status: 'completed', score: { home: 3, away: 1 } },
-            // Tie 8
-            { id: 'R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'tonny', status: 'completed', score: { home: 1, away: 0 } },
-            { id: 'R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'tonny', awayTeam: 'its_lyta23', status: 'completed', score: { home: 1, away: 3 }, }
-        ],
-        quarterFinals: [
-            // Tie 1
-            { id: 'QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'thDrksid', status: 'completed', score: { home: 0, away: 1 } },
-            { id: 'QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'its_lyta23', status: 'completed', score: { home: 4, away: 2 }, },
-            // Tie 2
-            { id: 'QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'wato', awayTeam: 'dyno', status: 'completed', score: { home: 8, away: 3 } },
-            { id: 'QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'dyno', awayTeam: 'wato', status: 'completed', score: { home: 5, away: 2 } },
-            // Tie 3
-            { id: 'QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'ghost', awayTeam: 'kenno', status: 'completed', score: { home: 3, away: 3 } },
-            { id: 'QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'kenno', awayTeam: 'ghost', status: 'completed', score: { home: 2, away: 0 }, },
-            // Tie 4
-            { id: 'QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'dav_lil7', status: 'completed', score: { home: 1, away: 2 } },
-            { id: 'QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'dav_lil7', awayTeam: 'thorvisual', status: 'completed', score: { home: 1, away: 1 } }
-        ],
-        semiFinals: [
-            // Tie 1
-            { id: 'SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-09-01', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'kenno', status: 'completed', score: { home: 1, away: 5 } },
-            { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'kenno', awayTeam: 'dav_lil7', status: 'completed', score: { home: 7, away: 3 } },
-            // { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'kenno', awayTeam: 'dav_lil7', status: 'completed', score: { home: 0, away: 0 }, penalties: { home: 1, away: 4 } },
-            // Tie 2
-            { id: 'SF_2_1', round: 'Semi Finals', tie: 2, leg: '1st', date: '2025-09-01', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 0 } },
-            { id: 'SF_2_2', round: 'Semi Finals', tie: 2, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'wato', awayTeam: 'thDrksid', status: 'completed', score: { home: 4, away: 3 }, }
-        ],
-        thirdPlacePlayoff: [
-            { id: 'TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-09-02', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'wato', status: 'completed',score: { home: 1, away: 2 } }
-        ],
-        final: [
-            { id: 'FINAL_1', round: 'Final', matchNumber: 1, date: '2025-09-02', time: '22:00', homeTeam: 'kenno', awayTeam: 'thDrksid', status: 'completed', score: { home: 2, away: 1 } }
-        ]
-    }
-};
+    knockouts: getCurrentSeasonKnockouts()
+    };
+}
+
+// Create leagueData with current season's data
+const leagueData = createLeagueData();
 
 // Function to calculate group standings
 function calculateGroupStandings() {
@@ -3936,6 +6268,24 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Simulate a small delay to ensure smooth loading
     setTimeout(() => {
+        try {
+        // Debug: Check if seasonsData is properly initialized
+        console.log('Seasons data:', seasonsData);
+        console.log('Current season:', currentSeason);
+        console.log('Current season data:', getCurrentSeason());
+        
+        // Ensure data is properly initialized before loading the page
+        console.log('Re-initializing current season data before page load...');
+        initializeCurrentSeasonData();
+        
+        // Debug: Verify the data after initialization
+        console.log('After initialization:');
+        console.log('- Current season:', currentSeason);
+        console.log('- leagueData.teams length:', leagueData.teams.length);
+        console.log('- leagueData.groupFixtures length:', leagueData.groupFixtures.length);
+        console.log('- leagueData.groups keys:', Object.keys(leagueData.groups));
+        console.log('- First few team names:', leagueData.teams.slice(0, 3).map(t => t.name));
+        
         // Load the home page
         loadPage('home');
         setupEventListeners();
@@ -3948,6 +6298,12 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             pageLoader.style.display = 'none';
         }, 500);
+        } catch (error) {
+            console.error('Error during page initialization:', error);
+            // Force hide loader even if there's an error
+            pageLoader.style.display = 'none';
+            mainContent.style.display = 'block';
+        }
     }, 800);
 });
 
@@ -3973,6 +6329,7 @@ function setupEventListeners() {
             setActiveNavLink(document.querySelector(`[data-page="${page}"]`));
         });
     });
+
 
     // Search functionality
     searchBtn.addEventListener('click', (e) => {
@@ -4045,10 +6402,15 @@ function loadPage(page) {
             content = generateTablePage();
             break;
         case 'knockouts':
+            console.log('Loading knockouts page...');
             content = generateKnockoutsPage();
+            console.log('Knockouts page generated successfully');
             break;
         case 'clubs':
             content = generateClubsPage();
+            break;
+        case 'certificates':
+            content = generateCertificatesPage();
             break;
         default:
             content = generateHomePage();
@@ -4061,7 +6423,7 @@ function loadPage(page) {
 
 function generateHomePage() {
     // Calculate dynamic stats
-    const totalTeams = leagueData.teams.length;
+    const totalTeams = getCurrentSeasonTeamIds().length;
     const totalGroupMatches = leagueData.groupFixtures.length;
     const completedGroupMatches = leagueData.groupFixtures.filter(f => f.status === 'completed').length;
     const upcomingGroupMatches = leagueData.groupFixtures.filter(f => f.status === 'scheduled').length;
@@ -4750,56 +7112,15 @@ function generateHomePage() {
                             <h3>Clubs</h3>
                             <p>Explore all teams</p>
                         </div>
+                        <div class="quick-nav-card" onclick="loadPage('certificates')">
+                            <i class="fas fa-certificate"></i>
+                            <h3>Certificates</h3>
+                            <p>Download championship certificates</p>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Certificates Section -->
-            <div class="certificates-section">
-                <h2 class="certificates-title">🏆 Championship Certificates</h2>
-                <p class="certificates-subtitle">Download and review the official certificates for our top 3 teams</p>
-                <div class="certificates-grid">
-                    <div class="certificate-item">
-                        <div class="certificate-icon">🥇</div>
-                        <div class="certificate-position">1st Place</div>
-                        <div class="certificate-description">Championship Winner Certificate</div>
-                        <div class="certificate-actions">
-                            <a href="images/certificates/first.jpeg" download="Championship_Winner_Certificate.jpeg" class="certificate-btn download">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                            <button onclick="viewCertificate('first', 'Championship Winner Certificate')" class="certificate-btn view">
-                                <i class="fas fa-eye"></i> View
-                            </button>
-                        </div>
-                    </div>
-                    <div class="certificate-item">
-                        <div class="certificate-icon">🥈</div>
-                        <div class="certificate-position">2nd Place</div>
-                        <div class="certificate-description">Runner-up Certificate</div>
-                        <div class="certificate-actions">
-                            <a href="images/certificates/second.jpeg" download="Runner_up_Certificate.jpeg" class="certificate-btn download">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                            <button onclick="viewCertificate('second', 'Runner-up Certificate')" class="certificate-btn view">
-                                <i class="fas fa-eye"></i> View
-                            </button>
-                        </div>
-                    </div>
-                    <div class="certificate-item">
-                        <div class="certificate-icon">🥉</div>
-                        <div class="certificate-position">3rd Place</div>
-                        <div class="certificate-description">Third Place Certificate</div>
-                        <div class="certificate-actions">
-                            <a href="images/certificates/third.jpeg" download="Third_Place_Certificate.jpeg" class="certificate-btn download">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                            <button onclick="viewCertificate('third', 'Third Place Certificate')" class="certificate-btn view">
-                                <i class="fas fa-eye"></i> View
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
             
             <!-- Sponsors Section -->
             <div class="sponsors-section">
@@ -4815,43 +7136,6 @@ function generateHomePage() {
                         <div class="sponsor-item">
                             <img src="images/sponsors/yty.svg" alt="YTY" class="sponsor-logo">
                         </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Certificate Modal -->
-            <div id="certificateModal" class="certificate-modal">
-                <div class="certificate-modal-content">
-                    <div class="certificate-modal-header">
-                        <h3 class="certificate-modal-title" id="modalTitle">Certificate Preview</h3>
-                        <button class="certificate-modal-close" onclick="closeCertificateModal()">&times;</button>
-                    </div>
-                    <!-- Loading Spinner -->
-                    <div id="certificateLoading" class="certificate-loading">
-                        <div class="certificate-spinner"></div>
-                        <div class="certificate-loading-text">Loading Certificate...</div>
-                        <div class="certificate-loading-subtext">Please wait while we load the certificate image</div>
-                    </div>
-                    
-                    <!-- Certificate Image -->
-                    <img id="certificatePreview" class="certificate-preview" src="" alt="Certificate Preview" style="display: none;" onerror="showFallbackMessage()">
-                    
-                    <!-- Fallback Message -->
-                    <div id="fallbackMessage" style="display: none; text-align: center; padding: 40px; color: rgba(255, 255, 255, 0.8);">
-                        <i class="fas fa-exclamation-triangle" style="font-size: 3rem; margin-bottom: 20px; color: #e90052;"></i>
-                        <h3>Image Preview Not Available</h3>
-                        <p>Unable to load the certificate image. Please use the download button to get the certificate.</p>
-                        <button onclick="downloadCertificate()" class="certificate-modal-btn download" style="margin-top: 20px;">
-                            <i class="fas fa-download"></i> Download Certificate
-                        </button>
-                    </div>
-                    <div class="certificate-modal-actions">
-                        <a id="modalDownload" href="" download="" class="certificate-modal-btn download">
-                            <i class="fas fa-download"></i> Download Certificate
-                        </a>
-                        <button onclick="closeCertificateModal()" class="certificate-modal-btn close">
-                            <i class="fas fa-times"></i> Close
-                        </button>
                     </div>
                 </div>
             </div>
@@ -5375,22 +7659,114 @@ function switchKnockoutTab(tabName) {
     }
 }
 
+// Helper function to check if knockout stages have started
+function checkIfKnockoutsStarted() {
+    // Check if any knockout matches have been played or are scheduled
+    const roundOf16Matches = leagueData.knockouts.roundOf16 || [];
+    const quarterFinalsMatches = leagueData.knockouts.quarterFinals || [];
+    const semiFinalsMatches = leagueData.knockouts.semiFinals || [];
+    const finalMatches = leagueData.knockouts.final || [];
+    
+    // Check if any knockout match has been completed (not just scheduled with TBD teams)
+    const allMatches = [
+        ...roundOf16Matches,
+        ...quarterFinalsMatches,
+        ...semiFinalsMatches,
+        ...finalMatches
+    ];
+    console.log('All knockout matches:', allMatches.length);
+    console.log('Sample matches:', allMatches.slice(0, 3).map(m => ({ id: m.id, status: m.status, homeTeam: m.homeTeam, awayTeam: m.awayTeam })));
+    
+    const hasStartedMatches = allMatches.some(match => match.status === 'completed');
+    console.log('Has started matches:', hasStartedMatches);
+    
+    // Check if ALL teams in knockout matches are TBD
+    const allTeamsAreTBD = allMatches.length > 0 && allMatches.every(match => 
+        (match.homeTeam === 'TBD' || 
+         match.homeTeam === 'TBA' || 
+         match.homeTeam === 'To Be Determined' ||
+         match.homeTeam === '') &&
+        (match.awayTeam === 'TBD' || 
+         match.awayTeam === 'TBA' || 
+         match.awayTeam === 'To Be Determined' ||
+         match.awayTeam === '')
+    );
+    console.log('All teams are TBD:', allTeamsAreTBD);
+    
+    // Also check if group stage is complete (all group matches finished)
+    const groupMatches = leagueData.groupFixtures || [];
+    const allGroupMatchesComplete = groupMatches.length > 0 && groupMatches.every(match => match.status === 'completed');
+    console.log('Group matches count:', groupMatches.length);
+    console.log('All group matches complete:', allGroupMatchesComplete);
+    
+    // Knockouts have started if:
+    // 1. Any knockout match has been completed (actual matches played), OR
+    // 2. All group matches are complete (knockouts should start)
+    // BUT NOT if all teams are still TBD
+    return (hasStartedMatches || allGroupMatchesComplete) && !allTeamsAreTBD;
+}
+
 function generateKnockoutsPage() {
+    try {
+        const currentSeasonData = getCurrentSeason();
+        const seasonName = currentSeasonData ? currentSeasonData.name : 'Current Season';
+        const seasonYear = currentSeasonData ? currentSeasonData.year : '2025';
+        
+        console.log('Generating knockouts page for:', seasonName, seasonYear);
+        
+        // Check if knockout stages have started
+        const knockoutsStarted = checkIfKnockoutsStarted();
+        console.log('Knockouts started:', knockoutsStarted);
+        console.log('Current season:', currentSeason);
+        console.log('Knockout data:', leagueData.knockouts);
+    
     return `
         <div class="page-container">
-            <h1 class="page-title">Knockout Stages</h1>
+            <h1 class="page-title">Knockout Stages - ${seasonName}</h1>
+            <div class="season-info" style="text-align: center; margin-bottom: 20px; color: rgba(255, 255, 255, 0.8);">
+                <span style="background: rgba(233, 0, 82, 0.2); padding: 5px 15px; border-radius: 20px; border: 1px solid rgba(233, 0, 82, 0.3);">
+                    <i class="fas fa-calendar"></i> ${seasonYear}
+                </span>
+            </div>
             
+            ${knockoutsStarted ? `
             <!-- Tournament Bracket Visualization -->
             <div class="brackets-visualization">
                 <div class="brackets-header">
-                    <h2><i class="fas fa-sitemap"></i> Tournament Bracket</h2>
-                    <p>Visual representation of the knockout tournament structure</p>
+                    <h2><i class="fas fa-sitemap"></i> Tournament Bracket - ${seasonName}</h2>
+                    <p>Visual representation of the ${seasonName.toLowerCase()} knockout tournament structure</p>
                 </div>
                 <div class="brackets-container">
-                    <img src="images/brackets/brackets.svg" alt="Tournament Bracket" class="brackets-svg">
+                    <img src="images/brackets/brackets-${currentSeason}.svg" alt="${seasonName} Tournament Bracket" class="brackets-svg" onerror="this.src='images/brackets/brackets.svg'">
                 </div>
             </div>
+            ` : `
+            <!-- Knockouts Not Started Message -->
+            <div class="knockouts-not-started">
+                <div class="not-started-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h2>Knockout Stages Not Yet Started</h2>
+                <p>The knockout stages for <strong>${seasonName}</strong> will begin once the group stage is completed.</p>
+                <div class="group-stage-info">
+                    <div class="info-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Group Stage</h3>
+                        <p>Teams are currently competing in group matches to qualify for the knockout rounds.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Qualification</h3>
+                        <p>Top teams from each group will advance to the Round of 16.</p>
+                    </div>
+                </div>
+                <div class="suggestion-text">
+                    <p><i class="fas fa-lightbulb"></i> <strong>Tip:</strong> Check the <a href="#" onclick="loadPage('fixtures')" style="color: #e90052; text-decoration: none;">Fixtures</a> page to follow the group stage matches, or visit the <a href="#" onclick="loadPage('certificates')" style="color: #e90052; text-decoration: none;">Certificates</a> page to download championship certificates.</p>
+                </div>
+            </div>
+            `}
             
+            ${knockoutsStarted ? `
             <!-- Tab Navigation -->
             <div class="knockout-tabs">
                 <button class="tab-button active" onclick="switchKnockoutTab('bracket')">
@@ -5399,8 +7775,13 @@ function generateKnockoutsPage() {
                 <button class="tab-button" onclick="switchKnockoutTab('details')">
                     <i class="fas fa-list"></i> Match Details
                 </button>
+                <button class="tab-button" onclick="loadPage('certificates')">
+                    <i class="fas fa-certificate"></i> Certificates
+                </button>
             </div>
+            ` : ''}
             
+            ${knockoutsStarted ? `
             <!-- Bracket Tab Content -->
             <div id="bracket-tab" class="tab-content active">
                 <div class="tournament-bracket">
@@ -5443,9 +7824,17 @@ function generateKnockoutsPage() {
             
             <!-- Details Tab Content -->
             <div id="details-tab" class="tab-content">
+                <div class="season-details-header" style="text-align: center; margin-bottom: 30px; padding: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h3 style="color: #ffffff; margin-bottom: 10px; font-size: 1.3rem;">
+                        <i class="fas fa-trophy"></i> ${seasonName} Knockout Matches
+                    </h3>
+                    <p style="color: rgba(255, 255, 255, 0.7); margin: 0;">
+                        Complete match details for the ${seasonYear} tournament
+                    </p>
+                </div>
                 <div class="fixtures-container">
                 <div class="round-card">
-                    <h2 class="round-title">Round of 16</h2>
+                    <h2 class="round-title">Round of 16 - ${seasonName}</h2>
                     ${groupMatchesByTie(leagueData.knockouts.roundOf16).map(tie => `
                         <div class="tie-container">
                             <h3 class="tie-title">Tie ${tie.tie}</h3>
@@ -5481,7 +7870,7 @@ function generateKnockoutsPage() {
                 </div>
 
                 <div class="round-card">
-                    <h2 class="round-title">Quarter Finals</h2>
+                    <h2 class="round-title">Quarter Finals - ${seasonName}</h2>
                     ${groupMatchesByTie(leagueData.knockouts.quarterFinals).map(tie => `
                         <div class="tie-container">
                             <h3 class="tie-title">Tie ${tie.tie}</h3>
@@ -5517,7 +7906,7 @@ function generateKnockoutsPage() {
                 </div>
 
                 <div class="round-card">
-                    <h2 class="round-title">Semi Finals</h2>
+                    <h2 class="round-title">Semi Finals - ${seasonName}</h2>
                     ${groupMatchesByTie(leagueData.knockouts.semiFinals).map(tie => `
                         <div class="tie-container">
                             <h3 class="tie-title">Tie ${tie.tie}</h3>
@@ -5553,7 +7942,7 @@ function generateKnockoutsPage() {
                 </div>
 
                 <div class="round-card">
-                    <h2 class="round-title">Third Place Playoff</h2>
+                    <h2 class="round-title">Third Place Playoff - ${seasonName}</h2>
                     ${leagueData.knockouts.thirdPlacePlayoff.map(match => `
                         <div class="fixture-item ${match.status}" onclick="loadDetailedKnockoutPage('${match.round}_${match.tie || match.matchNumber}')" style="cursor: pointer;">
                             <div class="matchday-badge">${match.round}</div>
@@ -5584,7 +7973,7 @@ function generateKnockoutsPage() {
                 </div>
 
                 <div class="round-card">
-                    <h2 class="round-title">Final</h2>
+                    <h2 class="round-title">Final - ${seasonName}</h2>
                     ${leagueData.knockouts.final.map(match => `
                         <div class="fixture-item ${match.status}" onclick="loadDetailedKnockoutPage('${match.round}_${match.tie || match.matchNumber}')" style="cursor: pointer;">
                             <div class="matchday-badge">${match.round}</div>
@@ -5614,18 +8003,41 @@ function generateKnockoutsPage() {
                     `).join('')}
                 </div>
             </div>
+            ` : ''}
         </div>
     `;
+    } catch (error) {
+        console.error('Error generating knockouts page:', error);
+        return `
+            <div class="page-container">
+                <h1 class="page-title">Knockout Stages</h1>
+                <div class="error-message" style="text-align: center; padding: 40px; color: #ff6b6b;">
+                    <i class="fas fa-exclamation-triangle" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                    <h2>Error Loading Knockout Data</h2>
+                    <p>There was an error loading the knockout stages. Please try refreshing the page.</p>
+                    <button onclick="loadPage('knockouts')" class="btn primary" style="margin-top: 20px;">
+                        <i class="fas fa-refresh"></i> Retry
+                    </button>
+            </div>
+        </div>
+    `;
+    }
 }
 
 function generateClubsPage() {
+    // Get teams participating in the current season
+    const currentSeasonTeamIds = getCurrentSeasonTeamIds();
+    
     return `
         <div class="page-container">
             <h1 class="page-title">Clubs</h1>
             <div class="clubs-grid">
-                ${Object.entries(teamsData).map(([teamId, team]) => {
-                    // Get team's group
-                    const teamGroup = findTeamGroup(teamId);
+                ${currentSeasonTeamIds.map(teamId => {
+                    const team = teamsData[teamId];
+                    if (!team) return ''; // Skip if team data not found
+                    
+                    // Get team's group for current season
+                    const teamGroup = findTeamGroupInSeason(teamId, currentSeason);
                     // Get team's current stats from group fixtures
                     const teamFixtures = leagueData.groupFixtures.filter(f => 
                         f.homeTeam === teamId || f.awayTeam === teamId
@@ -5688,6 +8100,259 @@ function generateClubsPage() {
             </div>
         </div>
     `;
+}
+
+function generateCertificatesPage() {
+    // Get all available seasons
+    const availableSeasons = Object.entries(seasonsData).map(([seasonId, season]) => ({
+        id: seasonId,
+        name: season.name,
+        year: season.year,
+        status: season.status
+    }));
+
+    // Check if current season has certificates available
+    const currentSeasonData = seasonsData[currentSeason];
+    const certificatesAvailable = currentSeasonData && currentSeasonData.status === 'completed';
+
+    return `
+        <div class="page-container">
+            <h1 class="page-title">Championship Certificates</h1>
+            <p class="page-subtitle">Download and review official certificates for all seasons</p>
+            
+            <!-- Season Filter -->
+            <div class="season-filter-section">
+                <h2>Select Season</h2>
+                <div class="season-selector-container">
+                    <select id="certificateSeasonSelect" class="certificate-season-select" onchange="filterCertificatesBySeason(this.value)">
+                        ${availableSeasons.map(season => `
+                            <option value="${season.id}" ${season.id === currentSeason ? 'selected' : ''}>
+                                ${season.name} (${season.year}) - ${season.status}
+                            </option>
+                        `).join('')}
+                    </select>
+                    <div class="season-selector-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certificates Section -->
+            <div class="certificates-section" id="certificatesContent">
+                <div class="certificates-header">
+                    <h2 id="certificatesTitle">🏆 ${seasonsData[currentSeason]?.name || 'Current Season'} Certificates</h2>
+                    <p id="certificatesSubtitle">Download and review the official certificates for our top 3 teams</p>
+                </div>
+                ${certificatesAvailable ? `
+                    <div class="certificates-grid">
+                        <div class="certificate-item">
+                            <div class="certificate-icon">🥇</div>
+                            <div class="certificate-position">1st Place</div>
+                            <div class="certificate-description">Championship Winner Certificate</div>
+                            <div class="certificate-actions">
+                                <a href="images/certificates/${currentSeason}-first.jpeg" download="Championship_Winner_Certificate_${seasonsData[currentSeason]?.name?.replace(' ', '_') || 'Current_Season'}.jpeg" class="certificate-btn download">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                                <button onclick="viewCertificate('${currentSeason}-first', 'Championship Winner Certificate - ${seasonsData[currentSeason]?.name || 'Current Season'}')" class="certificate-btn view">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="certificate-item">
+                            <div class="certificate-icon">🥈</div>
+                            <div class="certificate-position">2nd Place</div>
+                            <div class="certificate-description">Runner-up Certificate</div>
+                            <div class="certificate-actions">
+                                <a href="images/certificates/${currentSeason}-second.jpeg" download="Runner_up_Certificate_${seasonsData[currentSeason]?.name?.replace(' ', '_') || 'Current_Season'}.jpeg" class="certificate-btn download">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                                <button onclick="viewCertificate('${currentSeason}-second', 'Runner-up Certificate - ${seasonsData[currentSeason]?.name || 'Current Season'}')" class="certificate-btn view">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="certificate-item">
+                            <div class="certificate-icon">🥉</div>
+                            <div class="certificate-position">3rd Place</div>
+                            <div class="certificate-description">Third Place Certificate</div>
+                            <div class="certificate-actions">
+                                <a href="images/certificates/${currentSeason}-third.jpeg" download="Third_Place_Certificate_${seasonsData[currentSeason]?.name?.replace(' ', '_') || 'Current_Season'}.jpeg" class="certificate-btn download">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                                <button onclick="viewCertificate('${currentSeason}-third', 'Third Place Certificate - ${seasonsData[currentSeason]?.name || 'Current Season'}')" class="certificate-btn view">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                ` : `
+                    <div class="no-certificates-message">
+                        <div class="no-certificates-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Certificates Not Yet Available</h3>
+                        <p>The certificates for <strong>${seasonsData[currentSeason]?.name || 'this season'}</strong> will be available once the season is completed.</p>
+                        <div class="season-status-info">
+                            <span class="status-badge ${currentSeasonData?.status || 'planned'}">${currentSeasonData?.status || 'planned'}</span>
+                            <p class="status-description">
+                                ${currentSeasonData?.status === 'upcoming' ? 'This season is scheduled to begin soon.' : 
+                                  currentSeasonData?.status === 'planned' ? 'This season is in the planning phase.' : 
+                                  'This season is currently in progress.'}
+                            </p>
+                        </div>
+                        <div class="suggestion-text">
+                            <p><i class="fas fa-lightbulb"></i> <strong>Tip:</strong> Select a completed season from the dropdown above to view available certificates.</p>
+                        </div>
+                    </div>
+                `}
+            </div>
+            
+            <!-- Certificate Modal -->
+            <div id="certificateModal" class="certificate-modal">
+                <div class="certificate-modal-content">
+                    <div class="certificate-modal-header">
+                        <h3 class="certificate-modal-title" id="modalTitle">Certificate Preview</h3>
+                        <button class="certificate-modal-close" onclick="closeCertificateModal()">&times;</button>
+                    </div>
+                    <!-- Loading Spinner -->
+                    <div id="certificateLoading" class="certificate-loading">
+                        <div class="certificate-spinner"></div>
+                        <div class="certificate-loading-text">Loading Certificate...</div>
+                        <div class="certificate-loading-subtext">Please wait while we load the certificate image</div>
+                    </div>
+                    
+                    <!-- Certificate Image -->
+                    <img id="certificatePreview" class="certificate-preview" src="" alt="Certificate Preview" style="display: none;" onerror="showFallbackMessage()">
+                    
+                    <!-- Fallback Message -->
+                    <div id="fallbackMessage" style="display: none; text-align: center; padding: 40px; color: rgba(255, 255, 255, 0.8);">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 3rem; margin-bottom: 20px; color: #e90052;"></i>
+                        <h3>Image Preview Not Available</h3>
+                        <p>Unable to load the certificate image. Please use the download button to get the certificate.</p>
+                        <button onclick="downloadCertificate()" class="certificate-modal-btn download" style="margin-top: 20px;">
+                            <i class="fas fa-download"></i> Download Certificate
+                        </button>
+                    </div>
+                    <div class="certificate-modal-actions">
+                        <a id="modalDownload" href="" download="" class="certificate-modal-btn download">
+                            <i class="fas fa-download"></i> Download Certificate
+                        </a>
+                        <button onclick="closeCertificateModal()" class="certificate-modal-btn close">
+                            <i class="fas fa-times"></i> Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function filterCertificatesBySeason(seasonId) {
+    // Update the current season
+    switchSeason(seasonId);
+    
+    // Check if certificates are available for this season
+    const seasonData = seasonsData[seasonId];
+    const certificatesAvailable = seasonData && seasonData.status === 'completed';
+    
+    // Update the certificates page content
+    const certificatesTitle = document.getElementById('certificatesTitle');
+    const certificatesSubtitle = document.getElementById('certificatesSubtitle');
+    const seasonSelect = document.getElementById('certificateSeasonSelect');
+    const certificatesContent = document.getElementById('certificatesContent');
+    
+    if (certificatesTitle) {
+        certificatesTitle.textContent = `🏆 ${seasonsData[seasonId]?.name || 'Current Season'} Certificates`;
+    }
+    
+    if (certificatesSubtitle) {
+        certificatesSubtitle.textContent = `Download and review the official certificates for our top 3 teams`;
+    }
+    
+    // Update the dropdown selection
+    if (seasonSelect) {
+        seasonSelect.value = seasonId;
+    }
+    
+    // Update the certificates content based on availability
+    if (certificatesContent) {
+        if (certificatesAvailable) {
+            // Show certificates
+            certificatesContent.innerHTML = `
+                <div class="certificates-header">
+                    <h2 id="certificatesTitle">🏆 ${seasonsData[seasonId]?.name || 'Current Season'} Certificates</h2>
+                    <p id="certificatesSubtitle">Download and review the official certificates for our top 3 teams</p>
+                </div>
+                <div class="certificates-grid">
+                    <div class="certificate-item">
+                        <div class="certificate-icon">🥇</div>
+                        <div class="certificate-position">1st Place</div>
+                        <div class="certificate-description">Championship Winner Certificate</div>
+                        <div class="certificate-actions">
+                            <a href="images/certificates/${seasonId}-first.jpeg" download="Championship_Winner_Certificate_${seasonsData[seasonId]?.name?.replace(' ', '_') || 'Current_Season'}.jpeg" class="certificate-btn download">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                            <button onclick="viewCertificate('${seasonId}-first', 'Championship Winner Certificate - ${seasonsData[seasonId]?.name || 'Current Season'}')" class="certificate-btn view">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon">🥈</div>
+                        <div class="certificate-position">2nd Place</div>
+                        <div class="certificate-description">Runner-up Certificate</div>
+                        <div class="certificate-actions">
+                            <a href="images/certificates/${seasonId}-second.jpeg" download="Runner_up_Certificate_${seasonsData[seasonId]?.name?.replace(' ', '_') || 'Current_Season'}.jpeg" class="certificate-btn download">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                            <button onclick="viewCertificate('${seasonId}-second', 'Runner-up Certificate - ${seasonsData[seasonId]?.name || 'Current Season'}')" class="certificate-btn view">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon">🥉</div>
+                        <div class="certificate-position">3rd Place</div>
+                        <div class="certificate-description">Third Place Certificate</div>
+                        <div class="certificate-actions">
+                            <a href="images/certificates/${seasonId}-third.jpeg" download="Third_Place_Certificate_${seasonsData[seasonId]?.name?.replace(' ', '_') || 'Current_Season'}.jpeg" class="certificate-btn download">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                            <button onclick="viewCertificate('${seasonId}-third', 'Third Place Certificate - ${seasonsData[seasonId]?.name || 'Current Season'}')" class="certificate-btn view">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        } else {
+            // Show no certificates message
+            certificatesContent.innerHTML = `
+                <div class="certificates-header">
+                    <h2 id="certificatesTitle">🏆 ${seasonsData[seasonId]?.name || 'Current Season'} Certificates</h2>
+                    <p id="certificatesSubtitle">Download and review the official certificates for our top 3 teams</p>
+                </div>
+                <div class="no-certificates-message">
+                    <div class="no-certificates-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Certificates Not Yet Available</h3>
+                    <p>The certificates for <strong>${seasonsData[seasonId]?.name || 'this season'}</strong> will be available once the season is completed.</p>
+                    <div class="season-status-info">
+                        <span class="status-badge ${seasonData?.status || 'planned'}">${seasonData?.status || 'planned'}</span>
+                        <p class="status-description">
+                            ${seasonData?.status === 'upcoming' ? 'This season is scheduled to begin soon.' : 
+                              seasonData?.status === 'planned' ? 'This season is in the planning phase.' : 
+                              'This season is currently in progress.'}
+                        </p>
+                    </div>
+                    <div class="suggestion-text">
+                        <p><i class="fas fa-lightbulb"></i> <strong>Tip:</strong> Select a completed season from the dropdown above to view available certificates.</p>
+                    </div>
+                </div>
+            `;
+        }
+    }
 }
 
 function performSearch() {
@@ -5862,11 +8527,25 @@ function loadDetailedTeamPage(team) {
         });
     });
     
-    // Calculate team statistics from group fixtures
-    const teamStats = calculateTeamStats(teamId, teamGroupFixtures);
+    // Calculate team statistics from ALL matches (group + knockout)
+    const allCurrentSeasonMatches = [...teamGroupFixtures, ...teamKnockouts];
+    const teamStats = calculateTeamStats(teamId, allCurrentSeasonMatches);
     
-    // Get team's group
-    const teamGroup = findTeamGroup(teamId);
+    // Get team's group for current season
+    const teamGroup = findTeamGroupInSeason(teamId, currentSeason);
+    
+    // Get historical records
+    const historicalRecords = calculateHistoricalRecords();
+    const teamRecords = historicalRecords[teamId] || {
+        leagueWins: 0,
+        runnerUp: 0,
+        thirdPlace: 0,
+        totalTrophies: 0,
+        seasons: []
+    };
+    
+    // Get all-seasons stats
+    const allSeasonsStats = calculateAllSeasonsStats(teamId);
 
     const content = `
         <div class="page-container">
@@ -5893,6 +8572,7 @@ function loadDetailedTeamPage(team) {
                         <p class="team-subtitle">${teamGroup} • ${team.stadium}</p>
                         <div class="team-stats-overview">
                             <span class="stat-badge">Group: ${teamGroup}</span>
+                            <span class="stat-badge">Matches: ${teamGroupFixtures.length}G ${teamKnockouts.length}K</span>
                             <span class="stat-badge">Points: ${teamStats.points}</span>
                             <span class="stat-badge">Record: ${teamStats.won}W ${teamStats.drawn}D ${teamStats.lost}L</span>
                         </div>
@@ -5905,7 +8585,11 @@ function loadDetailedTeamPage(team) {
                 <!-- Information Cards Section -->
                 <div class="info-grid">
                     <div class="info-card">
-                        <h3><i class="fas fa-info-circle"></i> Club Information</h3>
+                        <h3 class="collapsible-header" onclick="toggleSection(this)">
+                            <i class="fas fa-info-circle"></i> Club Information
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </h3>
+                        <div class="collapsible-content collapsed" style="display: none;">
                         <div class="info-item">
                             <span class="label"><i class="fas fa-user-tie"></i> Manager:</span>
                             <span class="value">${team.manager}</span>
@@ -5924,19 +8608,36 @@ function loadDetailedTeamPage(team) {
                         </div>
                         <div class="info-item">
                             <span class="label"><i class="fas fa-trophy"></i> Titles:</span>
-                            <span class="value">${team.titles}</span>
+                            <span class="value">
+                                ${teamRecords.leagueWins > 0 ? `${teamRecords.leagueWins} Championship${teamRecords.leagueWins > 1 ? 's' : ''}` : '0 Championships'}
+                                ${teamRecords.runnerUp > 0 ? `, ${teamRecords.runnerUp} Runner-up${teamRecords.runnerUp > 1 ? 's' : ''}` : ''}
+                                ${teamRecords.thirdPlace > 0 ? `, ${teamRecords.thirdPlace} Third Place${teamRecords.thirdPlace > 1 ? 's' : ''}` : ''}
+                            </span>
                         </div>
                         <div class="info-item">
                             <span class="label"><i class="fas fa-tag"></i> Short Name:</span>
                             <span class="value">${team.shortName}</span>
                         </div>
+                        </div>
                     </div>
 
                     <div class="info-card">
-                        <h3><i class="fas fa-chart-bar"></i> Season Statistics</h3>
+                        <h3 class="collapsible-header" onclick="toggleSection(this)">
+                            <i class="fas fa-chart-bar"></i> Season Statistics
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </h3>
+                        <div class="collapsible-content collapsed" style="display: none;">
                         <div class="info-item">
-                            <span class="label"><i class="fas fa-gamepad"></i> Matches Played:</span>
+                            <span class="label"><i class="fas fa-gamepad"></i> Total Matches:</span>
                             <span class="value">${teamStats.played}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label"><i class="fas fa-users"></i> Group Matches:</span>
+                            <span class="value">${teamGroupFixtures.length}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label"><i class="fas fa-trophy"></i> Knockout Matches:</span>
+                            <span class="value">${teamKnockouts.length}</span>
                         </div>
                         <div class="info-item">
                             <span class="label"><i class="fas fa-check-circle" style="color: #28a745;"></i> Wins:</span>
@@ -5962,12 +8663,105 @@ function loadDetailedTeamPage(team) {
                             <span class="label"><i class="fas fa-balance-scale"></i> Goal Difference:</span>
                             <span class="value" style="color: ${teamStats.goalDifference >= 0 ? '#28a745' : '#dc3545'}; font-weight: bold;">${teamStats.goalDifference}</span>
                         </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- All Seasons Statistics Section -->
+                <div class="info-card all-seasons-stats">
+                    <h3 class="collapsible-header" onclick="toggleSection(this)">
+                        <i class="fas fa-chart-line"></i> All Seasons Statistics
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </h3>
+                    <div class="collapsible-content" style="display: none;">
+                    <div class="all-seasons-overview">
+                        <div class="overview-stats">
+                            <div class="overview-stat">
+                                <span class="stat-value">${allSeasonsStats.seasonsPlayed}</span>
+                                <span class="stat-label">Seasons Played</span>
+                            </div>
+                            <div class="overview-stat">
+                                <span class="stat-value">${allSeasonsStats.totalMatches}</span>
+                                <span class="stat-label">Total Matches</span>
+                            </div>
+                            <div class="overview-stat">
+                                <span class="stat-value">${allSeasonsStats.totalWins}</span>
+                                <span class="stat-label">Total Wins</span>
+                            </div>
+                            <div class="overview-stat">
+                                <span class="stat-value">${allSeasonsStats.totalDraws}</span>
+                                <span class="stat-label">Total Draws</span>
+                            </div>
+                            <div class="overview-stat">
+                                <span class="stat-value">${allSeasonsStats.totalLosses}</span>
+                                <span class="stat-label">Total Losses</span>
+                            </div>
+                        </div>
+                        <div class="goals-overview">
+                            <div class="goals-stat">
+                                <span class="stat-value">${allSeasonsStats.totalGoalsFor}</span>
+                                <span class="stat-label">Goals For</span>
+                            </div>
+                            <div class="goals-stat">
+                                <span class="stat-value">${allSeasonsStats.totalGoalsAgainst}</span>
+                                <span class="stat-label">Goals Against</span>
+                            </div>
+                            <div class="goals-stat">
+                                <span class="stat-value" style="color: ${allSeasonsStats.totalGoalDifference >= 0 ? '#28a745' : '#dc3545'};">
+                                    ${allSeasonsStats.totalGoalDifference >= 0 ? '+' : ''}${allSeasonsStats.totalGoalDifference}
+                                </span>
+                                <span class="stat-label">Goal Difference</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    ${allSeasonsStats.seasons.length > 0 ? `
+                    <div class="seasons-breakdown">
+                        <h4><i class="fas fa-list"></i> Season Breakdown</h4>
+                        <div class="seasons-list">
+                            ${allSeasonsStats.seasons.map(season => `
+                                <div class="season-item">
+                                    <div class="season-header">
+                                        <span class="season-name">${season.seasonName} (${season.seasonYear})</span>
+                                        <span class="season-group">Group ${season.group}</span>
+                                    </div>
+                                    <div class="season-stats">
+                                        <div class="season-stat">
+                                            <span class="stat-value">${season.matches}</span>
+                                            <span class="stat-label">Total Matches</span>
+                                        </div>
+                                        <div class="season-stat">
+                                            <span class="stat-value">${season.groupMatches || 0}G ${season.knockoutMatches || 0}K</span>
+                                            <span class="stat-label">Group/Knockout</span>
+                                        </div>
+                                        <div class="season-stat">
+                                            <span class="stat-value">${season.wins}W ${season.draws}D ${season.losses}L</span>
+                                            <span class="stat-label">Record</span>
+                                        </div>
+                                        <div class="season-stat">
+                                            <span class="stat-value">${season.points}</span>
+                                            <span class="stat-label">Points</span>
+                                        </div>
+                                        <div class="season-stat">
+                                            <span class="stat-value">${season.goalsFor}/${season.goalsAgainst}</span>
+                                            <span class="stat-label">Goals</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    ` : '<p style="text-align: center; color: #666; font-style: italic; margin-top: 20px;">No season data available.</p>'}
                     </div>
                 </div>
 
                 <!-- Match History Section -->
                 <div class="fixtures-section">
-                    <h3><i class="fas fa-history"></i> Group Stage Matches</h3>
+                    <h3 class="collapsible-header" onclick="toggleSection(this)">
+                        <i class="fas fa-history"></i> Group Stage Matches
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </h3>
+                    <div class="collapsible-content" style="display: none;">
                     <div class="fixtures-list">
                         ${teamGroupFixtures.length > 0 ? teamGroupFixtures.map(fixture => `
                             <div class="fixture-item ${fixture.status}">
@@ -5986,11 +8780,16 @@ function loadDetailedTeamPage(team) {
                             </div>
                         `).join('') : '<p style="text-align: center; color: #666; font-style: italic;">No group fixtures found for this team.</p>'}
                     </div>
+                    </div>
                 </div>
 
                 <!-- Team Form Section -->
                 <div class="form-section">
-                    <h3><i class="fas fa-chart-line"></i> Recent Form</h3>
+                    <h3 class="collapsible-header" onclick="toggleSection(this)">
+                        <i class="fas fa-chart-line"></i> Recent Form
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </h3>
+                    <div class="collapsible-content" style="display: none;">
                     <div class="form-display">
                         <div class="form-indicators">
                             ${generateTeamFormFromFixtures(teamId, teamGroupFixtures).map(result => `
@@ -6014,39 +8813,53 @@ function loadDetailedTeamPage(team) {
 
                 <!-- Performance Analysis Section -->
                 <div class="performance-section">
-                    <h3><i class="fas fa-analytics"></i> Performance Analysis</h3>
-                    <div class="performance-grid">
-                        <div class="performance-card">
-                            <h4><i class="fas fa-home"></i> Home Performance</h4>
-                            <div class="performance-stats">
-                                <div class="perf-stat">
-                                    <span class="label">Home Matches:</span>
-                                    <span class="value">${getHomeMatchesFromFixtures(teamId, teamGroupFixtures)}</span>
+                    <h3 class="collapsible-header" onclick="toggleSection(this)">
+                        <i class="fas fa-analytics"></i> Performance Analysis
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </h3>
+                    <div class="collapsible-content" style="display: none;">
+                        <div class="performance-stats-card">
+                            <div class="performance-stats-grid">
+                                <div class="perf-stat-item home-stat">
+                                    <div class="perf-icon">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <div class="perf-content">
+                                        <div class="perf-title">Home</div>
+                                        <div class="perf-numbers">
+                                            <span class="perf-number">${getHomeMatchesFromFixtures(teamId, teamGroupFixtures)}</span>
+                                            <span class="perf-label">matches</span>
+                                        </div>
+                                        <div class="perf-numbers">
+                                            <span class="perf-number">${getHomeWinsFromFixtures(teamId, teamGroupFixtures)}</span>
+                                            <span class="perf-label">wins</span>
+                                        </div>
+                                        <div class="perf-numbers">
+                                            <span class="perf-number">${getHomeGoalsFromFixtures(teamId, teamGroupFixtures)}</span>
+                                            <span class="perf-label">goals</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="perf-stat">
-                                    <span class="label">Home Wins:</span>
-                                    <span class="value">${getHomeWinsFromFixtures(teamId, teamGroupFixtures)}</span>
-                                </div>
-                                <div class="perf-stat">
-                                    <span class="label">Home Goals:</span>
-                                    <span class="value">${getHomeGoalsFromFixtures(teamId, teamGroupFixtures)}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="performance-card">
-                            <h4><i class="fas fa-plane"></i> Away Performance</h4>
-                            <div class="performance-stats">
-                                <div class="perf-stat">
-                                    <span class="label">Away Matches:</span>
-                                    <span class="value">${getAwayMatchesFromFixtures(teamId, teamGroupFixtures)}</span>
-                                </div>
-                                <div class="perf-stat">
-                                    <span class="label">Away Wins:</span>
-                                    <span class="value">${getAwayWinsFromFixtures(teamId, teamGroupFixtures)}</span>
-                                </div>
-                                <div class="perf-stat">
-                                    <span class="label">Away Goals:</span>
-                                    <span class="value">${getAwayGoalsFromFixtures(teamId, teamGroupFixtures)}</span>
+                                
+                                <div class="perf-stat-item away-stat">
+                                    <div class="perf-icon">
+                                        <i class="fas fa-plane"></i>
+                                    </div>
+                                    <div class="perf-content">
+                                        <div class="perf-title">Away</div>
+                                        <div class="perf-numbers">
+                                            <span class="perf-number">${getAwayMatchesFromFixtures(teamId, teamGroupFixtures)}</span>
+                                            <span class="perf-label">matches</span>
+                                        </div>
+                                        <div class="perf-numbers">
+                                            <span class="perf-number">${getAwayWinsFromFixtures(teamId, teamGroupFixtures)}</span>
+                                            <span class="perf-label">wins</span>
+                                        </div>
+                                        <div class="perf-numbers">
+                                            <span class="perf-number">${getAwayGoalsFromFixtures(teamId, teamGroupFixtures)}</span>
+                                            <span class="perf-label">goals</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -6055,7 +8868,7 @@ function loadDetailedTeamPage(team) {
 
                 <!-- Knockouts Section -->
                 ${teamKnockouts.length > 0 ? `
-                <div class="knockouts-section">
+                <div class="knockouts-section" style="margin-top: 20px;">
                     <h3><i class="fas fa-trophy"></i> Knockout Matches</h3>
                     <div class="knockouts-list">
                         ${teamKnockouts.map(match => `
@@ -6077,12 +8890,38 @@ function loadDetailedTeamPage(team) {
                     </div>
                 </div>
                 ` : ''}
+                    </div>
+                </div>
             </div>
         </div>
     `;
 
     mainContent.innerHTML = content;
     currentPage = 'team-detail';
+}
+
+// Function to toggle collapsible sections
+function toggleSection(header) {
+    const content = header.nextElementSibling;
+    const icon = header.querySelector('.toggle-icon');
+    
+    if (content.style.display === 'none' || content.classList.contains('collapsed')) {
+        // Expand
+        content.style.display = 'block';
+        content.classList.remove('collapsed');
+        content.classList.add('expanded');
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up');
+        icon.style.transform = 'rotate(180deg)';
+    } else {
+        // Collapse
+        content.style.display = 'none';
+        content.classList.remove('expanded');
+        content.classList.add('collapsed');
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down');
+        icon.style.transform = 'rotate(0deg)';
+    }
 }
 
 // Team Form and Performance Helper Functions
@@ -6407,135 +9246,136 @@ function loadDetailedFixturePage(fixture) {
             <!-- Main Content Grid -->
             <div class="detailed-content">
                 <div class="info-grid">
-                    <!-- Match Information Card -->
-                    <div class="info-card">
-                        <h3><i class="fas fa-info-circle"></i> Match Information</h3>
-                        ${fixtureData.group ? `
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-trophy"></i> Group:</span>
-                            <span class="value">Group ${fixtureData.group}</span>
+                    <!-- Complete Match Details Card -->
+                    <div class="info-card complete-match-card">
+                        <h3><i class="fas fa-futbol"></i> Match Details</h3>
+                        
+                        <!-- Match Header with Teams and Score -->
+                        <div class="match-header-section">
+                            <div class="match-teams">
+                                <div class="team-display home-team-display">
+                                    <i class="fas fa-home"></i>
+                                    <span class="team-name">${homeTeamData.name}</span>
+                                    <span class="team-group">Group ${homeTeamGroup}</span>
+                                </div>
+                                
+                                <div class="match-score-section">
+                                    ${fixtureData.status === 'completed' && fixtureData.score ? `
+                                        <div class="final-score">
+                                            <span class="score">${fixtureData.score.home} - ${fixtureData.score.away}</span>
+                                            ${fixtureData.penalties ? `
+                                                <div class="penalties">(${fixtureData.penalties.home}-${fixtureData.penalties.away} pen)</div>
+                                            ` : ''}
+                                        </div>
+                                    ` : `
+                                        <div class="vs-text">VS</div>
+                                    `}
+                                </div>
+                                
+                                <div class="team-display away-team-display">
+                                    <i class="fas fa-plane"></i>
+                                    <span class="team-name">${awayTeamData.name}</span>
+                                    <span class="team-group">Group ${awayTeamGroup}</span>
+                                </div>
+                            </div>
                         </div>
-                        ` : ''}
-                        ${fixtureData.round ? `
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-trophy"></i> Round:</span>
-                            <span class="value">${fixtureData.round}</span>
-                        </div>
-                        ` : ''}
-                        ${fixtureData.matchday ? `
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-calendar-day"></i> Matchday:</span>
-                            <span class="value">${fixtureData.matchday}</span>
-                        </div>
-                        ` : ''}
-                        ${fixtureData.leg ? `
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-exchange-alt"></i> Leg:</span>
-                            <span class="value">${fixtureData.leg} Leg</span>
-                        </div>
-                        ` : ''}
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-flag"></i> Status:</span>
-                            <span class="value status ${fixtureData.status.toLowerCase()}">${fixtureData.status}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-calendar-alt"></i> Date:</span>
-                            <span class="value">${fixtureData.date}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-clock"></i> Time:</span>
-                            <span class="value">${fixtureData.time}</span>
-                        </div>
-                        ${fixtureData.venue ? `
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-map-marker-alt"></i> Venue:</span>
-                            <span class="value">${fixtureData.venue}</span>
-                        </div>
-                        ` : ''}
-                        ${fixtureData.penalties ? `
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-crosshairs"></i> Penalties:</span>
-                            <span class="value">${fixtureData.penalties.home} - ${fixtureData.penalties.away}</span>
-                        </div>
-                        ` : ''}
-                    </div>
 
-                    <!-- Match Score Card (for completed matches) -->
-                    ${fixtureData.status === 'completed' && fixtureData.score ? `
-                    <div class="info-card">
-                        <h3><i class="fas fa-futbol"></i> Match Result</h3>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-home"></i> ${homeTeamData.name}:</span>
-                            <span class="value">${fixtureData.score.home}</span>
+                        <!-- Match Information -->
+                        <div class="match-info-section">
+                            <div class="info-row">
+                                ${fixtureData.group ? `
+                                    <div class="info-item">
+                                        <span class="label"><i class="fas fa-trophy"></i> Group:</span>
+                                        <span class="value">Group ${fixtureData.group}</span>
+                                    </div>
+                                ` : ''}
+                                ${fixtureData.round ? `
+                                    <div class="info-item">
+                                        <span class="label"><i class="fas fa-star"></i> Round:</span>
+                                        <span class="value">${fixtureData.round}</span>
+                                    </div>
+                                ` : ''}
+                                ${fixtureData.matchday ? `
+                                    <div class="info-item">
+                                        <span class="label"><i class="fas fa-calendar-day"></i> Matchday:</span>
+                                        <span class="value">${fixtureData.matchday}</span>
+                                    </div>
+                                ` : ''}
+                            </div>
+                            <div class="info-row">
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-flag"></i> Status:</span>
+                                    <span class="value status ${fixtureData.status.toLowerCase()}">${fixtureData.status}</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-calendar-alt"></i> Date:</span>
+                                    <span class="value">${fixtureData.date}</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-clock"></i> Time:</span>
+                                    <span class="value">${fixtureData.time}</span>
+                                </div>
+                            </div>
+                            ${fixtureData.venue ? `
+                                <div class="info-row">
+                                    <div class="info-item">
+                                        <span class="label"><i class="fas fa-map-marker-alt"></i> Venue:</span>
+                                        <span class="value">${fixtureData.venue}</span>
+                                    </div>
+                                </div>
+                            ` : ''}
                         </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-plane"></i> ${awayTeamData.name}:</span>
-                            <span class="value">${fixtureData.score.away}</span>
-                        </div>
-                        ${fixtureData.penalties ? `
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-crosshairs"></i> Penalties:</span>
-                            <span class="value" style="color: #e90052; font-weight: bold;">${fixtureData.penalties.home} - ${fixtureData.penalties.away}</span>
-                        </div>
-                        ` : ''}
-                    </div>
-                    ` : ''}
 
-                    <!-- Home Team Stats Card -->
-                    <div class="info-card">
-                        <h3><i class="fas fa-home"></i> ${homeTeamData.name} Stats</h3>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-trophy"></i> Group:</span>
-                            <span class="value">${homeTeamGroup}</span>
+                        <!-- Team Stats Comparison -->
+                        <div class="team-stats-section">
+                            <h4><i class="fas fa-chart-bar"></i> Team Statistics</h4>
+                            <div class="stats-comparison">
+                                <div class="team-stats home-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">Points:</span>
+                                        <span class="stat-value">${homeTeamStats.points}</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Record:</span>
+                                        <span class="stat-value">${homeTeamStats.won}W ${homeTeamStats.drawn}D ${homeTeamStats.lost}L</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Goals:</span>
+                                        <span class="stat-value">${homeTeamStats.goalsFor}-${homeTeamStats.goalsAgainst}</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">GD:</span>
+                                        <span class="stat-value ${homeTeamStats.goalDifference >= 0 ? 'positive' : 'negative'}">${homeTeamStats.goalDifference >= 0 ? '+' : ''}${homeTeamStats.goalDifference}</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="stats-divider"></div>
+                                
+                                <div class="team-stats away-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">Points:</span>
+                                        <span class="stat-value">${awayTeamStats.points}</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Record:</span>
+                                        <span class="stat-value">${awayTeamStats.won}W ${awayTeamStats.drawn}D ${awayTeamStats.lost}L</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Goals:</span>
+                                        <span class="stat-value">${awayTeamStats.goalsFor}-${awayTeamStats.goalsAgainst}</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">GD:</span>
+                                        <span class="stat-value ${awayTeamStats.goalDifference >= 0 ? 'positive' : 'negative'}">${awayTeamStats.goalDifference >= 0 ? '+' : ''}${awayTeamStats.goalDifference}</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-star"></i> Points:</span>
-                            <span class="value">${homeTeamStats.points}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-chart-bar"></i> Record:</span>
-                            <span class="value">${homeTeamStats.won}W ${homeTeamStats.drawn}D ${homeTeamStats.lost}L</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-futbol"></i> Goals:</span>
-                            <span class="value">${homeTeamStats.goalsFor}-${homeTeamStats.goalsAgainst}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-balance-scale"></i> Goal Difference:</span>
-                            <span class="value ${homeTeamStats.goalDifference >= 0 ? 'positive' : 'negative'}">${homeTeamStats.goalDifference >= 0 ? '+' : ''}${homeTeamStats.goalDifference}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-gamepad"></i> Matches Played:</span>
-                            <span class="value">${homeTeamStats.played}</span>
-                        </div>
-                    </div>
 
-                    <!-- Away Team Stats Card -->
-                    <div class="info-card">
-                        <h3><i class="fas fa-plane"></i> ${awayTeamData.name} Stats</h3>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-trophy"></i> Group:</span>
-                            <span class="value">${awayTeamGroup}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-star"></i> Points:</span>
-                            <span class="value">${awayTeamStats.points}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-chart-bar"></i> Record:</span>
-                            <span class="value">${awayTeamStats.won}W ${awayTeamStats.drawn}D ${awayTeamStats.lost}L</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-futbol"></i> Goals:</span>
-                            <span class="value">${awayTeamStats.goalsFor}-${awayTeamStats.goalsAgainst}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-balance-scale"></i> Goal Difference:</span>
-                            <span class="value ${awayTeamStats.goalDifference >= 0 ? 'positive' : 'negative'}">${awayTeamStats.goalDifference >= 0 ? '+' : ''}${awayTeamStats.goalDifference}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-gamepad"></i> Matches Played:</span>
-                            <span class="value">${awayTeamStats.played}</span>
+                        <!-- Head to Head Section -->
+                        <div class="head-to-head-section">
+                            <h4><i class="fas fa-history"></i> Head to Head</h4>
+                            ${getHeadToHeadMatches(fixtureData.homeTeam, fixtureData.awayTeam)}
                         </div>
                     </div>
                 </div>
@@ -6640,100 +9480,120 @@ function loadDetailedKnockoutPage(match) {
             <!-- Main Content Grid -->
             <div class="detailed-content">
                 <div class="info-grid">
-                    <!-- Match Information Card -->
-                    <div class="info-card">
-                        <h3><i class="fas fa-info-circle"></i> Match Information</h3>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-star"></i> Round:</span>
-                            <span class="value">${roundName ? roundName.replace(/([A-Z])/g, ' $1').trim() : 'Unknown'}</span>
+                    <!-- Complete Match Details Card -->
+                    <div class="info-card complete-match-card">
+                        <h3><i class="fas fa-futbol"></i> Match Details</h3>
+                        
+                        <!-- Match Header with Teams and Score -->
+                        <div class="match-header-section">
+                            <div class="match-teams">
+                                <div class="team-display home-team-display">
+                                    <i class="fas fa-home"></i>
+                                    <span class="team-name">${homeTeamData.name}</span>
+                                    <span class="team-group">Group ${homeTeamGroup}</span>
+                                </div>
+                                
+                                <div class="match-score-section">
+                                    ${match.status === 'completed' && match.score ? `
+                                        <div class="final-score">
+                                            <span class="score">${match.score.home} - ${match.score.away}</span>
+                                            ${match.penalties ? `
+                                                <div class="penalties">(${match.penalties.home}-${match.penalties.away} pen)</div>
+                                            ` : ''}
+                                        </div>
+                                    ` : `
+                                        <div class="vs-text">VS</div>
+                                    `}
+                                </div>
+                                
+                                <div class="team-display away-team-display">
+                                    <i class="fas fa-plane"></i>
+                                    <span class="team-name">${awayTeamData.name}</span>
+                                    <span class="team-group">Group ${awayTeamGroup}</span>
+                                </div>
+                            </div>
                         </div>
-                        ${match.leg ? `
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-exchange-alt"></i> Leg:</span>
-                            <span class="value">${match.leg} Leg</span>
-                        </div>
-                        ` : ''}
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-flag"></i> Status:</span>
-                            <span class="value status ${match.status}">${match.status}</span>
-                        </div>
-                        ${match.status === 'completed' && match.score ? `
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-futbol"></i> Score:</span>
-                            <span class="value" style="font-weight: bold; font-size: 1.1rem;">${match.score.home} - ${match.score.away}</span>
-                        </div>
-                        ` : ''}
-                        ${match.status === 'completed' && match.penalties ? `
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-bullseye"></i> Penalties:</span>
-                            <span class="value" style="font-weight: bold; color: #e90052;">${match.penalties.home} - ${match.penalties.away}</span>
-                        </div>
-                        ` : ''}
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-calendar"></i> Date:</span>
-                            <span class="value">${match.date}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-clock"></i> Time:</span>
-                            <span class="value">${match.time}</span>
-                        </div>
-                    </div>
 
-                    <!-- Home Team Stats Card -->
-                    <div class="info-card">
-                        <h3><i class="fas fa-home"></i> ${homeTeamData.name} Stats</h3>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-trophy"></i> Group:</span>
-                            <span class="value">${homeTeamGroup}</span>
+                        <!-- Match Information -->
+                        <div class="match-info-section">
+                            <div class="info-row">
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-star"></i> Round:</span>
+                                    <span class="value">${roundName ? roundName.replace(/([A-Z])/g, ' $1').trim() : 'Unknown'}</span>
+                                </div>
+                                ${match.leg ? `
+                                    <div class="info-item">
+                                        <span class="label"><i class="fas fa-exchange-alt"></i> Leg:</span>
+                                        <span class="value">${match.leg} Leg</span>
+                                    </div>
+                                ` : ''}
+                            </div>
+                            <div class="info-row">
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-flag"></i> Status:</span>
+                                    <span class="value status ${match.status}">${match.status}</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-calendar"></i> Date:</span>
+                                    <span class="value">${match.date}</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label"><i class="fas fa-clock"></i> Time:</span>
+                                    <span class="value">${match.time}</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-star"></i> Points:</span>
-                            <span class="value">${homeTeamStats.points}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-chart-bar"></i> Record:</span>
-                            <span class="value">${homeTeamStats.won}W ${homeTeamStats.drawn}D ${homeTeamStats.lost}L</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-futbol"></i> Goals:</span>
-                            <span class="value">${homeTeamStats.goalsFor}-${homeTeamStats.goalsAgainst}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-balance-scale"></i> Goal Difference:</span>
-                            <span class="value ${homeTeamStats.goalDifference >= 0 ? 'positive' : 'negative'}">${homeTeamStats.goalDifference >= 0 ? '+' : ''}${homeTeamStats.goalDifference}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-gamepad"></i> Matches Played:</span>
-                            <span class="value">${homeTeamStats.played}</span>
-                        </div>
-                    </div>
 
-                    <!-- Away Team Stats Card -->
-                    <div class="info-card">
-                        <h3><i class="fas fa-plane"></i> ${awayTeamData.name} Stats</h3>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-trophy"></i> Group:</span>
-                            <span class="value">${awayTeamGroup}</span>
+                        <!-- Team Stats Comparison -->
+                        <div class="team-stats-section">
+                            <h4><i class="fas fa-chart-bar"></i> Team Statistics</h4>
+                            <div class="stats-comparison">
+                                <div class="team-stats home-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">Points:</span>
+                                        <span class="stat-value">${homeTeamStats.points}</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Record:</span>
+                                        <span class="stat-value">${homeTeamStats.won}W ${homeTeamStats.drawn}D ${homeTeamStats.lost}L</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Goals:</span>
+                                        <span class="stat-value">${homeTeamStats.goalsFor}-${homeTeamStats.goalsAgainst}</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">GD:</span>
+                                        <span class="stat-value ${homeTeamStats.goalDifference >= 0 ? 'positive' : 'negative'}">${homeTeamStats.goalDifference >= 0 ? '+' : ''}${homeTeamStats.goalDifference}</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="stats-divider"></div>
+                                
+                                <div class="team-stats away-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">Points:</span>
+                                        <span class="stat-value">${awayTeamStats.points}</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Record:</span>
+                                        <span class="stat-value">${awayTeamStats.won}W ${awayTeamStats.drawn}D ${awayTeamStats.lost}L</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Goals:</span>
+                                        <span class="stat-value">${awayTeamStats.goalsFor}-${awayTeamStats.goalsAgainst}</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">GD:</span>
+                                        <span class="stat-value ${awayTeamStats.goalDifference >= 0 ? 'positive' : 'negative'}">${awayTeamStats.goalDifference >= 0 ? '+' : ''}${awayTeamStats.goalDifference}</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-star"></i> Points:</span>
-                            <span class="value">${awayTeamStats.points}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-chart-bar"></i> Record:</span>
-                            <span class="value">${awayTeamStats.won}W ${awayTeamStats.drawn}D ${awayTeamStats.lost}L</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-futbol"></i> Goals:</span>
-                            <span class="value">${awayTeamStats.goalsFor}-${awayTeamStats.goalsAgainst}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-balance-scale"></i> Goal Difference:</span>
-                            <span class="value ${awayTeamStats.goalDifference >= 0 ? 'positive' : 'negative'}">${awayTeamStats.goalDifference >= 0 ? '+' : ''}${awayTeamStats.goalDifference}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label"><i class="fas fa-gamepad"></i> Matches Played:</span>
-                            <span class="value">${awayTeamStats.played}</span>
+
+                        <!-- Head to Head Section -->
+                        <div class="head-to-head-section">
+                            <h4><i class="fas fa-history"></i> Head to Head</h4>
+                            ${getHeadToHeadMatches(match.homeTeam, match.awayTeam)}
                         </div>
                     </div>
                 </div>
@@ -6743,6 +9603,182 @@ function loadDetailedKnockoutPage(match) {
 
     mainContent.innerHTML = content;
     currentPage = 'knockout-detail';
+}
+
+// Head to Head function
+function getHeadToHeadMatches(team1Id, team2Id) {
+    try {
+        // Check if required variables exist
+        if (!seasonsFixtures || !seasonsKnockouts || !teamsData) {
+            console.warn('Required variables not available for head-to-head analysis');
+            return `
+                <div class="no-head-to-head">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Head-to-head data not available</p>
+                </div>
+            `;
+        }
+
+        const headToHeadMatches = [];
+        
+        // Search through all seasons' fixtures
+        Object.entries(seasonsFixtures).forEach(([seasonId, seasonFixtures]) => {
+            if (!Array.isArray(seasonFixtures)) return;
+            
+            const seasonMatches = seasonFixtures.filter(fixture => 
+            fixture.status === 'completed' && 
+            ((fixture.homeTeam === team1Id && fixture.awayTeam === team2Id) ||
+             (fixture.homeTeam === team2Id && fixture.awayTeam === team1Id))
+        );
+        
+        seasonMatches.forEach(match => {
+            headToHeadMatches.push({
+                ...match,
+                seasonId: seasonId,
+                seasonName: seasonsData[seasonId]?.name || seasonId
+            });
+        });
+    });
+    
+        // Search through all seasons' knockouts
+        Object.entries(seasonsKnockouts).forEach(([seasonId, seasonKnockouts]) => {
+            if (!seasonKnockouts) return;
+            
+            const allKnockoutMatches = [
+            ...seasonKnockouts.roundOf16,
+            ...seasonKnockouts.quarterFinals,
+            ...seasonKnockouts.semiFinals,
+            ...seasonKnockouts.final,
+            ...seasonKnockouts.thirdPlacePlayoff
+        ];
+        
+        const knockoutMatches = allKnockoutMatches.filter(match => 
+            match.status === 'completed' && 
+            ((match.homeTeam === team1Id && match.awayTeam === team2Id) ||
+             (match.homeTeam === team2Id && match.awayTeam === team1Id))
+        );
+        
+        knockoutMatches.forEach(match => {
+            headToHeadMatches.push({
+                ...match,
+                seasonId: seasonId,
+                seasonName: seasonsData[seasonId]?.name || seasonId,
+                isKnockout: true
+            });
+        });
+    });
+    
+    // Sort by date (most recent first)
+    headToHeadMatches.sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+    if (headToHeadMatches.length === 0) {
+        return `
+            <div class="no-head-to-head">
+                <i class="fas fa-info-circle"></i>
+                <p>No previous meetings between these teams</p>
+            </div>
+        `;
+    }
+    
+    // Calculate head-to-head statistics
+    let team1Wins = 0;
+    let team2Wins = 0;
+    let draws = 0;
+    let team1Goals = 0;
+    let team2Goals = 0;
+    
+    headToHeadMatches.forEach(match => {
+        if (match.score) {
+            const isTeam1Home = match.homeTeam === team1Id;
+            const team1Score = isTeam1Home ? match.score.home : match.score.away;
+            const team2Score = isTeam1Home ? match.score.away : match.score.home;
+            
+            team1Goals += team1Score;
+            team2Goals += team2Score;
+            
+            if (team1Score > team2Score) {
+                team1Wins++;
+            } else if (team2Score > team1Score) {
+                team2Wins++;
+            } else {
+                draws++;
+            }
+        }
+    });
+    
+    const team1Name = teamsData[team1Id]?.name || 'Team 1';
+    const team2Name = teamsData[team2Id]?.name || 'Team 2';
+    
+    return `
+        <div class="head-to-head-stats">
+            <div class="h2h-summary">
+                <div class="h2h-stat">
+                    <span class="h2h-label">${team1Name} Wins:</span>
+                    <span class="h2h-value team1-color">${team1Wins}</span>
+                </div>
+                <div class="h2h-stat">
+                    <span class="h2h-label">Draws:</span>
+                    <span class="h2h-value">${draws}</span>
+                </div>
+                <div class="h2h-stat">
+                    <span class="h2h-label">${team2Name} Wins:</span>
+                    <span class="h2h-value team2-color">${team2Wins}</span>
+                </div>
+                <div class="h2h-stat">
+                    <span class="h2h-label">Total Goals:</span>
+                    <span class="h2h-value">${team1Goals}-${team2Goals}</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="h2h-matches">
+            <h5><i class="fas fa-list"></i> Previous Meetings (${headToHeadMatches.length})</h5>
+            <div class="h2h-matches-list">
+                ${headToHeadMatches.map(match => {
+                    const isTeam1Home = match.homeTeam === team1Id;
+                    const team1Score = isTeam1Home ? match.score.home : match.score.away;
+                    const team2Score = isTeam1Home ? match.score.away : match.score.home;
+                    const homeTeamName = isTeam1Home ? team1Name : team2Name;
+                    const awayTeamName = isTeam1Home ? team2Name : team1Name;
+                    
+                    let resultClass = 'draw';
+                    if (team1Score > team2Score) {
+                        resultClass = 'team1-win';
+                    } else if (team2Score > team1Score) {
+                        resultClass = 'team2-win';
+                    }
+                    
+                    return `
+                        <div class="h2h-match ${resultClass}">
+                            <div class="h2h-match-info">
+                                <div class="h2h-teams">
+                                    <span class="h2h-home">${homeTeamName}</span>
+                                    <span class="h2h-score">${team1Score} - ${team2Score}</span>
+                                    <span class="h2h-away">${awayTeamName}</span>
+                                </div>
+                                <div class="h2h-match-details">
+                                    <span class="h2h-season">${match.seasonName}</span>
+                                    <span class="h2h-date">${match.date}</span>
+                                    ${match.isKnockout ? `<span class="h2h-type knockout">Knockout</span>` : `<span class="h2h-type group">Group Stage</span>`}
+                                    ${match.round ? `<span class="h2h-round">${match.round}</span>` : ''}
+                                    ${match.penalties ? `<span class="h2h-penalties">(${match.penalties.home}-${match.penalties.away} pen)</span>` : ''}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('')}
+            </div>
+        </div>
+    `;
+    } catch (error) {
+        console.error('Error in getHeadToHeadMatches:', error);
+        return `
+            <div class="no-head-to-head">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>Error loading head-to-head data</p>
+            </div>
+        `;
+    }
 }
 
 // Certificate viewing functions
@@ -6763,6 +9799,7 @@ function viewCertificate(certificateType, title) {
     }
     if (certificateLoading) {
         certificateLoading.style.display = 'flex';
+        console.log('Loading spinner shown');
     }
     certificatePreview.style.display = 'none';
     
@@ -6782,7 +9819,8 @@ function viewCertificate(certificateType, title) {
         };
     };
     
-    // Set download link
+    // Set download link - extract position from certificateType (e.g., "season1-first" -> "first")
+    const position = certificateType.split('-').pop(); // Get the last part after the dash
     const downloadNames = {
         'first': 'Championship_Winner_Certificate.jpeg',
         'second': 'Runner_up_Certificate.jpeg',
@@ -6790,7 +9828,7 @@ function viewCertificate(certificateType, title) {
     };
     
     modalDownload.href = imagePath;
-    modalDownload.download = downloadNames[certificateType];
+    modalDownload.download = downloadNames[position] || 'Certificate.jpeg';
     
     // Show modal
     modal.style.display = 'block';
@@ -6799,7 +9837,10 @@ function viewCertificate(certificateType, title) {
     // Add load event listener to handle successful loading
     certificatePreview.onload = function() {
         console.log('Certificate image loaded successfully');
-        hideLoadingAndShowImage();
+        // Add a small delay to ensure loading spinner is visible
+        setTimeout(() => {
+            hideLoadingAndShowImage();
+        }, 500); // Show loading for at least 500ms
     };
 }
 
@@ -6829,9 +9870,13 @@ function hideLoadingAndShowImage() {
     const loading = document.getElementById('certificateLoading');
     const image = document.getElementById('certificatePreview');
     
+    console.log('Hiding loading spinner and showing image');
     if (loading && image) {
         loading.style.display = 'none';
         image.style.display = 'block';
+        console.log('Loading spinner hidden, image shown');
+    } else {
+        console.log('Loading or image element not found:', { loading: !!loading, image: !!image });
     }
 }
 
@@ -6868,4 +9913,6 @@ function testImagePath(path) {
     };
     img.src = path;
 }
+
+
 
