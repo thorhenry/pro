@@ -5373,7 +5373,7 @@ const seasonsData = {
         id: 'season1',
         name: 'Season 1',
         year: 'August 2025',
-        status: 'ongoing',
+        status: 'completed',
         startDate: '2025-08-01',
         endDate: '2025-08-31',
         groups: {
@@ -5411,7 +5411,7 @@ const seasonsData = {
         id: 'season2',
         name: 'Season 2',
         year: 'September 2025',
-        status: 'upcoming',
+        status: 'ongoing',
         startDate: '2025-09-01',
         endDate: '2025-09-30',
         groups: {
@@ -5672,6 +5672,8 @@ let currentSeason = findOngoingSeason();
 
 // Log the current season
 console.log('Current season set to:', currentSeason);
+console.log('Available seasons:', Object.keys(seasonsData));
+console.log('Season statuses:', Object.entries(seasonsData).map(([id, data]) => ({ id, status: data.status })));
 
 // Helper function to get current season data
 function getCurrentSeasonData() {
@@ -5691,20 +5693,32 @@ function getCurrentSeasonData() {
 // Helper function to get unique team IDs from current season
 function getCurrentSeasonTeamIds() {
     try {
+        console.log('getCurrentSeasonTeamIds called with currentSeason:', currentSeason);
+        console.log('seasonsData available:', Object.keys(seasonsData || {}));
+        
         const currentSeasonData = getCurrentSeasonData();
+        console.log('currentSeasonData:', currentSeasonData);
+        
         if (!currentSeasonData || !currentSeasonData.groups) {
             console.warn('No current season data or groups found');
+            console.log('Falling back to all teams:', Object.keys(teamsData));
             return Object.keys(teamsData); // Fallback to all teams
         }
+        
+        console.log('Current season groups:', currentSeasonData.groups);
         
         const allTeams = [];
         
         // Collect all teams from all groups in current season
         Object.values(currentSeasonData.groups).forEach(group => {
+            console.log('Processing group:', group);
             if (Array.isArray(group)) {
                 group.forEach(team => {
+                    console.log('Adding team:', team);
                     allTeams.push(team.id);
                 });
+            } else {
+                console.warn('Group is not an array:', group);
             }
         });
         
@@ -5923,8 +5937,10 @@ function switchSeason(seasonId) {
     if (seasonsData[seasonId]) {
         currentSeason = seasonId;
         
-        // Update the legacy groupData reference
+        // CRITICAL FIX: Replace groupData completely instead of mutating it
         const newGroupData = seasonsData[seasonId].groups;
+        // Clear existing groupData and replace with new season's data
+        Object.keys(groupData).forEach(key => delete groupData[key]);
         Object.assign(groupData, newGroupData);
         
         // Update the legacy groupFixtures reference
@@ -5934,8 +5950,8 @@ function switchSeason(seasonId) {
         
         // Update leagueData.groupFixtures to match
         leagueData.groupFixtures = groupFixtures;
-        // Update leagueData.groups to match
-        leagueData.groups = newGroupData;
+        // Update leagueData.groups to match - use a fresh copy
+        leagueData.groups = JSON.parse(JSON.stringify(newGroupData));
         // Update the legacy knockouts reference
         const currentKnockouts = getCurrentSeasonKnockouts();
         leagueData.knockouts = currentKnockouts;
@@ -5944,26 +5960,31 @@ function switchSeason(seasonId) {
         const currentSeasonTeamIds = getCurrentSeasonTeamIds();
         leagueData.teams = currentSeasonTeamIds.map((teamId, index) => {
             const team = teamsData[teamId];
-            const played = Math.floor(Math.random() * 6) + 1;
-            const won = Math.floor(Math.random() * played);
-            const drawn = Math.floor(Math.random() * (played - won));
-            const lost = played - won - drawn;
-            const goalsFor = Math.floor(Math.random() * 20) + 5;
-            const goalsAgainst = Math.floor(Math.random() * 15) + 3;
-            const points = (won * 3) + drawn;
+            if (!team) {
+                console.error(`Team data not found for teamId: ${teamId}`);
+                return null;
+            }
+            
+            // Get team fixtures for this season
+            const teamFixtures = groupFixtures.filter(fixture => 
+                fixture.homeTeam === teamId || fixture.awayTeam === teamId
+            );
+            
+            // Calculate actual stats from fixtures instead of random numbers
+            const stats = calculateTeamStats(teamId, teamFixtures);
             
             return {
                 id: index + 1,
                 name: team.name,
                 country: "Pro League",
                 logo: team.logo,
-                points: points,
-                played: played,
-                won: won,
-                drawn: drawn,
-                lost: lost,
-                goalsFor: goalsFor,
-                goalsAgainst: goalsAgainst,
+                points: stats.points,
+                played: stats.played,
+                won: stats.won,
+                drawn: stats.drawn,
+                lost: stats.lost,
+                goalsFor: stats.goalsFor,
+                goalsAgainst: stats.goalsAgainst,
                 stadium: team.stadium,
                 manager: team.manager,
                 capacity: team.capacity,
@@ -5972,7 +5993,7 @@ function switchSeason(seasonId) {
                 colors: team.colors,
                 shortName: team.shortName
             };
-        });
+        }).filter(team => team !== null); // Remove null entries
         
         console.log(`Switched to ${seasonsData[seasonId].name} and set as current season`);
         
@@ -6575,8 +6596,8 @@ function initializeCurrentSeasonData() {
         // Initialize groupData with current season's data
         groupData = getCurrentGroupData();
         
-        // Update leagueData.groups to match
-        leagueData.groups = groupData;
+        // Update leagueData.groups to match - use a deep copy
+        leagueData.groups = JSON.parse(JSON.stringify(groupData));
         
         // Initialize groupFixtures with current season's fixtures
         const currentFixtures = getCurrentSeasonFixtures();
@@ -6599,26 +6620,31 @@ function initializeCurrentSeasonData() {
         const currentSeasonTeamIds = getCurrentSeasonTeamIds();
         leagueData.teams = currentSeasonTeamIds.map((teamId, index) => {
             const team = teamsData[teamId];
-            const played = Math.floor(Math.random() * 6) + 1;
-            const won = Math.floor(Math.random() * played);
-            const drawn = Math.floor(Math.random() * (played - won));
-            const lost = played - won - drawn;
-            const goalsFor = Math.floor(Math.random() * 20) + 5;
-            const goalsAgainst = Math.floor(Math.random() * 15) + 3;
-            const points = (won * 3) + drawn;
+            if (!team) {
+                console.error(`Team data not found for teamId: ${teamId}`);
+                return null;
+            }
+            
+            // Get team fixtures for this season
+            const teamFixtures = groupFixtures.filter(fixture => 
+                fixture.homeTeam === teamId || fixture.awayTeam === teamId
+            );
+            
+            // Calculate actual stats from fixtures instead of random numbers
+            const stats = calculateTeamStats(teamId, teamFixtures);
             
             return {
                 id: index + 1,
                 name: team.name,
                 country: "Pro League",
                 logo: team.logo,
-                points: points,
-                played: played,
-                won: won,
-                drawn: drawn,
-                lost: lost,
-                goalsFor: goalsFor,
-                goalsAgainst: goalsAgainst,
+                points: stats.points,
+                played: stats.played,
+                won: stats.won,
+                drawn: stats.drawn,
+                lost: stats.lost,
+                goalsFor: stats.goalsFor,
+                goalsAgainst: stats.goalsAgainst,
                 stadium: team.stadium,
                 manager: team.manager,
                 capacity: team.capacity,
@@ -6627,7 +6653,7 @@ function initializeCurrentSeasonData() {
                 colors: team.colors,
                 shortName: team.shortName
             };
-        });
+        }).filter(team => team !== null); // Remove null entries
         
         console.log(`Initialized data for ${currentSeason}:`, {
             teams: leagueData.teams.length,
@@ -6935,26 +6961,31 @@ function createLeagueData() {
     return {
         teams: currentSeasonTeamIds.map((teamId, index) => {
             const team = teamsData[teamId];
-        const played = Math.floor(Math.random() * 6) + 1;
-        const won = Math.floor(Math.random() * played);
-        const drawn = Math.floor(Math.random() * (played - won));
-        const lost = played - won - drawn;
-        const goalsFor = Math.floor(Math.random() * 20) + 5;
-        const goalsAgainst = Math.floor(Math.random() * 15) + 3;
-        const points = (won * 3) + drawn;
+            if (!team) {
+                console.error(`Team data not found for teamId: ${teamId}`);
+                return null;
+            }
+            
+            // Get team fixtures for this season
+            const teamFixtures = groupFixtures.filter(fixture => 
+                fixture.homeTeam === teamId || fixture.awayTeam === teamId
+            );
+            
+            // Calculate actual stats from fixtures instead of random numbers
+            const stats = calculateTeamStats(teamId, teamFixtures);
         
         return {
             id: index + 1,
             name: team.name,
             country: "Pro League",
             logo: team.logo,
-            points: points,
-            played: played,
-            won: won,
-            drawn: drawn,
-            lost: lost,
-            goalsFor: goalsFor,
-            goalsAgainst: goalsAgainst,
+                points: stats.points,
+                played: stats.played,
+                won: stats.won,
+                drawn: stats.drawn,
+                lost: stats.lost,
+                goalsFor: stats.goalsFor,
+                goalsAgainst: stats.goalsAgainst,
             stadium: team.stadium,
             manager: team.manager,
             capacity: team.capacity,
@@ -6963,7 +6994,7 @@ function createLeagueData() {
             colors: team.colors,
             shortName: team.shortName
         };
-    }),
+        }).filter(team => team !== null), // Remove null entries
     groups: groupData,
     groupFixtures: groupFixtures,
     knockouts: getCurrentSeasonKnockouts()
@@ -6975,12 +7006,20 @@ const leagueData = createLeagueData();
 
 // Function to calculate group standings
 function calculateGroupStandings() {
+    // Validate that group data exists
+    if (!leagueData || !leagueData.groups) {
+        console.error('Cannot calculate group standings: leagueData or groups not found');
+        return;
+    }
+    
     // Create stats objects for each team based on fixtures
     const teamStats = {};
     
     // Initialize stats for all teams
     Object.keys(leagueData.groups).forEach(groupKey => {
-        leagueData.groups[groupKey].forEach(team => {
+        const group = leagueData.groups[groupKey];
+        if (Array.isArray(group)) {
+            group.forEach(team => {
             teamStats[team.id] = {
                 id: team.id,
                 name: team.name,
@@ -6995,6 +7034,7 @@ function calculateGroupStandings() {
                 goalDifference: 0
             };
         });
+        }
     });
 
     // Process completed fixtures
@@ -7043,16 +7083,19 @@ function calculateGroupStandings() {
 
     // Update leagueData.groups with calculated stats
     Object.keys(leagueData.groups).forEach(groupKey => {
-        leagueData.groups[groupKey] = leagueData.groups[groupKey].map(team => {
-            return teamStats[team.id] || team;
-        });
+        const group = leagueData.groups[groupKey];
+        if (Array.isArray(group)) {
+            leagueData.groups[groupKey] = group.map(team => {
+                return teamStats[team.id] || team;
+            });
 
-        // Sort teams by points, goal difference, goals scored
-        leagueData.groups[groupKey].sort((a, b) => {
-            if (b.points !== a.points) return b.points - a.points;
-            if (b.goalDifference !== a.goalDifference) return b.goalDifference - a.goalDifference;
-            return b.goalsFor - a.goalsFor;
-        });
+            // Sort teams by points, goal difference, goals scored
+            leagueData.groups[groupKey].sort((a, b) => {
+                if (b.points !== a.points) return b.points - a.points;
+                if (b.goalDifference !== a.goalDifference) return b.goalDifference - a.goalDifference;
+                return b.goalsFor - a.goalsFor;
+            });
+        }
     });
 }
 
@@ -8228,6 +8271,41 @@ function generateTablePage() {
     try {
         // Calculate group standings before displaying
         calculateGroupStandings();
+        
+        // Debug: Log the current group data
+        console.log('Current leagueData.groups:', leagueData.groups);
+        console.log('Group A data:', leagueData.groups?.groupA);
+        console.log('Group A length:', leagueData.groups?.groupA?.length);
+        
+        // Validate that group data exists
+        if (!leagueData || !leagueData.groups) {
+            console.error('League data or groups not found');
+            return `
+                <div class="page-container">
+                    <h1 class="page-title">Group Tables</h1>
+                    <div class="error-message">
+                        <p>No group data available. Please try refreshing the page.</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Check if all groups are empty (no teams)
+        const hasTeams = (leagueData.groups.groupA && leagueData.groups.groupA.length > 0) ||
+                        (leagueData.groups.groupB && leagueData.groups.groupB.length > 0) ||
+                        (leagueData.groups.groupC && leagueData.groups.groupC.length > 0);
+        
+        if (!hasTeams) {
+            console.error('No teams found in any group');
+            return `
+                <div class="page-container">
+                    <h1 class="page-title">Group Tables</h1>
+                    <div class="error-message">
+                        <p>No teams found for the current season. Please try refreshing the page.</p>
+                    </div>
+                </div>
+            `;
+        }
     
     return `
         <div class="page-container">
@@ -8253,7 +8331,7 @@ function generateTablePage() {
                         </tr>
                     </thead>
                     <tbody>
-                                ${leagueData.groups.groupA.map((team, index) => `
+                                ${(leagueData.groups.groupA || []).map((team, index) => `
                                     <tr class="${index < 4 ? 'qualified' : index >= 4 ? 'eliminated' : ''}">
                                         <td class="position">${index + 1}</td>
                                         <td>
@@ -8297,7 +8375,7 @@ function generateTablePage() {
                                 </tr>
                             </thead>
                             <tbody>
-                                ${leagueData.groups.groupB.map((team, index) => `
+                                ${(leagueData.groups.groupB || []).map((team, index) => `
                                     <tr class="${index < 4 ? 'qualified' : index >= 4 ? 'eliminated' : ''}">
                                 <td class="position">${index + 1}</td>
                                 <td>
@@ -8341,7 +8419,7 @@ function generateTablePage() {
                                 </tr>
                             </thead>
                             <tbody>
-                                ${leagueData.groups.groupC.map((team, index) => `
+                                ${(leagueData.groups.groupC || []).map((team, index) => `
                                     <tr class="${index < 4 ? 'qualified' : index >= 4 ? 'eliminated' : ''}">
                                         <td class="position">${index + 1}</td>
                                         <td>
@@ -8385,7 +8463,7 @@ function generateTablePage() {
                                 </tr>
                             </thead>
                             <tbody>
-                                ${leagueData.groups.groupD.map((team, index) => `
+                                ${(leagueData.groups.groupD || []).map((team, index) => `
                                     <tr class="${index < 4 ? 'qualified' : index >= 4 ? 'eliminated' : ''}">
                                         <td class="position">${index + 1}</td>
                                         <td>
@@ -8911,21 +8989,43 @@ function generateKnockoutsPage() {
 }
 
 function generateClubsPage() {
-    // Get teams participating in the current season
-    const currentSeasonTeamIds = getCurrentSeasonTeamIds();
-    
-    return `
-        <div class="page-container">
-            <h1 class="page-title">Clubs</h1>
-            <div class="clubs-grid">
-                ${currentSeasonTeamIds.map(teamId => {
-                    const team = teamsData[teamId];
-                    if (!team) return ''; // Skip if team data not found
+    try {
+        // Get teams participating in the current season
+        const currentSeasonTeamIds = getCurrentSeasonTeamIds();
+        
+        // Debug: Log the current season team IDs
+        console.log('Current season team IDs:', currentSeasonTeamIds);
+        console.log('Current season:', currentSeason);
+        console.log('Teams data available:', Object.keys(teamsData).length);
+        
+        // Validate that we have team IDs
+        if (!currentSeasonTeamIds || currentSeasonTeamIds.length === 0) {
+            console.error('No team IDs found for current season');
+            return `
+                <div class="page-container">
+                    <h1 class="page-title">Clubs</h1>
+                    <div class="error-message">
+                        <p>No teams found for the current season. Please try refreshing the page.</p>
+                    </div>
+                </div>
+            `;
+        }
+        
+        return `
+            <div class="page-container">
+                <h1 class="page-title">Clubs</h1>
+                <div class="clubs-grid">
+                    ${currentSeasonTeamIds.map(teamId => {
+                        const team = teamsData[teamId];
+                        if (!team) {
+                            console.error(`Team data not found for teamId: ${teamId}`);
+                            return ''; // Skip if team data not found
+                        }
                     
                     // Get team's group for current season
                     const teamGroup = findTeamGroupInSeason(teamId, currentSeason);
                     // Get team's current stats from group fixtures
-                    const teamFixtures = leagueData.groupFixtures.filter(f => 
+                    const teamFixtures = (leagueData.groupFixtures || []).filter(f => 
                         f.homeTeam === teamId || f.awayTeam === teamId
                     );
                     const teamStats = calculateTeamStats(teamId, teamFixtures);
@@ -8986,6 +9086,18 @@ function generateClubsPage() {
             </div>
         </div>
     `;
+    } catch (error) {
+        console.error('Error in generateClubsPage:', error);
+        return `
+            <div class="page-container">
+                <h1 class="page-title">Clubs</h1>
+                <div class="error-message">
+                    <p>There was an error loading the clubs page. Please try refreshing the page.</p>
+                    <p>Error: ${error.message}</p>
+                </div>
+            </div>
+        `;
+    }
 }
 
 function generateCertificatesPage() {
