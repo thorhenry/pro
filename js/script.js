@@ -5411,7 +5411,7 @@ const seasonsData = {
         id: 'season2',
         name: 'Season 2',
         year: 'September 2025',
-        status: 'ongoing',
+        status: 'upcoming',
         startDate: '2025-09-01',
         endDate: '2025-09-30',
         groups: {
