@@ -9246,8 +9246,8 @@ function generateCertificatesPage() {
 }
 
 function filterCertificatesBySeason(seasonId) {
-    // Update the current season
-    switchSeason(seasonId);
+    // Don't change the global season - just filter certificates locally
+    // switchSeason(seasonId); // Removed to prevent mixed data across pages
     
     // Check if certificates are available for this season
     const seasonData = seasonsData[seasonId];
