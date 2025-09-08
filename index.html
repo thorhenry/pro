@@ -17,6 +17,16 @@
                     <span class="nav-logo-league">LEAGUE</span>
                 </span>
             </div>
+            <div class="season-selector">
+                <div class="season-select-wrapper">
+                    <select id="seasonSelect" class="season-select">
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                    <div class="season-select-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
             <ul class="nav-menu">
                 <li><a href="#" class="nav-link" data-page="home">Home</a></li>
                 <li><a href="#" class="nav-link" data-page="fixtures">Fixtures</a></li>
@@ -60,6 +70,14 @@
             <button id="searchBtn"><i class="fas fa-search"></i></button>
         </div>
         <div id="searchResults" class="search-results"></div>
+    </div>
+
+    <!-- Important Message -->
+    <div class="important-message">
+        <div class="message-content">
+            <i class="fas fa-info-circle"></i>
+            <span>Please refresh the page to get the latest current season data</span>
+        </div>
     </div>
 
     <!-- Loader -->

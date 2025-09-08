@@ -2333,8 +2333,34 @@ const styles = `
             text-align: left;
         }
         
-        .nav-menu {
+        .season-selector {
             order: 2;
+            margin: 0;
+            flex: 1;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+        
+        .season-select {
+            min-width: 100%;
+            max-width: 200px;
+            width: 100%;
+            font-size: 0.9rem;
+            padding: 8px 35px 8px 12px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .season-select-arrow {
+            right: 10px;
+            font-size: 0.8rem;
+        }
+        
+        .nav-menu {
+            order: 3;
             display: none;
         }
         
@@ -2354,6 +2380,303 @@ const styles = `
         
         .nav-logo-text {
             font-size: 0.9rem;
+        }
+    }
+
+    /* Important Message Styles */
+    .important-message {
+        padding: 8px 16px;
+        margin: 0 auto 15px auto;
+        max-width: 1200px;
+        font-size: 12px;
+    }
+
+    .message-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        font-weight: 700;
+        color: #dc3545;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .message-content i {
+        font-size: 12px;
+        color: #dc3545;
+    }
+
+
+    /* Responsive Important Message */
+    @media (max-width: 768px) {
+        .important-message {
+            margin: 0 15px 10px 15px;
+            padding: 6px 12px;
+            font-size: 11px;
+        }
+        
+        .message-content {
+            text-align: center;
+            letter-spacing: 0.3px;
+        }
+        
+        .message-content i {
+            font-size: 11px;
+        }
+    }
+
+    /* Unavailable Season Message Styles (Planned/Upcoming) */
+    .unavailable-season-message {
+        display: none;
+        max-width: 1200px;
+        margin: 0 auto 30px auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .unavailable-message-content {
+        background: #f8f9fa;
+        border: 2px dashed #dee2e6;
+        border-radius: 12px;
+        padding: 40px 30px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .unavailable-message-content i {
+        font-size: 48px;
+        color: #6c757d;
+        margin-bottom: 20px;
+    }
+
+    .unavailable-message-content h3 {
+        color: #495057;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .unavailable-message-content p {
+        color: #6c757d;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    .unavailable-actions {
+        margin-top: 25px;
+    }
+
+    .btn-view-available {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-view-available:hover {
+        background: linear-gradient(135deg, #0056b3, #004085);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+
+    .btn-view-available i {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    /* Responsive Unavailable Season Message */
+    @media (max-width: 768px) {
+        .unavailable-season-message {
+            margin: 0 15px 20px 15px;
+            padding: 20px 15px;
+        }
+        
+        .unavailable-message-content {
+            padding: 30px 20px;
+        }
+        
+        .unavailable-message-content i {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .unavailable-message-content h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .unavailable-message-content p {
+            font-size: 14px;
+        }
+        
+        .btn-view-available {
+            padding: 10px 20px;
+            font-size: 13px;
+        }
+    }
+
+    /* Season Selector Styles */
+    .season-selector {
+        display: flex;
+        align-items: center;
+        margin: 0 20px;
+        position: relative;
+    }
+
+    .season-select-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .season-select {
+        background: linear-gradient(135deg, rgba(233, 0, 82, 0.2), rgba(138, 43, 226, 0.2));
+        border: 2px solid transparent;
+        border-radius: 12px;
+        color: #ffffff;
+        padding: 12px 45px 12px 20px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        outline: none;
+        min-width: 180px;
+        position: relative;
+        backdrop-filter: blur(10px);
+        box-shadow: 
+            0 4px 15px rgba(0, 0, 0, 0.2),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+    .season-select-arrow {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #e90052;
+        font-size: 0.9rem;
+        pointer-events: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 2;
+    }
+
+    .season-select:hover + .season-select-arrow {
+        color: #ff6b9d;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .season-select:focus + .season-select-arrow {
+        color: #ff6b9d;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .season-select:hover {
+        background: linear-gradient(135deg, rgba(233, 0, 82, 0.3), rgba(138, 43, 226, 0.3));
+        border-color: rgba(233, 0, 82, 0.6);
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 
+            0 8px 25px rgba(233, 0, 82, 0.3),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    .season-select:focus {
+        border-color: rgba(233, 0, 82, 0.8);
+        box-shadow: 
+            0 0 0 3px rgba(233, 0, 82, 0.3),
+            0 8px 25px rgba(233, 0, 82, 0.3),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px) scale(1.02);
+    }
+
+    .season-select:active {
+        transform: translateY(0) scale(0.98);
+    }
+
+    .season-select option {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        color: #ffffff;
+        padding: 12px 16px;
+        font-weight: 500;
+        border: none;
+    }
+
+    .season-select option:hover {
+        background: linear-gradient(135deg, rgba(233, 0, 82, 0.3), rgba(138, 43, 226, 0.3));
+    }
+
+    .season-select option:checked {
+        background: linear-gradient(135deg, rgba(233, 0, 82, 0.4), rgba(138, 43, 226, 0.4));
+        color: #ffffff;
+    }
+
+    /* Season Selector Animations */
+    .season-select.updating {
+        opacity: 0.5;
+        transform: scale(0.98);
+        transition: all 0.3s ease;
+    }
+
+    .season-select.updated {
+        animation: seasonSuccess 0.6s ease-out;
+    }
+
+    @keyframes seasonSuccess {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+            box-shadow: 
+                0 8px 25px rgba(76, 175, 80, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .season-select.changing {
+        background: linear-gradient(135deg, rgba(255, 193, 7, 0.3), rgba(255, 152, 0, 0.3));
+        border-color: rgba(255, 193, 7, 0.6);
+        transform: scale(0.95);
+        transition: all 0.3s ease;
+    }
+
+    .season-select.changed {
+        animation: seasonSuccess 0.6s ease-out;
+    }
+
+    .season-select.error {
+        background: linear-gradient(135deg, rgba(244, 67, 54, 0.3), rgba(211, 47, 47, 0.3));
+        border-color: rgba(244, 67, 54, 0.6);
+        animation: seasonError 0.6s ease-out;
+    }
+
+    @keyframes seasonError {
+        0% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(-5px);
+        }
+        75% {
+            transform: translateX(5px);
+        }
+        100% {
+            transform: translateX(0);
         }
     }
 
@@ -4860,7 +5183,7 @@ const seasonsData = {
         id: 'season1',
         name: 'Season 1',
         year: 'August 2025',
-        status: 'completed',
+        status: 'ongoing',
         startDate: '2025-08-01',
         endDate: '2025-08-31',
         groups: {
@@ -4898,7 +5221,7 @@ const seasonsData = {
         id: 'season2',
         name: 'Season 2',
         year: 'September 2025',
-        status: 'ongoing',
+        status: 'upcoming',
         startDate: '2025-09-01',
         endDate: '2025-09-30',
         groups: {
@@ -4973,8 +5296,189 @@ const seasonsData = {
 };
 
 
-// Current season reference
-let currentSeason = 'season1';
+// Function to find the season with status 'ongoing'
+function findOngoingSeason() {
+    try {
+        for (const [seasonId, seasonData] of Object.entries(seasonsData)) {
+            if (seasonData.status === 'ongoing') {
+                console.log(`Found ongoing season: ${seasonId}`);
+                return seasonId;
+            }
+        }
+        console.log('No ongoing season found, defaulting to season1');
+        return 'season1';
+    } catch (error) {
+        console.error('Error finding ongoing season:', error);
+        return 'season1';
+    }
+}
+
+// Function to check if current season is planned
+function isCurrentSeasonPlanned() {
+    try {
+        const currentSeasonData = seasonsData[currentSeason];
+        return currentSeasonData && currentSeasonData.status === 'planned';
+    } catch (error) {
+        console.error('Error checking if current season is planned:', error);
+        return false;
+    }
+}
+
+// Function to check if current season is upcoming
+function isCurrentSeasonUpcoming() {
+    try {
+        const currentSeasonData = seasonsData[currentSeason];
+        return currentSeasonData && currentSeasonData.status === 'upcoming';
+    } catch (error) {
+        console.error('Error checking if current season is upcoming:', error);
+        return false;
+    }
+}
+
+// Function to check if current season is not available (planned or upcoming)
+function isCurrentSeasonNotAvailable() {
+    return isCurrentSeasonPlanned() || isCurrentSeasonUpcoming();
+}
+
+// Function to display unavailable season message (planned or upcoming)
+function displayUnavailableSeasonMessage() {
+    try {
+        const currentSeasonData = seasonsData[currentSeason];
+        const seasonName = currentSeasonData ? currentSeasonData.name : currentSeason;
+        const seasonStatus = currentSeasonData ? currentSeasonData.status : 'unknown';
+        
+        // Hide ALL content - main content, navigation, everything except the message
+        const mainContent = document.getElementById('mainContent');
+        if (mainContent) {
+            mainContent.style.display = 'none';
+        }
+        
+        // Hide all content sections
+        const contentSections = document.querySelectorAll('.content-section');
+        contentSections.forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        // Create or update unavailable season message
+        let unavailableMessage = document.getElementById('unavailableSeasonMessage');
+        if (!unavailableMessage) {
+            unavailableMessage = document.createElement('div');
+            unavailableMessage.id = 'unavailableSeasonMessage';
+            unavailableMessage.className = 'unavailable-season-message';
+            
+            // Insert after the important message
+            const importantMessage = document.querySelector('.important-message');
+            if (importantMessage) {
+                importantMessage.insertAdjacentElement('afterend', unavailableMessage);
+            } else {
+                // Insert after search container if no important message
+                const searchContainer = document.querySelector('.search-container');
+                if (searchContainer) {
+                    searchContainer.insertAdjacentElement('afterend', unavailableMessage);
+                }
+            }
+        }
+        
+        // Determine message content based on status
+        let icon, title, description;
+        if (seasonStatus === 'planned') {
+            icon = 'fas fa-calendar-plus';
+            title = 'Season Coming Soon';
+            description = `${seasonName} is currently in planning phase.`;
+        } else if (seasonStatus === 'upcoming') {
+            icon = 'fas fa-clock';
+            title = 'Season Starting Soon';
+            description = `${seasonName} is scheduled to begin soon.`;
+        } else {
+            icon = 'fas fa-info-circle';
+            title = 'Season Not Available';
+            description = `${seasonName} is not currently available.`;
+        }
+        
+        unavailableMessage.innerHTML = `
+            <div class="unavailable-message-content">
+                <i class="${icon}"></i>
+                <h3>${title}</h3>
+                <p><strong>${description}</strong></p>
+                <p>Data will be available once the season begins.</p>
+                <div class="unavailable-actions">
+                    <button onclick="switchToAvailableSeason()" class="btn-view-available">
+                        <i class="fas fa-eye"></i>
+                        View Available Season
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        unavailableMessage.style.display = 'block';
+        console.log(`Displaying unavailable season message for: ${seasonName} (${seasonStatus}) - All other content hidden`);
+        
+    } catch (error) {
+        console.error('Error displaying unavailable season message:', error);
+    }
+}
+
+// Function to switch to an available season (not planned)
+function switchToAvailableSeason() {
+    try {
+        // First, try to find an ongoing season
+        let targetSeasonId = null;
+        
+        // Look for ongoing season first
+        for (const [seasonId, seasonData] of Object.entries(seasonsData)) {
+            if (seasonData.status === 'ongoing') {
+                targetSeasonId = seasonId;
+                console.log(`Found ongoing season: ${seasonId}`);
+                break;
+            }
+        }
+        
+        // If no ongoing season, fall back to completed season
+        if (!targetSeasonId) {
+            for (const [seasonId, seasonData] of Object.entries(seasonsData)) {
+                if (seasonData.status === 'completed') {
+                    targetSeasonId = seasonId;
+                    console.log(`No ongoing season found, using completed season: ${seasonId}`);
+                    break;
+                }
+            }
+        }
+        
+        if (targetSeasonId) {
+            console.log(`Switching to available season: ${targetSeasonId}`);
+            
+            // Hide unavailable season message
+            const unavailableMessage = document.getElementById('unavailableSeasonMessage');
+            if (unavailableMessage) {
+                unavailableMessage.style.display = 'none';
+            }
+            
+            // Restore main content
+            const mainContent = document.getElementById('mainContent');
+            if (mainContent) {
+                mainContent.style.display = 'block';
+            }
+            
+            switchSeason(targetSeasonId);
+            
+            // Update season selector to reflect the new season
+            updateSeasonSelector();
+            
+            loadPage('home');
+            return;
+        }
+        
+        // If no available season found, show error
+        console.error('No available seasons found');
+        alert('No available seasons found. Please contact support.');
+        
+    } catch (error) {
+        console.error('Error switching to available season:', error);
+    }
+}
+
+// Current season reference (automatically set to ongoing season)
+let currentSeason = findOngoingSeason();
 
 // Log the current season
 console.log('Current season set to:', currentSeason);
@@ -5281,6 +5785,25 @@ function switchSeason(seasonId) {
         });
         
         console.log(`Switched to ${seasonsData[seasonId].name} and set as current season`);
+        
+        // Check if the new season is not available and show message if needed
+        if (isCurrentSeasonNotAvailable()) {
+            console.log('Switched to unavailable season, showing unavailable season message');
+            displayUnavailableSeasonMessage();
+        } else {
+            // Hide unavailable season message if switching to available season
+            const unavailableMessage = document.getElementById('unavailableSeasonMessage');
+            if (unavailableMessage) {
+                unavailableMessage.style.display = 'none';
+            }
+            
+            // Restore main content
+            const mainContent = document.getElementById('mainContent');
+            if (mainContent) {
+                mainContent.style.display = 'block';
+            }
+        }
+        
         return true;
     }
     console.error(`Season ${seasonId} not found`);
@@ -5314,6 +5837,69 @@ function getCurrentSeason() {
 
 function getSeasonById(seasonId) {
     return seasonsData[seasonId] || null;
+}
+
+// Function to update season selector options
+function updateSeasonSelector() {
+    try {
+        const seasonSelect = document.getElementById('seasonSelect');
+        if (!seasonSelect) {
+            console.warn('Season selector element not found');
+            return;
+        }
+        
+        // Add visual feedback during update
+        seasonSelect.classList.add('updating');
+        
+        // Clear existing options with fade effect
+        seasonSelect.style.opacity = '0.5';
+        
+        setTimeout(() => {
+            seasonSelect.innerHTML = '';
+            
+            // Add options for each season
+            if (seasonsData && Object.keys(seasonsData).length > 0) {
+                Object.values(seasonsData).forEach((season, index) => {
+                    const option = document.createElement('option');
+                    option.value = season.id;
+                    
+                    option.textContent = `${season.name} (${season.year})`;
+                    option.selected = season.id === currentSeason;
+                    option.dataset.status = season.status;
+                    seasonSelect.appendChild(option);
+                });
+                console.log('Season selector updated successfully');
+            } else {
+                console.warn('No seasons data available, adding fallback option');
+                // Add fallback option
+                const option = document.createElement('option');
+                option.value = 'season1';
+                option.textContent = 'Season 1 (August 2025)';
+                option.selected = true;
+                seasonSelect.appendChild(option);
+            }
+            
+            // Restore opacity and add success animation
+            seasonSelect.style.opacity = '1';
+            seasonSelect.classList.remove('updating');
+            seasonSelect.classList.add('updated');
+            
+            // Remove success class after animation
+            setTimeout(() => {
+                seasonSelect.classList.remove('updated');
+            }, 1000);
+            
+        }, 200);
+        
+    } catch (error) {
+        console.error('Error updating season selector:', error);
+        // Restore opacity on error
+        const seasonSelect = document.getElementById('seasonSelect');
+        if (seasonSelect) {
+            seasonSelect.style.opacity = '1';
+            seasonSelect.classList.remove('updating');
+        }
+    }
 }
 
 
@@ -5772,9 +6358,28 @@ let groupFixtures = [];
 // Initialize season1 fixtures after groupFixtures is defined
 // populateSeason1Fixtures(); // Commented out - will be handled by initializeCurrentSeasonData()
 
+// Function to update current season based on ongoing status
+function updateCurrentSeasonFromStatus() {
+    try {
+        const ongoingSeason = findOngoingSeason();
+        if (ongoingSeason !== currentSeason) {
+            console.log(`Updating current season from ${currentSeason} to ${ongoingSeason} (ongoing status)`);
+            currentSeason = ongoingSeason;
+            return true; // Season changed
+        }
+        return false; // No change
+    } catch (error) {
+        console.error('Error updating current season from status:', error);
+        return false;
+    }
+}
+
 // Initialize data for the current season
 function initializeCurrentSeasonData() {
     try {
+        // Check if we need to update current season based on ongoing status
+        updateCurrentSeasonFromStatus();
+        
         console.log(`Initializing data for current season: ${currentSeason}`);
         
         // Initialize groupData with current season's data
@@ -5856,6 +6461,19 @@ function initializeCurrentSeasonData() {
 
 // Initialize data for the current season
 initializeCurrentSeasonData();
+
+// Set up periodic check for ongoing seasons (every 5 minutes)
+setInterval(() => {
+    const seasonChanged = updateCurrentSeasonFromStatus();
+    if (seasonChanged) {
+        console.log('Season changed to ongoing, updating UI...');
+        initializeCurrentSeasonData();
+        updateSeasonSelector();
+        // Reload current page to reflect changes
+        const currentPage = document.querySelector('.nav-link.active')?.dataset.page || 'home';
+        loadPage(currentPage);
+    }
+}, 5 * 60 * 1000); // Check every 5 minutes
 
 // Helper function to get team name from ID
 function getTeamName(teamId) {
@@ -6289,6 +6907,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Load the home page
         loadPage('home');
         setupEventListeners();
+        updateSeasonSelector();
         
         // Hide loader and show main content
         pageLoader.classList.add('hidden');
@@ -6330,6 +6949,64 @@ function setupEventListeners() {
         });
     });
 
+    // Season Selector
+    const seasonSelect = document.getElementById('seasonSelect');
+    if (seasonSelect) {
+        seasonSelect.addEventListener('change', (e) => {
+            const selectedSeason = e.target.value;
+            const seasonSelectElement = e.target;
+            
+            // Add visual feedback
+            seasonSelectElement.classList.add('changing');
+            
+            // Add loading state
+            seasonSelectElement.style.opacity = '0.7';
+            seasonSelectElement.style.pointerEvents = 'none';
+            
+            // Switch season with smooth transition
+            setTimeout(() => {
+                if (switchSeason(selectedSeason)) {
+                    // Success feedback
+                    seasonSelectElement.classList.remove('changing');
+                    seasonSelectElement.classList.add('changed');
+                    
+                    // Restore normal state
+                    seasonSelectElement.style.opacity = '1';
+                    seasonSelectElement.style.pointerEvents = 'auto';
+                    
+                    // Remove success class after animation
+                    setTimeout(() => {
+                        seasonSelectElement.classList.remove('changed');
+                    }, 1000);
+                    
+                    // Reload current page to reflect season change
+                    const currentPage = document.querySelector('.nav-link.active')?.dataset.page || 'home';
+                    
+                    // Force a small delay to ensure data is fully updated
+                    setTimeout(() => {
+                        loadPage(currentPage);
+                    }, 50);
+                    
+                    console.log(`Season switched to: ${seasonsData[selectedSeason]?.name}`);
+                } else {
+                    // Error feedback
+                    seasonSelectElement.classList.remove('changing');
+                    seasonSelectElement.classList.add('error');
+                    
+                    // Restore normal state
+                    seasonSelectElement.style.opacity = '1';
+                    seasonSelectElement.style.pointerEvents = 'auto';
+                    
+                    // Remove error class after animation
+                    setTimeout(() => {
+                        seasonSelectElement.classList.remove('error');
+                    }, 1000);
+                    
+                    console.error('Failed to switch season');
+                }
+            }, 300);
+        });
+    }
 
     // Search functionality
     searchBtn.addEventListener('click', (e) => {
@@ -6386,8 +7063,27 @@ function loadPage(page) {
     currentPage = page;
     let content = '';
 
-    // Show quick loader for page transitions
+    // Check if current season is not available (planned or upcoming)
+    if (isCurrentSeasonNotAvailable()) {
+        console.log('Current season is not available, showing unavailable season message');
+        displayUnavailableSeasonMessage();
+        updateActiveNavigation(page);
+        return;
+    }
+
+    // Hide unavailable season message if it exists and restore main content
+    const unavailableMessage = document.getElementById('unavailableSeasonMessage');
+    if (unavailableMessage) {
+        unavailableMessage.style.display = 'none';
+    }
+    
+    // Restore main content
     const mainContent = document.getElementById('mainContent');
+    if (mainContent) {
+        mainContent.style.display = 'block';
+    }
+
+    // Show quick loader for page transitions
     mainContent.style.opacity = '0.7';
     mainContent.style.transition = 'opacity 0.2s ease';
 
