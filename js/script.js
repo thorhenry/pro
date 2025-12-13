@@ -1856,7 +1856,7 @@ const styles = `
         opacity: 1;
     }
 
-    /* Apply silver/white colors to YTY and ThorVisual */
+    /* Apply silver/white colors to YTY and demon */
     .sponsor-item:nth-child(2) .sponsor-logo,
     .sponsor-item:nth-child(3) .sponsor-logo {
         filter: brightness(0) saturate(100%) invert(100%) brightness(0.9) contrast(1.1);
@@ -5100,270 +5100,226 @@ document.head.appendChild(styleSheet);
 
 // Teams Data
 const teamsData = {
+    'thorvisual': {
+        name: 'Thorvisual',
+        stadium: 'Thorvisual Arena',
+        manager: 'Thorvisual Manager',
+        capacity: 50000,
+        founded: 2023,
+        titles: 0,
+        colors: ['#1a237e', '#90caf9'],
+        shortName: 'THO',
+        logo: 'THO'
+    },
+    'maria': {
+        name: 'Mariakhan',
+        stadium: 'Mariakhan Stadium',
+        manager: 'Mariakhan Manager',
+        capacity: 48000,
+        founded: 2023,
+        titles: 0,
+        colors: ['#ff6f00', '#ffcc02'],
+        shortName: 'MAR',
+        logo: 'MAR'
+    },
+    'lardker': {
+        name: 'Lardker',
+        stadium: 'Lardker Ground',
+        manager: 'Lardker Manager',
+        capacity: 42000,
+        founded: 2023,
+        titles: 0,
+        colors: ['#2e7d32', '#81c784'],
+        shortName: 'LAR',
+        logo: 'LAR'
+    },
+    'smiles': {
+        name: 'Smiles',
+        stadium: 'Smiles Park',
+        manager: 'Smiles Manager',
+        capacity: 46000,
+        founded: 2023,
+        titles: 0,
+        colors: ['#c2185b', '#f8bbd9'],
+        shortName: 'SMI',
+        logo: 'SMI'
+    },
+    'yotah': {
+        name: 'Yotah',
+        stadium: 'Yotah Arena',
+        manager: 'Yotah Manager',
+        capacity: 44000,
+        founded: 2023,
+        titles: 0,
+        colors: ['#424242', '#9e9e9e'],
+        shortName: 'YOT',
+        logo: 'YOT'
+    },
+    'offer': {
+        name: 'Offer Art',
+        stadium: 'Offer Art Stadium',
+        manager: 'Offer Art Manager',
+        capacity: 52000,
+        founded: 2023,
+        titles: 0,
+        colors: ['#1565c0', '#64b5f6'],
+        shortName: 'OFE',
+        logo: 'OFE'
+    },
     'phenom': {
         name: 'Phenom',
-        stadium: 'Phenom Arena',
+        stadium: 'Phenom Stadium',
         manager: 'Phenom Manager',
-        capacity: 50000,
+        capacity: 45000,
         founded: 2023,
         titles: 0,
         colors: ['#1a237e', '#90caf9'],
         shortName: 'PHE',
         logo: 'PHE'
     },
-    'volts': {
-        name: 'Volts',
-        stadium: 'Volts Stadium',
-        manager: 'Volts Manager',
-        capacity: 48000,
-        founded: 2023,
-        titles: 0,
-        colors: ['#ff6f00', '#ffcc02'],
-        shortName: 'VOL',
-        logo: 'VOL'
-    },
-    'kenno': {
-        name: 'Kenno',
-        stadium: 'Kenno Ground',
-        manager: 'Kenno Manager',
-        capacity: 42000,
-        founded: 2023,
-        titles: 0,
-        colors: ['#2e7d32', '#81c784'],
-        shortName: 'KEN',
-        logo: 'KEN'
-    },
-    'mignon': {
-        name: 'Mignon',
-        stadium: 'Mignon Park',
-        manager: 'Mignon Manager',
-        capacity: 46000,
-        founded: 2023,
-        titles: 0,
-        colors: ['#c2185b', '#f8bbd9'],
-        shortName: 'MIG',
-        logo: 'MIG'
-    },
-    'ghost': {
-        name: 'Ghost',
-        stadium: 'Ghost Arena',
-        manager: 'Ghost Manager',
-        capacity: 44000,
-        founded: 2023,
-        titles: 0,
-        colors: ['#424242', '#9e9e9e'],
-        shortName: 'GHO',
-        logo: 'GHO'
-    },
-    'newton': {
-        name: 'Newton',
-        stadium: 'Newton Stadium',
-        manager: 'Newton Manager',
-        capacity: 52000,
-        founded: 2023,
-        titles: 0,
-        colors: ['#1565c0', '#64b5f6'],
-        shortName: 'NEW',
-        logo: 'NEW'
-    },
-    'maria': {
-        name: 'Aka The Kraven',
-        stadium: 'Holy Stadium',
-        manager: 'Mariakhan',
-        capacity: 45000,
-        founded: 2023,
-        titles: 0,
-        colors: ['#1a237e', '#90caf9'],
-        shortName: 'AFC',
-        logo: 'AFC'
-    },
-    'thDrksid': {
-        name: 'ThDrksid',
+    'henryluther': {
+        name: 'Henry Luther',
         stadium: 'Dark Side Arena',
         manager: 'Dark Manager',
         capacity: 47000,
         founded: 2023,
         titles: 0,
         colors: ['#000000', '#ffffff'],
-        shortName: 'DARK',
-        logo: 'DARK'
+        shortName: 'HFC',
+        logo: 'HFC'
     },
-    'its_lyta23': {
-        name: 'Its_Lyta23',
-        stadium: 'Lyta Stadium',
-        manager: 'Lyta Manager',
+    'yunusu': {
+        name: 'Yunusu',
+        stadium: 'Yunus Stadium',
+        manager: 'Yunus Manager',
         capacity: 43000,
         founded: 2023,
         titles: 0,
         colors: ['#6a1b9a', '#ce93d8'],
-        shortName: 'LYT',
-        logo: 'LYT'
+        shortName: 'YUN',
+        logo: 'YUN'
     },
-    'dav_lil7': {
-        name: 'Dav-Lil7',
-        stadium: 'Dav Stadium',
-        manager: 'Dav Manager',
-        capacity: 41000,
+    'mignon': {
+        name: 'Mignon',
+        stadium: 'Mignon Stadium',
+        manager: 'Mignon Manager',
+        capacity: 40000,
         founded: 2023,
         titles: 0,
         colors: ['#d84315', '#ffab91'],
-        shortName: 'DAV',
-        logo: 'DAV'
+        shortName: 'MIG',
+        logo: 'MIG'
     },
-    'emjay': {
-        name: 'Emjay',
-        stadium: 'Emjay Arena',
-        manager: 'Emjay Manager',
+    'clarks': {
+        name: 'Clarks',
+        stadium: 'Clarks Arena',
+        manager: 'Clarks Manager',
         capacity: 46000,
         founded: 2023,
         titles: 0,
         colors: ['#0277bd', '#4fc3f7'],
-        shortName: 'EMJ',
-        logo: 'EMJ'
+        shortName: 'CLK',
+        logo: 'CLK'
     },
-    'ghazi': {
-        name: 'Ghazi',
-        stadium: 'Ghazi Ground',
-        manager: 'Ghazi Manager',
+    'thelastOG': {
+        name: 'The Last OG',
+        stadium: 'The Last OG Ground',
+        manager: 'The Last OG Manager',
         capacity: 44000,
         founded: 2023,
         titles: 0,
         colors: ['#388e3c', '#66bb6a'],
-        shortName: 'GHA',
-        logo: 'GHA'
+        shortName: 'GLG',
+        logo: 'GLG'
     },
-    'elton': {
-        name: 'Elton',
-        stadium: 'Elton Park',
-        manager: 'Elton Manager',
+    'lyta': {
+        name: 'Lyta',
+        stadium: 'Lyta Park',
+        manager: 'Lyta Manager',
         capacity: 48000,
         founded: 2023,
         titles: 0,
         colors: ['#f57c00', '#ffb74d'],
-        shortName: 'ELT',
-        logo: 'ELT'
+        shortName: 'LYT',
+        logo: 'LYT'
     },
-    'dandizzo': {
-        name: 'Dandizzo',
-        stadium: 'Dandizzo Arena',
-        manager: 'Dandizzo Manager',
+    'volts': {
+        name: 'Volts',
+        stadium: 'Volts Arena',
+        manager: 'Volts Manager',
         capacity: 42000,
         founded: 2023,
         titles: 0,
         colors: ['#7b1fa2', '#ba68c8'],
-        shortName: 'DAN',
-        logo: 'DAN'
+        shortName: 'VOL',
+        logo: 'VOL'
     },
-    'offer_art': {
-        name: 'Offer Art',
-        stadium: 'Art Stadium',
-        manager: 'Art Manager',
+    'wato': {
+        name: 'Wato',
+        stadium: 'Wato Stadium',
+        manager: 'Wato Manager',
         capacity: 45000,
         founded: 2023,
         titles: 0,
         colors: ['#e65100', '#ff8a65'],
-        shortName: 'ART',
-        logo: 'ART'
+        shortName: 'WAT',
+        logo: 'WAT'
     },
-    'thorvisual': {
-        name: 'ThorVisual',
-        stadium: 'Thor Arena',
-        manager: 'Thor Manager',
+    'demon': {
+        name: 'Demon',
+        stadium: 'Den Arena',
+        manager: 'Den Manager',
         capacity: 50000,
         founded: 2023,
         titles: 0,
         colors: ['#0d47a1', '#42a5f5'],
-        shortName: 'THOR',
-        logo: 'THOR'
+        shortName: 'DEN',
+        logo: 'DEN'
     },
-    'dyno': {
-        name: 'Dyno',
-        stadium: 'Dyno Stadium',
-        manager: 'Dyno Manager',
+    'newton': {
+        name: 'Newton',
+        stadium: 'Newton Stadium',
+        manager: 'Newton Manager',
         capacity: 46000,
         founded: 2023,
         titles: 0,
         colors: ['#bf360c', '#ff7043'],
-        shortName: 'DYN',
-        logo: 'DYN'
+        shortName: 'NEW',
+        logo: 'NEW'
     },
-    'yotah': {
-        name: 'Yotah',
-        stadium: 'Yotah Ground',
-        manager: 'Yotah Manager',
+    'theDrksid': {
+        name: 'TheDrksid',
+        stadium: 'TheDrksid Ground',
+        manager: 'TheDrksid Manager',
         capacity: 43000,
         founded: 2023,
         titles: 0,
         colors: ['#4a148c', '#ab47bc'],
-        shortName: 'YOT',
-        logo: 'YOT'
+        shortName: 'TDS',
+        logo: 'TDS'
     },
-    'wato': {
-        name: 'Wato',
-        stadium: 'Wato Park',
-        manager: 'Wato Manager',
+    'ghost': {
+        name: 'Ghost',
+        stadium: 'Grayson Stadium',
+        manager: 'Grayson Manager',
         capacity: 44000,
         founded: 2023,
         titles: 0,
         colors: ['#1b5e20', '#4caf50'],
-        shortName: 'WAT',
-        logo: 'WAT'
+        shortName: 'GHO',
+        logo: 'GHO'
     },
-    'tonny': {
-        name: 'Tonny',
-        stadium: 'Tonny Arena',
-        manager: 'Tonny Manager',
+    'kenno': {
+        name: 'Kenno',
+        stadium: 'Kenno Arena',
+        manager: 'kenno Manager',
         capacity: 47000,
         founded: 2023,
         titles: 0,
         colors: ['#b71c1c', '#ef5350'],
-        shortName: 'TON',
-        logo: 'TON'
-    },
-    'yunusu': {
-        name: 'Yunusu',
-        stadium: 'Yunusu Arena',
-        manager: 'Yunusu Manager',
-        capacity: 27000,
-        founded: 2021,
-        titles: 0,
-        colors: ['#b71c1c', '#ef5350'],
-        shortName: 'YUN',
-        logo: 'YUN'
-    },
-    'lardker': {
-        name: 'Lardker',
-        stadium: 'Lardker Feild',
-        manager: 'Lardker Manager',
-        capacity: 3000,
-        founded: 2024,
-        titles: 0,
-        colors: ['#b71c1c', '#4a148c'],
-        shortName: 'LAD',
-        logo: 'LAD'
-    },
-    'delvin': {
-        name: 'Delvin Rash',
-        stadium: 'Rash Feild',
-        manager: 'Delvin Manager',
-        capacity: 3000,
-        founded: 2024,
-        titles: 0,
-        colors: ['#4a148c', '#4caf50'],
-        shortName: 'DEL',
-        logo: 'DEL'
-    },
-    'brioz': {
-        name: 'Brioz',
-        stadium: 'Brioz Stadium',
-        manager: 'Brioz Manager',
-        capacity: 13000,
-        founded: 2025,
-        titles: 0,
-        colors: ['#bf360c', '#4caf50'],
-        shortName: 'BRI',
-        logo: 'BRI'
-    },
+        shortName: 'KEN',
+        logo: 'KEN'
+    }
     
 };
 
@@ -5375,112 +5331,36 @@ const seasonsData = {
         year: 'August 2025',
         status: 'completed',
         startDate: '2025-08-01',
-        endDate: '2025-08-31',
+        endDate: '2025-12-20',
         groups: {
     groupA: [
-        { id: 'dav_lil7', name: 'Dav-Lil7', shortName: 'DAV' },
-        { id: 'dandizzo', name: 'Dandizzo', shortName: 'DAN' },
-        { id: 'its_lyta23', name: 'Its_Lyta23', shortName: 'LYT' },
+        { id: 'mignon', name: 'Mignon', shortName: 'MIG' },
         { id: 'volts', name: 'Volts', shortName: 'VOL' },
-        { id: 'ghost', name: 'ghost', shortName: 'GHO' }
+        { id: 'yunusu', name: 'Yunusu', shortName: 'YUN' },
+        { id: 'maria', name: 'Mariakhan', shortName: 'MAR' },
+        { id: 'yotah', name: 'yotah', shortName: 'YOT' }
     ],
     groupB: [
-        { id: 'phenom', name: 'Phenom', shortName: 'PHE' },
-        { id: 'elton', name: 'Elton', shortName: 'ELT' },
-        { id: 'dyno', name: 'Dyno', shortName: 'DYN' },
-        { id: 'ghazi', name: 'Ghazi', shortName: 'GHA' },
-        { id: 'tonny', name: 'Tonny', shortName: 'TON' }
+        { id: 'thorvisual', name: 'Thorvisual', shortName: 'THO' },
+        { id: 'lyta', name: 'Lyta', shortName: 'LYT' },
+        { id: 'newton', name: 'Newton', shortName: 'NEW' },
+        { id: 'thelastOG', name: 'The Last OG', shortName: 'GLG' },
+        { id: 'kenno', name: 'Kenno', shortName: 'KEN' }
     ],
     groupC: [
-        { id: 'newton', name: 'Newton', shortName: 'NEW' },
-        { id: 'yotah', name: 'Yotah', shortName: 'YOT' },
-        { id: 'kenno', name: 'Kenno', shortName: 'KEN' },
-        { id: 'offer_art', name: 'Offer Art', shortName: 'OFF' },
-        { id: 'emjay', name: 'Emjay', shortName: 'EMJ' }
+        { id: 'offer', name: 'Offer Art', shortName: 'OFE' },
+        { id: 'theDrksid', name: 'TheDrksid', shortName: 'TDS' },
+        { id: 'lardker', name: 'Lardker', shortName: 'LAR' },
+        { id: 'wato', name: 'Wato', shortName: 'WAT' },
+        { id: 'clarks', name: 'Clarks', shortName: 'CLK' }
     ],
     groupD: [
-        { id: 'mignon', name: 'Mignon', shortName: 'MIG' },
-        { id: 'wato', name: 'Wato', shortName: 'WAT' },
-        { id: 'thorvisual', name: 'ThorVisual', shortName: 'THO' },
-        { id: 'thDrksid', name: 'ThDrksid', shortName: 'DARK' },
-        { id: 'maria', name: 'Aka The Kraven', shortName: 'AFC' }
+        { id: 'smiles', name: 'Smiles', shortName: 'SMI' },
+        { id: 'ghost', name: 'Ghost', shortName: 'GHO' },
+        { id: 'demon', name: 'Demon', shortName: 'DEN' },
+        { id: 'henryluther', name: 'Henry Luther', shortName: 'HFC' },
+        { id: 'phenom', name: 'Phenom', shortName: 'PHE' }
     ]
-        }
-    },
-    season2: {
-        id: 'season2',
-        name: 'Season 2',
-        year: 'September 2025',
-        status: 'upcoming',
-        startDate: '2025-09-01',
-        endDate: '2025-09-30',
-        groups: {
-            groupA: [
-                { id: 'dav_lil7', name: 'Dav-Lil7', shortName: 'DAV' },
-                { id: 'phenom', name: 'Phenom', shortName: 'PHE' },
-                { id: 'yunusu', name: 'Yunusu', shortName: 'YUN' },
-                { id: 'mignon', name: 'Mignon', shortName: 'MIG' },
-                { id: 'ghost', name: 'ghost', shortName: 'GHO' }
-            ],
-            groupB: [
-                { id: 'dandizzo', name: 'Dandizzo', shortName: 'DAN' },
-                { id: 'elton', name: 'Elton', shortName: 'ELT' },
-                { id: 'yotah', name: 'Yotah', shortName: 'YOT' },
-                { id: 'wato', name: 'Wato', shortName: 'WAT' },
-                { id: 'volts', name: 'Volts', shortName: 'VOL' }
-            ],
-            groupC: [
-                { id: 'its_lyta23', name: 'Its_Lyta23', shortName: 'LYT' },
-                { id: 'lardker', name: 'Lardker', shortName: 'LAD' },
-                { id: 'kenno', name: 'Kenno', shortName: 'KEN' },
-                { id: 'thorvisual', name: 'ThorVisual', shortName: 'THO' },
-                { id: 'offer_art', name: 'Offer Art', shortName: 'OFF' }
-            ],
-            groupD: [
-                { id: 'ghazi', name: 'Ghazi', shortName: 'GHA' },
-                { id: 'delvin', name: 'Delvin Rash', shortName: 'DEL' },
-                { id: 'brioz', name: 'Brioz', shortName: 'BRI' },
-                { id: 'thDrksid', name: 'ThDrksid', shortName: 'DARK' },
-                { id: 'maria', name: 'Aka The Kraven', shortName: 'AFC' }
-            ]
-        }
-    },
-    season3: {
-        id: 'season3',
-        name: 'Season 3',
-        year: 'October 2025',
-        status: 'planned',
-        startDate: '2025-10-01',
-        endDate: '2025-10-31',
-        groups: {
-            groupA: [
-                { id: 'dav_lil7', name: 'Dav-Lil7', shortName: 'DAV' },
-                { id: 'dyno', name: 'Dyno', shortName: 'DYN' },
-                { id: 'kenno', name: 'Kenno', shortName: 'KEN' },
-                { id: 'thorvisual', name: 'ThorVisual', shortName: 'THO' },
-                { id: 'ghost', name: 'ghost', shortName: 'GHO' }
-            ],
-            groupB: [
-                { id: 'phenom', name: 'Phenom', shortName: 'PHE' },
-                { id: 'its_lyta23', name: 'Its_Lyta23', shortName: 'LYT' },
-                { id: 'offer_art', name: 'Offer Art', shortName: 'OFF' },
-                { id: 'thDrksid', name: 'ThDrksid', shortName: 'DARK' },
-                { id: 'volts', name: 'Volts', shortName: 'VOL' }
-            ],
-            groupC: [
-                { id: 'elton', name: 'Elton', shortName: 'ELT' },
-                { id: 'dandizzo', name: 'Dandizzo', shortName: 'DAN' },
-                { id: 'emjay', name: 'Emjay', shortName: 'EMJ' },
-                { id: 'wato', name: 'Wato', shortName: 'WAT' },
-                { id: 'newton', name: 'Newton', shortName: 'NEW' }
-            ],
-            groupD: [
-                { id: 'ghazi', name: 'Ghazi', shortName: 'GHA' },
-                { id: 'tonny', name: 'Tonny', shortName: 'TON' },
-                { id: 'yotah', name: 'Yotah', shortName: 'YOT' },
-                { id: 'mignon', name: 'Mignon', shortName: 'MIG' },
-                { id: 'maria', name: 'Aka The Kraven', shortName: 'AFC' }
-            ]
         }
     }
 };
@@ -5488,183 +5368,35 @@ const seasonsData = {
 
 // Function to find the season with status 'ongoing'
 function findOngoingSeason() {
-    try {
-        for (const [seasonId, seasonData] of Object.entries(seasonsData)) {
-            if (seasonData.status === 'ongoing') {
-                console.log(`Found ongoing season: ${seasonId}`);
-                return seasonId;
-            }
-        }
-        console.log('No ongoing season found, defaulting to season1');
-        return 'season1';
-    } catch (error) {
-        console.error('Error finding ongoing season:', error);
-        return 'season1';
-    }
+    return 'season1';
 }
 
 // Function to check if current season is planned
 function isCurrentSeasonPlanned() {
-    try {
-        const currentSeasonData = seasonsData[currentSeason];
-        return currentSeasonData && currentSeasonData.status === 'planned';
-    } catch (error) {
-        console.error('Error checking if current season is planned:', error);
-        return false;
-    }
+    return false;
 }
 
 // Function to check if current season is upcoming
 function isCurrentSeasonUpcoming() {
-    try {
-        const currentSeasonData = seasonsData[currentSeason];
-        return currentSeasonData && currentSeasonData.status === 'upcoming';
-    } catch (error) {
-        console.error('Error checking if current season is upcoming:', error);
-        return false;
-    }
+    return false;
 }
 
 // Function to check if current season is not available (planned or upcoming)
 function isCurrentSeasonNotAvailable() {
-    return isCurrentSeasonPlanned() || isCurrentSeasonUpcoming();
+    return false;
 }
 
-// Function to display unavailable season message (planned or upcoming)
+// Function to display unavailable season message (not used - only season1 exists)
 function displayUnavailableSeasonMessage() {
-    try {
-        const currentSeasonData = seasonsData[currentSeason];
-        const seasonName = currentSeasonData ? currentSeasonData.name : currentSeason;
-        const seasonStatus = currentSeasonData ? currentSeasonData.status : 'unknown';
-        
-        // Hide ALL content - main content, navigation, everything except the message
-        const mainContent = document.getElementById('mainContent');
-        if (mainContent) {
-            mainContent.style.display = 'none';
-        }
-        
-        // Hide all content sections
-        const contentSections = document.querySelectorAll('.content-section');
-        contentSections.forEach(section => {
-            section.style.display = 'none';
-        });
-        
-        // Create or update unavailable season message
-        let unavailableMessage = document.getElementById('unavailableSeasonMessage');
-        if (!unavailableMessage) {
-            unavailableMessage = document.createElement('div');
-            unavailableMessage.id = 'unavailableSeasonMessage';
-            unavailableMessage.className = 'unavailable-season-message';
-            
-            // Insert after the important message
-            const importantMessage = document.querySelector('.important-message');
-            if (importantMessage) {
-                importantMessage.insertAdjacentElement('afterend', unavailableMessage);
-            } else {
-                // Insert after search container if no important message
-                const searchContainer = document.querySelector('.search-container');
-                if (searchContainer) {
-                    searchContainer.insertAdjacentElement('afterend', unavailableMessage);
-                }
-            }
-        }
-        
-        // Determine message content based on status
-        let icon, title, description;
-        if (seasonStatus === 'planned') {
-            icon = 'fas fa-calendar-plus';
-            title = 'Season Coming Soon';
-            description = `${seasonName} is currently in planning phase.`;
-        } else if (seasonStatus === 'upcoming') {
-            icon = 'fas fa-clock';
-            title = 'Season Starting Soon';
-            description = `${seasonName} is scheduled to begin soon.`;
-        } else {
-            icon = 'fas fa-info-circle';
-            title = 'Season Not Available';
-            description = `${seasonName} is not currently available.`;
-        }
-        
-        unavailableMessage.innerHTML = `
-            <div class="unavailable-message-content">
-                <i class="${icon}"></i>
-                <h3>${title}</h3>
-                <p><strong>${description}</strong></p>
-                <p>Data will be available once the season begins.</p>
-                <div class="unavailable-actions">
-                    <button onclick="switchToAvailableSeason()" class="btn-view-available">
-                        <i class="fas fa-eye"></i>
-                        View Available Season
-                    </button>
-                </div>
-            </div>
-        `;
-        
-        unavailableMessage.style.display = 'block';
-        console.log(`Displaying unavailable season message for: ${seasonName} (${seasonStatus}) - All other content hidden`);
-        
-    } catch (error) {
-        console.error('Error displaying unavailable season message:', error);
-    }
+    // Only season1 exists, so this function is not needed
+    console.log('displayUnavailableSeasonMessage called but only season1 is available');
 }
 
-// Function to switch to an available season (not planned)
+// Function to switch to an available season (not used - only season1 exists)
 function switchToAvailableSeason() {
-    try {
-        // First, try to find an ongoing season
-        let targetSeasonId = null;
-        
-        // Look for ongoing season first
-        for (const [seasonId, seasonData] of Object.entries(seasonsData)) {
-            if (seasonData.status === 'ongoing') {
-                targetSeasonId = seasonId;
-                console.log(`Found ongoing season: ${seasonId}`);
-                break;
-            }
-        }
-        
-        // If no ongoing season, fall back to completed season
-        if (!targetSeasonId) {
-            for (const [seasonId, seasonData] of Object.entries(seasonsData)) {
-                if (seasonData.status === 'completed') {
-                    targetSeasonId = seasonId;
-                    console.log(`No ongoing season found, using completed season: ${seasonId}`);
-                    break;
-                }
-            }
-        }
-        
-        if (targetSeasonId) {
-            console.log(`Switching to available season: ${targetSeasonId}`);
-            
-            // Hide unavailable season message
-            const unavailableMessage = document.getElementById('unavailableSeasonMessage');
-            if (unavailableMessage) {
-                unavailableMessage.style.display = 'none';
-            }
-            
-            // Restore main content
-            const mainContent = document.getElementById('mainContent');
-            if (mainContent) {
-                mainContent.style.display = 'block';
-            }
-            
-            switchSeason(targetSeasonId);
-            
-            // Update season selector to reflect the new season
-            updateSeasonSelector();
-            
-            loadPage('home');
-            return;
-        }
-        
-        // If no available season found, show error
-        console.error('No available seasons found');
-        alert('No available seasons found. Please contact support.');
-        
-    } catch (error) {
-        console.error('Error switching to available season:', error);
-    }
+    // Only season1 exists, so just switch to it
+    switchSeason('season1');
+    loadPage('home');
 }
 
 // Current season reference (automatically set to ongoing season)
@@ -5732,8 +5464,9 @@ function getCurrentSeasonTeamIds() {
     }
 }
 
-// Function to calculate all-seasons stats for a team
+// Function to calculate all-seasons stats for a team (only season1)
 function calculateAllSeasonsStats(teamId) {
+    const seasonId = 'season1';
     const allSeasonsStats = {
         totalMatches: 0,
         totalWins: 0,
@@ -5746,65 +5479,63 @@ function calculateAllSeasonsStats(teamId) {
         seasons: []
     };
 
-    // Process each season
-    Object.entries(seasonsFixtures).forEach(([seasonId, seasonFixtures]) => {
-        // Get team's group stage fixtures for this season
-        const teamSeasonFixtures = seasonFixtures.filter(f => 
-            f.homeTeam === teamId || f.awayTeam === teamId
-        );
+    // Get team's group stage fixtures for season1
+    const seasonFixturesList = seasonsFixtures[seasonId] || [];
+    const teamSeasonFixtures = seasonFixturesList.filter(f => 
+        f.homeTeam === teamId || f.awayTeam === teamId
+    );
 
-        // Get team's knockout matches for this season
-        const seasonKnockouts = seasonsKnockouts[seasonId];
-        let teamKnockoutMatches = [];
+    // Get team's knockout matches for season1
+    const seasonKnockouts = seasonsKnockouts[seasonId];
+    let teamKnockoutMatches = [];
+    
+    if (seasonKnockouts) {
+        const allKnockoutMatches = [
+            ...seasonKnockouts.roundOf16,
+            ...seasonKnockouts.quarterFinals,
+            ...seasonKnockouts.semiFinals,
+            ...seasonKnockouts.final,
+            ...seasonKnockouts.thirdPlacePlayoff
+        ];
         
-        if (seasonKnockouts) {
-            const allKnockoutMatches = [
-                ...seasonKnockouts.roundOf16,
-                ...seasonKnockouts.quarterFinals,
-                ...seasonKnockouts.semiFinals,
-                ...seasonKnockouts.final,
-                ...seasonKnockouts.thirdPlacePlayoff
-            ];
-            
-            teamKnockoutMatches = allKnockoutMatches.filter(match => 
-                match.homeTeam === teamId || match.awayTeam === teamId
-            );
-        }
+        teamKnockoutMatches = allKnockoutMatches.filter(match => 
+            match.homeTeam === teamId || match.awayTeam === teamId
+        );
+    }
 
-        // Combine all matches for this season
-        const allSeasonMatches = [...teamSeasonFixtures, ...teamKnockoutMatches];
+    // Combine all matches for season1
+    const allSeasonMatches = [...teamSeasonFixtures, ...teamKnockoutMatches];
 
-        if (allSeasonMatches.length > 0) {
-            // Calculate stats for this season (including both group and knockout)
-            const seasonStats = calculateTeamStats(teamId, allSeasonMatches);
-            
-            allSeasonsStats.totalMatches += seasonStats.played;
-            allSeasonsStats.totalWins += seasonStats.won;
-            allSeasonsStats.totalDraws += seasonStats.drawn;
-            allSeasonsStats.totalLosses += seasonStats.lost;
-            allSeasonsStats.totalGoalsFor += seasonStats.goalsFor;
-            allSeasonsStats.totalGoalsAgainst += seasonStats.goalsAgainst;
-            allSeasonsStats.seasonsPlayed++;
-            
-            // Add season details
-            allSeasonsStats.seasons.push({
-                seasonId: seasonId,
-                seasonName: seasonsData[seasonId]?.name || seasonId,
-                seasonYear: seasonsData[seasonId]?.year || '2025',
-                group: findTeamGroupInSeason(teamId, seasonId),
-                matches: seasonStats.played,
-                wins: seasonStats.won,
-                draws: seasonStats.drawn,
-                losses: seasonStats.lost,
-                goalsFor: seasonStats.goalsFor,
-                goalsAgainst: seasonStats.goalsAgainst,
-                goalDifference: seasonStats.goalDifference,
-                points: seasonStats.points,
-                groupMatches: teamSeasonFixtures.length,
-                knockoutMatches: teamKnockoutMatches.length
-            });
-        }
-    });
+    if (allSeasonMatches.length > 0) {
+        // Calculate stats for season1 (including both group and knockout)
+        const seasonStats = calculateTeamStats(teamId, allSeasonMatches);
+        
+        allSeasonsStats.totalMatches = seasonStats.played;
+        allSeasonsStats.totalWins = seasonStats.won;
+        allSeasonsStats.totalDraws = seasonStats.drawn;
+        allSeasonsStats.totalLosses = seasonStats.lost;
+        allSeasonsStats.totalGoalsFor = seasonStats.goalsFor;
+        allSeasonsStats.totalGoalsAgainst = seasonStats.goalsAgainst;
+        allSeasonsStats.seasonsPlayed = 1;
+        
+        // Add season details
+        allSeasonsStats.seasons.push({
+            seasonId: seasonId,
+            seasonName: seasonsData[seasonId]?.name || seasonId,
+            seasonYear: seasonsData[seasonId]?.year || '2025',
+            group: findTeamGroupInSeason(teamId, seasonId),
+            matches: seasonStats.played,
+            wins: seasonStats.won,
+            draws: seasonStats.drawn,
+            losses: seasonStats.lost,
+            goalsFor: seasonStats.goalsFor,
+            goalsAgainst: seasonStats.goalsAgainst,
+            goalDifference: seasonStats.goalDifference,
+            points: seasonStats.points,
+            groupMatches: teamSeasonFixtures.length,
+            knockoutMatches: teamKnockoutMatches.length
+        });
+    }
 
     // Calculate total goal difference
     allSeasonsStats.totalGoalDifference = allSeasonsStats.totalGoalsFor - allSeasonsStats.totalGoalsAgainst;
@@ -5812,9 +5543,10 @@ function calculateAllSeasonsStats(teamId) {
     return allSeasonsStats;
 }
 
-// Function to calculate historical records from all seasons
+// Function to calculate historical records from season1 only
 function calculateHistoricalRecords() {
     const teamRecords = {};
+    const seasonId = 'season1';
     
     // Initialize all teams with empty records
     Object.keys(teamsData).forEach(teamId => {
@@ -5827,8 +5559,9 @@ function calculateHistoricalRecords() {
         };
     });
     
-    // Process each season
-    Object.entries(seasonsKnockouts).forEach(([seasonId, seasonData]) => {
+    // Process season1 only
+    const seasonData = seasonsKnockouts[seasonId];
+    if (seasonData) {
         console.log(`Processing ${seasonId} for historical records...`);
         
         // Check if season has completed final
@@ -5907,7 +5640,7 @@ function calculateHistoricalRecords() {
                 }
             }
         }
-    });
+    }
     
     console.log('Historical records calculated:', teamRecords);
     return teamRecords;
@@ -5932,8 +5665,14 @@ function getCurrentGroupData() {
 // Legacy support - keep the old groupData for backward compatibility
 let groupData = {};
 
-// Season management functions
+// Season management functions - only supports season1
 function switchSeason(seasonId) {
+    // Only allow season1
+    if (seasonId !== 'season1') {
+        console.warn(`Only season1 is supported. Requested: ${seasonId}`);
+        return false;
+    }
+    
     if (seasonsData[seasonId]) {
         currentSeason = seasonId;
         
@@ -5996,24 +5735,6 @@ function switchSeason(seasonId) {
         }).filter(team => team !== null); // Remove null entries
         
         console.log(`Switched to ${seasonsData[seasonId].name} and set as current season`);
-        
-        // Check if the new season is not available and show message if needed
-        if (isCurrentSeasonNotAvailable()) {
-            console.log('Switched to unavailable season, showing unavailable season message');
-            displayUnavailableSeasonMessage();
-        } else {
-            // Hide unavailable season message if switching to available season
-            const unavailableMessage = document.getElementById('unavailableSeasonMessage');
-            if (unavailableMessage) {
-                unavailableMessage.style.display = 'none';
-            }
-            
-            // Restore main content
-            const mainContent = document.getElementById('mainContent');
-            if (mainContent) {
-                mainContent.style.display = 'block';
-            }
-        }
         
         return true;
     }
@@ -6149,150 +5870,116 @@ function removeSeason(seasonId) {
 const seasonsFixtures = {
     season1: [
             // Group A - Matchday 1 (August 26, 2025)
-        { id: 'GA1', group: 'A', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'dandizzo', status: 'completed', score: { home: 1, away: 2 } },
-        { id: 'GA2', group: 'A', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'dandizzo', awayTeam: 'dav_lil7', status: 'completed', score: { home: 1, away: 2 } },
-        { id: 'GA3', group: 'A', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'volts', status: 'completed', score: { home: 3, away: 0 } },
-        { id: 'GA4', group: 'A', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'volts', awayTeam: 'its_lyta23', status: 'completed', score: { home: 0, away: 2 } },
-        { id: 'GA5', group: 'A', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'ghost', awayTeam: 'dav_lil7', status: 'completed', score: { home: 0, away: 1 } },
-        { id: 'GA6', group: 'A', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'dav_lil7', awayTeam: 'ghost', status: 'completed', score: { home: 2, away: 0 } },
+        { id: 'GA1', group: 'A', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'mignon', awayTeam: 'volts', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GA2', group: 'A', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'volts', awayTeam: 'mignon', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GA3', group: 'A', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'yunusu', awayTeam: 'maria', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GA4', group: 'A', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'maria', awayTeam: 'yunusu', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GA5', group: 'A', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'yotah', awayTeam: 'mignon', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GA6', group: 'A', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'mignon', awayTeam: 'yotah', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group A - Matchday 2 (August 27, 2025)
-        { id: 'GA7', group: 'A', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'its_lyta23', status: 'completed', score: { home: 0, away: 1 } },
-        { id: 'GA8', group: 'A', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'its_lyta23', awayTeam: 'dandizzo', status: 'completed', score: { home: 1, away: 0 } },
-        { id: 'GA9', group: 'A', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'volts', awayTeam: 'ghost', status: 'completed', score: { home: 2, away: 5 } },
-        { id: 'GA10', group: 'A', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'ghost', awayTeam: 'volts', status: 'completed', score: { home: 3, away: 3 } },
+        { id: 'GA7', group: 'A', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'volts', awayTeam: 'yunusu', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GA8', group: 'A', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'yunusu', awayTeam: 'volts', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GA9', group: 'A', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'maria', awayTeam: 'yotah', status: 'scheduled', score: { home: 0, away: 0} },
+        { id: 'GA10', group: 'A', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'yotah', awayTeam: 'maria', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group A - Matchday 3 (August 28, 2025)
-        { id: 'GA11', group: 'A', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'volts', status: 'completed', score: { home: 1, away: 3 } },
-        { id: 'GA12', group: 'A', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'volts', awayTeam: 'dav_lil7', status: 'completed', score: { home: 0, away: 2 } },
-        { id: 'GA13', group: 'A', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'ghost', status: 'completed', score: { home: 0, away: 5 } },
-        { id: 'GA14', group: 'A', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'ghost', awayTeam: 'dandizzo', status: 'completed', score: { home: 4, away: 4 } },
-        { id: 'GA15', group: 'A', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'dav_lil7', status: 'completed', score: { home: 1, away: 3 } },
-        { id: 'GA16', group: 'A', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'dav_lil7', awayTeam: 'its_lyta23', status: 'completed', score: { home: 2, away: 2 } },
+        { id: 'GA11', group: 'A', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'mignon', awayTeam: 'maria', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GA12', group: 'A', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'maria', awayTeam: 'mignon', status: 'scheduled', score: { home: 0, away: 2 } },
+        { id: 'GA13', group: 'A', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'volts', awayTeam: 'yotah', status: 'scheduled', score: { home: 0, away: 5 } },
+        { id: 'GA14', group: 'A', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'yotah', awayTeam: 'volts', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GA15', group: 'A', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'yunusu', awayTeam: 'mignon', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GA16', group: 'A', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'mignon', awayTeam: 'yunusu', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group A - Matchday 4 (August 29, 2025)
-        { id: 'GA17', group: 'A', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'volts', status: 'completed', score: { home: 2, away: 1 } },
-        { id: 'GA18', group: 'A', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'volts', awayTeam: 'dandizzo', status: 'completed', score: { home: 2, away: 1 } },
-        { id: 'GA19', group: 'A', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'ghost', status: 'completed', score: { home: 2, away: 5 } },
-        { id: 'GA20', group: 'A', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'ghost', awayTeam: 'its_lyta23', status: 'completed', score: { home: 1, away: 2 } },
+        { id: 'GA17', group: 'A', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'volts', awayTeam: 'maria', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GA18', group: 'A', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'maria', awayTeam: 'volts', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GA19', group: 'A', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'yunusu', awayTeam: 'yotah', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GA20', group: 'A', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'yotah', awayTeam: 'yunusu', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group B - Matchday 1 (August 26, 2025)
-        { id: 'GB1', group: 'B', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'phenom', awayTeam: 'elton', status: 'completed', score: { home: 5, away: 1 } },
-        { id: 'GB2', group: 'B', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'elton', awayTeam: 'phenom', status: 'completed', score: { home: 0, away: 4 } },
-        { id: 'GB3', group: 'B', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'dyno', awayTeam: 'ghazi', status: 'completed', score: { home: 7, away: 2 } },
-        { id: 'GB4', group: 'B', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'ghazi', awayTeam: 'dyno', status: 'completed', score: { home: 0, away: 3 } },
-        { id: 'GB5', group: 'B', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'tonny', awayTeam: 'phenom', status: 'completed', score: { home: 2, away: 1 } },
-        { id: 'GB6', group: 'B', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'phenom', awayTeam: 'tonny', status: 'completed', score: { home: 1, away: 3 } },
+        { id: 'GB1', group: 'B', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'lyta', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB2', group: 'B', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'lyta', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB3', group: 'B', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'newton', awayTeam: 'thelastOG', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB4', group: 'B', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'thelastOG', awayTeam: 'newton', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB5', group: 'B', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'kenno', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB6', group: 'B', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'kenno', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group B - Matchday 2 (August 27, 2025)
-        { id: 'GB7', group: 'B', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'elton', awayTeam: 'dyno', status: 'completed', score: { home: 1, away: 8 } },
-        { id: 'GB8', group: 'B', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'dyno', awayTeam: 'elton', status: 'completed', score: { home: 4, away: 2 } },
-        { id: 'GB9', group: 'B', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'ghazi', awayTeam: 'tonny', status: 'completed', score: { home: 5, away: 1 } },
-        { id: 'GB10', group: 'B', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'tonny', awayTeam: 'ghazi', status: 'completed', score: { home: 0, away: 1 } },
+        { id: 'GB7', group: 'B', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'lyta', awayTeam: 'newton', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB8', group: 'B', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'newton', awayTeam: 'lyta', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB9', group: 'B', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'thelastOG', awayTeam: 'kenno', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB10', group: 'B', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'kenno', awayTeam: 'thelastOG', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group B - Matchday 3 (August 28, 2025)
-        { id: 'GB11', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'phenom', awayTeam: 'dyno', status: 'completed', score: { home: 1, away: 3 } },
-        { id: 'GB12', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'dyno', awayTeam: 'phenom', status: 'completed', score: { home: 3, away: 2 } },
-        { id: 'GB13', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'elton', awayTeam: 'ghazi', status: 'completed', score: { home: 0, away: 8 } },
-        { id: 'GB14', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'ghazi', awayTeam: 'elton', status: 'completed', score: { home: 9, away: 1 } },
-        { id: 'GB15', group: 'B', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'tonny', awayTeam: 'elton', status: 'completed', score: { home: 0, away: 0 } },
-        { id: 'GB16', group: 'B', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'elton', awayTeam: 'tonny', status: 'completed', score: { home: 0, away: 0 } },
+        { id: 'GB11', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'newton', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB12', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'newton', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB13', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'lyta', awayTeam: 'thelastOG', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB14', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'thelastOG', awayTeam: 'lyta', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB15', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'kenno', awayTeam: 'lyta', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB16', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'lyta', awayTeam: 'kenno', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group B - Matchday 4 (August 29, 2025)
-        { id: 'GB17', group: 'B', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'phenom', awayTeam: 'ghazi', status: 'completed', score: { home: 0, away: 2 } },
-        { id: 'GB18', group: 'B', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'ghazi', awayTeam: 'phenom', status: 'completed', score: { home: 2, away: 2 } },
-        { id: 'GB21', group: 'B', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'dyno', awayTeam: 'tonny', status: 'completed', score: { home: 4, away: 0 } },
-        { id: 'GB22', group: 'B', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'tonny', awayTeam: 'dyno', status: 'completed', score: { home: 3, away: 8 } },
+        { id: 'GB17', group: 'B', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'thelastOG', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB18', group: 'B', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'thelastOG', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB21', group: 'B', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'newton', awayTeam: 'kenno', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB22', group: 'B', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'kenno', awayTeam: 'newton', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group C - Matchday 1 (August 26, 2025)
-        { id: 'GC1', group: 'C', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'newton', awayTeam: 'yotah', status: 'completed', score: { home: 2, away: 5 } },
-        { id: 'GC2', group: 'C', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'yotah', awayTeam: 'newton', status: 'completed', score: { home: 1, away: 0 } },
-        { id: 'GC3', group: 'C', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'kenno', awayTeam: 'offer_art', status: 'completed', score: { home: 7, away: 2 } },
-        { id: 'GC4', group: 'C', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'offer_art', awayTeam: 'kenno', status: 'completed', score: { home: 1, away: 2 } },
-        { id: 'GC5', group: 'C', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'emjay', awayTeam: 'newton', status: 'completed', score: { home: 3, away: 2 } },
-        { id: 'GC6', group: 'C', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'newton', awayTeam: 'emjay', status: 'completed', score: { home: 1, away: 4 } },
+        { id: 'GC1', group: 'C', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'offer', awayTeam: 'theDrksid', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC2', group: 'C', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'theDrksid', awayTeam: 'offer', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC3', group: 'C', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'lardker', awayTeam: 'wato', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC4', group: 'C', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'wato', awayTeam: 'lardker', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC5', group: 'C', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'clarks', awayTeam: 'offer', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC6', group: 'C', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'offer', awayTeam: 'clarks', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group C - Matchday 2 (August 27, 2025)
-        { id: 'GC7', group: 'C', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'yotah', awayTeam: 'kenno', status: 'completed', score: { home: 2, away: 5 } },
-        { id: 'GC8', group: 'C', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'kenno', awayTeam: 'yotah', status: 'completed', score: { home: 6, away: 0 } },
-        { id: 'GC9', group: 'C', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'offer_art', awayTeam: 'emjay', status: 'completed', score: { home: 4, away: 5 } },
-        { id: 'GC10', group: 'C', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'emjay', awayTeam: 'offer_art', status: 'completed', score: { home: 0, away: 1 } },
+        { id: 'GC7', group: 'C', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'theDrksid', awayTeam: 'lardker', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC8', group: 'C', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'lardker', awayTeam: 'theDrksid', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC9', group: 'C', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'wato', awayTeam: 'clarks', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC10', group: 'C', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'clarks', awayTeam: 'wato', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group C - Matchday 3 (August 28, 2025)
-        { id: 'GC11', group: 'C', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'newton', awayTeam: 'kenno', status: 'completed', score: { home: 4, away: 6 } },
-        { id: 'GC12', group: 'C', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'kenno', awayTeam: 'newton', status: 'completed', score: { home: 8, away: 2 } },
-        { id: 'GC13', group: 'C', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'yotah', awayTeam: 'offer_art', status: 'completed', score: { home: 1, away: 2 } },
-        { id: 'GC14', group: 'C', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'offer_art', awayTeam: 'yotah', status: 'completed', score: { home: 2, away: 3 } },
-        { id: 'GC15', group: 'C', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'emjay', awayTeam: 'kenno', status: 'completed', score: { home: 0, away: 3 } },
-        { id: 'GC16', group: 'C', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'kenno', awayTeam: 'emjay', status: 'completed', score: { home: 3, away: 2 } },
+        { id: 'GC11', group: 'C', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'offer', awayTeam: 'lardker', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC12', group: 'C', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'lardker', awayTeam: 'offer', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC13', group: 'C', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'theDrksid', awayTeam: 'wato', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC14', group: 'C', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'wato', awayTeam: 'theDrksid', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC15', group: 'C', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'clarks', awayTeam: 'lardker', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC16', group: 'C', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'lardker', awayTeam: 'clarks', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group C - Matchday 4 (August 29, 2025)
-        { id: 'GC17', group: 'C', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'newton', awayTeam: 'offer_art', status: 'completed', score: { home: 2, away: 5 } },
-        { id: 'GC18', group: 'C', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'offer_art', awayTeam: 'newton', status: 'completed', score: { home: 8, away: 2 } },
-        { id: 'GC19', group: 'C', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'yotah', awayTeam: 'emjay', status: 'completed', score: { home: 1, away: 2 } },
-        { id: 'GC20', group: 'C', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'emjay', awayTeam: 'yotah', status: 'completed', score: { home: 1, away: 3 } },
+        { id: 'GC17', group: 'C', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'offer', awayTeam: 'wato', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC18', group: 'C', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'wato', awayTeam: 'offer', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC19', group: 'C', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'theDrksid', awayTeam: 'clarks', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC20', group: 'C', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'clarks', awayTeam: 'theDrksid', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group D - Matchday 1 (August 26, 2025)
-        { id: 'GD1', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'mignon', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 11 } },
-        { id: 'GD2', group: 'D', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'wato', awayTeam: 'mignon', status: 'completed', score: { home: 3, away: 1 } },
-        { id: 'GD3', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'thDrksid', status: 'completed', score: { home: 2, away: 5 } },
-        { id: 'GD4', group: 'D', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'thorvisual', status: 'completed', score: { home: 4, away: 2 } },
-        { id: 'GD5', group: 'D', matchday: 1, date: '2025-08-26', time: '20:00', homeTeam: 'maria', awayTeam: 'mignon', status: 'completed', score: { home: 0, away: 0 } },
-        { id: 'GD6', group: 'D', matchday: 1, date: '2025-08-26', time: '22:00', homeTeam: 'mignon', awayTeam: 'maria', status: 'completed', score: { home: 0, away: 0 } },
+        { id: 'GD1', group: 'D', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'smiles', awayTeam: 'ghost', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD2', group: 'D', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'ghost', awayTeam: 'smiles', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD3', group: 'D', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'demon', awayTeam: 'henryluther', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD4', group: 'D', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'henryluther', awayTeam: 'demon', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD5', group: 'D', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'phenom', awayTeam: 'smiles', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD6', group: 'D', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'smiles', awayTeam: 'phenom', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group D - Matchday 2 (August 27, 2025)
-        { id: 'GD7', group: 'D', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'wato', awayTeam: 'thorvisual', status: 'completed', score: { home: 5, away: 3 } },
-        { id: 'GD8', group: 'D', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 1 } },
-        { id: 'GD9', group: 'D', matchday: 2, date: '2025-08-27', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'maria', status: 'completed', score: { home: 2, away: 1 } },
-        { id: 'GD10', group: 'D', matchday: 2, date: '2025-08-27', time: '22:00', homeTeam: 'maria', awayTeam: 'thDrksid', status: 'completed', score: { home: 1, away: 4 } },
+        { id: 'GD7', group: 'D', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'ghost', awayTeam: 'demon', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD8', group: 'D', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'demon', awayTeam: 'ghost', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD9', group: 'D', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'henryluther', awayTeam: 'phenom', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD10', group: 'D', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'phenom', awayTeam: 'henryluther', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group D - Matchday 3 (August 28, 2025)
-        { id: 'GD11', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'mignon', awayTeam: 'thorvisual', status: 'completed', score: { home: 1, away: 7 } },
-        { id: 'GD12', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'mignon', status: 'completed', score: { home: 1, away: 0 } },
-        { id: 'GD13', group: 'D', matchday: 3, date: '2025-08-28', time: '20:00', homeTeam: 'wato', awayTeam: 'thDrksid', status: 'completed', score: { home: 3, away: 3 } },
-        { id: 'GD14', group: 'D', matchday: 3, date: '2025-08-28', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'wato', status: 'completed', score: { home: 6, away: 5 } },
+        { id: 'GD11', group: 'D', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'smiles', awayTeam: 'demon', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD12', group: 'D', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'demon', awayTeam: 'smiles', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD13', group: 'D', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'ghost', awayTeam: 'henryluther', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD14', group: 'D', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'henryluther', awayTeam: 'ghost', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group D - Matchday 4 (August 29, 2025)
-        { id: 'GD15', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'mignon', awayTeam: 'thDrksid', status: 'completed', score: { home: 0, away: 0 } },
-        { id: 'GD16', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'mignon', status: 'completed', score: { home: 0, away: 0 } },
-        { id: 'GD17', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'wato', awayTeam: 'maria', status: 'completed', score: { home: 1, away: 2 } },
-        { id: 'GD18', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'maria', awayTeam: 'wato', status: 'completed', score: { home: 4, away: 4 } },
-        { id: 'GD19', group: 'D', matchday: 4, date: '2025-08-29', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'maria', status: 'completed', score: { home: 2, away: 3 } },
-        { id: 'GD20', group: 'D', matchday: 4, date: '2025-08-29', time: '22:00', homeTeam: 'maria', awayTeam: 'thorvisual', status: 'completed', score: { home: 0, away: 3 } }
-    ],
-    season2: [
-        // Season 2 fixtures - Sample data for upcoming season
-        { id: 'S2GA1', group: 'A', matchday: 1, date: '2025-09-01', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'phenom', status: 'completed', score: { home: 1, away: 2 } },
-        { id: 'S2GA2', group: 'A', matchday: 1, date: '2025-09-01', time: '22:00', homeTeam: 'yunusu', awayTeam: 'mignon', status: 'completed', score: { home: 7, away: 2 } },
-        { id: 'S2GA3', group: 'A', matchday: 1, date: '2025-09-02', time: '20:00', homeTeam: 'ghost', awayTeam: 'dav_lil7', status: 'completed', score: { home: 1, away: 0 } },
-        { id: 'S2GA4', group: 'A', matchday: 1, date: '2025-09-02', time: '22:00', homeTeam: 'phenom', awayTeam: 'yunusu', status: 'completed', score: { home: 0, away: 2 } },
-        { id: 'S2GA5', group: 'A', matchday: 1, date: '2025-09-03', time: '20:00', homeTeam: 'mignon', awayTeam: 'ghost', status: 'completed', score: { home: 9, away: 8 } },
-        
-        { id: 'S2GB1', group: 'B', matchday: 1, date: '2025-09-01', time: '20:00', homeTeam: 'dandizzo', awayTeam: 'elton', status: 'completed', score: { home: 1, away: 2 } },
-        { id: 'S2GB2', group: 'B', matchday: 1, date: '2025-09-01', time: '22:00', homeTeam: 'yotah', awayTeam: 'wato', status: 'completed', score: { home: 5, away: 2 } },
-        { id: 'S2GB3', group: 'B', matchday: 1, date: '2025-09-02', time: '20:00', homeTeam: 'volts', awayTeam: 'dandizzo', status: 'completed', score: { home: 1, away: 2 } },
-        { id: 'S2GB4', group: 'B', matchday: 1, date: '2025-09-02', time: '22:00', homeTeam: 'elton', awayTeam: 'yotah', status: 'completed', score: { home: 1, away: 5 } },
-        { id: 'S2GB5', group: 'B', matchday: 1, date: '2025-09-03', time: '20:00', homeTeam: 'wato', awayTeam: 'volts', status: 'completed', score: { home: 1, away: 2 } },
-        
-        { id: 'S2GC1', group: 'C', matchday: 1, date: '2025-09-01', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'lardker', status: 'completed', score: { home: 1, away: 2 } },
-        { id: 'S2GC2', group: 'C', matchday: 1, date: '2025-09-01', time: '22:00', homeTeam: 'kenno', awayTeam: 'thorvisual', status: 'completed', score: { home: 1, away: 9 } },
-        { id: 'S2GC3', group: 'C', matchday: 1, date: '2025-09-02', time: '20:00', homeTeam: 'offer_art', awayTeam: 'its_lyta23', status: 'scheduled', score: { home: 8, away: 2 } },
-        { id: 'S2GC4', group: 'C', matchday: 1, date: '2025-09-02', time: '22:00', homeTeam: 'lardker', awayTeam: 'kenno', status: 'completed', score: { home: 6, away: 2 } },
-        { id: 'S2GC5', group: 'C', matchday: 1, date: '2025-09-03', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'offer_art', status: 'completed', score: { home: 5, away: 2 } },
-        
-        { id: 'S2GD1', group: 'D', matchday: 1, date: '2025-09-01', time: '20:00', homeTeam: 'ghazi', awayTeam: 'brioz', status: 'completed', score: { home: 1, away: 2 } },
-        { id: 'S2GD2', group: 'D', matchday: 1, date: '2025-09-01', time: '22:00', homeTeam: 'delvin', awayTeam: 'thDrksid', status: 'completed', score: { home: 6, away: 2 } },
-        { id: 'S2GD3', group: 'D', matchday: 1, date: '2025-09-02', time: '20:00', homeTeam: 'maria', awayTeam: 'ghazi', status: 'completed', score: { home: 1, away: 2 } },
-        { id: 'S2GD4', group: 'D', matchday: 1, date: '2025-09-02', time: '22:00', homeTeam: 'brioz', awayTeam: 'delvin', status: 'completed', score: { home: 1, away: 2 } },
-        { id: 'S2GD5', group: 'D', matchday: 1, date: '2025-09-03', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'maria', status: 'completed', score: { home: 8, away: 2 } }
-    ],
-    season3: [
-        // Season 3 fixtures - Sample data for planned season
-        { id: 'S3GA1', group: 'A', matchday: 1, date: '2025-10-01', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'dyno', status: 'pending', score: null },
-        { id: 'S3GA2', group: 'A', matchday: 1, date: '2025-10-01', time: '22:00', homeTeam: 'kenno', awayTeam: 'thorvisual', status: 'pending', score: null },
-        { id: 'S3GA3', group: 'A', matchday: 1, date: '2025-10-02', time: '20:00', homeTeam: 'ghost', awayTeam: 'dav_lil7', status: 'pending', score: null },
-        { id: 'S3GA4', group: 'A', matchday: 1, date: '2025-10-02', time: '22:00', homeTeam: 'dyno', awayTeam: 'kenno', status: 'pending', score: null },
-        { id: 'S3GA5', group: 'A', matchday: 1, date: '2025-10-03', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'ghost', status: 'pending', score: null }
+        { id: 'GD15', group: 'D', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'smiles', awayTeam: 'henryluther', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD16', group: 'D', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'henryluther', awayTeam: 'smiles', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD17', group: 'D', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'ghost', awayTeam: 'phenom', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD18', group: 'D', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'phenom', awayTeam: 'ghost', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD19', group: 'D', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'demon', awayTeam: 'phenom', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD20', group: 'D', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'phenom', awayTeam: 'demon', status: 'scheduled', score: { home: 0, away: 0 } }
     ]
 };
 
@@ -6301,233 +5988,59 @@ const seasonsKnockouts = {
     season1: {
         roundOf16: [
             // Tie 1
-            { id: 'R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'phenom', status: 'completed', score: { home: 1, away: 2 } },
-            { id: 'R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'phenom', awayTeam: 'dav_lil7', status: 'completed', score: { home: 0, away: 2 } },
+            { id: 'R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 2
-            { id: 'R16_2_1', round: 'Round of 16', tie: 2, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'emjay', status: 'completed', score: { home: 4, away: 2 } },
-            { id: 'R16_2_2', round: 'Round of 16', tie: 2, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'emjay', awayTeam: 'thorvisual', status: 'completed', score: { home: 3, away: 4 } },
+            { id: 'R16_2_1', round: 'Round of 16', tie: 2, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_2_2', round: 'Round of 16', tie: 2, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 3
-            { id: 'R16_3_1', round: 'Round of 16', tie: 3, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'kenno', awayTeam: 'maria', status: 'completed', score: { home: 4, away: 0 } },
-            { id: 'R16_3_2', round: 'Round of 16', tie: 3, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'maria', awayTeam: 'kenno', status: 'completed', score: { home: 3, away: 1 } },
+            { id: 'R16_3_1', round: 'Round of 16', tie: 3, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_3_2', round: 'Round of 16', tie: 3, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 4
-            { id: 'R16_4_1', round: 'Round of 16', tie: 4, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'ghazi', awayTeam: 'ghost', status: 'completed', score: { home: 3, away: 3 } },
-            { id: 'R16_4_2', round: 'Round of 16', tie: 4, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'ghost', awayTeam: 'ghazi', status: 'completed', score: { home: 4, away: 2 } },
+            { id: 'R16_4_1', round: 'Round of 16', tie: 4, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_4_2', round: 'Round of 16', tie: 4, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 5
-            { id: 'R16_5_1', round: 'Round of 16', tie: 5, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'dyno', awayTeam: 'dandizzo', status: 'completed', score: { home: 2, away: 1 } },
-            { id: 'R16_5_2', round: 'Round of 16', tie: 5, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'dandizzo', awayTeam: 'dyno', status: 'completed', score: { home: 1, away: 4 } },
+            { id: 'R16_5_1', round: 'Round of 16', tie: 5, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_5_2', round: 'Round of 16', tie: 5, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 6
-            { id: 'R16_6_1', round: 'Round of 16', tie: 6, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'offer_art', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 4 } },
-            { id: 'R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'wato', awayTeam: 'offer_art', status: 'completed', score: { home: 3, away: 1 } },
+            { id: 'R16_6_1', round: 'Round of 16', tie: 6, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 7
-            { id: 'R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'yotah', status: 'completed', score: { home: 8, away: 2 } },
-            { id: 'R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'yotah', awayTeam: 'thDrksid', status: 'completed', score: { home: 3, away: 1 } },
+            { id: 'R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 8
-            { id: 'R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-08-30', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'tonny', status: 'completed', score: { home: 1, away: 0 } },
-            { id: 'R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-08-30', time: '22:00', homeTeam: 'tonny', awayTeam: 'its_lyta23', status: 'completed', score: { home: 1, away: 3 }, }
+            { id: 'R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 }, }
         ],
         quarterFinals: [
             // Tie 1
-            { id: 'QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'its_lyta23', awayTeam: 'thDrksid', status: 'completed', score: { home: 0, away: 1 } },
-            { id: 'QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'thDrksid', awayTeam: 'its_lyta23', status: 'completed', score: { home: 4, away: 2 }, },
+            { id: 'QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-12-20', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-12-20', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 }, },
             // Tie 2
-            { id: 'QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'wato', awayTeam: 'dyno', status: 'completed', score: { home: 8, away: 3 } },
-            { id: 'QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'dyno', awayTeam: 'wato', status: 'completed', score: { home: 5, away: 2 } },
+            { id: 'QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-12-20', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-12-20', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 3
-            { id: 'QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'ghost', awayTeam: 'kenno', status: 'completed', score: { home: 3, away: 3 } },
-            { id: 'QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'kenno', awayTeam: 'ghost', status: 'completed', score: { home: 2, away: 0 }, },
+            { id: 'QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-12-20', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-12-20', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 }, },
             // Tie 4
-            { id: 'QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-08-31', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'dav_lil7', status: 'completed', score: { home: 1, away: 2 } },
-            { id: 'QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-08-31', time: '22:00', homeTeam: 'dav_lil7', awayTeam: 'thorvisual', status: 'completed', score: { home: 1, away: 1 } }
+            { id: 'QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-12-20', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-12-20', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } }
         ],
         semiFinals: [
             // Tie 1
-            { id: 'SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-09-01', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'kenno', status: 'completed', score: { home: 1, away: 5 } },
-            { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'kenno', awayTeam: 'dav_lil7', status: 'completed', score: { home: 7, away: 3 } },
-            // { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'kenno', awayTeam: 'dav_lil7', status: 'completed', score: { home: 0, away: 0 }, penalties: { home: 1, away: 4 } },
+            { id: 'SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-12-21', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-12-21', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            // { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'lardker', awayTeam: 'mignon', status: 'completed', score: { home: 0, away: 0 }, penalties: { home: 1, away: 4 } },
             // Tie 2
-            { id: 'SF_2_1', round: 'Semi Finals', tie: 2, leg: '1st', date: '2025-09-01', time: '20:00', homeTeam: 'thDrksid', awayTeam: 'wato', status: 'completed', score: { home: 2, away: 0 } },
-            { id: 'SF_2_2', round: 'Semi Finals', tie: 2, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'wato', awayTeam: 'thDrksid', status: 'completed', score: { home: 4, away: 3 }, }
+            { id: 'SF_2_1', round: 'Semi Finals', tie: 2, leg: '1st', date: '2025-12-21', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'SF_2_2', round: 'Semi Finals', tie: 2, leg: '2nd', date: '2025-12-21', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 }, }
         ],
         final: [
-            { id: 'FINAL_1', round: 'Final', matchNumber: 1, date: '2025-09-02', time: '22:00', homeTeam: 'kenno', awayTeam: 'thDrksid', status: 'completed', score: { home: 2, away: 1 } }
+            { id: 'FINAL_1', round: 'Final', matchNumber: 1, date: '2025-12-22', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } }
         ],
         thirdPlacePlayoff: [
-            { id: 'TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-09-02', time: '20:00', homeTeam: 'dav_lil7', awayTeam: 'wato', status: 'completed',score: { home: 1, away: 2 } }
+            { id: 'TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-012-22', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled',score: { home: 0, away: 0 } }
         ]
-    },
-    season2: {
-        roundOf16: [
-            // Season 2 knockouts - different team matchups
-            { id: 'S2R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-09-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
-            { id: 'S2R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-09-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
-            { id: 'S2R16_2_1', round: 'Round of 16', tie: 2, leg: '1st', date: '2025-09-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
-            { id: 'S2R16_2_2', round: 'Round of 16', tie: 2, leg: '2nd', date: '2025-09-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
-            { id: 'S2R16_3_1', round: 'Round of 16', tie: 3, leg: '1st', date: '2025-09-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
-            { id: 'S2R16_3_2', round: 'Round of 16', tie: 3, leg: '2nd', date: '2025-09-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
-            { id: 'S2R16_4_1', round: 'Round of 16', tie: 4, leg: '1st', date: '2025-09-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
-            { id: 'S2R16_4_2', round: 'Round of 16', tie: 4, leg: '2nd', date: '2025-09-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
-            { id: 'S2R16_5_1', round: 'Round of 16', tie: 5, leg: '1st', date: '2025-09-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
-            { id: 'S2R16_5_2', round: 'Round of 16', tie: 5, leg: '2nd', date: '2025-09-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
-            { id: 'S2R16_6_1', round: 'Round of 16', tie: 6, leg: '1st', date: '2025-09-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
-            { id: 'S2R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-09-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
-            { id: 'S2R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-09-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
-            { id: 'S2R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-09-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
-            { id: 'S2R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-09-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null },
-            { id: 'S2R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-09-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'scheduled', score: null }
-        ],
-        quarterFinals: [
-            { id: 'S2QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-09-20', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
-            { id: 'S2QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-09-20', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
-            { id: 'S2QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-09-20', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
-            { id: 'S2QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-09-20', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
-            { id: 'S2QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-09-20', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
-            { id: 'S2QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-09-20', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
-            { id: 'S2QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-09-20', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
-            { id: 'S2QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-09-20', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
-        ],
-        semiFinals: [
-            { id: 'S2SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-09-25', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
-            { id: 'S2SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-09-25', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
-            { id: 'S2SF_2_1', round: 'Semi Finals', tie: 2, leg: '1st', date: '2025-09-25', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
-            { id: 'S2SF_2_2', round: 'Semi Finals', tie: 2, leg: '2nd', date: '2025-09-25', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
-        ],
-        final: [
-            { id: 'S2FINAL_1', round: 'Final', matchNumber: 1, date: '2025-09-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
-        ],
-        thirdPlacePlayoff: [
-            { id: 'S2TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-09-30', time: '17:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
-        ]
-    },
-    season3: {
-        roundOf16: [
-            { id: 'S3R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-10-15', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
-            { id: 'S3R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-10-15', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
-        ],
-        quarterFinals: [
-            { id: 'S3QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-10-20', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
-            { id: 'S3QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-10-20', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
-        ],
-        semiFinals: [
-            { id: 'S3SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-10-25', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null },
-            { id: 'S3SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-10-25', time: '22:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
-        ],
-        final: [
-            { id: 'S3FINAL_1', round: 'Final', matchNumber: 1, date: '2025-10-30', time: '20:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
-        ],
-        thirdPlacePlayoff: [
-            { id: 'S3TPP_1', round: 'Third Place Playoff', matchNumber: 1, date: '2025-10-30', time: '17:00', homeTeam: 'TBD', awayTeam: 'TBD', status: 'pending', score: null }
-        ]
-    },
-    season4: {
-        id: 'season4',
-        current: false,
-        name: 'Season 4',
-        year: 'November 2025',
-        status: 'planned',
-        startDate: '2025-11-01',
-        endDate: '2025-11-30',
-        groups: {
-            groupA: [
-                { id: 'dav_lil7', name: 'Dav-Lil7', shortName: 'DAV' },
-                { id: 'phenom', name: 'Phenom', shortName: 'PHE' },
-                { id: 'newton', name: 'Newton', shortName: 'NEW' },
-                { id: 'mignon', name: 'Mignon', shortName: 'MIG' },
-                { id: 'ghost', name: 'ghost', shortName: 'GHO' }
-            ],
-            groupB: [
-                { id: 'dandizzo', name: 'Dandizzo', shortName: 'DAN' },
-                { id: 'elton', name: 'Elton', shortName: 'ELT' },
-                { id: 'yotah', name: 'Yotah', shortName: 'YOT' },
-                { id: 'wato', name: 'Wato', shortName: 'WAT' },
-                { id: 'volts', name: 'Volts', shortName: 'VOL' }
-            ],
-            groupC: [
-                { id: 'its_lyta23', name: 'Its Lyta23', shortName: 'LYT' },
-                { id: 'dyno', name: 'Dyno', shortName: 'DYN' },
-                { id: 'kenno', name: 'Kenno', shortName: 'KEN' },
-                { id: 'thorvisual', name: 'ThorVisual', shortName: 'THO' },
-                { id: 'offer_art', name: 'Offer Art', shortName: 'ART' }
-            ],
-            groupD: [
-                { id: 'ghazi', name: 'Ghazi', shortName: 'GHA' },
-                { id: 'thDrksid', name: 'ThDrksid', shortName: 'DARK' },
-                { id: 'maria', name: 'Aka The Kraven', shortName: 'AFC' }
-            ]
-        }
-    },
-    season5: {
-        id: 'season5',
-        current: false,
-        name: 'Season 5',
-        year: 'December 2025',
-        status: 'planned',
-        startDate: '2025-12-01',
-        endDate: '2025-12-31',
-        groups: {
-            groupA: [
-                { id: 'dav_lil7', name: 'Dav-Lil7', shortName: 'DAV' },
-                { id: 'phenom', name: 'Phenom', shortName: 'PHE' },
-                { id: 'newton', name: 'Newton', shortName: 'NEW' },
-                { id: 'mignon', name: 'Mignon', shortName: 'MIG' },
-                { id: 'ghost', name: 'ghost', shortName: 'GHO' }
-            ],
-            groupB: [
-                { id: 'dandizzo', name: 'Dandizzo', shortName: 'DAN' },
-                { id: 'elton', name: 'Elton', shortName: 'ELT' },
-                { id: 'yotah', name: 'Yotah', shortName: 'YOT' },
-                { id: 'wato', name: 'Wato', shortName: 'WAT' },
-                { id: 'volts', name: 'Volts', shortName: 'VOL' }
-            ],
-            groupC: [
-                { id: 'its_lyta23', name: 'Its Lyta23', shortName: 'LYT' },
-                { id: 'dyno', name: 'Dyno', shortName: 'DYN' },
-                { id: 'kenno', name: 'Kenno', shortName: 'KEN' },
-                { id: 'thorvisual', name: 'ThorVisual', shortName: 'THO' },
-                { id: 'offer_art', name: 'Offer Art', shortName: 'ART' }
-            ],
-            groupD: [
-                { id: 'ghazi', name: 'Ghazi', shortName: 'GHA' },
-                { id: 'thDrksid', name: 'ThDrksid', shortName: 'DARK' },
-                { id: 'maria', name: 'Aka The Kraven', shortName: 'AFC' }
-            ]
-        }
-    },
-    season6: {
-        id: 'season6',
-        current: false,
-        name: 'Season 6',
-        year: 'January 2026',
-        status: 'planned',
-        startDate: '2026-01-01',
-        endDate: '2026-01-31',
-        groups: {
-            groupA: [
-                { id: 'dav_lil7', name: 'Dav-Lil7', shortName: 'DAV' },
-                { id: 'phenom', name: 'Phenom', shortName: 'PHE' },
-                { id: 'newton', name: 'Newton', shortName: 'NEW' },
-                { id: 'mignon', name: 'Mignon', shortName: 'MIG' },
-                { id: 'ghost', name: 'ghost', shortName: 'GHO' }
-            ],
-            groupB: [
-                { id: 'dandizzo', name: 'Dandizzo', shortName: 'DAN' },
-                { id: 'elton', name: 'Elton', shortName: 'ELT' },
-                { id: 'yotah', name: 'Yotah', shortName: 'YOT' },
-                { id: 'wato', name: 'Wato', shortName: 'WAT' },
-                { id: 'volts', name: 'Volts', shortName: 'VOL' }
-            ],
-            groupC: [
-                { id: 'its_lyta23', name: 'Its Lyta23', shortName: 'LYT' },
-                { id: 'dyno', name: 'Dyno', shortName: 'DYN' },
-                { id: 'kenno', name: 'Kenno', shortName: 'KEN' },
-                { id: 'thorvisual', name: 'ThorVisual', shortName: 'THO' },
-                { id: 'offer_art', name: 'Offer Art', shortName: 'ART' }
-            ],
-            groupD: [
-                { id: 'ghazi', name: 'Ghazi', shortName: 'GHA' },
-                { id: 'thDrksid', name: 'ThDrksid', shortName: 'DARK' },
-                { id: 'maria', name: 'Aka The Kraven', shortName: 'AFC' }
-            ]
-        }
     }
 };
 
@@ -6684,7 +6197,6 @@ setInterval(() => {
     if (seasonChanged) {
         console.log('Season changed to ongoing, updating UI...');
         initializeCurrentSeasonData();
-        updateSeasonSelector();
         // Reload current page to reflect changes
         const currentPage = document.querySelector('.nav-link.active')?.dataset.page || 'home';
         loadPage(currentPage);
@@ -6706,11 +6218,23 @@ function getTeamLogo(teamId, size = '40px', useCircle = true) {
     const borderRadius = useCircle ? '50%' : '8px';
     const background = useCircle ? 'rgba(255, 255, 255, 0.1)' : 'transparent';
     
-    // Create a working fallback system with proper error handling
-    return `<div style="position: relative; width: ${size}; height: ${size};">
-                <img src="images/pics/${teamId}.jpeg" alt="${getTeamName(teamId)}" class="team-logo owner-picture" style="width: ${size}; height: ${size}; object-fit: cover; border-radius: ${borderRadius}; background: ${background}; position: absolute; top: 0; left: 0; border: 2px solid rgba(255, 255, 255, 0.3);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                <img src="images/club-logos/${teamId}.svg" alt="${getTeamName(teamId)}" class="team-logo club-badge" style="width: ${size}; height: ${size}; object-fit: contain; border-radius: ${borderRadius}; background: ${background}; position: absolute; top: 0; left: 0; border: 2px solid rgba(244, 67, 54, 0.3); display: none;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                <div class="team-logo-fallback" style="width: ${size}; height: ${size}; display: none; align-items: center; justify-content: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: ${borderRadius}; font-weight: bold; color: #ffffff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; border: 2px solid rgba(255, 255, 255, 0.3); font-size: ${parseInt(size) * 0.4}px; letter-spacing: 1px;">${teamsData[teamId] ? teamsData[teamId].shortName : teamId.substring(0, 3).toUpperCase()}</div>
+    // Map team IDs to their actual file names in club-logos directory
+    const clubLogoMap = {
+        'offer': 'offer_art',
+        'theDrksid': 'ThDrksid',
+        'dav_lil7': 'dav_lil7',
+        'its_lyta23': 'its_lyta23'
+    };
+    
+    const clubLogoName = clubLogoMap[teamId] || teamId;
+    
+    // Create a working fallback system: JPEG -> SVG Logo -> Text Fallback
+    const logoId = `logo-${teamId}-${Math.random().toString(36).substr(2, 9)}`;
+    
+    return `<div id="${logoId}" style="position: relative; width: ${size}; height: ${size};">
+                <img src="images/pics/${teamId}.jpeg" alt="${getTeamName(teamId)}" class="team-logo owner-picture" style="width: ${size}; height: ${size}; object-fit: cover; border-radius: ${borderRadius}; background: ${background}; position: absolute; top: 0; left: 0; border: 2px solid rgba(255, 255, 255, 0.3); z-index: 3;" onerror="this.onerror=null; this.style.display='none'; var container=this.parentElement; if(container){var logo=container.querySelector('.club-badge'); if(logo) logo.style.display='block'; else {var fallback=container.querySelector('.team-logo-fallback'); if(fallback) fallback.style.display='flex';}}" />
+                <img src="images/club-logos/${clubLogoName}.svg" alt="${getTeamName(teamId)}" class="team-logo club-badge" style="width: ${size}; height: ${size}; object-fit: contain; border-radius: ${borderRadius}; background: ${background}; position: absolute; top: 0; left: 0; border: 2px solid rgba(244, 67, 54, 0.3); display: none; z-index: 2;" onerror="this.onerror=null; this.style.display='none'; var container=this.parentElement; if(container){var fallback=container.querySelector('.team-logo-fallback'); if(fallback) fallback.style.display='flex';}" />
+                <div class="team-logo-fallback" style="width: ${size}; height: ${size}; display: none; align-items: center; justify-content: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: ${borderRadius}; font-weight: bold; color: #ffffff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; border: 2px solid rgba(255, 255, 255, 0.3); font-size: ${parseInt(size) * 0.4}px; letter-spacing: 1px; z-index: 1;">${teamsData[teamId] ? teamsData[teamId].shortName : teamId.substring(0, 3).toUpperCase()}</div>
             </div>`;
 }
 
@@ -6729,7 +6253,8 @@ function findTeamGroup(teamId) {
 
 // Function to find which group a team belongs to in a specific season
 function findTeamGroupInSeason(teamId, seasonId) {
-    const seasonData = seasonsData[seasonId];
+    // Only support season1
+    const seasonData = seasonsData['season1'];
     if (!seasonData) return 'Unknown';
     
     for (const [group, teams] of Object.entries(seasonData.groups)) {
@@ -7140,7 +6665,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Load the home page
         loadPage('home');
         setupEventListeners();
-        updateSeasonSelector();
         
         // Hide loader and show main content
         pageLoader.classList.add('hidden');
@@ -7182,64 +6706,7 @@ function setupEventListeners() {
         });
     });
 
-    // Season Selector
-    const seasonSelect = document.getElementById('seasonSelect');
-    if (seasonSelect) {
-        seasonSelect.addEventListener('change', (e) => {
-            const selectedSeason = e.target.value;
-            const seasonSelectElement = e.target;
-            
-            // Add visual feedback
-            seasonSelectElement.classList.add('changing');
-            
-            // Add loading state
-            seasonSelectElement.style.opacity = '0.7';
-            seasonSelectElement.style.pointerEvents = 'none';
-            
-            // Switch season with smooth transition
-            setTimeout(() => {
-                if (switchSeason(selectedSeason)) {
-                    // Success feedback
-                    seasonSelectElement.classList.remove('changing');
-                    seasonSelectElement.classList.add('changed');
-                    
-                    // Restore normal state
-                    seasonSelectElement.style.opacity = '1';
-                    seasonSelectElement.style.pointerEvents = 'auto';
-                    
-                    // Remove success class after animation
-                    setTimeout(() => {
-                        seasonSelectElement.classList.remove('changed');
-                    }, 1000);
-                    
-                    // Reload current page to reflect season change
-                    const currentPage = document.querySelector('.nav-link.active')?.dataset.page || 'home';
-                    
-                    // Force a small delay to ensure data is fully updated
-                    setTimeout(() => {
-                        loadPage(currentPage);
-                    }, 50);
-                    
-                    console.log(`Season switched to: ${seasonsData[selectedSeason]?.name}`);
-                } else {
-                    // Error feedback
-                    seasonSelectElement.classList.remove('changing');
-                    seasonSelectElement.classList.add('error');
-                    
-                    // Restore normal state
-                    seasonSelectElement.style.opacity = '1';
-                    seasonSelectElement.style.pointerEvents = 'auto';
-                    
-                    // Remove error class after animation
-                    setTimeout(() => {
-                        seasonSelectElement.classList.remove('error');
-                    }, 1000);
-                    
-                    console.error('Failed to switch season');
-                }
-            }, 300);
-        });
-    }
+    // Season Selector - removed since only season1 is supported
 
     // Search functionality
     searchBtn.addEventListener('click', (e) => {
@@ -8060,7 +7527,7 @@ function generateHomePage() {
                             <img src="images/sponsors/linkmedia.svg" alt="LinkMedia" class="sponsor-logo">
                         </div>
                         <div class="sponsor-item">
-                            <img src="images/sponsors/thorvisual.svg" alt="ThorVisual" class="sponsor-logo">
+                            <img src="images/sponsors/demon.svg" alt="demon" class="sponsor-logo">
                         </div>
                         <div class="sponsor-item">
                             <img src="images/sponsors/yty.svg" alt="YTY" class="sponsor-logo">
@@ -9101,44 +8568,20 @@ function generateClubsPage() {
 }
 
 function generateCertificatesPage() {
-    // Get all available seasons
-    const availableSeasons = Object.entries(seasonsData).map(([seasonId, season]) => ({
-        id: seasonId,
-        name: season.name,
-        year: season.year,
-        status: season.status
-    }));
-
-    // Check if current season has certificates available
-    const currentSeasonData = seasonsData[currentSeason];
+    // Only season1 is available
+    const seasonId = 'season1';
+    const currentSeasonData = seasonsData[seasonId];
     const certificatesAvailable = currentSeasonData && currentSeasonData.status === 'completed';
 
     return `
         <div class="page-container">
             <h1 class="page-title">Championship Certificates</h1>
-            <p class="page-subtitle">Download and review official certificates for all seasons</p>
-            
-            <!-- Season Filter -->
-            <div class="season-filter-section">
-                <h2>Select Season</h2>
-                <div class="season-selector-container">
-                    <select id="certificateSeasonSelect" class="certificate-season-select" onchange="filterCertificatesBySeason(this.value)">
-                        ${availableSeasons.map(season => `
-                            <option value="${season.id}" ${season.id === currentSeason ? 'selected' : ''}>
-                                ${season.name} (${season.year}) - ${season.status}
-                            </option>
-                        `).join('')}
-                    </select>
-                    <div class="season-selector-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                </div>
-            </div>
+            <p class="page-subtitle">Download and review official certificates</p>
             
             <!-- Certificates Section -->
             <div class="certificates-section" id="certificatesContent">
                 <div class="certificates-header">
-                    <h2 id="certificatesTitle">🏆 ${seasonsData[currentSeason]?.name || 'Current Season'} Certificates</h2>
+                    <h2 id="certificatesTitle">🏆 ${seasonsData[seasonId]?.name || 'Season 1'} Certificates</h2>
                     <p id="certificatesSubtitle">Download and review the official certificates for our top 3 teams</p>
                 </div>
                 ${certificatesAvailable ? `
@@ -9148,10 +8591,10 @@ function generateCertificatesPage() {
                             <div class="certificate-position">1st Place</div>
                             <div class="certificate-description">Championship Winner Certificate</div>
                             <div class="certificate-actions">
-                                <a href="images/certificates/${currentSeason}-first.jpeg" download="Championship_Winner_Certificate_${seasonsData[currentSeason]?.name?.replace(' ', '_') || 'Current_Season'}.jpeg" class="certificate-btn download">
+                                <a href="images/certificates/${seasonId}-first.jpeg" download="Championship_Winner_Certificate_${seasonsData[seasonId]?.name?.replace(' ', '_') || 'Season_1'}.jpeg" class="certificate-btn download">
                                     <i class="fas fa-download"></i> Download
                                 </a>
-                                <button onclick="viewCertificate('${currentSeason}-first', 'Championship Winner Certificate - ${seasonsData[currentSeason]?.name || 'Current Season'}')" class="certificate-btn view">
+                                <button onclick="viewCertificate('${seasonId}-first', 'Championship Winner Certificate - ${seasonsData[seasonId]?.name || 'Season 1'}')" class="certificate-btn view">
                                     <i class="fas fa-eye"></i> View
                                 </button>
                             </div>
@@ -9161,10 +8604,10 @@ function generateCertificatesPage() {
                             <div class="certificate-position">2nd Place</div>
                             <div class="certificate-description">Runner-up Certificate</div>
                             <div class="certificate-actions">
-                                <a href="images/certificates/${currentSeason}-second.jpeg" download="Runner_up_Certificate_${seasonsData[currentSeason]?.name?.replace(' ', '_') || 'Current_Season'}.jpeg" class="certificate-btn download">
+                                <a href="images/certificates/${seasonId}-second.jpeg" download="Runner_up_Certificate_${seasonsData[seasonId]?.name?.replace(' ', '_') || 'Season_1'}.jpeg" class="certificate-btn download">
                                     <i class="fas fa-download"></i> Download
                                 </a>
-                                <button onclick="viewCertificate('${currentSeason}-second', 'Runner-up Certificate - ${seasonsData[currentSeason]?.name || 'Current Season'}')" class="certificate-btn view">
+                                <button onclick="viewCertificate('${seasonId}-second', 'Runner-up Certificate - ${seasonsData[seasonId]?.name || 'Season 1'}')" class="certificate-btn view">
                                     <i class="fas fa-eye"></i> View
                                 </button>
                             </div>
@@ -9174,10 +8617,10 @@ function generateCertificatesPage() {
                             <div class="certificate-position">3rd Place</div>
                             <div class="certificate-description">Third Place Certificate</div>
                             <div class="certificate-actions">
-                                <a href="images/certificates/${currentSeason}-third.jpeg" download="Third_Place_Certificate_${seasonsData[currentSeason]?.name?.replace(' ', '_') || 'Current_Season'}.jpeg" class="certificate-btn download">
+                                <a href="images/certificates/${seasonId}-third.jpeg" download="Third_Place_Certificate_${seasonsData[seasonId]?.name?.replace(' ', '_') || 'Season_1'}.jpeg" class="certificate-btn download">
                                     <i class="fas fa-download"></i> Download
                                 </a>
-                                <button onclick="viewCertificate('${currentSeason}-third', 'Third Place Certificate - ${seasonsData[currentSeason]?.name || 'Current Season'}')" class="certificate-btn view">
+                                <button onclick="viewCertificate('${seasonId}-third', 'Third Place Certificate - ${seasonsData[seasonId]?.name || 'Season 1'}')" class="certificate-btn view">
                                     <i class="fas fa-eye"></i> View
                                 </button>
                             </div>
@@ -9189,7 +8632,7 @@ function generateCertificatesPage() {
                             <i class="fas fa-clock"></i>
                         </div>
                         <h3>Certificates Not Yet Available</h3>
-                        <p>The certificates for <strong>${seasonsData[currentSeason]?.name || 'this season'}</strong> will be available once the season is completed.</p>
+                        <p>The certificates for <strong>${seasonsData[seasonId]?.name || 'Season 1'}</strong> will be available once the season is completed.</p>
                         <div class="season-status-info">
                             <span class="status-badge ${currentSeasonData?.status || 'planned'}">${currentSeasonData?.status || 'planned'}</span>
                             <p class="status-description">
@@ -9197,9 +8640,6 @@ function generateCertificatesPage() {
                                   currentSeasonData?.status === 'planned' ? 'This season is in the planning phase.' : 
                                   'This season is currently in progress.'}
                             </p>
-                        </div>
-                        <div class="suggestion-text">
-                            <p><i class="fas fa-lightbulb"></i> <strong>Tip:</strong> Select a completed season from the dropdown above to view available certificates.</p>
                         </div>
                     </div>
                 `}
@@ -9246,111 +8686,8 @@ function generateCertificatesPage() {
 }
 
 function filterCertificatesBySeason(seasonId) {
-    // Don't change the global season - just filter certificates locally
-    // switchSeason(seasonId); // Removed to prevent mixed data across pages
-    
-    // Check if certificates are available for this season
-    const seasonData = seasonsData[seasonId];
-    const certificatesAvailable = seasonData && seasonData.status === 'completed';
-    
-    // Update the certificates page content
-    const certificatesTitle = document.getElementById('certificatesTitle');
-    const certificatesSubtitle = document.getElementById('certificatesSubtitle');
-    const seasonSelect = document.getElementById('certificateSeasonSelect');
-    const certificatesContent = document.getElementById('certificatesContent');
-    
-    if (certificatesTitle) {
-        certificatesTitle.textContent = `🏆 ${seasonsData[seasonId]?.name || 'Current Season'} Certificates`;
-    }
-    
-    if (certificatesSubtitle) {
-        certificatesSubtitle.textContent = `Download and review the official certificates for our top 3 teams`;
-    }
-    
-    // Update the dropdown selection
-    if (seasonSelect) {
-        seasonSelect.value = seasonId;
-    }
-    
-    // Update the certificates content based on availability
-    if (certificatesContent) {
-        if (certificatesAvailable) {
-            // Show certificates
-            certificatesContent.innerHTML = `
-                <div class="certificates-header">
-                    <h2 id="certificatesTitle">🏆 ${seasonsData[seasonId]?.name || 'Current Season'} Certificates</h2>
-                    <p id="certificatesSubtitle">Download and review the official certificates for our top 3 teams</p>
-                </div>
-                <div class="certificates-grid">
-                    <div class="certificate-item">
-                        <div class="certificate-icon">🥇</div>
-                        <div class="certificate-position">1st Place</div>
-                        <div class="certificate-description">Championship Winner Certificate</div>
-                        <div class="certificate-actions">
-                            <a href="images/certificates/${seasonId}-first.jpeg" download="Championship_Winner_Certificate_${seasonsData[seasonId]?.name?.replace(' ', '_') || 'Current_Season'}.jpeg" class="certificate-btn download">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                            <button onclick="viewCertificate('${seasonId}-first', 'Championship Winner Certificate - ${seasonsData[seasonId]?.name || 'Current Season'}')" class="certificate-btn view">
-                                <i class="fas fa-eye"></i> View
-                            </button>
-                        </div>
-                    </div>
-                    <div class="certificate-item">
-                        <div class="certificate-icon">🥈</div>
-                        <div class="certificate-position">2nd Place</div>
-                        <div class="certificate-description">Runner-up Certificate</div>
-                        <div class="certificate-actions">
-                            <a href="images/certificates/${seasonId}-second.jpeg" download="Runner_up_Certificate_${seasonsData[seasonId]?.name?.replace(' ', '_') || 'Current_Season'}.jpeg" class="certificate-btn download">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                            <button onclick="viewCertificate('${seasonId}-second', 'Runner-up Certificate - ${seasonsData[seasonId]?.name || 'Current Season'}')" class="certificate-btn view">
-                                <i class="fas fa-eye"></i> View
-                            </button>
-                        </div>
-                    </div>
-                    <div class="certificate-item">
-                        <div class="certificate-icon">🥉</div>
-                        <div class="certificate-position">3rd Place</div>
-                        <div class="certificate-description">Third Place Certificate</div>
-                        <div class="certificate-actions">
-                            <a href="images/certificates/${seasonId}-third.jpeg" download="Third_Place_Certificate_${seasonsData[seasonId]?.name?.replace(' ', '_') || 'Current_Season'}.jpeg" class="certificate-btn download">
-                                <i class="fas fa-download"></i> Download
-                            </a>
-                            <button onclick="viewCertificate('${seasonId}-third', 'Third Place Certificate - ${seasonsData[seasonId]?.name || 'Current Season'}')" class="certificate-btn view">
-                                <i class="fas fa-eye"></i> View
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `;
-        } else {
-            // Show no certificates message
-            certificatesContent.innerHTML = `
-                <div class="certificates-header">
-                    <h2 id="certificatesTitle">🏆 ${seasonsData[seasonId]?.name || 'Current Season'} Certificates</h2>
-                    <p id="certificatesSubtitle">Download and review the official certificates for our top 3 teams</p>
-                </div>
-                <div class="no-certificates-message">
-                    <div class="no-certificates-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Certificates Not Yet Available</h3>
-                    <p>The certificates for <strong>${seasonsData[seasonId]?.name || 'this season'}</strong> will be available once the season is completed.</p>
-                    <div class="season-status-info">
-                        <span class="status-badge ${seasonData?.status || 'planned'}">${seasonData?.status || 'planned'}</span>
-                        <p class="status-description">
-                            ${seasonData?.status === 'upcoming' ? 'This season is scheduled to begin soon.' : 
-                              seasonData?.status === 'planned' ? 'This season is in the planning phase.' : 
-                              'This season is currently in progress.'}
-                        </p>
-                    </div>
-                    <div class="suggestion-text">
-                        <p><i class="fas fa-lightbulb"></i> <strong>Tip:</strong> Select a completed season from the dropdown above to view available certificates.</p>
-                    </div>
-                </div>
-            `;
-        }
-    }
+    // Only season1 is supported - this function is kept for compatibility but does nothing
+    console.log('filterCertificatesBySeason called but only season1 is supported');
 }
 
 function performSearch() {
@@ -10619,52 +9956,51 @@ function getHeadToHeadMatches(team1Id, team2Id) {
 
         const headToHeadMatches = [];
         
-        // Search through all seasons' fixtures
-        Object.entries(seasonsFixtures).forEach(([seasonId, seasonFixtures]) => {
-            if (!Array.isArray(seasonFixtures)) return;
-            
+        // Search through season1 fixtures only
+        const seasonId = 'season1';
+        const seasonFixtures = seasonsFixtures[seasonId] || [];
+        if (Array.isArray(seasonFixtures)) {
             const seasonMatches = seasonFixtures.filter(fixture => 
-            fixture.status === 'completed' && 
-            ((fixture.homeTeam === team1Id && fixture.awayTeam === team2Id) ||
-             (fixture.homeTeam === team2Id && fixture.awayTeam === team1Id))
-        );
-        
-        seasonMatches.forEach(match => {
-            headToHeadMatches.push({
-                ...match,
-                seasonId: seasonId,
-                seasonName: seasonsData[seasonId]?.name || seasonId
-            });
-        });
-    });
-    
-        // Search through all seasons' knockouts
-        Object.entries(seasonsKnockouts).forEach(([seasonId, seasonKnockouts]) => {
-            if (!seasonKnockouts) return;
+                fixture.status === 'completed' && 
+                ((fixture.homeTeam === team1Id && fixture.awayTeam === team2Id) ||
+                 (fixture.homeTeam === team2Id && fixture.awayTeam === team1Id))
+            );
             
-            const allKnockoutMatches = [
-            ...seasonKnockouts.roundOf16,
-            ...seasonKnockouts.quarterFinals,
-            ...seasonKnockouts.semiFinals,
-            ...seasonKnockouts.final,
-            ...seasonKnockouts.thirdPlacePlayoff
-        ];
-        
-        const knockoutMatches = allKnockoutMatches.filter(match => 
-            match.status === 'completed' && 
-            ((match.homeTeam === team1Id && match.awayTeam === team2Id) ||
-             (match.homeTeam === team2Id && match.awayTeam === team1Id))
-        );
-        
-        knockoutMatches.forEach(match => {
-            headToHeadMatches.push({
-                ...match,
-                seasonId: seasonId,
-                seasonName: seasonsData[seasonId]?.name || seasonId,
-                isKnockout: true
+            seasonMatches.forEach(match => {
+                headToHeadMatches.push({
+                    ...match,
+                    seasonId: seasonId,
+                    seasonName: seasonsData[seasonId]?.name || seasonId
+                });
             });
-        });
-    });
+        }
+    
+        // Search through season1 knockouts only
+        const seasonKnockouts = seasonsKnockouts[seasonId];
+        if (seasonKnockouts) {
+            const allKnockoutMatches = [
+                ...seasonKnockouts.roundOf16,
+                ...seasonKnockouts.quarterFinals,
+                ...seasonKnockouts.semiFinals,
+                ...seasonKnockouts.final,
+                ...seasonKnockouts.thirdPlacePlayoff
+            ];
+            
+            const knockoutMatches = allKnockoutMatches.filter(match => 
+                match.status === 'completed' && 
+                ((match.homeTeam === team1Id && match.awayTeam === team2Id) ||
+                 (match.homeTeam === team2Id && match.awayTeam === team1Id))
+            );
+            
+            knockoutMatches.forEach(match => {
+                headToHeadMatches.push({
+                    ...match,
+                    seasonId: seasonId,
+                    seasonName: seasonsData[seasonId]?.name || seasonId,
+                    isKnockout: true
+                });
+            });
+        }
     
     // Sort by date (most recent first)
     headToHeadMatches.sort((a, b) => new Date(b.date) - new Date(a.date));

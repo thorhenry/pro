@@ -17,16 +17,6 @@
                     <span class="nav-logo-league">LEAGUE</span>
                 </span>
             </div>
-            <div class="season-selector">
-                <div class="season-select-wrapper">
-                    <select id="seasonSelect" class="season-select">
-                        <!-- Options will be populated by JavaScript -->
-                    </select>
-                    <div class="season-select-arrow">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div>
-            </div>
             <ul class="nav-menu">
                 <li><a href="#" class="nav-link" data-page="home">Home</a></li>
                 <li><a href="#" class="nav-link" data-page="fixtures">Fixtures</a></li>
@@ -102,6 +92,11 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- Version for cache busting - update this version number when deploying new changes -->
+    <script>
+        // Update this version number to force browser cache refresh
+        const APP_VERSION = '1.0.0';
+    </script>
+    <script src="js/script.js?v=1.0.0"></script>
 </body>
 </html>
