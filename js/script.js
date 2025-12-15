@@ -5928,8 +5928,8 @@ const seasonsFixtures = {
         // Group C - Matchday 1 (August 26, 2025)
         { id: 'GC1', group: 'C', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'offer', awayTeam: 'theDrksid', status: 'scheduled', score: { home: 0, away: 0 } },
         { id: 'GC2', group: 'C', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'theDrksid', awayTeam: 'offer', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GC3', group: 'C', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'lardker', awayTeam: 'wato', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GC4', group: 'C', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'wato', awayTeam: 'lardker', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC3', group: 'C', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'lardker', awayTeam: 'wato', status: 'completed', score: { home: 5, away: 0 } },
+        { id: 'GC4', group: 'C', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'wato', awayTeam: 'lardker', status: 'completed', score: { home: 4, away: 2 } },
         { id: 'GC5', group: 'C', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'clarks', awayTeam: 'offer', status: 'scheduled', score: { home: 0, away: 0 } },
         { id: 'GC6', group: 'C', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'offer', awayTeam: 'clarks', status: 'scheduled', score: { home: 0, away: 0 } },
 
