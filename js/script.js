@@ -5872,8 +5872,8 @@ const seasonsFixtures = {
             // Group A - Matchday 1 (August 26, 2025)
         { id: 'GA1', group: 'A', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'mignon', awayTeam: 'volts', status: 'scheduled', score: { home: 0, away: 0 } },
         { id: 'GA2', group: 'A', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'volts', awayTeam: 'mignon', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GA3', group: 'A', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'yunusu', awayTeam: 'maria', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GA4', group: 'A', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'maria', awayTeam: 'yunusu', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GA3', group: 'A', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'yunusu', awayTeam: 'maria', status: 'completed', score: { home: 1, away: 0 } },
+        { id: 'GA4', group: 'A', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'maria', awayTeam: 'yunusu', status: 'completed', score: { home: 3, away: 3 } },
         { id: 'GA5', group: 'A', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'yotah', awayTeam: 'mignon', status: 'scheduled', score: { home: 0, away: 0 } },
         { id: 'GA6', group: 'A', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'mignon', awayTeam: 'yotah', status: 'scheduled', score: { home: 0, away: 0 } },
 
