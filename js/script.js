@@ -5902,8 +5902,8 @@ const seasonsFixtures = {
         { id: 'GB2', group: 'B', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'lyta', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 0, away: 0 } },
         { id: 'GB3', group: 'B', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'newton', awayTeam: 'thelastOG', status: 'scheduled', score: { home: 0, away: 0 } },
         { id: 'GB4', group: 'B', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'thelastOG', awayTeam: 'newton', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GB5', group: 'B', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'kenno', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GB6', group: 'B', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'kenno', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB5', group: 'B', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'kenno', awayTeam: 'thorvisual', status: 'completed', score: { home: 2, away: 1 } },
+        { id: 'GB6', group: 'B', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'kenno', status: 'completed', score: { home: 0, away: 2 } },
 
         // Group B - Matchday 2 (August 27, 2025)
         { id: 'GB7', group: 'B', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'lyta', awayTeam: 'newton', status: 'scheduled', score: { home: 0, away: 0 } },
