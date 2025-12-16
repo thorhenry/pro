@@ -5898,8 +5898,8 @@ const seasonsFixtures = {
         { id: 'GA20', group: 'A', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'yotah', awayTeam: 'yunusu', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group B - Matchday 1 (August 26, 2025)
-        { id: 'GB1', group: 'B', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'donor', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GB2', group: 'B', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'donor', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB1', group: 'B', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'donor', status: 'completed', score: { home: 2, away: 2 } },
+        { id: 'GB2', group: 'B', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'donor', awayTeam: 'thorvisual', status: 'completed', score: { home: 3, away: 3 } },
         { id: 'GB3', group: 'B', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'newton', awayTeam: 'thelastOG', status: 'completed', score: { home: 5, away: 1 } },
         { id: 'GB4', group: 'B', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'thelastOG', awayTeam: 'newton', status: 'completed', score: { home: 1, away: 4 } },
         { id: 'GB5', group: 'B', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'kenno', awayTeam: 'thorvisual', status: 'completed', score: { home: 2, away: 1 } },
