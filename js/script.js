@@ -5232,16 +5232,16 @@ const teamsData = {
         shortName: 'GLG',
         logo: 'GLG'
     },
-    'lyta': {
-        name: 'Lyta',
-        stadium: 'Lyta Park',
-        manager: 'Lyta Manager',
+    'donor': {
+        name: 'Donor',
+        stadium: 'Donor Park',
+        manager: 'Donor Manager',
         capacity: 48000,
         founded: 2023,
         titles: 0,
         colors: ['#f57c00', '#ffb74d'],
-        shortName: 'LYT',
-        logo: 'LYT'
+        shortName: 'DON',
+        logo: 'DON'
     },
     'volts': {
         name: 'Volts',
@@ -5342,7 +5342,7 @@ const seasonsData = {
     ],
     groupB: [
         { id: 'thorvisual', name: 'Thorvisual', shortName: 'THO' },
-        { id: 'lyta', name: 'Lyta', shortName: 'LYT' },
+        { id: 'donor', name: 'Donor', shortName: 'DON' },
         { id: 'newton', name: 'Newton', shortName: 'NEW' },
         { id: 'thelastOG', name: 'The Last OG', shortName: 'GLG' },
         { id: 'kenno', name: 'Kenno', shortName: 'KEN' }
@@ -5898,26 +5898,26 @@ const seasonsFixtures = {
         { id: 'GA20', group: 'A', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'yotah', awayTeam: 'yunusu', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group B - Matchday 1 (August 26, 2025)
-        { id: 'GB1', group: 'B', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'lyta', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GB2', group: 'B', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'lyta', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB1', group: 'B', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'donor', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB2', group: 'B', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'donor', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 0, away: 0 } },
         { id: 'GB3', group: 'B', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'newton', awayTeam: 'thelastOG', status: 'completed', score: { home: 5, away: 1 } },
         { id: 'GB4', group: 'B', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'thelastOG', awayTeam: 'newton', status: 'completed', score: { home: 1, away: 4 } },
         { id: 'GB5', group: 'B', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'kenno', awayTeam: 'thorvisual', status: 'completed', score: { home: 2, away: 1 } },
         { id: 'GB6', group: 'B', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'kenno', status: 'completed', score: { home: 0, away: 2 } },
 
         // Group B - Matchday 2 (August 27, 2025)
-        { id: 'GB7', group: 'B', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'lyta', awayTeam: 'newton', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GB8', group: 'B', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'newton', awayTeam: 'lyta', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB7', group: 'B', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'donor', awayTeam: 'newton', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB8', group: 'B', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'newton', awayTeam: 'donor', status: 'scheduled', score: { home: 0, away: 0 } },
         { id: 'GB9', group: 'B', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'thelastOG', awayTeam: 'kenno', status: 'scheduled', score: { home: 0, away: 0 } },
         { id: 'GB10', group: 'B', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'kenno', awayTeam: 'thelastOG', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group B - Matchday 3 (August 28, 2025)
         { id: 'GB11', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'newton', status: 'scheduled', score: { home: 0, away: 0 } },
         { id: 'GB12', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'newton', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GB13', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'lyta', awayTeam: 'thelastOG', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GB14', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'thelastOG', awayTeam: 'lyta', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GB15', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'kenno', awayTeam: 'lyta', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GB16', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'lyta', awayTeam: 'kenno', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB13', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'donor', awayTeam: 'thelastOG', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB14', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'thelastOG', awayTeam: 'donor', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB15', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'kenno', awayTeam: 'donor', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB16', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'donor', awayTeam: 'kenno', status: 'scheduled', score: { home: 0, away: 0 } },
 
         // Group B - Matchday 4 (August 29, 2025)
         { id: 'GB17', group: 'B', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'thelastOG', status: 'scheduled', score: { home: 0, away: 0 } },
@@ -6223,7 +6223,7 @@ function getTeamLogo(teamId, size = '40px', useCircle = true) {
         'offer': 'offer_art',
         'theDrksid': 'ThDrksid',
         'dav_lil7': 'dav_lil7',
-        'its_lyta23': 'its_lyta23'
+        'its_donor23': 'its_donor23'
     };
     
     const clubLogoName = clubLogoMap[teamId] || teamId;
