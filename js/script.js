@@ -5908,8 +5908,8 @@ const seasonsFixtures = {
         // Group B - Matchday 2 (August 27, 2025)
         { id: 'GB7', group: 'B', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'donor', awayTeam: 'newton', status: 'scheduled', score: { home: 0, away: 0 } },
         { id: 'GB8', group: 'B', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'newton', awayTeam: 'donor', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GB9', group: 'B', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'thelastOG', awayTeam: 'kenno', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GB10', group: 'B', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'kenno', awayTeam: 'thelastOG', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB9', group: 'B', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'thelastOG', awayTeam: 'kenno', status: 'completed', score: { home: 2, away: 3 } },
+        { id: 'GB10', group: 'B', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'kenno', awayTeam: 'thelastOG', status: 'completed', score: { home: 3, away: 0 } },
 
         // Group B - Matchday 3 (August 28, 2025)
         { id: 'GB11', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'newton', status: 'scheduled', score: { home: 0, away: 0 } },
@@ -5964,12 +5964,12 @@ const seasonsFixtures = {
         // Group D - Matchday 2 (August 27, 2025)
         { id: 'GD7', group: 'D', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'ghost', awayTeam: 'demon', status: 'scheduled', score: { home: 0, away: 0 } },
         { id: 'GD8', group: 'D', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'demon', awayTeam: 'ghost', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GD9', group: 'D', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'henryluther', awayTeam: 'phenom', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GD10', group: 'D', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'phenom', awayTeam: 'henryluther', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD9', group: 'D', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'henryluther', awayTeam: 'phenom', status: 'completed', score: { home: 2, away: 2 } },
+        { id: 'GD10', group: 'D', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'phenom', awayTeam: 'henryluther', status: 'completed', score: { home: 4, away: 2 } },
 
         // Group D - Matchday 3 (August 28, 2025)
-        { id: 'GD11', group: 'D', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'smiles', awayTeam: 'demon', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GD12', group: 'D', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'demon', awayTeam: 'smiles', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD11', group: 'D', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'smiles', awayTeam: 'demon', status: 'completed', score: { home: 0, away: 3 } },
+        { id: 'GD12', group: 'D', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'demon', awayTeam: 'smiles', status: 'completed', score: { home: 3, away: 0 } },
         { id: 'GD13', group: 'D', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'ghost', awayTeam: 'henryluther', status: 'scheduled', score: { home: 0, away: 0 } },
         { id: 'GD14', group: 'D', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'henryluther', awayTeam: 'ghost', status: 'scheduled', score: { home: 0, away: 0 } },
 
