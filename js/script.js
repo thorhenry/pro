@@ -5912,12 +5912,12 @@ const seasonsFixtures = {
         { id: 'GB10', group: 'B', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'kenno', awayTeam: 'thelastOG', status: 'completed', score: { home: 3, away: 0 } },
 
         // Group B - Matchday 3 (August 28, 2025)
-        { id: 'GB11', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'newton', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB11', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'newton', status: 'completed', score: { home: 5, away: 2 } },
         { id: 'GB12', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'newton', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 0, away: 0 } },
         { id: 'GB13', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'donor', awayTeam: 'thelastOG', status: 'scheduled', score: { home: 0, away: 0 } },
         { id: 'GB14', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'thelastOG', awayTeam: 'donor', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GB15', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'kenno', awayTeam: 'donor', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GB16', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'donor', awayTeam: 'kenno', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB15', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'kenno', awayTeam: 'donor', status: 'completed', score: { home: 5, away: 3 } },
+        { id: 'GB16', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'donor', awayTeam: 'kenno', status: 'completed', score: { home: 2, away: 2 } },
 
         // Group B - Matchday 4 (August 29, 2025)
         { id: 'GB17', group: 'B', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'thelastOG', status: 'scheduled', score: { home: 0, away: 0 } },
