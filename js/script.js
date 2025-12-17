@@ -5888,8 +5888,8 @@ const seasonsFixtures = {
         { id: 'GA12', group: 'A', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'maria', awayTeam: 'mignon', status: 'scheduled', score: { home: 0, away: 2 } },
         { id: 'GA13', group: 'A', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'volts', awayTeam: 'yotah', status: 'scheduled', score: { home: 0, away: 5 } },
         { id: 'GA14', group: 'A', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'yotah', awayTeam: 'volts', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GA15', group: 'A', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'yunusu', awayTeam: 'mignon', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GA16', group: 'A', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'mignon', awayTeam: 'yunusu', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GA15', group: 'A', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'yunusu', awayTeam: 'mignon', status: 'completed', score: { home: 2, away: 1 } },
+        { id: 'GA16', group: 'A', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'mignon', awayTeam: 'yunusu', status: 'completed', score: { home: 1, away: 3 } },
 
         // Group A - Matchday 4 (August 29, 2025)
         { id: 'GA17', group: 'A', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'volts', awayTeam: 'maria', status: 'scheduled', score: { home: 0, away: 0 } },
@@ -5936,8 +5936,8 @@ const seasonsFixtures = {
         // Group C - Matchday 2 (August 27, 2025)
         { id: 'GC7', group: 'C', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'theDrksid', awayTeam: 'lardker', status: 'scheduled', score: { home: 0, away: 0 } },
         { id: 'GC8', group: 'C', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'lardker', awayTeam: 'theDrksid', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GC9', group: 'C', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'wato', awayTeam: 'clarks', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GC10', group: 'C', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'clarks', awayTeam: 'wato', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC9', group: 'C', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'wato', awayTeam: 'clarks', status: 'completed', score: { home: 4, away: 3 } },
+        { id: 'GC10', group: 'C', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'clarks', awayTeam: 'wato', status: 'completed', score: { home: 3, away: 2 } },
 
         // Group C - Matchday 3 (August 28, 2025)
         { id: 'GC11', group: 'C', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'offer', awayTeam: 'lardker', status: 'scheduled', score: { home: 0, away: 0 } },
