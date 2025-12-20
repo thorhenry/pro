@@ -5870,8 +5870,8 @@ function removeSeason(seasonId) {
 const seasonsFixtures = {
     season1: [
             // Group A - Matchday 1 (August 26, 2025)
-        { id: 'GA1', group: 'A', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'mignon', awayTeam: 'volts', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GA2', group: 'A', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'volts', awayTeam: 'mignon', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GA1', group: 'A', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'mignon', awayTeam: 'volts', status: 'completed', score: { home: 1, away: 1 } },
+        { id: 'GA2', group: 'A', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'volts', awayTeam: 'mignon', status: 'completed', score: { home: 5, away: 1 } },
         { id: 'GA3', group: 'A', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'yunusu', awayTeam: 'maria', status: 'completed', score: { home: 1, away: 0 } },
         { id: 'GA4', group: 'A', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'maria', awayTeam: 'yunusu', status: 'completed', score: { home: 3, away: 3 } },
         { id: 'GA5', group: 'A', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'yotah', awayTeam: 'mignon', status: 'completed', score: { home: 5, away: 6 } },
@@ -5920,7 +5920,7 @@ const seasonsFixtures = {
         { id: 'GB16', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'donor', awayTeam: 'kenno', status: 'completed', score: { home: 2, away: 2 } },
 
         // Group B - Matchday 4 (August 29, 2025)
-        { id: 'GB17', group: 'B', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'thelastOG', status: 'completed', score: { home: 5, away: 1 } },
+        { id: 'GB17', group: 'B', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'thelastOG', status: 'completed', score: { home: 5, away: 0 } },
         { id: 'GB18', group: 'B', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'thelastOG', awayTeam: 'thorvisual', status: 'completed', score: { home: 0, away: 6 } },
         { id: 'GB21', group: 'B', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'newton', awayTeam: 'kenno', status: 'completed', score: { home: 2, away: 5 } },
         { id: 'GB22', group: 'B', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'kenno', awayTeam: 'newton', status: 'completed', score: { home: 9, away: 0 } },
@@ -5948,10 +5948,10 @@ const seasonsFixtures = {
         { id: 'GC16', group: 'C', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'lardker', awayTeam: 'clarks', status: 'completed', score: { home: 6, away: 1 } },
 
         // Group C - Matchday 4 (August 29, 2025)
-        { id: 'GC17', group: 'C', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'offer', awayTeam: 'wato', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GC18', group: 'C', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'wato', awayTeam: 'offer', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GC19', group: 'C', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'ankofit', awayTeam: 'clarks', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GC20', group: 'C', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'clarks', awayTeam: 'ankofit', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC17', group: 'C', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'offer', awayTeam: 'wato', status: 'completed', score: { home: 3, away: 0 } },
+        { id: 'GC18', group: 'C', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'wato', awayTeam: 'offer', status: 'completed', score: { home: 1, away: 0 } },
+        { id: 'GC19', group: 'C', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'ankofit', awayTeam: 'clarks', status: 'completed', score: { home: 4, away: 2 } },
+        { id: 'GC20', group: 'C', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'clarks', awayTeam: 'ankofit', status: 'completed', score: { home: 0, away: 2 } },
 
         // Group D - Matchday 1 (August 26, 2025)
         { id: 'GD1', group: 'D', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'smiles', awayTeam: 'ghost', status: 'scheduled', score: { home: 0, away: 0 } },
