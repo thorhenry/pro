@@ -5884,8 +5884,8 @@ const seasonsFixtures = {
         { id: 'GA10', group: 'A', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'yotah', awayTeam: 'maria', status: 'completed', score: { home: 3, away: 2 } },
 
         // Group A - Matchday 3 (August 28, 2025)
-        { id: 'GA11', group: 'A', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'mignon', awayTeam: 'maria', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GA12', group: 'A', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'maria', awayTeam: 'mignon', status: 'scheduled', score: { home: 0, away: 2 } },
+        { id: 'GA11', group: 'A', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'mignon', awayTeam: 'maria', status: 'completed', score: { home: 0, away: 0 } },
+        { id: 'GA12', group: 'A', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'maria', awayTeam: 'mignon', status: 'completed', score: { home: 0, away: 2 } },
         { id: 'GA13', group: 'A', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'volts', awayTeam: 'yotah', status: 'completed', score: { home: 3, away: 3 } },
         { id: 'GA14', group: 'A', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'yotah', awayTeam: 'volts', status: 'completed', score: { home: 7, away: 3 } },
         { id: 'GA15', group: 'A', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'yunusu', awayTeam: 'mignon', status: 'completed', score: { home: 2, away: 1 } },
@@ -5906,16 +5906,16 @@ const seasonsFixtures = {
         { id: 'GB6', group: 'B', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'kenno', status: 'completed', score: { home: 0, away: 2 } },
 
         // Group B - Matchday 2 (August 27, 2025)
-        { id: 'GB7', group: 'B', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'donor', awayTeam: 'newton', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GB8', group: 'B', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'newton', awayTeam: 'donor', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB7', group: 'B', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'donor', awayTeam: 'newton', status: 'completed', score: { home: 0, away: 0 } },
+        { id: 'GB8', group: 'B', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'newton', awayTeam: 'donor', status: 'completed', score: { home: 0, away: 0 } },
         { id: 'GB9', group: 'B', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'thelastOG', awayTeam: 'kenno', status: 'completed', score: { home: 2, away: 3 } },
         { id: 'GB10', group: 'B', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'kenno', awayTeam: 'thelastOG', status: 'completed', score: { home: 3, away: 0 } },
 
         // Group B - Matchday 3 (August 28, 2025)
         { id: 'GB11', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'newton', status: 'completed', score: { home: 5, away: 2 } },
         { id: 'GB12', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'newton', awayTeam: 'thorvisual', status: 'completed', score: { home: 0, away: 4 } },
-        { id: 'GB13', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'donor', awayTeam: 'thelastOG', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GB14', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'thelastOG', awayTeam: 'donor', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GB13', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'donor', awayTeam: 'thelastOG', status: 'completed', score: { home: 0, away: 0 } },
+        { id: 'GB14', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'thelastOG', awayTeam: 'donor', status: 'completed', score: { home: 0, away: 0 } },
         { id: 'GB15', group: 'B', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'kenno', awayTeam: 'donor', status: 'completed', score: { home: 5, away: 3 } },
         { id: 'GB16', group: 'B', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'donor', awayTeam: 'kenno', status: 'completed', score: { home: 2, away: 2 } },
 
@@ -5935,15 +5935,15 @@ const seasonsFixtures = {
 
         // Group C - Matchday 2 (August 27, 2025)
         { id: 'GC7', group: 'C', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'ankofit', awayTeam: 'lardker', status: 'completed', score: { home: 1, away: 3 } },
-        { id: 'GC8', group: 'C', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'lardker', awayTeam: 'ankofit', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC8', group: 'C', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'lardker', awayTeam: 'ankofit', status: 'completed', score: { home: 0, away: 0 } },
         { id: 'GC9', group: 'C', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'wato', awayTeam: 'clarks', status: 'completed', score: { home: 4, away: 3 } },
         { id: 'GC10', group: 'C', matchday: 2, date: '2025-12-16', time: '22:00', homeTeam: 'clarks', awayTeam: 'wato', status: 'completed', score: { home: 3, away: 2 } },
 
         // Group C - Matchday 3 (August 28, 2025)
         { id: 'GC11', group: 'C', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'offer', awayTeam: 'lardker', status: 'completed', score: { home: 3, away: 2 } },
         { id: 'GC12', group: 'C', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'lardker', awayTeam: 'offer', status: 'completed', score: { home: 5, away: 2 } },
-        { id: 'GC13', group: 'C', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'ankofit', awayTeam: 'wato', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GC14', group: 'C', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'wato', awayTeam: 'ankofit', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GC13', group: 'C', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'ankofit', awayTeam: 'wato', status: 'completed', score: { home: 0, away: 0 } },
+        { id: 'GC14', group: 'C', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'wato', awayTeam: 'ankofit', status: 'completed', score: { home: 0, away: 0 } },
         { id: 'GC15', group: 'C', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'clarks', awayTeam: 'lardker', status: 'completed', score: { home: 0, away: 4 } },
         { id: 'GC16', group: 'C', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'lardker', awayTeam: 'clarks', status: 'completed', score: { home: 6, away: 1 } },
 
@@ -5954,12 +5954,12 @@ const seasonsFixtures = {
         { id: 'GC20', group: 'C', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'clarks', awayTeam: 'ankofit', status: 'completed', score: { home: 0, away: 2 } },
 
         // Group D - Matchday 1 (August 26, 2025)
-        { id: 'GD1', group: 'D', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'smiles', awayTeam: 'ghost', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GD2', group: 'D', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'ghost', awayTeam: 'smiles', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD1', group: 'D', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'smiles', awayTeam: 'ghost', status: 'completed', score: { home: 0, away: 0 } },
+        { id: 'GD2', group: 'D', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'ghost', awayTeam: 'smiles', status: 'completed', score: { home: 0, away: 0 } },
         { id: 'GD3', group: 'D', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'demon', awayTeam: 'henryluther', status: 'completed', score: { home: 5, away: 3 } },
         { id: 'GD4', group: 'D', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'henryluther', awayTeam: 'demon', status: 'completed', score: { home: 0, away: 3 } },
-        { id: 'GD5', group: 'D', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'phenom', awayTeam: 'smiles', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GD6', group: 'D', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'smiles', awayTeam: 'phenom', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD5', group: 'D', matchday: 1, date: '2025-12-15', time: '20:00', homeTeam: 'phenom', awayTeam: 'smiles', status: 'completed', score: { home: 0, away: 0 } },
+        { id: 'GD6', group: 'D', matchday: 1, date: '2025-12-15', time: '22:00', homeTeam: 'smiles', awayTeam: 'phenom', status: 'completed', score: { home: 0, away: 0 } },
 
         // Group D - Matchday 2 (August 27, 2025)
         { id: 'GD7', group: 'D', matchday: 2, date: '2025-12-16', time: '20:00', homeTeam: 'ghost', awayTeam: 'demon', status: 'completed', score: { home: 0, away: 2 } },
@@ -5970,14 +5970,14 @@ const seasonsFixtures = {
         // Group D - Matchday 3 (August 28, 2025)
         { id: 'GD11', group: 'D', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'smiles', awayTeam: 'demon', status: 'completed', score: { home: 0, away: 3 } },
         { id: 'GD12', group: 'D', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'demon', awayTeam: 'smiles', status: 'completed', score: { home: 3, away: 0 } },
-        { id: 'GD13', group: 'D', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'ghost', awayTeam: 'henryluther', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GD14', group: 'D', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'henryluther', awayTeam: 'ghost', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD13', group: 'D', matchday: 3, date: '2025-12-17', time: '20:00', homeTeam: 'ghost', awayTeam: 'henryluther', status: 'completed', score: { home: 0, away: 0 } },
+        { id: 'GD14', group: 'D', matchday: 3, date: '2025-12-17', time: '22:00', homeTeam: 'henryluther', awayTeam: 'ghost', status: 'completed', score: { home: 0, away: 0 } },
 
         // Group D - Matchday 4 (August 29, 2025)
-        { id: 'GD15', group: 'D', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'smiles', awayTeam: 'henryluther', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GD16', group: 'D', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'henryluther', awayTeam: 'smiles', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GD17', group: 'D', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'ghost', awayTeam: 'phenom', status: 'scheduled', score: { home: 0, away: 0 } },
-        { id: 'GD18', group: 'D', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'phenom', awayTeam: 'ghost', status: 'scheduled', score: { home: 0, away: 0 } },
+        { id: 'GD15', group: 'D', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'smiles', awayTeam: 'henryluther', status: 'completed', score: { home: 0, away: 0 } },
+        { id: 'GD16', group: 'D', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'henryluther', awayTeam: 'smiles', status: 'completed', score: { home: 0, away: 0 } },
+        { id: 'GD17', group: 'D', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'ghost', awayTeam: 'phenom', status: 'completed', score: { home: 0, away: 0 } },
+        { id: 'GD18', group: 'D', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'phenom', awayTeam: 'ghost', status: 'completed', score: { home: 0, away: 0 } },
         { id: 'GD19', group: 'D', matchday: 4, date: '2025-12-18', time: '20:00', homeTeam: 'demon', awayTeam: 'phenom', status: 'completed', score: { home: 3, away: 3 } },
         { id: 'GD20', group: 'D', matchday: 4, date: '2025-12-18', time: '22:00', homeTeam: 'phenom', awayTeam: 'demon', status: 'completed', score: { home: 2, away: 2 } }
     ]
@@ -5988,29 +5988,29 @@ const seasonsKnockouts = {
     season1: {
         roundOf16: [
             // Tie 1
-            { id: 'R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'yunusu', awayTeam: 'offer', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'offer', awayTeam: 'yunusu', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 2
-            { id: 'R16_2_1', round: 'Round of 16', tie: 2, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'R16_2_2', round: 'Round of 16', tie: 2, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_2_1', round: 'Round of 16', tie: 2, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'wato', awayTeam: 'yotah', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_2_2', round: 'Round of 16', tie: 2, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'yotah', awayTeam: 'wato', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 3
-            { id: 'R16_3_1', round: 'Round of 16', tie: 3, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'R16_3_2', round: 'Round of 16', tie: 3, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_3_1', round: 'Round of 16', tie: 3, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'ankofit', awayTeam: 'volts', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_3_2', round: 'Round of 16', tie: 3, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'volts', awayTeam: 'ankofit', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 4
-            { id: 'R16_4_1', round: 'Round of 16', tie: 4, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'R16_4_2', round: 'Round of 16', tie: 4, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_4_1', round: 'Round of 16', tie: 4, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'lardker', awayTeam: 'mignon', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_4_2', round: 'Round of 16', tie: 4, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'mignon', awayTeam: 'lardker', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 5
-            { id: 'R16_5_1', round: 'Round of 16', tie: 5, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'R16_5_2', round: 'Round of 16', tie: 5, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_5_1', round: 'Round of 16', tie: 5, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'kenno', awayTeam: 'ghost', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_5_2', round: 'Round of 16', tie: 5, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'ghost', awayTeam: 'kenno', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 6
-            { id: 'R16_6_1', round: 'Round of 16', tie: 6, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_6_1', round: 'Round of 16', tie: 6, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'smiles', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'smiles', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 7
-            { id: 'R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'newton', awayTeam: 'phenom', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'phenom', awayTeam: 'newton', status: 'scheduled', score: { home: 0, away: 0 } },
             // Tie 8
-            { id: 'R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 }, }
+            { id: 'R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'demon', awayTeam: 'donor', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'donor', awayTeam: 'demon', status: 'scheduled', score: { home: 0, away: 0 }, }
         ],
         quarterFinals: [
             // Tie 1
