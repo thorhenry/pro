@@ -5991,40 +5991,40 @@ const seasonsKnockouts = {
             { id: 'R16_1_1', round: 'Round of 16', tie: 1, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'yunusu', awayTeam: 'offer', status: 'completed', score: { home: 1, away: 2 } },
             { id: 'R16_1_2', round: 'Round of 16', tie: 1, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'offer', awayTeam: 'yunusu', status: 'completed', score: { home: 2, away: 0 } },
             // Tie 2
-            { id: 'R16_2_1', round: 'Round of 16', tie: 2, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'wato', awayTeam: 'yotah', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'R16_2_2', round: 'Round of 16', tie: 2, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'yotah', awayTeam: 'wato', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_2_1', round: 'Round of 16', tie: 2, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'wato', awayTeam: 'yotah', status: 'completed', score: { home: 1, away: 2 } },
+            { id: 'R16_2_2', round: 'Round of 16', tie: 2, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'yotah', awayTeam: 'wato', status: 'completed', score: { home: 1, away: 0 } },
             // Tie 3
             { id: 'R16_3_1', round: 'Round of 16', tie: 3, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'ankofit', awayTeam: 'volts', status: 'completed', score: { home: 3, away: 0 } },
             { id: 'R16_3_2', round: 'Round of 16', tie: 3, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'volts', awayTeam: 'ankofit', status: 'completed', score: { home: 3, away: 3 } },
             // Tie 4
-            { id: 'R16_4_1', round: 'Round of 16', tie: 4, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'lardker', awayTeam: 'mignon', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'R16_4_2', round: 'Round of 16', tie: 4, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'mignon', awayTeam: 'lardker', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_4_1', round: 'Round of 16', tie: 4, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'lardker', awayTeam: 'mignon', status: 'completed', score: { home: 3, away: 0 } },
+            { id: 'R16_4_2', round: 'Round of 16', tie: 4, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'mignon', awayTeam: 'lardker', status: 'completed', score: { home: 0, away: 1 } },
             // Tie 5
-            { id: 'R16_5_1', round: 'Round of 16', tie: 5, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'kenno', awayTeam: 'ghost', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'R16_5_2', round: 'Round of 16', tie: 5, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'ghost', awayTeam: 'kenno', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_5_1', round: 'Round of 16', tie: 5, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'kenno', awayTeam: 'ghost', status: 'completed', score: { home: 3, away: 1 } },
+            { id: 'R16_5_2', round: 'Round of 16', tie: 5, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'ghost', awayTeam: 'kenno', status: 'completed', score: { home: 0, away: 3 } },
             // Tie 6
-            { id: 'R16_6_1', round: 'Round of 16', tie: 6, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'smiles', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'smiles', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'R16_6_1', round: 'Round of 16', tie: 6, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'smiles', awayTeam: 'thorvisual', status: 'completed', score: { home: 0, away: 1 } },
+            { id: 'R16_6_2', round: 'Round of 16', tie: 6, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'thorvisual', awayTeam: 'smiles', status: 'completed', score: { home: 3, away: 0 } },
             // Tie 7
             { id: 'R16_7_1', round: 'Round of 16', tie: 7, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'newton', awayTeam: 'phenom', status: 'completed', score: { home: 0, away: 5 } },
             { id: 'R16_7_2', round: 'Round of 16', tie: 7, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'phenom', awayTeam: 'newton', status: 'completed', score: { home: 5, away: 0 } },
             // Tie 8
-            { id: 'R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'demon', awayTeam: 'donor', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'donor', awayTeam: 'demon', status: 'scheduled', score: { home: 0, away: 0 }, }
+            { id: 'R16_8_1', round: 'Round of 16', tie: 8, leg: '1st', date: '2025-12-19', time: '20:00', homeTeam: 'demon', awayTeam: 'donor', status: 'completed', score: { home: 1, away: 0 } },
+            { id: 'R16_8_2', round: 'Round of 16', tie: 8, leg: '2nd', date: '2025-12-19', time: '22:00', homeTeam: 'donor', awayTeam: 'demon', status: 'completed', score: { home: 1, away: 2 }, }
         ],
         quarterFinals: [
             // Tie 1
-            { id: 'QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-12-20', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-12-20', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 }, },
+            { id: 'QF_1_1', round: 'Quarter Finals', tie: 1, leg: '1st', date: '2025-12-20', time: '20:00', homeTeam: 'kenno', awayTeam: 'ankofit', status: 'completed', score: { home: 3, away: 1 } },
+            { id: 'QF_1_2', round: 'Quarter Finals', tie: 1, leg: '2nd', date: '2025-12-20', time: '22:00', homeTeam: 'ankofit', awayTeam: 'kenno', status: 'completed', score: { home: 0, away: 3 }, },
             // Tie 2
-            { id: 'QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-12-20', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-12-20', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'QF_2_1', round: 'Quarter Finals', tie: 2, leg: '1st', date: '2025-12-20', time: '20:00', homeTeam: 'offer', awayTeam: 'phenom', status: 'completed', score: { home: 1, away: 2 } },
+            { id: 'QF_2_2', round: 'Quarter Finals', tie: 2, leg: '2nd', date: '2025-12-20', time: '22:00', homeTeam: 'phenom', awayTeam: 'offer', status: 'completed', score: { home: 1, away: 0 } },
             // Tie 3
-            { id: 'QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-12-20', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-12-20', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 }, },
+            { id: 'QF_3_1', round: 'Quarter Finals', tie: 3, leg: '1st', date: '2025-12-20', time: '20:00', homeTeam: 'demon', awayTeam: 'yotah', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'QF_3_2', round: 'Quarter Finals', tie: 3, leg: '2nd', date: '2025-12-20', time: '22:00', homeTeam: 'yotah', awayTeam: 'demon', status: 'scheduled', score: { home: 0, away: 0 }, },
             // Tie 4
-            { id: 'QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-12-20', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-12-20', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } }
+            { id: 'QF_4_1', round: 'Quarter Finals', tie: 4, leg: '1st', date: '2025-12-20', time: '20:00', homeTeam: 'thorvisual', awayTeam: 'lardker', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'QF_4_2', round: 'Quarter Finals', tie: 4, leg: '2nd', date: '2025-12-20', time: '22:00', homeTeam: 'lardker', awayTeam: 'thorvisual', status: 'scheduled', score: { home: 0, away: 0 } }
         ],
         semiFinals: [
             // Tie 1
