@@ -6028,8 +6028,8 @@ const seasonsKnockouts = {
         ],
         semiFinals: [
             // Tie 1
-            { id: 'SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-12-21', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
-            { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-12-21', time: '22:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
+            { id: 'SF_1_1', round: 'Semi Finals', tie: 1, leg: '1st', date: '2025-12-21', time: '20:00', homeTeam: 'kenno', awayTeam: 'phenom', status: 'completed', score: { home: 2, away: 0 } },
+            { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-12-21', time: '22:00', homeTeam: 'phenom', awayTeam: 'kenno', status: 'completed', score: { home: 2, away: 4 } },
             // { id: 'SF_1_2', round: 'Semi Finals', tie: 1, leg: '2nd', date: '2025-09-01', time: '22:00', homeTeam: 'lardker', awayTeam: 'mignon', status: 'completed', score: { home: 0, away: 0 }, penalties: { home: 1, away: 4 } },
             // Tie 2
             { id: 'SF_2_1', round: 'Semi Finals', tie: 2, leg: '1st', date: '2025-12-21', time: '20:00', homeTeam: 'tbd', awayTeam: 'tbd', status: 'scheduled', score: { home: 0, away: 0 } },
